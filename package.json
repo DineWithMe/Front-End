@@ -1,7 +1,7 @@
 {
-  "name": "DWM-Front_End",
+  "name": "dine_with_me-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "app that serach for dining partner",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
