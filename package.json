@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/DineWithMe/Front-End#readme",
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
+    "axios": "^0.18.0",
     "next": "^7.0.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
