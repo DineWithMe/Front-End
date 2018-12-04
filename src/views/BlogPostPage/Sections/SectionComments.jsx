@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Tooltip from "@material-ui/core/Tooltip";
+import withStyles from '@material-ui/core/styles/withStyles'
+import Tooltip from '@material-ui/core/Tooltip'
 // @material-ui/icons
-import Reply from "@material-ui/icons/Reply";
-import Favorite from "@material-ui/icons/Favorite";
+import Reply from '@material-ui/icons/Reply'
+import Favorite from '@material-ui/icons/Favorite'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Media from "components/Media/Media.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Media from 'components/Media/Media.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
 
-import profile4 from "assets/img/faces/card-profile4-square.jpg";
-import profile1 from "assets/img/faces/card-profile1-square.jpg";
-import profile6 from "assets/img/faces/card-profile6-square.jpg";
+import profile4 from '../../../../static/assets/img/faces/card-profile4-square.jpg'
+import profile1 from '../../../../static/assets/img/faces/card-profile1-square.jpg'
+import profile6 from '../../../../static/assets/img/faces/card-profile6-square.jpg'
 
-import sectionCommentsStyle from "assets/jss/material-kit-pro-react/views/blogPostSections/sectionCommentsStyle.jsx";
+import sectionCommentsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostSections/sectionCommentsStyle.jsx'
 
 function SectionComments({ ...props }) {
-  const { classes } = props;
+  const { classes } = props
   return (
     <div className={classes.section}>
-      <GridContainer justify="center">
+      <GridContainer justify='center'>
         <GridItem xs={12} sm={10} md={8}>
           <div>
             <h3 className={classes.title}>3 Comments</h3>
@@ -45,13 +45,13 @@ function SectionComments({ ...props }) {
               footer={
                 <div>
                   <Tooltip
-                    id="tooltip-tina"
-                    title="Reply to comment"
-                    placement="top"
+                    id='tooltip-tina'
+                    title='Reply to comment'
+                    placement='top'
                     classes={{ tooltip: classes.tooltip }}
                   >
                     <Button
-                      color="primary"
+                      color='primary'
                       simple
                       className={classes.footerButtons}
                     >
@@ -60,7 +60,7 @@ function SectionComments({ ...props }) {
                   </Tooltip>
 
                   <Button
-                    color="danger"
+                    color='danger'
                     simple
                     className={classes.footerButtons}
                   >
@@ -89,13 +89,13 @@ function SectionComments({ ...props }) {
               footer={
                 <div>
                   <Tooltip
-                    id="tooltip-john"
-                    title="Reply to comment"
-                    placement="top"
+                    id='tooltip-john'
+                    title='Reply to comment'
+                    placement='top'
                     classes={{ tooltip: classes.tooltip }}
                   >
                     <Button
-                      color="primary"
+                      color='primary'
                       simple
                       className={classes.footerButtons}
                     >
@@ -129,13 +129,13 @@ function SectionComments({ ...props }) {
                   }
                   footer={
                     <Tooltip
-                      id="tooltip-tina2"
-                      title="Reply to comment"
-                      placement="top"
+                      id='tooltip-tina2'
+                      title='Reply to comment'
+                      placement='top'
                       classes={{ tooltip: classes.tooltip }}
                     >
                       <Button
-                        color="primary"
+                        color='primary'
                         simple
                         className={classes.footerButtons}
                       >
@@ -143,7 +143,7 @@ function SectionComments({ ...props }) {
                       </Button>
                     </Tooltip>
                   }
-                />
+                />,
               ]}
             />
           </div>
@@ -152,19 +152,19 @@ function SectionComments({ ...props }) {
             avatar={profile6}
             body={
               <CustomInput
-                labelText=" Write some nice stuff or nothing..."
-                id="nice"
+                labelText=' Write some nice stuff or nothing...'
+                id='nice'
                 formControlProps={{
-                  fullWidth: true
+                  fullWidth: true,
                 }}
                 inputProps={{
                   multiline: true,
-                  rows: 5
+                  rows: 5,
                 }}
               />
             }
             footer={
-              <Button color="primary" round className={classes.footerButtons}>
+              <Button color='primary' round className={classes.footerButtons}>
                 Post comment
               </Button>
             }
@@ -172,7 +172,7 @@ function SectionComments({ ...props }) {
         </GridItem>
       </GridContainer>
     </div>
-  );
+  )
 }
 
-export default withStyles(sectionCommentsStyle)(SectionComments);
+export default withStyles(sectionCommentsStyle)(SectionComments)

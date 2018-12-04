@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import NavPills from "components/NavPills/NavPills.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import NavPills from 'components/NavPills/NavPills.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingSections/pricingStyle.jsx";
+import pricingStyle from '../../../../static/assets/jss/material-kit-pro-react/views/pricingSections/pricingStyle.jsx'
 
 function SectionPricing(props) {
-  const { classes } = props;
+  const { classes } = props
 
   return (
     <div className={classes.pricingSection}>
@@ -30,14 +30,14 @@ function SectionPricing(props) {
         >
           <NavPills
             alignCenter
-            color="rose"
+            color='rose'
             tabs={[
               {
-                tabButton: "monthly"
+                tabButton: 'monthly',
               },
               {
-                tabButton: "yearly"
-              }
+                tabButton: 'yearly',
+              },
             ]}
           />
         </GridItem>
@@ -68,14 +68,14 @@ function SectionPricing(props) {
                   <b>5.000</b> Messages
                 </li>
               </ul>
-              <Button href="#pablo" color="rose" round>
+              <Button href='#pablo' color='rose' round>
                 Get started
               </Button>
             </CardBody>
           </Card>
         </GridItem>
         <GridItem md={4} sm={4}>
-          <Card raised pricing color="rose">
+          <Card raised pricing color='rose'>
             <CardBody pricing>
               <h6 className={classes.cardCategory}>Premium</h6>
               <h1 className={classes.cardTitleWhite}>
@@ -95,7 +95,7 @@ function SectionPricing(props) {
                   <b>15.000</b> Messages
                 </li>
               </ul>
-              <Button href="#pablo" color="white" round>
+              <Button href='#pablo' color='white' round>
                 Get started
               </Button>
             </CardBody>
@@ -126,7 +126,7 @@ function SectionPricing(props) {
                   <b>50.000</b> Messages
                 </li>
               </ul>
-              <Button href="#pablo" color="rose" round>
+              <Button href='#pablo' color='rose' round>
                 Get started
               </Button>
             </CardBody>
@@ -134,7 +134,7 @@ function SectionPricing(props) {
         </GridItem>
       </GridContainer>
     </div>
-  );
+  )
 }
 
-export default withStyles(pricingStyle)(SectionPricing);
+export default withStyles(pricingStyle)(SectionPricing)

@@ -1,89 +1,89 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // plugin that creates slider
-import nouislider from "nouislider";
+import nouislider from 'nouislider'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Checkbox from "@material-ui/core/Checkbox";
-import Tooltip from "@material-ui/core/Tooltip";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import withStyles from '@material-ui/core/styles/withStyles'
+import Checkbox from '@material-ui/core/Checkbox'
+import Tooltip from '@material-ui/core/Tooltip'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 // @material-ui icons
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import Cached from "@material-ui/icons/Cached";
-import Subject from "@material-ui/icons/Subject";
-import Check from "@material-ui/icons/Check";
+import Favorite from '@material-ui/icons/Favorite'
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
+import Cached from '@material-ui/icons/Cached'
+import Subject from '@material-ui/icons/Subject'
+import Check from '@material-ui/icons/Check'
 // core components
-import Accordion from "components/Accordion/Accordion.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Clearfix from "components/Clearfix/Clearfix.jsx";
+import Accordion from 'components/Accordion/Accordion.jsx'
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardHeader from 'components/Card/CardHeader.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import Clearfix from 'components/Clearfix/Clearfix.jsx'
 
-import suit1 from "assets/img/examples/suit-1.jpg";
-import suit2 from "assets/img/examples/suit-2.jpg";
-import suit3 from "assets/img/examples/suit-3.jpg";
-import suit4 from "assets/img/examples/suit-4.jpg";
-import suit5 from "assets/img/examples/suit-5.jpg";
-import suit6 from "assets/img/examples/suit-6.jpg";
-import color1 from "assets/img/examples/color1.jpg";
-import color3 from "assets/img/examples/color3.jpg";
-import color2 from "assets/img/examples/color2.jpg";
-import dg3 from "assets/img/dg3.jpg";
-import dg1 from "assets/img/dg1.jpg";
+import suit1 from '../../../../static/assets/img/examples/suit-1.jpg'
+import suit2 from '../../../../static/assets/img/examples/suit-2.jpg'
+import suit3 from '../../../../static/assets/img/examples/suit-3.jpg'
+import suit4 from '../../../../static/assets/img/examples/suit-4.jpg'
+import suit5 from '../../../../static/assets/img/examples/suit-5.jpg'
+import suit6 from '../../../../static/assets/img/examples/suit-6.jpg'
+import color1 from '../../../../static/assets/img/examples/color1.jpg'
+import color3 from '../../../../static/assets/img/examples/color3.jpg'
+import color2 from '../../../../static/assets/img/examples/color2.jpg'
+import dg3 from '../../../../static/assets/img/dg3.jpg'
+import dg1 from '../../../../static/assets/img/dg1.jpg'
 
-import styles from "assets/jss/material-kit-pro-react/views/ecommerceSections/productsStyle.jsx";
+import styles from '../../../../static/assets/jss/material-kit-pro-react/views/ecommerceSections/productsStyle.jsx'
 
 class SectionProducts extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       checked: [1, 9, 27],
-      priceRange: [101, 790]
-    };
+      priceRange: [101, 790],
+    }
   }
   componentDidMount() {
-    var slider = this.refs.slider1;
-    var priceLow = this.refs.priceLow;
-    var priceHigh = this.refs.priceHigh;
+    var slider = this.refs.slider1
+    var priceLow = this.refs.priceLow
+    var priceHigh = this.refs.priceHigh
     nouislider
       .create(slider, {
         start: this.state.priceRange,
         connect: true,
         range: { min: 30, max: 900 },
-        step: 1
+        step: 1,
       })
-      .on("update", function(values, handle) {
-        let currencyLow = priceLow.dataset.currency;
-        let currencyHigh = priceHigh.dataset.currency;
-        priceLow.innerHTML = currencyLow + Math.round(values[0]);
-        priceHigh.innerHTML = currencyHigh + Math.round(values[1]);
-      });
+      .on('update', function(values, handle) {
+        let currencyLow = priceLow.dataset.currency
+        let currencyHigh = priceHigh.dataset.currency
+        priceLow.innerHTML = currencyLow + Math.round(values[0])
+        priceHigh.innerHTML = currencyHigh + Math.round(values[1])
+      })
   }
   handleToggle(value) {
-    const { checked } = this.state;
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+    const { checked } = this.state
+    const currentIndex = checked.indexOf(value)
+    const newChecked = [...checked]
 
     if (currentIndex === -1) {
-      newChecked.push(value);
+      newChecked.push(value)
     } else {
-      newChecked.splice(currentIndex, 1);
+      newChecked.splice(currentIndex, 1)
     }
 
     this.setState({
-      checked: newChecked
-    });
+      checked: newChecked,
+    })
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
 
     return (
       <div className={classes.section}>
@@ -96,15 +96,15 @@ class SectionProducts extends React.Component {
                   <h4 className={`${classes.cardTitle} ${classes.textLeft}`}>
                     Refine
                     <Tooltip
-                      id="tooltip-top"
-                      title="Reset Filter"
-                      placement="top"
+                      id='tooltip-top'
+                      title='Reset Filter'
+                      placement='top'
                       classes={{ tooltip: classes.tooltip }}
                     >
                       <Button
                         link
                         justIcon
-                        size="sm"
+                        size='sm'
                         className={`${classes.pullRight} ${
                           classes.refineButton
                         }`}
@@ -116,15 +116,15 @@ class SectionProducts extends React.Component {
                   </h4>
                   <Accordion
                     active={[0, 2]}
-                    activeColor="rose"
+                    activeColor='rose'
                     collapses={[
                       {
-                        title: "Price Range",
+                        title: 'Price Range',
                         content: (
                           <CardBody className={classes.cardBodyRefine}>
                             <span
-                              ref="priceLow"
-                              data-currency="€"
+                              ref='priceLow'
+                              data-currency='€'
                               className={classNames(
                                 classes.pullLeft,
                                 classes.priceSlider
@@ -133,8 +133,8 @@ class SectionProducts extends React.Component {
                               €101
                             </span>
                             <span
-                              ref="priceHigh"
-                              data-currency="€"
+                              ref='priceHigh'
+                              data-currency='€'
                               className={classNames(
                                 classes.pullRight,
                                 classes.priceSlider
@@ -144,18 +144,18 @@ class SectionProducts extends React.Component {
                             </span>
                             <br />
                             <br />
-                            <div ref="slider1" className="slider-rose" />
+                            <div ref='slider1' className='slider-rose' />
                           </CardBody>
-                        )
+                        ),
                       },
                       {
-                        title: "Clothing",
+                        title: 'Clothing',
                         content: (
                           <div className={classes.customExpandPanel}>
                             <div
                               className={
                                 classes.checkboxAndRadio +
-                                " " +
+                                ' ' +
                                 classes.checkboxAndRadioHorizontal
                               }
                             >
@@ -179,12 +179,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Blazers"
+                                label='Blazers'
                               />
                               <FormControlLabel
                                 control={
@@ -201,12 +201,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Casual Shirts"
+                                label='Casual Shirts'
                               />
                               <FormControlLabel
                                 control={
@@ -223,12 +223,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Formal Shirts"
+                                label='Formal Shirts'
                               />
                               <FormControlLabel
                                 control={
@@ -245,12 +245,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Jeans"
+                                label='Jeans'
                               />
                               <FormControlLabel
                                 control={
@@ -267,12 +267,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Polos"
+                                label='Polos'
                               />
                               <FormControlLabel
                                 control={
@@ -289,12 +289,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Pyjamas"
+                                label='Pyjamas'
                               />
                               <FormControlLabel
                                 control={
@@ -311,12 +311,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Shorts"
+                                label='Shorts'
                               />
                               <FormControlLabel
                                 control={
@@ -333,25 +333,25 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Trousers"
+                                label='Trousers'
                               />
                             </div>
                           </div>
-                        )
+                        ),
                       },
                       {
-                        title: "Designer",
+                        title: 'Designer',
                         content: (
                           <div className={classes.customExpandPanel}>
                             <div
                               className={
                                 classes.checkboxAndRadio +
-                                " " +
+                                ' ' +
                                 classes.checkboxAndRadioHorizontal
                               }
                             >
@@ -375,12 +375,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="All"
+                                label='All'
                               />
                               <FormControlLabel
                                 control={
@@ -397,12 +397,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Polo Ralph Lauren"
+                                label='Polo Ralph Lauren'
                               />
                               <FormControlLabel
                                 control={
@@ -419,12 +419,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Wooyoungmi"
+                                label='Wooyoungmi'
                               />
                               <FormControlLabel
                                 control={
@@ -441,12 +441,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Alexander McQueen"
+                                label='Alexander McQueen'
                               />
                               <FormControlLabel
                                 control={
@@ -463,12 +463,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Tom Ford"
+                                label='Tom Ford'
                               />
                               <FormControlLabel
                                 control={
@@ -485,12 +485,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="AMI"
+                                label='AMI'
                               />
                               <FormControlLabel
                                 control={
@@ -507,12 +507,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Berena"
+                                label='Berena'
                               />
                               <FormControlLabel
                                 control={
@@ -529,12 +529,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Thom Sweeney"
+                                label='Thom Sweeney'
                               />
                               <FormControlLabel
                                 control={
@@ -551,12 +551,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Burberry Prorsum"
+                                label='Burberry Prorsum'
                               />
                               <FormControlLabel
                                 control={
@@ -573,12 +573,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Calvin Klein"
+                                label='Calvin Klein'
                               />
                               <FormControlLabel
                                 control={
@@ -595,12 +595,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Kingsman"
+                                label='Kingsman'
                               />
                               <FormControlLabel
                                 control={
@@ -617,12 +617,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Club Monaco"
+                                label='Club Monaco'
                               />
                               <FormControlLabel
                                 control={
@@ -639,12 +639,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Dolce & Gabbana"
+                                label='Dolce & Gabbana'
                               />
                               <FormControlLabel
                                 control={
@@ -661,12 +661,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Gucci"
+                                label='Gucci'
                               />
                               <FormControlLabel
                                 control={
@@ -683,12 +683,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Biglioli"
+                                label='Biglioli'
                               />
                               <FormControlLabel
                                 control={
@@ -705,12 +705,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Lanvin"
+                                label='Lanvin'
                               />
                               <FormControlLabel
                                 control={
@@ -727,12 +727,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Loro Piana"
+                                label='Loro Piana'
                               />
                               <FormControlLabel
                                 control={
@@ -749,25 +749,25 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Massimo Alba"
+                                label='Massimo Alba'
                               />
                             </div>
                           </div>
-                        )
+                        ),
                       },
                       {
-                        title: "Colour",
+                        title: 'Colour',
                         content: (
                           <div className={classes.customExpandPanel}>
                             <div
                               className={
                                 classes.checkboxAndRadio +
-                                " " +
+                                ' ' +
                                 classes.checkboxAndRadioHorizontal
                               }
                             >
@@ -791,12 +791,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="All"
+                                label='All'
                               />
                               <FormControlLabel
                                 control={
@@ -813,12 +813,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Black"
+                                label='Black'
                               />
                               <FormControlLabel
                                 control={
@@ -835,12 +835,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Blue"
+                                label='Blue'
                               />
                               <FormControlLabel
                                 control={
@@ -857,12 +857,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Brown"
+                                label='Brown'
                               />
                               <FormControlLabel
                                 control={
@@ -879,12 +879,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Gray"
+                                label='Gray'
                               />
                               <FormControlLabel
                                 control={
@@ -901,12 +901,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Green"
+                                label='Green'
                               />
                               <FormControlLabel
                                 control={
@@ -923,12 +923,12 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Neutrals"
+                                label='Neutrals'
                               />
                               <FormControlLabel
                                 control={
@@ -945,17 +945,17 @@ class SectionProducts extends React.Component {
                                     }
                                     classes={{
                                       checked: classes.checked,
-                                      root: classes.checkRoot
+                                      root: classes.checkRoot,
                                     }}
                                   />
                                 }
                                 classes={{ label: classes.label }}
-                                label="Purple"
+                                label='Purple'
                               />
                             </div>
                           </div>
-                        )
-                      }
+                        ),
+                      },
                     ]}
                   />
                 </CardBody>
@@ -966,12 +966,12 @@ class SectionProducts extends React.Component {
                 <GridItem md={4} sm={4}>
                   <Card plain product>
                     <CardHeader noShadow image>
-                      <a href="#pablo">
-                        <img src={suit1} alt=".." />
+                      <a href='#pablo'>
+                        <img src={suit1} alt='..' />
                       </a>
                     </CardHeader>
                     <CardBody plain>
-                      <a href="#pablo">
+                      <a href='#pablo'>
                         <h4 className={classes.cardTitle}>Polo Ralph Lauren</h4>
                       </a>
                       <p className={classes.description}>
@@ -983,15 +983,15 @@ class SectionProducts extends React.Component {
                         <span className={classes.price}> €800</span>
                       </div>
                       <Tooltip
-                        id="tooltip-top"
-                        title="Saved to Wishlist"
-                        placement="left"
+                        id='tooltip-top'
+                        title='Saved to Wishlist'
+                        placement='left'
                         classes={{ tooltip: classes.tooltip }}
                       >
                         <Button
                           justIcon
                           simple
-                          color="rose"
+                          color='rose'
                           className={classes.pullRight}
                         >
                           <Favorite />
@@ -1003,12 +1003,12 @@ class SectionProducts extends React.Component {
                 <GridItem md={4} sm={4}>
                   <Card plain product>
                     <CardHeader noShadow image>
-                      <a href="#pablo">
-                        <img src={suit2} alt=".." />
+                      <a href='#pablo'>
+                        <img src={suit2} alt='..' />
                       </a>
                     </CardHeader>
                     <CardBody plain>
-                      <a href="#pablo">
+                      <a href='#pablo'>
                         <h4 className={classes.cardTitle}>Wooyoungmi</h4>
                       </a>
                       <p className={classes.description}>
@@ -1020,15 +1020,15 @@ class SectionProducts extends React.Component {
                         <span className={classes.price}> €555</span>
                       </div>
                       <Tooltip
-                        id="tooltip-top"
-                        title="Save to Wishlist"
-                        placement="left"
+                        id='tooltip-top'
+                        title='Save to Wishlist'
+                        placement='left'
                         classes={{ tooltip: classes.tooltip }}
                       >
                         <Button
                           justIcon
                           simple
-                          color="rose"
+                          color='rose'
                           className={classes.pullRight}
                         >
                           <FavoriteBorder />
@@ -1040,12 +1040,12 @@ class SectionProducts extends React.Component {
                 <GridItem md={4} sm={4}>
                   <Card plain product>
                     <CardHeader noShadow image>
-                      <a href="#pablo">
-                        <img src={suit3} alt=".." />
+                      <a href='#pablo'>
+                        <img src={suit3} alt='..' />
                       </a>
                     </CardHeader>
                     <CardBody plain>
-                      <a href="#pablo">
+                      <a href='#pablo'>
                         <h4 className={classes.cardTitle}>Tom Ford</h4>
                       </a>
                       <p className={classes.description}>
@@ -1057,15 +1057,15 @@ class SectionProducts extends React.Component {
                         <span className={classes.price}> €879</span>
                       </div>
                       <Tooltip
-                        id="tooltip-top"
-                        title="Save to Wishlist"
-                        placement="left"
+                        id='tooltip-top'
+                        title='Save to Wishlist'
+                        placement='left'
                         classes={{ tooltip: classes.tooltip }}
                       >
                         <Button
                           justIcon
                           simple
-                          color="rose"
+                          color='rose'
                           className={classes.pullRight}
                         >
                           <FavoriteBorder />
@@ -1077,12 +1077,12 @@ class SectionProducts extends React.Component {
                 <GridItem md={4} sm={4}>
                   <Card plain product>
                     <CardHeader noShadow image>
-                      <a href="#pablo">
-                        <img src={suit4} alt=".." />
+                      <a href='#pablo'>
+                        <img src={suit4} alt='..' />
                       </a>
                     </CardHeader>
                     <CardBody plain>
-                      <a href="#pablo">
+                      <a href='#pablo'>
                         <h4 className={classes.cardTitle}>Thom Sweeney</h4>
                       </a>
                       <p className={classes.description}>
@@ -1094,15 +1094,15 @@ class SectionProducts extends React.Component {
                         <span className={classes.price}> €680</span>
                       </div>
                       <Tooltip
-                        id="tooltip-top"
-                        title="Save to Wishlist"
-                        placement="left"
+                        id='tooltip-top'
+                        title='Save to Wishlist'
+                        placement='left'
                         classes={{ tooltip: classes.tooltip }}
                       >
                         <Button
                           justIcon
                           simple
-                          color="rose"
+                          color='rose'
                           className={classes.pullRight}
                         >
                           <FavoriteBorder />
@@ -1114,12 +1114,12 @@ class SectionProducts extends React.Component {
                 <GridItem md={4} sm={4}>
                   <Card plain product>
                     <CardHeader noShadow image>
-                      <a href="#pablo">
-                        <img src={suit5} alt=".." />
+                      <a href='#pablo'>
+                        <img src={suit5} alt='..' />
                       </a>
                     </CardHeader>
                     <CardBody plain>
-                      <a href="#pablo">
+                      <a href='#pablo'>
                         <h4 className={classes.cardTitle}>Kingsman</h4>
                       </a>
                       <p className={classes.description}>
@@ -1131,15 +1131,15 @@ class SectionProducts extends React.Component {
                         <span className={classes.price}> €725</span>
                       </div>
                       <Tooltip
-                        id="tooltip-top"
-                        title="Saved to Wishlist"
-                        placement="left"
+                        id='tooltip-top'
+                        title='Saved to Wishlist'
+                        placement='left'
                         classes={{ tooltip: classes.tooltip }}
                       >
                         <Button
                           justIcon
                           simple
-                          color="rose"
+                          color='rose'
                           className={classes.pullRight}
                         >
                           <Favorite />
@@ -1151,12 +1151,12 @@ class SectionProducts extends React.Component {
                 <GridItem md={4} sm={4}>
                   <Card plain product>
                     <CardHeader noShadow image>
-                      <a href="#pablo">
-                        <img src={suit6} alt=".." />
+                      <a href='#pablo'>
+                        <img src={suit6} alt='..' />
                       </a>
                     </CardHeader>
                     <CardBody plain>
-                      <a href="#pablo">
+                      <a href='#pablo'>
                         <h4 className={classes.cardTitle}>Boglioli</h4>
                       </a>
                       <p className={classes.description}>
@@ -1168,15 +1168,15 @@ class SectionProducts extends React.Component {
                         <span className={classes.price}> €699</span>
                       </div>
                       <Tooltip
-                        id="tooltip-top"
-                        title="Save to Wishlist"
-                        placement="left"
+                        id='tooltip-top'
+                        title='Save to Wishlist'
+                        placement='left'
                         classes={{ tooltip: classes.tooltip }}
                       >
                         <Button
                           justIcon
                           simple
-                          color="rose"
+                          color='rose'
                           className={classes.pullRight}
                         >
                           <FavoriteBorder />
@@ -1190,7 +1190,7 @@ class SectionProducts extends React.Component {
                   sm={3}
                   className={classNames(classes.mlAuto, classes.mrAuto)}
                 >
-                  <Button round color="rose">
+                  <Button round color='rose'>
                     Load more...
                   </Button>
                 </GridItem>
@@ -1211,7 +1211,7 @@ class SectionProducts extends React.Component {
                   >
                     Productivity Apps
                   </h6>
-                  <a href="#pablo">
+                  <a href='#pablo'>
                     <h3 className={classes.cardTitle}>
                       The best trends in fashion 2017
                     </h3>
@@ -1221,7 +1221,7 @@ class SectionProducts extends React.Component {
                     human foundation in truth And I love you like Kanye loves
                     Kanye I love Rick Owens’ bed design but the back is...
                   </p>
-                  <Button href="#" round color="white">
+                  <Button href='#' round color='white'>
                     <Subject /> Read
                   </Button>
                 </CardBody>
@@ -1238,7 +1238,7 @@ class SectionProducts extends React.Component {
                   >
                     FASHION NEWS
                   </h6>
-                  <a href="#pablo">
+                  <a href='#pablo'>
                     <h3 className={classes.cardTitle}>
                       Kanye joins the Yeezy team at Adidas
                     </h3>
@@ -1248,7 +1248,7 @@ class SectionProducts extends React.Component {
                     human foundation in truth And I love you like Kanye loves
                     Kanye I love Rick Owens’ bed design but the back is...
                   </p>
-                  <Button href="#" round color="white">
+                  <Button href='#' round color='white'>
                     <Subject /> Read
                   </Button>
                 </CardBody>
@@ -1265,7 +1265,7 @@ class SectionProducts extends React.Component {
                   >
                     Productivity Apps
                   </h6>
-                  <a href="#pablo">
+                  <a href='#pablo'>
                     <h3 className={classes.cardTitle}>
                       Learn how to use the new colors of 2017
                     </h3>
@@ -1275,7 +1275,7 @@ class SectionProducts extends React.Component {
                     human foundation in truth And I love you like Kanye loves
                     Kanye I love Rick Owens’ bed design but the back is...
                   </p>
-                  <Button href="#" round color="white">
+                  <Button href='#' round color='white'>
                     <Subject /> Read
                   </Button>
                 </CardBody>
@@ -1292,7 +1292,7 @@ class SectionProducts extends React.Component {
                   >
                     Tutorials
                   </h6>
-                  <a href="#pablo">
+                  <a href='#pablo'>
                     <h3 className={classes.cardTitle}>
                       Trending colors of 2017
                     </h3>
@@ -1302,7 +1302,7 @@ class SectionProducts extends React.Component {
                     human foundation in truth And I love you like Kanye loves
                     Kanye I love Rick Owens’ bed design but the back is...
                   </p>
-                  <Button href="#" round color="white">
+                  <Button href='#' round color='white'>
                     <Subject /> Read
                   </Button>
                 </CardBody>
@@ -1319,7 +1319,7 @@ class SectionProducts extends React.Component {
                   >
                     Productivity Style
                   </h6>
-                  <a href="#pablo">
+                  <a href='#pablo'>
                     <h3 className={classes.cardTitle}>Fashion & Style 2017</h3>
                   </a>
                   <p className={classes.description}>
@@ -1327,7 +1327,7 @@ class SectionProducts extends React.Component {
                     human foundation in truth And I love you like Kanye loves
                     Kanye I love Rick Owens’ bed design but the back is...
                   </p>
-                  <Button href="#" round color="white">
+                  <Button href='#' round color='white'>
                     <Subject /> Read
                   </Button>
                 </CardBody>
@@ -1336,8 +1336,8 @@ class SectionProducts extends React.Component {
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(styles)(SectionProducts);
+export default withStyles(styles)(SectionProducts)

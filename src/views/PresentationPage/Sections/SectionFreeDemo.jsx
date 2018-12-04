@@ -1,34 +1,34 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui icons
-import Close from "@material-ui/icons/Close";
-import Check from "@material-ui/icons/Check";
+import Close from '@material-ui/icons/Close'
+import Check from '@material-ui/icons/Check'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 
-import freeDemoStyle from "assets/jss/material-kit-pro-react/views/presentationSections/freeDemoStyle.jsx";
+import freeDemoStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/freeDemoStyle.jsx'
 
 class SectionFreeDemo extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.section}>
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem
               md={5}
               sm={8}
               className={`${classes.mlAuto} ${classes.mrAuto}`}
             >
               <div className={classes.iconGithub}>
-                <div className="fab fa-github" />
+                <div className='fab fa-github' />
               </div>
               <div>
                 <h2 className={classes.title}>Free Demo</h2>
@@ -41,9 +41,9 @@ class SectionFreeDemo extends React.Component {
                 </h5>
               </div>
               <Button
-                href="https://demos.creative-tim.com/material-kit-react/#/"
-                color="rose"
-                target="_blank"
+                href='https://demos.creative-tim.com/material-kit-react/#/'
+                color='rose'
+                target='_blank'
                 round
               >
                 View demo on github
@@ -70,7 +70,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.dangerColor
                             )}
-                          />{" "}
+                          />{' '}
                           Unconventional Cards
                         </li>
                         <li>
@@ -79,7 +79,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.dangerColor
                             )}
-                          />{" "}
+                          />{' '}
                           Sections
                         </li>
                         <li>
@@ -88,7 +88,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.dangerColor
                             )}
-                          />{" "}
+                          />{' '}
                           Photoshop for Prototype
                         </li>
                         <li>
@@ -97,7 +97,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.dangerColor
                             )}
-                          />{" "}
+                          />{' '}
                           Premium Support
                         </li>
                       </ul>
@@ -123,7 +123,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.successColor
                             )}
-                          />{" "}
+                          />{' '}
                           Unconventional Cards
                         </li>
                         <li>
@@ -132,7 +132,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.successColor
                             )}
-                          />{" "}
+                          />{' '}
                           Sections
                         </li>
                         <li>
@@ -141,7 +141,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.successColor
                             )}
-                          />{" "}
+                          />{' '}
                           Photoshop for Prototype
                         </li>
                         <li>
@@ -150,7 +150,7 @@ class SectionFreeDemo extends React.Component {
                               classes.cardIcons,
                               classes.successColor
                             )}
-                          />{" "}
+                          />{' '}
                           Premium Support
                         </li>
                       </ul>
@@ -162,8 +162,8 @@ class SectionFreeDemo extends React.Component {
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(freeDemoStyle)(SectionFreeDemo);
+export default withStyles(freeDemoStyle)(SectionFreeDemo)

@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import Muted from "components/Typography/Muted.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardHeader from 'components/Card/CardHeader.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import Muted from 'components/Typography/Muted.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 
-import bg10 from "assets/img/bg10.jpg";
+import bg10 from '../../../../static/assets/img/bg10.jpg'
 
-import cardProfile1 from "assets/img/faces/card-profile1-square.jpg";
-import cardProfile4 from "assets/img/faces/card-profile4-square.jpg";
+import cardProfile1 from '../../../../static/assets/img/faces/card-profile1-square.jpg'
+import cardProfile4 from '../../../../static/assets/img/faces/card-profile4-square.jpg'
 
-import sectionImageStyle from "assets/jss/material-kit-pro-react/views/blogPostsSections/sectionImageStyle.jsx";
+import sectionImageStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionImageStyle.jsx'
 
 function SectionImage({ ...props }) {
-  const { classes } = props;
+  const { classes } = props
   return (
     <div
       className={classes.section}
-      style={{ backgroundImage: "url(" + bg10 + ")" }}
+      style={{ backgroundImage: 'url(' + bg10 + ')' }}
     >
       <div className={classes.container}>
         <GridContainer>
@@ -33,8 +33,8 @@ function SectionImage({ ...props }) {
               <GridContainer>
                 <GridItem xs={12} sm={5} md={5}>
                   <CardHeader image plain>
-                    <a href="#pablo">
-                      <img src={cardProfile1} alt="..." />
+                    <a href='#pablo'>
+                      <img src={cardProfile1} alt='...' />
                     </a>
                   </CardHeader>
                 </GridItem>
@@ -50,14 +50,14 @@ function SectionImage({ ...props }) {
                     </p>
                   </CardBody>
                   <CardFooter profile plain>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-twitter" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-twitter' />
                     </Button>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-facebook-square" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-facebook-square' />
                     </Button>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-google" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-google' />
                     </Button>
                   </CardFooter>
                 </GridItem>
@@ -69,8 +69,8 @@ function SectionImage({ ...props }) {
               <GridContainer>
                 <GridItem xs={12} sm={5} md={5}>
                   <CardHeader image plain>
-                    <a href="#pablo">
-                      <img src={cardProfile4} alt="..." />
+                    <a href='#pablo'>
+                      <img src={cardProfile4} alt='...' />
                     </a>
                   </CardHeader>
                 </GridItem>
@@ -86,17 +86,17 @@ function SectionImage({ ...props }) {
                     </p>
                   </CardBody>
                   <CardFooter profile plain>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-linkedin-in" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-linkedin-in' />
                     </Button>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-facebook-square" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-facebook-square' />
                     </Button>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-dribbble" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-dribbble' />
                     </Button>
-                    <Button justIcon simple color="white" href="#pablo">
-                      <i className="fab fa-google" />
+                    <Button justIcon simple color='white' href='#pablo'>
+                      <i className='fab fa-google' />
                     </Button>
                   </CardFooter>
                 </GridItem>
@@ -106,7 +106,7 @@ function SectionImage({ ...props }) {
         </GridContainer>
       </div>
     </div>
-  );
+  )
 }
 
-export default withStyles(sectionImageStyle)(SectionImage);
+export default withStyles(sectionImageStyle)(SectionImage)

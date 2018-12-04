@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import officeStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/officeStyle.jsx";
+import officeStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/officeStyle.jsx'
 
 // office
-import office1 from "assets/img/examples/office1.jpg";
-import office2 from "assets/img/examples/office2.jpg";
-import office3 from "assets/img/examples/office3.jpg";
-import office4 from "assets/img/examples/office4.jpg";
-import office5 from "assets/img/examples/office5.jpg";
+import office1 from '../../../../static/assets/img/examples/office1.jpg'
+import office2 from '../../../../static/assets/img/examples/office2.jpg'
+import office3 from '../../../../static/assets/img/examples/office3.jpg'
+import office4 from '../../../../static/assets/img/examples/office4.jpg'
+import office5 from '../../../../static/assets/img/examples/office5.jpg'
 
 function SectionOffice(props) {
-  const { classes } = props;
+  const { classes } = props
   return (
     <div className={classes.office}>
       <GridContainer className={classes.textCenter}>
@@ -43,7 +43,7 @@ function SectionOffice(props) {
               classes.rounded
             )}
             src={office1}
-            alt="office1"
+            alt='office1'
           />
         </GridItem>
         <GridItem md={4} sm={4}>
@@ -54,7 +54,7 @@ function SectionOffice(props) {
               classes.rounded
             )}
             src={office2}
-            alt="office2"
+            alt='office2'
           />
         </GridItem>
         <GridItem md={4} sm={4}>
@@ -65,7 +65,7 @@ function SectionOffice(props) {
               classes.rounded
             )}
             src={office3}
-            alt="office3"
+            alt='office3'
           />
         </GridItem>
         <GridItem md={6} sm={6}>
@@ -76,7 +76,7 @@ function SectionOffice(props) {
               classes.rounded
             )}
             src={office4}
-            alt="office4"
+            alt='office4'
           />
         </GridItem>
         <GridItem md={6} sm={6}>
@@ -87,12 +87,12 @@ function SectionOffice(props) {
               classes.rounded
             )}
             src={office5}
-            alt="office5"
+            alt='office5'
           />
         </GridItem>
       </GridContainer>
     </div>
-  );
+  )
 }
 
-export default withStyles(officeStyle)(SectionOffice);
+export default withStyles(officeStyle)(SectionOffice)

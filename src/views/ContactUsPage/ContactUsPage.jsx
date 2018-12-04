@@ -1,36 +1,36 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // react components used to create a google map
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
-} from "react-google-maps";
+  Marker,
+} from 'react-google-maps'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import withStyles from '@material-ui/core/styles/withStyles'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import PinDrop from "@material-ui/icons/PinDrop";
-import Phone from "@material-ui/icons/Phone";
-import BusinessCenter from "@material-ui/icons/BusinessCenter";
+import Favorite from '@material-ui/icons/Favorite'
+import PinDrop from '@material-ui/icons/PinDrop'
+import Phone from '@material-ui/icons/Phone'
+import BusinessCenter from '@material-ui/icons/BusinessCenter'
 // core components
-import Header from "components/Header/Header.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Footer from "components/Footer/Footer.jsx";
+import Header from 'components/Header/Header.jsx'
+import HeaderLinks from 'components/Header/HeaderLinks.jsx'
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import InfoArea from 'components/InfoArea/InfoArea.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import Footer from 'components/Footer/Footer.jsx'
 
-import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.jsx";
+import contactUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/contactUsStyle.jsx'
 
 const CustomSkinMap = withScriptjs(
-  withGoogleMap(props => (
+  withGoogleMap((props) => (
     <GoogleMap
       defaultZoom={14}
       defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
@@ -39,96 +39,96 @@ const CustomSkinMap = withScriptjs(
         zoomControl: true,
         styles: [
           {
-            featureType: "water",
+            featureType: 'water',
             stylers: [
               { saturation: 43 },
               { lightness: -11 },
-              { hue: "#0088ff" }
-            ]
+              { hue: '#0088ff' },
+            ],
           },
           {
-            featureType: "road",
-            elementType: "geometry.fill",
+            featureType: 'road',
+            elementType: 'geometry.fill',
             stylers: [
-              { hue: "#ff0000" },
+              { hue: '#ff0000' },
               { saturation: -100 },
-              { lightness: 99 }
-            ]
+              { lightness: 99 },
+            ],
           },
           {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#808080" }, { lightness: 54 }]
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [{ color: '#808080' }, { lightness: 54 }],
           },
           {
-            featureType: "landscape.man_made",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ece2d9" }]
+            featureType: 'landscape.man_made',
+            elementType: 'geometry.fill',
+            stylers: [{ color: '#ece2d9' }],
           },
           {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ccdca1" }]
+            featureType: 'poi.park',
+            elementType: 'geometry.fill',
+            stylers: [{ color: '#ccdca1' }],
           },
           {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#767676" }]
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [{ color: '#767676' }],
           },
           {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#ffffff" }]
+            featureType: 'road',
+            elementType: 'labels.text.stroke',
+            stylers: [{ color: '#ffffff' }],
           },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
+          { featureType: 'poi', stylers: [{ visibility: 'off' }] },
           {
-            featureType: "landscape.natural",
-            elementType: "geometry.fill",
-            stylers: [{ visibility: "on" }, { color: "#b8cb93" }]
+            featureType: 'landscape.natural',
+            elementType: 'geometry.fill',
+            stylers: [{ visibility: 'on' }, { color: '#b8cb93' }],
           },
-          { featureType: "poi.park", stylers: [{ visibility: "on" }] },
+          { featureType: 'poi.park', stylers: [{ visibility: 'on' }] },
           {
-            featureType: "poi.sports_complex",
-            stylers: [{ visibility: "on" }]
+            featureType: 'poi.sports_complex',
+            stylers: [{ visibility: 'on' }],
           },
-          { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
+          { featureType: 'poi.medical', stylers: [{ visibility: 'on' }] },
           {
-            featureType: "poi.business",
-            stylers: [{ visibility: "simplified" }]
-          }
-        ]
+            featureType: 'poi.business',
+            stylers: [{ visibility: 'simplified' }],
+          },
+        ],
       }}
     >
       <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
     </GoogleMap>
   ))
-);
+)
 
 class ContactUsPage extends React.Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0)
+    document.body.scrollTop = 0
   }
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div>
         <Header
-          brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="dark" />}
+          brand='Material Kit PRO React'
+          links={<HeaderLinks dropdownHoverColor='dark' />}
           fixed
-          color="dark"
+          color='dark'
         />
         <div className={classes.bigMap}>
           <CustomSkinMap
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+            googleMapURL='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={
               <div
                 style={{
                   height: `100%`,
-                  borderRadius: "6px",
-                  overflow: "hidden"
+                  borderRadius: '6px',
+                  overflow: 'hidden',
                 }}
               />
             }
@@ -149,39 +149,39 @@ class ContactUsPage extends React.Component {
                   </p>
                   <form>
                     <CustomInput
-                      labelText="Your Name"
-                      id="float"
+                      labelText='Your Name'
+                      id='float'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                     />
                     <CustomInput
-                      labelText="Email address"
-                      id="float"
+                      labelText='Email address'
+                      id='float'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                     />
                     <CustomInput
-                      labelText="Phone"
-                      id="float"
+                      labelText='Phone'
+                      id='float'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                     />
                     <CustomInput
-                      labelText="Your message"
-                      id="float"
+                      labelText='Your message'
+                      id='float'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         multiline: true,
-                        rows: 6
+                        rows: 6,
                       }}
                     />
                     <div className={classes.textCenter}>
-                      <Button color="primary" round>
+                      <Button color='primary' round>
                         Contact us
                       </Button>
                     </div>
@@ -190,19 +190,19 @@ class ContactUsPage extends React.Component {
                 <GridItem md={4} sm={4} className={classes.mlAuto}>
                   <InfoArea
                     className={classes.info}
-                    title="Find us at the office"
+                    title='Find us at the office'
                     description={
                       <p>
-                        Bld Mihail Kogalniceanu, nr. 8, <br /> 7652 Bucharest,{" "}
+                        Bld Mihail Kogalniceanu, nr. 8, <br /> 7652 Bucharest,{' '}
                         <br /> Romania
                       </p>
                     }
                     icon={PinDrop}
-                    iconColor="primary"
+                    iconColor='primary'
                   />
                   <InfoArea
                     className={classes.info}
-                    title="Give us a ring"
+                    title='Give us a ring'
                     description={
                       <p>
                         Michael Jordan <br /> +40 762 321 762 <br /> Mon - Fri,
@@ -210,11 +210,11 @@ class ContactUsPage extends React.Component {
                       </p>
                     }
                     icon={Phone}
-                    iconColor="primary"
+                    iconColor='primary'
                   />
                   <InfoArea
                     className={classes.info}
-                    title="Legal Information"
+                    title='Legal Information'
                     description={
                       <p>
                         Creative Tim Ltd. <br /> VAT · EN2341241 <br /> IBAN ·
@@ -222,7 +222,7 @@ class ContactUsPage extends React.Component {
                       </p>
                     }
                     icon={BusinessCenter}
-                    iconColor="primary"
+                    iconColor='primary'
                   />
                 </GridItem>
               </GridContainer>
@@ -236,7 +236,7 @@ class ContactUsPage extends React.Component {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/"
+                      href='https://www.creative-tim.com/'
                       className={classes.block}
                     >
                       Creative Tim
@@ -244,7 +244,7 @@ class ContactUsPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
+                      href='https://www.creative-tim.com/presentation'
                       className={classes.block}
                     >
                       About us
@@ -252,7 +252,7 @@ class ContactUsPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="//blog.creative-tim.com/"
+                      href='//blog.creative-tim.com/'
                       className={classes.block}
                     >
                       Blog
@@ -260,7 +260,7 @@ class ContactUsPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/license"
+                      href='https://www.creative-tim.com/license'
                       className={classes.block}
                     >
                       Licenses
@@ -269,17 +269,17 @@ class ContactUsPage extends React.Component {
                 </List>
               </div>
               <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{" "}
-                <Favorite className={classes.icon} /> by{" "}
-                <a href="https://www.creative-tim.com">Creative Tim</a> for a
+                &copy; {1900 + new Date().getYear()} , made with{' '}
+                <Favorite className={classes.icon} /> by{' '}
+                <a href='https://www.creative-tim.com'>Creative Tim</a> for a
                 better web.
               </div>
             </div>
           }
         />
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(contactUsStyle)(ContactUsPage);
+export default withStyles(contactUsStyle)(ContactUsPage)

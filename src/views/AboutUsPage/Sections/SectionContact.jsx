@@ -1,32 +1,32 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // @material-ui/core components
-import FormControl from "@material-ui/core/FormControl";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
-import withStyles from "@material-ui/core/styles/withStyles";
+import FormControl from '@material-ui/core/FormControl'
+import MenuItem from '@material-ui/core/MenuItem'
+import Select from '@material-ui/core/Select'
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 
-import contactStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/contactStyle.jsx";
+import contactStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/contactStyle.jsx'
 
 class SectionContact extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      specialitySelect: "1"
-    };
+      specialitySelect: '1',
+    }
   }
-  handleSpeciality = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
+  handleSpeciality = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.aboutUs}>
         <GridContainer>
@@ -47,17 +47,17 @@ class SectionContact extends React.Component {
               <GridContainer>
                 <GridItem md={4} sm={4}>
                   <CustomInput
-                    labelText="Your name"
+                    labelText='Your name'
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                 </GridItem>
                 <GridItem md={4} sm={4}>
                   <CustomInput
-                    labelText="Your email"
+                    labelText='Your email'
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                 </GridItem>
@@ -70,22 +70,22 @@ class SectionContact extends React.Component {
                   >
                     <Select
                       MenuProps={{
-                        className: classes.selectMenu
+                        className: classes.selectMenu,
                       }}
                       classes={{
-                        select: classes.select
+                        select: classes.select,
                       }}
                       value={this.state.specialitySelect}
                       onChange={this.handleSpeciality}
                       inputProps={{
-                        name: "specialitySelect",
-                        id: "speciality-select"
+                        name: 'specialitySelect',
+                        id: 'speciality-select',
                       }}
                     >
                       <MenuItem
                         disabled
                         classes={{
-                          root: classes.selectMenuItem
+                          root: classes.selectMenuItem,
                         }}
                       >
                         Speciality
@@ -93,27 +93,27 @@ class SectionContact extends React.Component {
                       <MenuItem
                         classes={{
                           root: classes.selectMenuItem,
-                          selected: classes.selectMenuItemSelected
+                          selected: classes.selectMenuItemSelected,
                         }}
-                        value="1"
+                        value='1'
                       >
                         I'm a Designer
                       </MenuItem>
                       <MenuItem
                         classes={{
                           root: classes.selectMenuItem,
-                          selected: classes.selectMenuItemSelected
+                          selected: classes.selectMenuItemSelected,
                         }}
-                        value="2"
+                        value='2'
                       >
                         I'm a Developer
                       </MenuItem>
                       <MenuItem
                         classes={{
                           root: classes.selectMenuItem,
-                          selected: classes.selectMenuItemSelected
+                          selected: classes.selectMenuItemSelected,
                         }}
-                        value="3"
+                        value='3'
                       >
                         I'm a Hero
                       </MenuItem>
@@ -131,7 +131,7 @@ class SectionContact extends React.Component {
                     classes.textCenter
                   )}
                 >
-                  <Button color="primary" round>
+                  <Button color='primary' round>
                     Let's talk
                   </Button>
                 </GridItem>
@@ -140,8 +140,8 @@ class SectionContact extends React.Component {
           </GridItem>
         </GridContainer>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(contactStyle)(SectionContact);
+export default withStyles(contactStyle)(SectionContact)

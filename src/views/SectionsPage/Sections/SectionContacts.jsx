@@ -1,36 +1,36 @@
-import React from "react";
+import React from 'react'
 // react components used to create a google map
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
-} from "react-google-maps";
+  Marker,
+} from 'react-google-maps'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import withStyles from '@material-ui/core/styles/withStyles'
+import Checkbox from '@material-ui/core/Checkbox'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 // @material-ui/icons
-import PinDrop from "@material-ui/icons/PinDrop";
-import Phone from "@material-ui/icons/Phone";
-import Check from "@material-ui/icons/Check";
+import PinDrop from '@material-ui/icons/PinDrop'
+import Phone from '@material-ui/icons/Phone'
+import Check from '@material-ui/icons/Check'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import InfoArea from 'components/InfoArea/InfoArea.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardHeader from 'components/Card/CardHeader.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 
-import contactsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.jsx";
+import contactsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.jsx'
 
-import city from "assets/img/examples/city.jpg";
+import city from '../../../../static/assets/img/examples/city.jpg'
 
 const RegularMap = withScriptjs(
-  withGoogleMap(props => (
+  withGoogleMap((props) => (
     <GoogleMap
       defaultZoom={14}
       defaultCenter={{ lat: 44.43353, lng: 26.093928 - 0.025 }}
@@ -39,97 +39,97 @@ const RegularMap = withScriptjs(
         zoomControl: true,
         styles: [
           {
-            featureType: "water",
+            featureType: 'water',
             stylers: [
               { saturation: 43 },
               { lightness: -11 },
-              { hue: "#0088ff" }
-            ]
+              { hue: '#0088ff' },
+            ],
           },
           {
-            featureType: "road",
-            elementType: "geometry.fill",
+            featureType: 'road',
+            elementType: 'geometry.fill',
             stylers: [
-              { hue: "#ff0000" },
+              { hue: '#ff0000' },
               { saturation: -100 },
-              { lightness: 99 }
-            ]
+              { lightness: 99 },
+            ],
           },
           {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#808080" }, { lightness: 54 }]
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [{ color: '#808080' }, { lightness: 54 }],
           },
           {
-            featureType: "landscape.man_made",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ece2d9" }]
+            featureType: 'landscape.man_made',
+            elementType: 'geometry.fill',
+            stylers: [{ color: '#ece2d9' }],
           },
           {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ccdca1" }]
+            featureType: 'poi.park',
+            elementType: 'geometry.fill',
+            stylers: [{ color: '#ccdca1' }],
           },
           {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#767676" }]
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [{ color: '#767676' }],
           },
           {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#ffffff" }]
+            featureType: 'road',
+            elementType: 'labels.text.stroke',
+            stylers: [{ color: '#ffffff' }],
           },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
+          { featureType: 'poi', stylers: [{ visibility: 'off' }] },
           {
-            featureType: "landscape.natural",
-            elementType: "geometry.fill",
-            stylers: [{ visibility: "on" }, { color: "#b8cb93" }]
+            featureType: 'landscape.natural',
+            elementType: 'geometry.fill',
+            stylers: [{ visibility: 'on' }, { color: '#b8cb93' }],
           },
-          { featureType: "poi.park", stylers: [{ visibility: "on" }] },
+          { featureType: 'poi.park', stylers: [{ visibility: 'on' }] },
           {
-            featureType: "poi.sports_complex",
-            stylers: [{ visibility: "on" }]
+            featureType: 'poi.sports_complex',
+            stylers: [{ visibility: 'on' }],
           },
-          { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
+          { featureType: 'poi.medical', stylers: [{ visibility: 'on' }] },
           {
-            featureType: "poi.business",
-            stylers: [{ visibility: "simplified" }]
-          }
-        ]
+            featureType: 'poi.business',
+            stylers: [{ visibility: 'simplified' }],
+          },
+        ],
       }}
     >
       <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
     </GoogleMap>
   ))
-);
+)
 
 class SectionContacts extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      checked: []
-    };
+      checked: [],
+    }
   }
   handleToggle(value) {
-    const { checked } = this.state;
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+    const { checked } = this.state
+    const currentIndex = checked.indexOf(value)
+    const newChecked = [...checked]
 
     if (currentIndex === -1) {
-      newChecked.push(value);
+      newChecked.push(value)
     } else {
-      newChecked.splice(currentIndex, 1);
+      newChecked.splice(currentIndex, 1)
     }
 
     this.setState({
-      checked: newChecked
-    });
+      checked: newChecked,
+    })
   }
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes, ...rest } = this.props
     return (
-      <div className="cd-section" {...rest}>
+      <div className='cd-section' {...rest}>
         {/* Contact us 1 START */}
         <div
           className={`${classes.contacts} ${classes.section}`}
@@ -145,7 +145,7 @@ class SectionContacts extends React.Component {
                 </h5>
                 <InfoArea
                   className={classes.infoArea}
-                  title="Find us at the office"
+                  title='Find us at the office'
                   description={
                     <span>
                       Bld Mihail Kogalniceanu, nr. 8,
@@ -157,7 +157,7 @@ class SectionContacts extends React.Component {
                 />
                 <InfoArea
                   className={classes.infoArea}
-                  title="Give us a ring"
+                  title='Give us a ring'
                   description={
                     <span>
                       Michael Jordan
@@ -173,7 +173,7 @@ class SectionContacts extends React.Component {
                   <form>
                     <CardHeader
                       contact
-                      color="primary"
+                      color='primary'
                       className={classes.textCenter}
                     >
                       <h4 className={classes.cardTitle}>Contact Us</h4>
@@ -182,39 +182,39 @@ class SectionContacts extends React.Component {
                       <GridContainer>
                         <GridItem xs={12} sm={6} md={6}>
                           <CustomInput
-                            labelText="First Name"
-                            id="first"
+                            labelText='First Name'
+                            id='first'
                             formControlProps={{
-                              fullWidth: true
+                              fullWidth: true,
                             }}
                           />
                         </GridItem>
                         <GridItem xs={12} sm={6} md={6}>
                           <CustomInput
-                            labelText="Last Name"
-                            id="last"
+                            labelText='Last Name'
+                            id='last'
                             formControlProps={{
-                              fullWidth: true
+                              fullWidth: true,
                             }}
                           />
                         </GridItem>
                       </GridContainer>
                       <CustomInput
-                        labelText="Email Address"
-                        id="email-address"
+                        labelText='Email Address'
+                        id='email-address'
                         formControlProps={{
-                          fullWidth: true
+                          fullWidth: true,
                         }}
                       />
                       <CustomInput
-                        labelText="Your Message"
-                        id="message"
+                        labelText='Your Message'
+                        id='message'
                         formControlProps={{
-                          fullWidth: true
+                          fullWidth: true,
                         }}
                         inputProps={{
                           multiline: true,
-                          rows: 5
+                          rows: 5,
                         }}
                       />
                     </CardBody>
@@ -230,14 +230,14 @@ class SectionContacts extends React.Component {
                             icon={<Check className={classes.uncheckedIcon} />}
                             classes={{
                               checked: classes.checked,
-                              root: classes.checkRoot
+                              root: classes.checkRoot,
                             }}
                           />
                         }
                         classes={{ label: classes.label }}
                         label="I'm not a robot"
                       />
-                      <Button color="primary" className={classes.pullRight}>
+                      <Button color='primary' className={classes.pullRight}>
                         Send Message
                       </Button>
                     </CardFooter>
@@ -252,14 +252,14 @@ class SectionContacts extends React.Component {
         <div className={classes.contacts2}>
           <div className={classes.map}>
             <RegularMap
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+              googleMapURL='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={
                 <div
                   style={{
                     height: `100%`,
-                    borderRadius: "6px",
-                    overflow: "hidden"
+                    borderRadius: '6px',
+                    overflow: 'hidden',
                   }}
                 />
               }
@@ -269,7 +269,7 @@ class SectionContacts extends React.Component {
           <GridItem xs={12} sm={6} md={6}>
             <Card className={classes.card2}>
               <form>
-                <CardHeader contact color="rose" className={classes.textCenter}>
+                <CardHeader contact color='rose' className={classes.textCenter}>
                   <h4 className={classes.cardTitle}>Contact Us</h4>
                 </CardHeader>
                 <CardBody>
@@ -277,7 +277,7 @@ class SectionContacts extends React.Component {
                     <GridItem xs={12} sm={6} md={6}>
                       <InfoArea
                         className={classes.infoArea2}
-                        title="Give us a ring"
+                        title='Give us a ring'
                         description={
                           <span>
                             Michael Jordan
@@ -286,13 +286,13 @@ class SectionContacts extends React.Component {
                           </span>
                         }
                         icon={Phone}
-                        iconColor="rose"
+                        iconColor='rose'
                       />
                     </GridItem>
                     <GridItem xs={12} sm={6} md={6}>
                       <InfoArea
                         className={classes.infoArea2}
-                        title="Find us at the office"
+                        title='Find us at the office'
                         description={
                           <span>
                             Bld Mihail Kogalniceanu, nr. 8,
@@ -301,39 +301,39 @@ class SectionContacts extends React.Component {
                           </span>
                         }
                         icon={PinDrop}
-                        iconColor="rose"
+                        iconColor='rose'
                       />
                     </GridItem>
                   </GridContainer>
                   <GridContainer>
                     <GridItem xs={12} sm={6} md={6}>
                       <CustomInput
-                        labelText="Full Name"
-                        id="first2"
+                        labelText='Full Name'
+                        id='first2'
                         formControlProps={{
-                          fullWidth: true
+                          fullWidth: true,
                         }}
                       />
                     </GridItem>
                     <GridItem xs={12} sm={6} md={6}>
                       <CustomInput
-                        labelText="Email Address"
-                        id="email-address2"
+                        labelText='Email Address'
+                        id='email-address2'
                         formControlProps={{
-                          fullWidth: true
+                          fullWidth: true,
                         }}
                       />
                     </GridItem>
                   </GridContainer>
                   <CustomInput
-                    labelText="Your Message"
-                    id="message2"
+                    labelText='Your Message'
+                    id='message2'
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                     inputProps={{
                       multiline: true,
-                      rows: 5
+                      rows: 5,
                     }}
                   />
                 </CardBody>
@@ -347,14 +347,14 @@ class SectionContacts extends React.Component {
                         icon={<Check className={classes.uncheckedIcon} />}
                         classes={{
                           checked: classes.checked,
-                          root: classes.checkRoot
+                          root: classes.checkRoot,
                         }}
                       />
                     }
                     classes={{ label: classes.label }}
                     label="I'm not a robot"
                   />
-                  <Button color="rose" className={classes.pullRight}>
+                  <Button color='rose' className={classes.pullRight}>
                     Send Message
                   </Button>
                 </CardFooter>
@@ -364,8 +364,8 @@ class SectionContacts extends React.Component {
         </div>
         {/* Contact us 2 END */}
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(contactsStyle)(SectionContacts);
+export default withStyles(contactsStyle)(SectionContacts)

@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import InputAdornment from "@material-ui/core/InputAdornment";
+import withStyles from '@material-ui/core/styles/withStyles'
+import InputAdornment from '@material-ui/core/InputAdornment'
 // @material-ui icons
-import Mail from "@material-ui/icons/Mail";
+import Mail from '@material-ui/icons/Mail'
 
-import bg7 from "assets/img/bg7.jpg";
+import bg7 from '../../../../static/assets/img/bg7.jpg'
 
-import styles from "assets/jss/material-kit-pro-react/views/componentsSections/preFooter.jsx";
+import styles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/preFooter.jsx'
 
-const SectionPreFooter = props => {
-  const { classes } = props;
+const SectionPreFooter = (props) => {
+  const { classes } = props
   return (
     <div>
       <div className={classes.container}>
@@ -35,41 +35,41 @@ const SectionPreFooter = props => {
         )}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem md={12}>
               <h4 className={classes.title}>Thank you for your support!</h4>
             </GridItem>
             <Button
-              color="twitter"
+              color='twitter'
               round
-              href="#pablo"
-              onClick={e => e.preventDefault()}
+              href='#pablo'
+              onClick={(e) => e.preventDefault()}
             >
-              <i className="fab fa-twitter" /> Twitter · 2.5K
+              <i className='fab fa-twitter' /> Twitter · 2.5K
             </Button>
             <Button
-              color="facebook"
+              color='facebook'
               round
-              href="#pablo"
-              onClick={e => e.preventDefault()}
+              href='#pablo'
+              onClick={(e) => e.preventDefault()}
             >
-              <i className="fab fa-facebook" /> Facebook · 3.2k
+              <i className='fab fa-facebook' /> Facebook · 3.2k
             </Button>
             <Button
-              color="google"
+              color='google'
               round
-              href="#pablo"
-              onClick={e => e.preventDefault()}
+              href='#pablo'
+              onClick={(e) => e.preventDefault()}
             >
-              <i className="fab fa-google-plus-g" /> Google · 1.2k
+              <i className='fab fa-google-plus-g' /> Google · 1.2k
             </Button>
             <Button
-              color="dribbble"
+              color='dribbble'
               round
-              href="#pablo"
-              onClick={e => e.preventDefault()}
+              href='#pablo'
+              onClick={(e) => e.preventDefault()}
             >
-              <i className="fab fa-dribbble" /> Dribbble · 1.8k
+              <i className='fab fa-dribbble' /> Dribbble · 1.8k
             </Button>
           </GridContainer>
         </div>
@@ -85,71 +85,71 @@ const SectionPreFooter = props => {
         )}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="twitter"
+                color='twitter'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-twitter" />
+                <i className='fab fa-twitter' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="facebook"
+                color='facebook'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-facebook" />
+                <i className='fab fa-facebook' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="google"
+                color='google'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-google-plus-g" />
+                <i className='fab fa-google-plus-g' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="dribbble"
+                color='dribbble'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-dribbble" />
+                <i className='fab fa-dribbble' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="youtube"
+                color='youtube'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-youtube" />
+                <i className='fab fa-youtube' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="instagram"
+                color='instagram'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-instagram" />
+                <i className='fab fa-instagram' />
               </Button>
             </GridItem>
           </GridContainer>
@@ -166,71 +166,71 @@ const SectionPreFooter = props => {
         )}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="white"
+                color='white'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-twitter" />
+                <i className='fab fa-twitter' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="white"
+                color='white'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-facebook" />
+                <i className='fab fa-facebook' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="white"
+                color='white'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-google-plus-g" />
+                <i className='fab fa-google-plus-g' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="white"
+                color='white'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-dribbble" />
+                <i className='fab fa-dribbble' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="white"
+                color='white'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-youtube" />
+                <i className='fab fa-youtube' />
               </Button>
             </GridItem>
             <GridItem xs={12} sm={2} md={2} className={classes.border}>
               <Button
-                color="white"
+                color='white'
                 justIcon
                 simple
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href='#pablo'
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-instagram" />
+                <i className='fab fa-instagram' />
               </Button>
             </GridItem>
           </GridContainer>
@@ -266,24 +266,24 @@ const SectionPreFooter = props => {
                     <GridContainer>
                       <GridItem xs={12} sm={6} md={6} lg={8}>
                         <CustomInput
-                          id="emailPreFooter"
+                          id='emailPreFooter'
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.cardForm
+                            className: classes.cardForm,
                           }}
                           inputProps={{
                             startAdornment: (
-                              <InputAdornment position="start">
+                              <InputAdornment position='start'>
                                 <Mail />
                               </InputAdornment>
                             ),
-                            placeholder: "Your Email..."
+                            placeholder: 'Your Email...',
                           }}
                         />
                       </GridItem>
                       <GridItem xs={12} sm={6} md={6} lg={4}>
                         <Button
-                          color="primary"
+                          color='primary'
                           block
                           className={classes.subscribeButton}
                         >
@@ -322,24 +322,24 @@ const SectionPreFooter = props => {
                     <GridContainer>
                       <GridItem xs={12} sm={6} md={6} lg={8}>
                         <CustomInput
-                          id="emailPreFooter2"
+                          id='emailPreFooter2'
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.formFix
+                            className: classes.formFix,
                           }}
                           inputProps={{
                             startAdornment: (
-                              <InputAdornment position="start">
+                              <InputAdornment position='start'>
                                 <Mail />
                               </InputAdornment>
                             ),
-                            placeholder: "Your Email..."
+                            placeholder: 'Your Email...',
                           }}
                         />
                       </GridItem>
                       <GridItem xs={12} sm={6} md={6} lg={4}>
                         <Button
-                          color="rose"
+                          color='rose'
                           round
                           block
                           className={classes.subscribeButton}
@@ -356,7 +356,7 @@ const SectionPreFooter = props => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default withStyles(styles)(SectionPreFooter);
+export default withStyles(styles)(SectionPreFooter)

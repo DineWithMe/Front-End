@@ -1,52 +1,55 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import withStyles from '@material-ui/core/styles/withStyles'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
+import Header from 'components/Header/Header.jsx'
+import Footer from 'components/Footer/Footer.jsx'
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import HeaderLinks from 'components/Header/HeaderLinks.jsx'
+import Parallax from 'components/Parallax/Parallax.jsx'
 
-import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.jsx";
+import landingPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/landingPageStyle.jsx'
 
 // Sections for this page
-import SectionProduct from "./Sections/SectionProduct.jsx";
-import SectionTeam from "./Sections/SectionTeam.jsx";
-import SectionWork from "./Sections/SectionWork.jsx";
+import SectionProduct from './Sections/SectionProduct.jsx'
+import SectionTeam from './Sections/SectionTeam.jsx'
+import SectionWork from './Sections/SectionWork.jsx'
 
-const dashboardRoutes = [];
+const dashboardRoutes = []
 
 class LandingPage extends React.Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0)
+    document.body.scrollTop = 0
   }
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes, ...rest } = this.props
     return (
       <div>
         <Header
-          color="transparent"
+          color='transparent'
           routes={dashboardRoutes}
-          brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="info" />}
+          brand='Material Kit PRO React'
+          links={<HeaderLinks dropdownHoverColor='info' />}
           fixed
           changeColorOnScroll={{
             height: 300,
-            color: "info"
+            color: 'info',
           }}
           {...rest}
         />
-        <Parallax image={require("assets/img/bg8.jpg")} filter="dark">
+        <Parallax
+          image={require('../../../static/assets/img/bg8.jpg')}
+          filter='dark'
+        >
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={6} md={6}>
@@ -59,13 +62,14 @@ class LandingPage extends React.Component {
                 </h4>
                 <br />
                 <Button
-                  color="danger"
-                  size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  color='danger'
+                  size='lg'
+                  href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
-                  <i className="fas fa-play" />Watch video
+                  <i className='fas fa-play' />
+                  Watch video
                 </Button>
               </GridItem>
             </GridContainer>
@@ -85,7 +89,7 @@ class LandingPage extends React.Component {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/"
+                      href='https://www.creative-tim.com/'
                       className={classes.block}
                     >
                       Creative Tim
@@ -93,7 +97,7 @@ class LandingPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
+                      href='https://www.creative-tim.com/presentation'
                       className={classes.block}
                     >
                       About us
@@ -101,7 +105,7 @@ class LandingPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="//blog.creative-tim.com/"
+                      href='//blog.creative-tim.com/'
                       className={classes.block}
                     >
                       Blog
@@ -109,7 +113,7 @@ class LandingPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/license"
+                      href='https://www.creative-tim.com/license'
                       className={classes.block}
                     >
                       Licenses
@@ -118,17 +122,17 @@ class LandingPage extends React.Component {
                 </List>
               </div>
               <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{" "}
-                <Favorite className={classes.icon} /> by{" "}
-                <a href="https://www.creative-tim.com">Creative Tim</a> for a
+                &copy; {1900 + new Date().getYear()} , made with{' '}
+                <Favorite className={classes.icon} /> by{' '}
+                <a href='https://www.creative-tim.com'>Creative Tim</a> for a
                 better web.
               </div>
             </div>
           }
         />
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(landingPageStyle)(LandingPage);
+export default withStyles(landingPageStyle)(LandingPage)

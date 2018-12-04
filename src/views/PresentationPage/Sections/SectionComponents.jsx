@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import componentsStyle from "assets/jss/material-kit-pro-react/views/presentationSections/componentsStyle.jsx";
+import componentsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/componentsStyle.jsx'
 
-import macbookImage from "assets/img/assets-for-demo/presentationViewSectionComponent/laptop-basics.png";
-import shoppingCartImage from "assets/img/assets-for-demo/presentationViewSectionComponent/table.jpg";
-import shareButtonImage from "assets/img/assets-for-demo/presentationViewSectionComponent/share-btn.jpg";
-import cardImage from "assets/img/assets-for-demo/presentationViewSectionComponent/coloured-card-with-btn.jpg";
-import twitterImage from "assets/img/assets-for-demo/presentationViewSectionComponent/coloured-card.jpg";
-import iconsImage from "assets/img/assets-for-demo/presentationViewSectionComponent/social-row.jpg";
-import repostImage from "assets/img/assets-for-demo/presentationViewSectionComponent/pin-btn.jpg";
+import macbookImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/laptop-basics.png'
+import shoppingCartImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/table.jpg'
+import shareButtonImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/share-btn.jpg'
+import cardImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/coloured-card-with-btn.jpg'
+import twitterImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/coloured-card.jpg'
+import iconsImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/social-row.jpg'
+import repostImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/pin-btn.jpg'
 
 class SectionComponents extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div>
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem md={5} lg={5} sm={12} xs={12}>
               <h3 className={classes.title}>Basic Components</h3>
               <h6 className={classes.description}>
@@ -40,37 +40,37 @@ class SectionComponents extends React.Component {
               <div className={classes.imageContainer}>
                 <img
                   src={macbookImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.componentsMacbook}
                 />
                 <img
                   src={shoppingCartImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.shoppingCart}
                 />
                 <img
                   src={shareButtonImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.shareButton}
                 />
                 <img
                   src={cardImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.cardImage}
                 />
                 <img
                   src={twitterImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.twitterImage}
                 />
                 <img
                   src={iconsImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.iconsImage}
                 />
                 <img
                   src={repostImage}
-                  alt="macbook"
+                  alt='macbook'
                   className={classes.repostImage}
                 />
               </div>
@@ -78,8 +78,8 @@ class SectionComponents extends React.Component {
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(componentsStyle)(SectionComponents);
+export default withStyles(componentsStyle)(SectionComponents)

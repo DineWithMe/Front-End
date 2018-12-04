@@ -1,90 +1,90 @@
-import React from "react";
+import React from 'react'
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Icon from "@material-ui/core/Icon";
+import withStyles from '@material-ui/core/styles/withStyles'
+import Icon from '@material-ui/core/Icon'
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import Share from "@material-ui/icons/Share";
-import ChatBubble from "@material-ui/icons/ChatBubble";
-import Schedule from "@material-ui/icons/Schedule";
-import TrendingUp from "@material-ui/icons/TrendingUp";
-import Subject from "@material-ui/icons/Subject";
-import WatchLater from "@material-ui/icons/WatchLater";
-import People from "@material-ui/icons/People";
-import Business from "@material-ui/icons/Business";
-import Check from "@material-ui/icons/Check";
-import Close from "@material-ui/icons/Close";
-import Delete from "@material-ui/icons/Delete";
-import Bookmark from "@material-ui/icons/Bookmark";
-import Refresh from "@material-ui/icons/Refresh";
-import Receipt from "@material-ui/icons/Receipt";
+import Favorite from '@material-ui/icons/Favorite'
+import Share from '@material-ui/icons/Share'
+import ChatBubble from '@material-ui/icons/ChatBubble'
+import Schedule from '@material-ui/icons/Schedule'
+import TrendingUp from '@material-ui/icons/TrendingUp'
+import Subject from '@material-ui/icons/Subject'
+import WatchLater from '@material-ui/icons/WatchLater'
+import People from '@material-ui/icons/People'
+import Business from '@material-ui/icons/Business'
+import Check from '@material-ui/icons/Check'
+import Close from '@material-ui/icons/Close'
+import Delete from '@material-ui/icons/Delete'
+import Bookmark from '@material-ui/icons/Bookmark'
+import Refresh from '@material-ui/icons/Refresh'
+import Receipt from '@material-ui/icons/Receipt'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import CardAvatar from "components/Card/CardAvatar.jsx";
-import Info from "components/Typography/Info.jsx";
-import Danger from "components/Typography/Danger.jsx";
-import Success from "components/Typography/Success.jsx";
-import Warning from "components/Typography/Warning.jsx";
-import Rose from "components/Typography/Rose.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardHeader from 'components/Card/CardHeader.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import CardAvatar from 'components/Card/CardAvatar.jsx'
+import Info from 'components/Typography/Info.jsx'
+import Danger from 'components/Typography/Danger.jsx'
+import Success from 'components/Typography/Success.jsx'
+import Warning from 'components/Typography/Warning.jsx'
+import Rose from 'components/Typography/Rose.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 
-import styles from "assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.jsx";
+import styles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.jsx'
 
-import cardBlog1 from "assets/img/examples/card-blog1.jpg";
-import cardBlog2 from "assets/img/examples/card-blog2.jpg";
-import cardBlog3 from "assets/img/examples/card-blog3.jpg";
-import cardBlog5 from "assets/img/examples/card-blog5.jpg";
-import cardBlog6 from "assets/img/examples/card-blog6.jpg";
-import cardProfile1 from "assets/img/examples/card-profile1.jpg";
-import cardProfile4 from "assets/img/examples/card-profile4.jpg";
-import blog1 from "assets/img/examples/blog1.jpg";
-import blog5 from "assets/img/examples/blog5.jpg";
-import blog6 from "assets/img/examples/blog6.jpg";
-import blog8 from "assets/img/examples/blog8.jpg";
-import avatar from "assets/img/faces/avatar.jpg";
-import christian from "assets/img/faces/christian.jpg";
-import marc from "assets/img/faces/marc.jpg";
-import office1 from "assets/img/examples/office1.jpg";
-import color1 from "assets/img/examples/color1.jpg";
-import color2 from "assets/img/examples/color2.jpg";
-import color3 from "assets/img/examples/color3.jpg";
+import cardBlog1 from '../../../../static/assets/img/examples/card-blog1.jpg'
+import cardBlog2 from '../../../../static/assets/img/examples/card-blog2.jpg'
+import cardBlog3 from '../../../../static/assets/img/examples/card-blog3.jpg'
+import cardBlog5 from '../../../../static/assets/img/examples/card-blog5.jpg'
+import cardBlog6 from '../../../../static/assets/img/examples/card-blog6.jpg'
+import cardProfile1 from '../../../../static/assets/img/examples/card-profile1.jpg'
+import cardProfile4 from '../../../../static/assets/img/examples/card-profile4.jpg'
+import blog1 from '../../../../static/assets/img/examples/blog1.jpg'
+import blog5 from '../../../../static/assets/img/examples/blog5.jpg'
+import blog6 from '../../../../static/assets/img/examples/blog6.jpg'
+import blog8 from '../../../../static/assets/img/examples/blog8.jpg'
+import avatar from '../../../../static/assets/img/faces/avatar.jpg'
+import christian from '../../../../static/assets/img/faces/christian.jpg'
+import marc from '../../../../static/assets/img/faces/marc.jpg'
+import office1 from '../../../../static/assets/img/examples/office1.jpg'
+import color1 from '../../../../static/assets/img/examples/color1.jpg'
+import color2 from '../../../../static/assets/img/examples/color2.jpg'
+import color3 from '../../../../static/assets/img/examples/color3.jpg'
 
 class SectionCards extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      activeRotate1: "",
-      activeRotate2: ""
-    };
+      activeRotate1: '',
+      activeRotate2: '',
+    }
   }
   componentDidMount() {
-    const { classes } = this.props;
-    var rotatingCards = document.getElementsByClassName(classes.cardRotate);
+    const { classes } = this.props
+    var rotatingCards = document.getElementsByClassName(classes.cardRotate)
     for (let i = 0; i < rotatingCards.length; i++) {
-      var rotatingCard = rotatingCards[i];
-      var rotatingWrapper = rotatingCard.parentElement;
-      var cardWidth = rotatingCard.parentElement.offsetWidth;
-      var cardHeight = rotatingCard.children[0].children[0].offsetHeight;
-      rotatingWrapper.style.height = cardHeight + "px";
-      rotatingWrapper.style["margin-bottom"] = 30 + "px";
-      var cardFront = rotatingCard.getElementsByClassName(classes.front)[0];
-      var cardBack = rotatingCard.getElementsByClassName(classes.back)[0];
-      cardFront.style.height = cardHeight + 35 + "px";
-      cardFront.style.width = cardWidth + "px";
-      cardBack.style.height = cardHeight + 35 + "px";
-      cardBack.style.width = cardWidth + "px";
+      var rotatingCard = rotatingCards[i]
+      var rotatingWrapper = rotatingCard.parentElement
+      var cardWidth = rotatingCard.parentElement.offsetWidth
+      var cardHeight = rotatingCard.children[0].children[0].offsetHeight
+      rotatingWrapper.style.height = cardHeight + 'px'
+      rotatingWrapper.style['margin-bottom'] = 30 + 'px'
+      var cardFront = rotatingCard.getElementsByClassName(classes.front)[0]
+      var cardBack = rotatingCard.getElementsByClassName(classes.back)[0]
+      cardFront.style.height = cardHeight + 35 + 'px'
+      cardFront.style.width = cardWidth + 'px'
+      cardBack.style.height = cardHeight + 35 + 'px'
+      cardBack.style.width = cardWidth + 'px'
     }
   }
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes, ...rest } = this.props
     return (
-      <div {...rest} className="cd-section" id="cards">
+      <div {...rest} className='cd-section' id='cards'>
         <div className={classes.sectionGray}>
           <div>
             {/* BLOG CARDS START */}
@@ -98,8 +98,8 @@ class SectionCards extends React.Component {
                   <GridItem xs={12} sm={6} md={6} lg={4}>
                     <Card blog>
                       <CardHeader image>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img src={cardBlog1} alt="..." />
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                          <img src={cardBlog1} alt='...' />
                           <div className={classes.cardTitleAbsolute}>
                             This Summer Will be Awesome
                           </div>
@@ -108,7 +108,7 @@ class SectionCards extends React.Component {
                           className={classes.coloredShadow}
                           style={{
                             backgroundImage: `url(${cardBlog1})`,
-                            opacity: "1"
+                            opacity: '1',
                           }}
                         />
                       </CardHeader>
@@ -124,13 +124,14 @@ class SectionCards extends React.Component {
                         </div>
                       </CardBody>
                     </Card>
-                    <Card color="info">
+                    <Card color='info'>
                       <CardBody color>
                         <h5 className={classes.cardCategorySocialWhite}>
-                          <i className="fab fa-twitter" />Twitter
+                          <i className='fab fa-twitter' />
+                          Twitter
                         </h5>
                         <h4 className={classes.cardTitleWhite}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             "You Don't Have to Sacrifice Joy to Build a Fabulous
                             Business and Life"
                           </a>
@@ -138,10 +139,10 @@ class SectionCards extends React.Component {
                       </CardBody>
                       <CardFooter>
                         <div className={classes.authorWhite}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             <img
                               src={avatar}
-                              alt="..."
+                              alt='...'
                               className={`${classes.imgRaised} ${
                                 classes.avatar
                               }`}
@@ -169,7 +170,7 @@ class SectionCards extends React.Component {
                           </h6>
                         </Danger>
                         <h4 className={classes.cardTitle}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             To Grow Your Business Start Focusing on Your
                             Employees
                           </a>
@@ -177,10 +178,10 @@ class SectionCards extends React.Component {
                       </CardBody>
                       <CardFooter>
                         <div className={classes.author}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             <img
                               src={christian}
-                              alt="..."
+                              alt='...'
                               className={`${classes.imgRaised} ${
                                 classes.avatar
                               }`}
@@ -198,14 +199,14 @@ class SectionCards extends React.Component {
                     </Card>
                     <Card blog>
                       <CardHeader image>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img src={cardBlog2} alt="..." />
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                          <img src={cardBlog2} alt='...' />
                         </a>
                         <div
                           className={classes.coloredShadow}
                           style={{
                             backgroundImage: `url(${cardBlog2})`,
-                            opacity: "1"
+                            opacity: '1',
                           }}
                         />
                       </CardHeader>
@@ -214,7 +215,7 @@ class SectionCards extends React.Component {
                           <h6 className={classes.cardCategory}>Legal</h6>
                         </Success>
                         <h4 className={classes.cardTitle}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             5 Common Legal Mistakes That Can Trip-Up Your
                             Startup
                           </a>
@@ -228,10 +229,10 @@ class SectionCards extends React.Component {
                       </CardBody>
                       <CardFooter>
                         <div className={classes.author}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             <img
                               src={marc}
-                              alt="..."
+                              alt='...'
                               className={`${classes.imgRaised} ${
                                 classes.avatar
                               }`}
@@ -240,8 +241,7 @@ class SectionCards extends React.Component {
                           </a>
                         </div>
                         <div className={`${classes.stats} ${classes.mlAuto}`}>
-                          <Schedule />
-                          5 min read
+                          <Schedule />5 min read
                         </div>
                       </CardFooter>
                     </Card>
@@ -249,14 +249,14 @@ class SectionCards extends React.Component {
                   <GridItem xs={12} sm={6} md={6} lg={4}>
                     <Card blog>
                       <CardHeader image>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img src={blog8} alt="..." />
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                          <img src={blog8} alt='...' />
                         </a>
                         <div
                           className={classes.coloredShadow}
                           style={{
                             backgroundImage: `url(${blog8})`,
-                            opacity: "1"
+                            opacity: '1',
                           }}
                         />
                       </CardHeader>
@@ -267,7 +267,7 @@ class SectionCards extends React.Component {
                           </h6>
                         </Danger>
                         <h4 className={classes.cardTitle}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             To Grow Your Business Start Focusing on Your
                             Employees
                           </a>
@@ -275,10 +275,10 @@ class SectionCards extends React.Component {
                       </CardBody>
                       <CardFooter>
                         <div className={classes.author}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             <img
                               src={marc}
-                              alt="..."
+                              alt='...'
                               className={`${classes.imgRaised} ${
                                 classes.avatar
                               }`}
@@ -287,18 +287,18 @@ class SectionCards extends React.Component {
                           </a>
                         </div>
                         <div className={`${classes.stats} ${classes.mlAuto}`}>
-                          <Schedule />
-                          5 min read
+                          <Schedule />5 min read
                         </div>
                       </CardFooter>
                     </Card>
-                    <Card color="success">
+                    <Card color='success'>
                       <CardBody color>
                         <h5 className={classes.cardCategorySocialWhite}>
-                          <i className="far fa-newspaper" />TechCrunch
+                          <i className='far fa-newspaper' />
+                          TechCrunch
                         </h5>
                         <h4 className={classes.cardTitleWhite}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             "Focus on Your Employees"
                           </a>
                         </h4>
@@ -313,7 +313,7 @@ class SectionCards extends React.Component {
                             classes.justifyContentCenter
                           }`}
                         >
-                          <Button color="white" round>
+                          <Button color='white' round>
                             Read Article
                           </Button>
                         </div>
@@ -334,8 +334,8 @@ class SectionCards extends React.Component {
                   <GridItem xs={12} sm={4} md={4}>
                     <Card profile>
                       <CardHeader image>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img src={cardProfile4} alt="..." />
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                          <img src={cardProfile4} alt='...' />
                           <div className={classes.cardTitleAbsolute}>
                             Tania Andrew
                           </div>
@@ -344,7 +344,7 @@ class SectionCards extends React.Component {
                           className={classes.coloredShadow}
                           style={{
                             backgroundImage: `url(${cardProfile4})`,
-                            opacity: "1"
+                            opacity: '1',
                           }}
                         />
                       </CardHeader>
@@ -363,14 +363,14 @@ class SectionCards extends React.Component {
                         profile
                         className={classes.justifyContentCenter}
                       >
-                        <Button justIcon simple color="twitter">
-                          <i className="fab fa-twitter" />
+                        <Button justIcon simple color='twitter'>
+                          <i className='fab fa-twitter' />
                         </Button>
-                        <Button justIcon simple color="dribbble">
-                          <i className="fab fa-dribbble" />
+                        <Button justIcon simple color='dribbble'>
+                          <i className='fab fa-dribbble' />
                         </Button>
-                        <Button justIcon simple color="instagram">
-                          <i className="fab fa-instagram" />
+                        <Button justIcon simple color='instagram'>
+                          <i className='fab fa-instagram' />
                         </Button>
                       </CardFooter>
                     </Card>
@@ -378,14 +378,14 @@ class SectionCards extends React.Component {
                   <GridItem xs={12} sm={4} md={4}>
                     <Card profile>
                       <CardHeader image>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img src={cardProfile1} alt="..." />
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                          <img src={cardProfile1} alt='...' />
                         </a>
                         <div
                           className={classes.coloredShadow}
                           style={{
                             backgroundImage: `url(${cardProfile1})`,
-                            opacity: "1"
+                            opacity: '1',
                           }}
                         />
                       </CardHeader>
@@ -403,14 +403,14 @@ class SectionCards extends React.Component {
                         profile
                         className={classes.justifyContentCenter}
                       >
-                        <Button justIcon round color="twitter">
-                          <i className="fab fa-twitter" />
+                        <Button justIcon round color='twitter'>
+                          <i className='fab fa-twitter' />
                         </Button>
-                        <Button justIcon round color="facebook">
-                          <i className="fab fa-facebook" />
+                        <Button justIcon round color='facebook'>
+                          <i className='fab fa-facebook' />
                         </Button>
-                        <Button justIcon round color="google">
-                          <i className="fab fa-google" />
+                        <Button justIcon round color='google'>
+                          <i className='fab fa-google' />
                         </Button>
                       </CardFooter>
                     </Card>
@@ -418,8 +418,8 @@ class SectionCards extends React.Component {
                   <GridItem xs={12} sm={4} md={4}>
                     <Card profile>
                       <CardAvatar profile>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img src={marc} alt="..." />
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                          <img src={marc} alt='...' />
                         </a>
                       </CardAvatar>
                       <CardBody>
@@ -437,7 +437,7 @@ class SectionCards extends React.Component {
                           like Kanye loves Kanye I love Rick Owens’ bed design
                           but the back is...
                         </p>
-                        <Button round color="info">
+                        <Button round color='info'>
                           Follow
                         </Button>
                       </CardBody>
@@ -463,7 +463,7 @@ class SectionCards extends React.Component {
                         <h6 className={classes.cardCategoryWhite}>
                           PRODUCTIVITY APPS
                         </h6>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           <h3 className={classes.cardTitleWhite}>
                             The Best Productivity Apps on Market
                           </h3>
@@ -474,10 +474,10 @@ class SectionCards extends React.Component {
                           like Kanye loves Kanye I love Rick Owens’ bed design
                           but the back is...
                         </p>
-                        <Button simple color="white">
+                        <Button simple color='white'>
                           <Subject /> Read Article
                         </Button>
-                        <Button simple color="white">
+                        <Button simple color='white'>
                           <WatchLater /> Watch Later
                         </Button>
                       </CardBody>
@@ -490,7 +490,7 @@ class SectionCards extends React.Component {
                     >
                       <CardBody background>
                         <h6 className={classes.cardCategoryWhite}>MATERIALS</h6>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           <h3 className={classes.cardTitleWhite}>
                             The Sculpture Where Details Matter
                           </h3>
@@ -501,7 +501,7 @@ class SectionCards extends React.Component {
                           like Kanye loves Kanye I love Rick Owens’ bed design
                           but the back is...
                         </p>
-                        <Button round color="danger">
+                        <Button round color='danger'>
                           <Subject /> Read Article
                         </Button>
                       </CardBody>
@@ -542,14 +542,14 @@ class SectionCards extends React.Component {
                           This is good if your company size is between 2 and 10
                           Persons.
                         </p>
-                        <Button round color="info">
+                        <Button round color='info'>
                           Choose plan
                         </Button>
                       </CardBody>
                     </Card>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={6} lg={3}>
-                    <Card pricing color="primary">
+                    <Card pricing color='primary'>
                       <CardBody pricing>
                         <div
                           className={`${classes.iconWrapper} ${
@@ -569,7 +569,7 @@ class SectionCards extends React.Component {
                           This is good if your company size is between 11 and 99
                           Persons.
                         </p>
-                        <Button round color="white">
+                        <Button round color='white'>
                           Choose plan
                         </Button>
                       </CardBody>
@@ -602,7 +602,7 @@ class SectionCards extends React.Component {
                             <b>5.000</b> Messages
                           </li>
                         </ul>
-                        <Button color="danger">Get Started</Button>
+                        <Button color='danger'>Get Started</Button>
                       </CardBody>
                     </Card>
                   </GridItem>
@@ -619,29 +619,29 @@ class SectionCards extends React.Component {
                           <li>
                             <Success>
                               <Check />
-                            </Success>{" "}
+                            </Success>{' '}
                             Sharing Tools
                           </li>
                           <li>
                             <Success>
                               <Check />
-                            </Success>{" "}
+                            </Success>{' '}
                             Design Tools
                           </li>
                           <li>
                             <Danger>
                               <Close />
-                            </Danger>{" "}
+                            </Danger>{' '}
                             Private Messages
                           </li>
                           <li>
                             <Danger>
                               <Close />
-                            </Danger>{" "}
+                            </Danger>{' '}
                             Personal Brand
                           </li>
                         </ul>
-                        <Button color="primary" round>
+                        <Button color='primary' round>
                           Get Started
                         </Button>
                       </CardBody>
@@ -654,7 +654,7 @@ class SectionCards extends React.Component {
           </div>
 
           {/* MORPHING CARDS START */}
-          <div id="morphingCards" className="cd-section">
+          <div id='morphingCards' className='cd-section'>
             <div className={classes.container}>
               <div className={classes.title}>
                 <h2>Morphing Cards</h2>
@@ -669,14 +669,14 @@ class SectionCards extends React.Component {
                           classes.wrapperBackground
                         }`}
                         style={{
-                          backgroundImage: `url(${cardBlog5})`
+                          backgroundImage: `url(${cardBlog5})`,
                         }}
                       >
                         <CardBody background className={classes.cardBodyRotate}>
                           <h6 className={classes.cardCategoryWhite}>
                             Full Background Card
                           </h6>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             <h3 className={classes.cardTitleWhite}>
                               This Background Card Will Rotate on Hover
                             </h3>
@@ -694,7 +694,7 @@ class SectionCards extends React.Component {
                           classes.wrapperBackground
                         }`}
                         style={{
-                          backgroundImage: `url(${cardBlog5})`
+                          backgroundImage: `url(${cardBlog5})`,
                         }}
                       >
                         <CardBody background className={classes.cardBodyRotate}>
@@ -706,13 +706,13 @@ class SectionCards extends React.Component {
                             delete the posts.
                           </p>
                           <div className={classes.textCenter}>
-                            <Button round justIcon color="info">
+                            <Button round justIcon color='info'>
                               <Subject />
                             </Button>
-                            <Button round justIcon color="success">
+                            <Button round justIcon color='success'>
                               <Icon>mode_edit</Icon>
                             </Button>
-                            <Button round justIcon color="danger">
+                            <Button round justIcon color='danger'>
                               <Delete />
                             </Button>
                           </div>
@@ -728,11 +728,15 @@ class SectionCards extends React.Component {
                         <CardBody className={classes.cardBodyRotate}>
                           <Success>
                             <h5 className={classes.cardCategorySocial}>
-                              <i className="far fa-newspaper" />TechCrunch
+                              <i className='far fa-newspaper' />
+                              TechCrunch
                             </h5>
                           </Success>
                           <h4 className={classes.cardTitle}>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href='#pablo'
+                              onClick={(e) => e.preventDefault()}
+                            >
                               This Card is Doing a Full Rotation on Hover...
                             </a>
                           </h4>
@@ -752,17 +756,17 @@ class SectionCards extends React.Component {
                             friends and family on different networks...
                           </p>
                           <div className={classes.textCenter}>
-                            <Button round color="rose">
+                            <Button round color='rose'>
                               <Subject /> Read
                             </Button>
-                            <Button round justIcon color="twitter">
-                              <i className="fab fa-twitter" />
+                            <Button round justIcon color='twitter'>
+                              <i className='fab fa-twitter' />
                             </Button>
-                            <Button round justIcon color="dribbble">
-                              <i className="fab fa-dribbble" />
+                            <Button round justIcon color='dribbble'>
+                              <i className='fab fa-dribbble' />
                             </Button>
-                            <Button round justIcon color="facebook">
-                              <i className="fab fa-facebook" />
+                            <Button round justIcon color='facebook'>
+                              <i className='fab fa-facebook' />
                             </Button>
                           </div>
                         </CardBody>
@@ -772,16 +776,19 @@ class SectionCards extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={6} lg={4}>
                   <div className={classes.rotatingCardContainer}>
-                    <Card color="rose" className={classes.cardRotate}>
+                    <Card color='rose' className={classes.cardRotate}>
                       <div
                         className={`${classes.front} ${classes.wrapperRose}`}
                       >
                         <CardBody color className={classes.cardBodyRotate}>
                           <h5 className={classes.cardCategorySocialWhite}>
-                            <i className="fab fa-dribbble" /> Dribbble
+                            <i className='fab fa-dribbble' /> Dribbble
                           </h5>
                           <h4 className={classes.cardTitleWhite}>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href='#pablo'
+                              onClick={(e) => e.preventDefault()}
+                            >
                               "Dribbble just acquired Crew, a very interesting
                               startup..."
                             </a>
@@ -795,10 +802,13 @@ class SectionCards extends React.Component {
                         </CardBody>
                         <CardFooter>
                           <div className={classes.authorWhite}>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href='#pablo'
+                              onClick={(e) => e.preventDefault()}
+                            >
                               <img
                                 src={avatar}
-                                alt="..."
+                                alt='...'
                                 className={`${classes.imgRaised} ${
                                   classes.avatar
                                 }`}
@@ -821,19 +831,22 @@ class SectionCards extends React.Component {
                       <div className={`${classes.back} ${classes.wrapperRose}`}>
                         <CardBody className={classes.cardBodyRotate}>
                           <h5 className={classes.cardCategorySocialWhite}>
-                            <i className="fab fa-dribbble" /> Dribbble
+                            <i className='fab fa-dribbble' /> Dribbble
                           </h5>
                           <h4 className={classes.cardTitleWhite}>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href='#pablo'
+                              onClick={(e) => e.preventDefault()}
+                            >
                               "Dribbble just acquired Crew, a very interesting
                               startup..."
                             </a>
                           </h4>
                           <div>
-                            <Button round color="white">
+                            <Button round color='white'>
                               <Subject /> Read
                             </Button>
-                            <Button simple color="white">
+                            <Button simple color='white'>
                               <Bookmark /> Bookmark
                             </Button>
                           </div>
@@ -858,12 +871,15 @@ class SectionCards extends React.Component {
                         <CardBody className={classes.cardBodyRotate}>
                           <Success>
                             <h5 className={classes.cardCategorySocial}>
-                              <i className="far fa-newspaper" /> Manual Rotating
+                              <i className='far fa-newspaper' /> Manual Rotating
                               Card
                             </h5>
                           </Success>
                           <h4 className={classes.cardTitle}>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href='#pablo'
+                              onClick={(e) => e.preventDefault()}
+                            >
                               "This card is doing a full rotation, click on the
                               rotate button"
                             </a>
@@ -877,10 +893,10 @@ class SectionCards extends React.Component {
                           <div className={classes.textCenter}>
                             <Button
                               round
-                              color="success"
+                              color='success'
                               onClick={() =>
                                 this.setState({
-                                  activeRotate1: classes.activateRotate
+                                  activeRotate1: classes.activateRotate,
                                 })
                               }
                             >
@@ -897,23 +913,23 @@ class SectionCards extends React.Component {
                             friends and family on different networks...
                           </p>
                           <div className={classes.textCenter}>
-                            <Button round color="rose">
+                            <Button round color='rose'>
                               <Subject /> Read
                             </Button>
-                            <Button round justIcon color="twitter">
-                              <i className="fab fa-twitter" />
+                            <Button round justIcon color='twitter'>
+                              <i className='fab fa-twitter' />
                             </Button>
-                            <Button round justIcon color="dribbble">
-                              <i className="fab fa-dribbble" />
+                            <Button round justIcon color='dribbble'>
+                              <i className='fab fa-dribbble' />
                             </Button>
-                            <Button round justIcon color="facebook">
-                              <i className="fab fa-facebook" />
+                            <Button round justIcon color='facebook'>
+                              <i className='fab fa-facebook' />
                             </Button>
                           </div>
                           <br />
                           <Button
                             link
-                            onClick={() => this.setState({ activeRotate1: "" })}
+                            onClick={() => this.setState({ activeRotate1: '' })}
                           >
                             <Refresh /> Back...
                           </Button>
@@ -939,7 +955,7 @@ class SectionCards extends React.Component {
                           <h6 className={classes.cardCategoryWhite}>
                             Full Background Card
                           </h6>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <a href='#pablo' onClick={(e) => e.preventDefault()}>
                             <h3 className={classes.cardTitleWhite}>
                               This card is doing a full rotation, click on the
                               rotate button
@@ -952,10 +968,10 @@ class SectionCards extends React.Component {
                           <div className={classes.textCenter}>
                             <Button
                               round
-                              color="danger"
+                              color='danger'
                               onClick={() =>
                                 this.setState({
-                                  activeRotate2: classes.activateRotate
+                                  activeRotate2: classes.activateRotate,
                                 })
                               }
                             >
@@ -979,23 +995,23 @@ class SectionCards extends React.Component {
                             delete the posts.
                           </p>
                           <div className={classes.textCenter}>
-                            <Button round justIcon color="info">
+                            <Button round justIcon color='info'>
                               <Subject />
                             </Button>
-                            <Button round justIcon color="success">
+                            <Button round justIcon color='success'>
                               <Icon>mode_edit</Icon>
                             </Button>
-                            <Button round justIcon color="danger">
+                            <Button round justIcon color='danger'>
                               <Delete />
                             </Button>
                             <br />
                             <br />
                             <Button
                               round
-                              color="danger"
+                              color='danger'
                               onClick={() =>
                                 this.setState({
-                                  activeRotate2: ""
+                                  activeRotate2: '',
                                 })
                               }
                             >
@@ -1022,7 +1038,10 @@ class SectionCards extends React.Component {
                             <Receipt /> Manual Rotating Card
                           </h5>
                           <h4 className={classes.cardTitleWhite}>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href='#pablo'
+                              onClick={(e) => e.preventDefault()}
+                            >
                               "This card is doing a full rotation, click on the
                               rotate button"
                             </a>
@@ -1036,10 +1055,10 @@ class SectionCards extends React.Component {
                           <div className={classes.textCenter}>
                             <Button
                               round
-                              color="white"
+                              color='white'
                               onClick={() =>
                                 this.setState({
-                                  activeRotate3: classes.activateRotate
+                                  activeRotate3: classes.activateRotate,
                                 })
                               }
                             >
@@ -1058,26 +1077,26 @@ class SectionCards extends React.Component {
                             friends and family on different networks...
                           </p>
                           <div className={classes.textCenter}>
-                            <Button round color="white">
+                            <Button round color='white'>
                               <Subject /> Read
                             </Button>
-                            <Button round justIcon color="white">
-                              <i className="fab fa-twitter" />
+                            <Button round justIcon color='white'>
+                              <i className='fab fa-twitter' />
                             </Button>
-                            <Button round justIcon color="white">
-                              <i className="fab fa-dribbble" />
+                            <Button round justIcon color='white'>
+                              <i className='fab fa-dribbble' />
                             </Button>
-                            <Button round justIcon color="white">
-                              <i className="fab fa-facebook" />
+                            <Button round justIcon color='white'>
+                              <i className='fab fa-facebook' />
                             </Button>
                             <br />
                             <br />
                             <Button
                               round
-                              color="white"
+                              color='white'
                               onClick={() =>
                                 this.setState({
-                                  activeRotate3: ""
+                                  activeRotate3: '',
                                 })
                               }
                             >
@@ -1113,14 +1132,14 @@ class SectionCards extends React.Component {
               <GridItem xs={12} sm={4} md={4}>
                 <Card blog>
                   <CardHeader image>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img src={color1} alt="..." />
+                    <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                      <img src={color1} alt='...' />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${color1})`,
-                        opacity: "1"
+                        opacity: '1',
                       }}
                     />
                   </CardHeader>
@@ -1129,7 +1148,7 @@ class SectionCards extends React.Component {
                       <h6 className={classes.cardCategory}>DYNAMIC SHADOWS</h6>
                     </Warning>
                     <h4 className={classes.cardTitle}>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
                         The image from this card is getting a yellow shadow
                       </a>
                     </h4>
@@ -1139,14 +1158,14 @@ class SectionCards extends React.Component {
               <GridItem xs={12} sm={4} md={4}>
                 <Card blog>
                   <CardHeader image>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img src={color2} alt="..." />
+                    <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                      <img src={color2} alt='...' />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${color2})`,
-                        opacity: "1"
+                        opacity: '1',
                       }}
                     />
                   </CardHeader>
@@ -1155,7 +1174,7 @@ class SectionCards extends React.Component {
                       <h6 className={classes.cardCategory}>DYNAMIC SHADOWS</h6>
                     </Rose>
                     <h4 className={classes.cardTitle}>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
                         The image from this card is getting a pink shadow
                       </a>
                     </h4>
@@ -1165,14 +1184,14 @@ class SectionCards extends React.Component {
               <GridItem xs={12} sm={4} md={4}>
                 <Card blog>
                   <CardHeader image>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img src={color3} alt="..." />
+                    <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                      <img src={color3} alt='...' />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${color3})`,
-                        opacity: "1"
+                        opacity: '1',
                       }}
                     />
                   </CardHeader>
@@ -1181,7 +1200,7 @@ class SectionCards extends React.Component {
                       <h6 className={classes.cardCategory}>DYNAMIC SHADOWS</h6>
                     </Info>
                     <h4 className={classes.cardTitle}>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
                         The image from this card is getting a blue shadow
                       </a>
                     </h4>
@@ -1203,8 +1222,8 @@ class SectionCards extends React.Component {
                 <GridItem xs={12} sm={6} md={6} lg={4}>
                   <Card blog plain>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={blog5} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={blog5} alt='...' />
                         <div className={classes.cardTitleAbsolute}>
                           This Summer Will be Awesome
                         </div>
@@ -1213,7 +1232,7 @@ class SectionCards extends React.Component {
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${blog5})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -1229,13 +1248,14 @@ class SectionCards extends React.Component {
                       </div>
                     </CardBody>
                   </Card>
-                  <Card color="info">
+                  <Card color='info'>
                     <CardBody color>
                       <h5 className={classes.cardCategorySocialWhite}>
-                        <i className="fab fa-twitter" />Twitter
+                        <i className='fab fa-twitter' />
+                        Twitter
                       </h5>
                       <h4 className={classes.cardTitleWhite}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           "You Don't Have to Sacrifice Joy to Build a Fabulous
                           Business and Life"
                         </a>
@@ -1243,10 +1263,10 @@ class SectionCards extends React.Component {
                     </CardBody>
                     <CardFooter>
                       <div className={classes.authorWhite}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           <img
                             src={avatar}
-                            alt="..."
+                            alt='...'
                             className={`${classes.imgRaised} ${classes.avatar}`}
                           />
                           <span>Tania Andrew</span>
@@ -1266,14 +1286,14 @@ class SectionCards extends React.Component {
                 <GridItem xs={12} sm={6} md={6} lg={4}>
                   <Card blog plain>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={blog1} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={blog1} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${blog1})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -1282,7 +1302,7 @@ class SectionCards extends React.Component {
                         <h6 className={classes.cardCategory}>Legal</h6>
                       </Success>
                       <h4 className={classes.cardTitle}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           5 Common Legal Mistakes That Can Trip-Up Your Startup
                         </a>
                       </h4>
@@ -1295,18 +1315,17 @@ class SectionCards extends React.Component {
                     </CardBody>
                     <CardFooter plain>
                       <div className={classes.author}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           <img
                             src={marc}
-                            alt="..."
+                            alt='...'
                             className={`${classes.imgRaised} ${classes.avatar}`}
                           />
                           <span>Mike John</span>
                         </a>
                       </div>
                       <div className={`${classes.stats} ${classes.mlAuto}`}>
-                        <Schedule />
-                        5 min read
+                        <Schedule />5 min read
                       </div>
                     </CardFooter>
                   </Card>
@@ -1314,14 +1333,14 @@ class SectionCards extends React.Component {
                 <GridItem xs={12} sm={6} md={6} lg={4}>
                   <Card blog plain>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={blog6} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={blog6} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${blog6})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -1332,35 +1351,34 @@ class SectionCards extends React.Component {
                         </h6>
                       </Danger>
                       <h4 className={classes.cardTitle}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           To Grow Your Business Start Focusing on Your Employees
                         </a>
                       </h4>
                     </CardBody>
                     <CardFooter plain>
                       <div className={classes.author}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           <img
                             src={marc}
-                            alt="..."
+                            alt='...'
                             className={`${classes.imgRaised} ${classes.avatar}`}
                           />
                           <span>Mike John</span>
                         </a>
                       </div>
                       <div className={`${classes.stats} ${classes.mlAuto}`}>
-                        <Schedule />
-                        5 min read
+                        <Schedule />5 min read
                       </div>
                     </CardFooter>
                   </Card>
-                  <Card color="danger">
+                  <Card color='danger'>
                     <CardBody color>
                       <h5 className={classes.cardCategorySocialWhite}>
-                        <i className="far fa-newspaper" /> The Next Web
+                        <i className='far fa-newspaper' /> The Next Web
                       </h5>
                       <h4 className={classes.cardTitleWhite}>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href='#pablo' onClick={(e) => e.preventDefault()}>
                           "Focus on Your Employees"
                         </a>
                       </h4>
@@ -1375,7 +1393,7 @@ class SectionCards extends React.Component {
                           classes.justifyContentCenter
                         }`}
                       >
-                        <Button color="white" round>
+                        <Button color='white' round>
                           Read Article
                         </Button>
                       </div>
@@ -1393,8 +1411,8 @@ class SectionCards extends React.Component {
                 <GridItem xs={12} sm={4} md={4}>
                   <Card profile plain>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={cardProfile4} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={cardProfile4} alt='...' />
                         <div className={classes.cardTitleAbsolute}>
                           Tania Andrew
                         </div>
@@ -1403,7 +1421,7 @@ class SectionCards extends React.Component {
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${cardProfile4})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -1423,14 +1441,14 @@ class SectionCards extends React.Component {
                       plain
                       className={classes.justifyContentCenter}
                     >
-                      <Button justIcon simple color="twitter">
-                        <i className="fab fa-twitter" />
+                      <Button justIcon simple color='twitter'>
+                        <i className='fab fa-twitter' />
                       </Button>
-                      <Button justIcon simple color="dribbble">
-                        <i className="fab fa-dribbble" />
+                      <Button justIcon simple color='dribbble'>
+                        <i className='fab fa-dribbble' />
                       </Button>
-                      <Button justIcon simple color="instagram">
-                        <i className="fab fa-instagram" />
+                      <Button justIcon simple color='instagram'>
+                        <i className='fab fa-instagram' />
                       </Button>
                     </CardFooter>
                   </Card>
@@ -1438,14 +1456,14 @@ class SectionCards extends React.Component {
                 <GridItem xs={12} sm={4} md={4}>
                   <Card profile plain>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={cardProfile1} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={cardProfile1} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${cardProfile1})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -1464,14 +1482,14 @@ class SectionCards extends React.Component {
                       plain
                       className={classes.justifyContentCenter}
                     >
-                      <Button justIcon round color="twitter">
-                        <i className="fab fa-twitter" />
+                      <Button justIcon round color='twitter'>
+                        <i className='fab fa-twitter' />
                       </Button>
-                      <Button justIcon round color="facebook">
-                        <i className="fab fa-facebook" />
+                      <Button justIcon round color='facebook'>
+                        <i className='fab fa-facebook' />
                       </Button>
-                      <Button justIcon round color="google">
-                        <i className="fab fa-google" />
+                      <Button justIcon round color='google'>
+                        <i className='fab fa-google' />
                       </Button>
                     </CardFooter>
                   </Card>
@@ -1479,8 +1497,8 @@ class SectionCards extends React.Component {
                 <GridItem xs={12} sm={4} md={4}>
                   <Card profile plain>
                     <CardAvatar profile plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={marc} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={marc} alt='...' />
                       </a>
                     </CardAvatar>
                     <CardBody plain>
@@ -1498,7 +1516,7 @@ class SectionCards extends React.Component {
                         loves Kanye I love Rick Owens’ bed design but the back
                         is...
                       </p>
-                      <Button round color="info">
+                      <Button round color='info'>
                         Follow
                       </Button>
                     </CardBody>
@@ -1510,8 +1528,8 @@ class SectionCards extends React.Component {
           {/* PROFILE PLAIN CARDS END */}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(styles)(SectionCards);
+export default withStyles(styles)(SectionCards)

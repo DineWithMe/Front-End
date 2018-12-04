@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import NavPills from "components/NavPills/NavPills.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import NavPills from 'components/NavPills/NavPills.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/presentationSections/pricingStyle.jsx";
+import pricingStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/pricingStyle.jsx'
 
 const style = {
-  ...pricingStyle
+  ...pricingStyle,
   // ...navPillsContentStyle
-};
+}
 
 class SectionPricing extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.section}>
         <div className={classes.container}>
@@ -35,10 +35,10 @@ class SectionPricing extends React.Component {
               </h2>
               <NavPills
                 alignCenter
-                color="rose"
+                color='rose'
                 tabs={[
                   {
-                    tabButton: "Personal License",
+                    tabButton: 'Personal License',
                     tabContent: (
                       <div className={classes.navPillsContent}>
                         <p className={classes.description}>
@@ -47,7 +47,7 @@ class SectionPricing extends React.Component {
                           charged for using it. Create one single website/app
                           for one client.
                         </p>
-                        <GridContainer justify="center">
+                        <GridContainer justify='center'>
                           <GridItem md={6} sm={6}>
                             <Card
                               className={classNames(
@@ -77,7 +77,7 @@ class SectionPricing extends React.Component {
                                     Product <b>Documentation</b>
                                   </li>
                                 </ul>
-                                <Button href="#pablo" round color="rose">
+                                <Button href='#pablo' round color='rose'>
                                   buy now!
                                 </Button>
                               </CardBody>
@@ -113,7 +113,7 @@ class SectionPricing extends React.Component {
                                     <b>+ Components</b> on Layers
                                   </li>
                                 </ul>
-                                <Button href="#pablo" round color="rose">
+                                <Button href='#pablo' round color='rose'>
                                   Buy now!
                                 </Button>
                               </CardBody>
@@ -121,10 +121,10 @@ class SectionPricing extends React.Component {
                           </GridItem>
                         </GridContainer>
                       </div>
-                    )
+                    ),
                   },
                   {
-                    tabButton: "Developer License",
+                    tabButton: 'Developer License',
                     tabContent: (
                       <div className={classes.navPillsContent}>
                         <p className={classes.description}>
@@ -133,7 +133,7 @@ class SectionPricing extends React.Component {
                           be charged for using it. Create multiple websites/apps
                           for multiple clients.
                         </p>
-                        <GridContainer justify="center">
+                        <GridContainer justify='center'>
                           <GridItem md={6} sm={6}>
                             <Card
                               className={classNames(
@@ -163,7 +163,7 @@ class SectionPricing extends React.Component {
                                     Product <b>Documentation</b>
                                   </li>
                                 </ul>
-                                <Button href="#pablo" round color="rose">
+                                <Button href='#pablo' round color='rose'>
                                   buy now!
                                 </Button>
                               </CardBody>
@@ -199,7 +199,7 @@ class SectionPricing extends React.Component {
                                     <b>+ Components</b> on Layers
                                   </li>
                                 </ul>
-                                <Button href="#pablo" round color="rose">
+                                <Button href='#pablo' round color='rose'>
                                   Buy now!
                                 </Button>
                               </CardBody>
@@ -207,8 +207,8 @@ class SectionPricing extends React.Component {
                           </GridItem>
                         </GridContainer>
                       </div>
-                    )
-                  }
+                    ),
+                  },
                 ]}
               />
             </GridItem>
@@ -218,7 +218,7 @@ class SectionPricing extends React.Component {
               className={classNames(classes.mlAuto, classes.mrAuto)}
             >
               <p className={classes.description}>
-                You have <b>Free Unlimited Updates</b> and{" "}
+                You have <b>Free Unlimited Updates</b> and{' '}
                 <b>Premium Support</b> on each package. You also have
                 <b> 30 days</b> to request a refund if you're not happy with
                 your purchase.
@@ -229,15 +229,15 @@ class SectionPricing extends React.Component {
                 <GridContainer>
                   <GridItem md={12}>
                     <h4 className={classes.title}>Thank you for sharing!</h4>
-                    <Button color="twitter" href="#pablo" round>
+                    <Button color='twitter' href='#pablo' round>
                       <i className={`fab fa-twitter ${classes.marginRight}`} />
                       Twitter
                     </Button>
-                    <Button color="facebook" href="#pablo" round>
+                    <Button color='facebook' href='#pablo' round>
                       <i className={`fab fa-facebook ${classes.marginRight}`} />
                       Facebook
                     </Button>
-                    <Button color="google" href="#pablo" round>
+                    <Button color='google' href='#pablo' round>
                       <i className={`fab fa-google ${classes.marginRight}`} />
                       Google
                     </Button>
@@ -248,8 +248,8 @@ class SectionPricing extends React.Component {
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(style)(SectionPricing);
+export default withStyles(style)(SectionPricing)

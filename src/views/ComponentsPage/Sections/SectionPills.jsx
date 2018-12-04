@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react'
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
+import Dashboard from '@material-ui/icons/Dashboard'
+import Schedule from '@material-ui/icons/Schedule'
+import List from '@material-ui/icons/List'
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import NavPills from "components/NavPills/NavPills.jsx";
-import pillsStyle from "assets/jss/material-kit-pro-react/views/componentsSections/pillsStyle.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import NavPills from 'components/NavPills/NavPills.jsx'
+import pillsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/pillsStyle.jsx'
 
 class SectionPills extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.section}>
         <div className={classes.container}>
-          <div id="navigation-pills">
+          <div id='navigation-pills'>
             <div className={classes.title}>
               <h3>Navigation Pills</h3>
             </div>
@@ -30,16 +30,16 @@ class SectionPills extends React.Component {
                   <small>Horizontal tabs</small>
                 </h3>
                 <NavPills
-                  color="rose"
+                  color='rose'
                   tabs={[
                     {
-                      tabButton: "Profile",
+                      tabButton: 'Profile',
                       tabContent: (
                         <span>
                           <p>
                             Collaboratively administrate empowered markets via
                             plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.{" "}
+                            B2C users after installed base benefits.{' '}
                           </p>
                           <br />
                           <p>
@@ -47,16 +47,16 @@ class SectionPills extends React.Component {
                             without revolutionary ROI.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Settings",
+                      tabButton: 'Settings',
                       tabContent: (
                         <span>
                           <p>
                             Efficiently unleash cross-media information without
                             cross-media value. Quickly maximize timely
-                            deliverables for real-time schemas.{" "}
+                            deliverables for real-time schemas.{' '}
                           </p>
                           <br />
                           <p>
@@ -64,16 +64,16 @@ class SectionPills extends React.Component {
                             without functional solutions.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Options",
+                      tabButton: 'Options',
                       tabContent: (
                         <span>
                           <p>
                             Completely synergize resource taxing relationships
                             via premier niche markets. Professionally cultivate
-                            one-to-one customer service with robust ideas.{" "}
+                            one-to-one customer service with robust ideas.{' '}
                           </p>
                           <br />
                           <p>
@@ -81,8 +81,8 @@ class SectionPills extends React.Component {
                             service for state of the art customer service.
                           </p>
                         </span>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>
@@ -93,18 +93,18 @@ class SectionPills extends React.Component {
                 <NavPills
                   horizontal={{
                     tabsGrid: { xs: 12, sm: 4, md: 5 },
-                    contentGrid: { xs: 12, sm: 8, md: 7 }
+                    contentGrid: { xs: 12, sm: 8, md: 7 },
                   }}
-                  color="rose"
+                  color='rose'
                   tabs={[
                     {
-                      tabButton: "Profile",
+                      tabButton: 'Profile',
                       tabContent: (
                         <span>
                           <p>
                             Collaboratively administrate empowered markets via
                             plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.{" "}
+                            B2C users after installed base benefits.{' '}
                           </p>
                           <br />
                           <p>
@@ -112,16 +112,16 @@ class SectionPills extends React.Component {
                             without revolutionary ROI.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Settings",
+                      tabButton: 'Settings',
                       tabContent: (
                         <span>
                           <p>
                             Efficiently unleash cross-media information without
                             cross-media value. Quickly maximize timely
-                            deliverables for real-time schemas.{" "}
+                            deliverables for real-time schemas.{' '}
                           </p>
                           <br />
                           <p>
@@ -129,16 +129,16 @@ class SectionPills extends React.Component {
                             without functional solutions.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Options",
+                      tabButton: 'Options',
                       tabContent: (
                         <span>
                           <p>
                             Completely synergize resource taxing relationships
                             via premier niche markets. Professionally cultivate
-                            one-to-one customer service with robust ideas.{" "}
+                            one-to-one customer service with robust ideas.{' '}
                           </p>
                           <br />
                           <p>
@@ -146,8 +146,8 @@ class SectionPills extends React.Component {
                             service for state of the art customer service.
                           </p>
                         </span>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>
@@ -160,10 +160,10 @@ class SectionPills extends React.Component {
             <GridContainer>
               <GridItem xs={12} sm={12} md={8} lg={6}>
                 <NavPills
-                  color="primary"
+                  color='primary'
                   tabs={[
                     {
-                      tabButton: "Dashboard",
+                      tabButton: 'Dashboard',
                       tabIcon: Dashboard,
                       tabContent: (
                         <span>
@@ -189,10 +189,10 @@ class SectionPills extends React.Component {
                             installed base benefits.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Schedule",
+                      tabButton: 'Schedule',
                       tabIcon: Schedule,
                       tabContent: (
                         <span>
@@ -212,10 +212,10 @@ class SectionPills extends React.Component {
                             benefits.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Tasks",
+                      tabButton: 'Tasks',
                       tabIcon: List,
                       tabContent: (
                         <span>
@@ -241,21 +241,21 @@ class SectionPills extends React.Component {
                             installed base benefits.
                           </p>
                         </span>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={8} lg={6}>
                 <NavPills
-                  color="primary"
+                  color='primary'
                   horizontal={{
                     tabsGrid: { xs: 12, sm: 3, md: 4 },
-                    contentGrid: { xs: 12, sm: 9, md: 8 }
+                    contentGrid: { xs: 12, sm: 9, md: 8 },
                   }}
                   tabs={[
                     {
-                      tabButton: "Dashboard",
+                      tabButton: 'Dashboard',
                       tabIcon: Dashboard,
                       tabContent: (
                         <span>
@@ -281,10 +281,10 @@ class SectionPills extends React.Component {
                             installed base benefits.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
-                      tabButton: "Schedule",
+                      tabButton: 'Schedule',
                       tabIcon: Schedule,
                       tabContent: (
                         <span>
@@ -304,8 +304,8 @@ class SectionPills extends React.Component {
                             benefits.
                           </p>
                         </span>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>
@@ -313,8 +313,8 @@ class SectionPills extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(pillsStyle)(SectionPills);
+export default withStyles(pillsStyle)(SectionPills)

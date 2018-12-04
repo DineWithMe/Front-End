@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
-import Check from "@material-ui/icons/Check";
-import Warning from "@material-ui/icons/Warning";
+import Check from '@material-ui/icons/Check'
+import Warning from '@material-ui/icons/Warning'
 // core components
-import SnackbarContent from "components/Snackbar/SnackbarContent.jsx";
-import Clearfix from "components/Clearfix/Clearfix.jsx";
-import notificationsStyles from "assets/jss/material-kit-pro-react/views/componentsSections/notificationsStyles.jsx";
+import SnackbarContent from 'components/Snackbar/SnackbarContent.jsx'
+import Clearfix from 'components/Clearfix/Clearfix.jsx'
+import notificationsStyles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/notificationsStyles.jsx'
 
 class SectionNotifications extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
-      <div className={`${classes.section} cd-section`} id="notifications">
+      <div className={`${classes.section} cd-section`} id='notifications'>
         <div className={classes.container}>
           <div className={classes.space70} />
           <div className={classes.title}>
@@ -29,8 +29,8 @@ class SectionNotifications extends React.Component {
             </span>
           }
           close
-          color="info"
-          icon="info_outline"
+          color='info'
+          icon='info_outline'
         />
         <SnackbarContent
           message={
@@ -40,7 +40,7 @@ class SectionNotifications extends React.Component {
             </span>
           }
           close
-          color="success"
+          color='success'
           icon={Check}
         />
         <SnackbarContent
@@ -51,7 +51,7 @@ class SectionNotifications extends React.Component {
             </span>
           }
           close
-          color="warning"
+          color='warning'
           icon={Warning}
         />
         <SnackbarContent
@@ -62,13 +62,13 @@ class SectionNotifications extends React.Component {
             </span>
           }
           close
-          color="danger"
-          icon="info_outline"
+          color='danger'
+          icon='info_outline'
         />
         <Clearfix />
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(notificationsStyles)(SectionNotifications);
+export default withStyles(notificationsStyles)(SectionNotifications)

@@ -1,33 +1,33 @@
-import React from "react";
+import React from 'react'
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
 // @material-ui/icons
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Small from "components/Typography/Small.jsx";
-import Danger from "components/Typography/Danger.jsx";
-import Warning from "components/Typography/Warning.jsx";
-import Success from "components/Typography/Success.jsx";
-import Info from "components/Typography/Info.jsx";
-import Primary from "components/Typography/Primary.jsx";
-import Muted from "components/Typography/Muted.jsx";
-import Quote from "components/Typography/Quote.jsx";
-import SectionContentAreas from "./SectionContentAreas.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Small from 'components/Typography/Small.jsx'
+import Danger from 'components/Typography/Danger.jsx'
+import Warning from 'components/Typography/Warning.jsx'
+import Success from 'components/Typography/Success.jsx'
+import Info from 'components/Typography/Info.jsx'
+import Primary from 'components/Typography/Primary.jsx'
+import Muted from 'components/Typography/Muted.jsx'
+import Quote from 'components/Typography/Quote.jsx'
+import SectionContentAreas from './SectionContentAreas.jsx'
 
-import typographyStyle from "assets/jss/material-kit-pro-react/views/componentsSections/typographyStyle.jsx";
+import typographyStyle from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/typographyStyle.jsx'
 
-import image from "assets/img/faces/avatar.jpg";
+import image from '../../../../static/assets/img/faces/avatar.jpg'
 class SectionTypography extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.section}>
         <div className={classes.container}>
-          <div id="typography" className="cd-section">
+          <div id='typography' className='cd-section'>
             <div className={classes.title}>
               <h2>Typography</h2>
             </div>
@@ -85,8 +85,8 @@ class SectionTypography extends React.Component {
               <div className={classes.typo}>
                 <div className={classes.note}>Quote</div>
                 <Quote
-                  text="I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
-                  author=" Kanye West, Musician"
+                  text='I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.'
+                  author=' Kanye West, Musician'
                 />
               </div>
               <div className={classes.typo}>
@@ -134,14 +134,15 @@ class SectionTypography extends React.Component {
               <div className={classes.typo}>
                 <div className={classes.note}>Small Tag</div>
                 <h2>
-                  Header with small subtitle<br />
+                  Header with small subtitle
+                  <br />
                   <Small>Use "Small" tag for the headers</Small>
                 </h2>
               </div>
             </GridContainer>
           </div>
           <div className={classes.space50} />
-          <div id="images">
+          <div id='images'>
             <div className={classes.title}>
               <h2>Images</h2>
             </div>
@@ -151,28 +152,28 @@ class SectionTypography extends React.Component {
                 <h4>Rounded Image</h4>
                 <img
                   src={image}
-                  alt="..."
-                  className={classes.imgRounded + " " + classes.imgFluid}
+                  alt='...'
+                  className={classes.imgRounded + ' ' + classes.imgFluid}
                 />
               </GridItem>
               <GridItem xs={12} sm={2} className={classes.marginLeft}>
                 <h4>Circle Image</h4>
                 <img
                   src={image}
-                  alt="..."
-                  className={classes.imgRoundedCircle + " " + classes.imgFluid}
+                  alt='...'
+                  className={classes.imgRoundedCircle + ' ' + classes.imgFluid}
                 />
               </GridItem>
               <GridItem xs={12} sm={2} className={classes.marginLeft}>
                 <h4>Rounded Raised</h4>
                 <img
                   src={image}
-                  alt="..."
+                  alt='...'
                   className={
                     classes.imgRaised +
-                    " " +
+                    ' ' +
                     classes.imgRounded +
-                    " " +
+                    ' ' +
                     classes.imgFluid
                   }
                 />
@@ -181,12 +182,12 @@ class SectionTypography extends React.Component {
                 <h4>Circle Raised</h4>
                 <img
                   src={image}
-                  alt="..."
+                  alt='...'
                   className={
                     classes.imgRaised +
-                    " " +
+                    ' ' +
                     classes.imgRoundedCircle +
-                    " " +
+                    ' ' +
                     classes.imgFluid
                   }
                 />
@@ -198,8 +199,8 @@ class SectionTypography extends React.Component {
           <SectionContentAreas />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(typographyStyle)(SectionTypography);
+export default withStyles(typographyStyle)(SectionTypography)

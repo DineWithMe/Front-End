@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
+import React from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem";
+import GridContainer from '../Grid/GridContainer.jsx'
+import GridItem from '../Grid/GridItem'
 
-import instructionStyle from "assets/jss/material-kit-pro-react/components/instructionStyle.jsx";
+import instructionStyle from '../../../static/assets/jss/material-kit-pro-react/components/instructionStyle.jsx'
 
 function Instruction({ ...props }) {
   const {
@@ -19,16 +19,16 @@ function Instruction({ ...props }) {
     image,
     className,
     imageClassName,
-    imageAlt
-  } = props;
+    imageAlt,
+  } = props
   const instructionClasses = cx({
     [classes.instruction]: true,
-    [className]: className !== undefined
-  });
+    [className]: className !== undefined,
+  })
   const pictureClasses = cx({
     [classes.picture]: true,
-    [imageClassName]: imageClassName !== undefined
-  });
+    [imageClassName]: imageClassName !== undefined,
+  })
   return (
     <div className={instructionClasses}>
       <GridContainer>
@@ -43,12 +43,12 @@ function Instruction({ ...props }) {
         </GridItem>
       </GridContainer>
     </div>
-  );
+  )
 }
 
 Instruction.defaultProps = {
-  imageAlt: "..."
-};
+  imageAlt: '...',
+}
 
 Instruction.propTypes = {
   classes: PropTypes.object.isRequired,
@@ -57,7 +57,7 @@ Instruction.propTypes = {
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string,
   className: PropTypes.string,
-  imageClassName: PropTypes.string
-};
+  imageClassName: PropTypes.string,
+}
 
-export default withStyles(instructionStyle)(Instruction);
+export default withStyles(instructionStyle)(Instruction)

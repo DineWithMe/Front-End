@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardAvatar from "components/Card/CardAvatar.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardAvatar from 'components/Card/CardAvatar.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import teamStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/teamStyle.jsx";
+import teamStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/teamStyle.jsx'
 
-import FaceMarc from "assets/img/faces/marc.jpg";
-import FaceChristian from "assets/img/faces/christian.jpg";
-import FaceKendall from "assets/img/faces/kendall.jpg";
-import FaceAvatar from "assets/img/faces/avatar.jpg";
+import FaceMarc from '../../../../static/assets/img/faces/marc.jpg'
+import FaceChristian from '../../../../static/assets/img/faces/christian.jpg'
+import FaceKendall from '../../../../static/assets/img/faces/kendall.jpg'
+import FaceAvatar from '../../../../static/assets/img/faces/avatar.jpg'
 
 function SectionTeam(props) {
-  const { classes } = props;
+  const { classes } = props
   return (
     <div className={classes.team}>
       <GridContainer>
@@ -44,8 +44,8 @@ function SectionTeam(props) {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
-                <img src={FaceMarc} alt="profile-pic" className={classes.img} />
+              <a href='#pablo'>
+                <img src={FaceMarc} alt='profile-pic' className={classes.img} />
               </a>
             </CardAvatar>
             <CardBody plain>
@@ -57,14 +57,14 @@ function SectionTeam(props) {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
+              <Button href='#pablo' justIcon simple color='twitter'>
+                <i className='fab fa-twitter' />
               </Button>
-              <Button href="#pablo" justIcon simple color="facebook">
-                <i className="fab fa-facebook" />
+              <Button href='#pablo' justIcon simple color='facebook'>
+                <i className='fab fa-facebook' />
               </Button>
-              <Button href="#pablo" justIcon simple color="google">
-                <i className="fab fa-google" />
+              <Button href='#pablo' justIcon simple color='google'>
+                <i className='fab fa-google' />
               </Button>
             </CardFooter>
           </Card>
@@ -72,10 +72,10 @@ function SectionTeam(props) {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
+              <a href='#pablo'>
                 <img
                   src={FaceKendall}
-                  alt="profile-pic"
+                  alt='profile-pic'
                   className={classes.img}
                 />
               </a>
@@ -89,14 +89,14 @@ function SectionTeam(props) {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
+              <Button href='#pablo' justIcon simple color='twitter'>
+                <i className='fab fa-twitter' />
               </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href='#pablo' justIcon simple color='dribbble'>
+                <i className='fab fa-dribbble' />
               </Button>
-              <Button href="#pablo" justIcon simple color="linkedin">
-                <i className="fab fa-linkedin-in" />
+              <Button href='#pablo' justIcon simple color='linkedin'>
+                <i className='fab fa-linkedin-in' />
               </Button>
             </CardFooter>
           </Card>
@@ -104,10 +104,10 @@ function SectionTeam(props) {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
+              <a href='#pablo'>
                 <img
                   src={FaceChristian}
-                  alt="profile-pic"
+                  alt='profile-pic'
                   className={classes.img}
                 />
               </a>
@@ -121,11 +121,11 @@ function SectionTeam(props) {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="facebook">
-                <i className="fab fa-facebook" />
+              <Button href='#pablo' justIcon simple color='facebook'>
+                <i className='fab fa-facebook' />
               </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href='#pablo' justIcon simple color='dribbble'>
+                <i className='fab fa-dribbble' />
               </Button>
             </CardFooter>
           </Card>
@@ -133,10 +133,10 @@ function SectionTeam(props) {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
+              <a href='#pablo'>
                 <img
                   src={FaceAvatar}
-                  alt="profile-pic"
+                  alt='profile-pic'
                   className={classes.img}
                 />
               </a>
@@ -150,21 +150,21 @@ function SectionTeam(props) {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="google">
-                <i className="fab fa-google" />
+              <Button href='#pablo' justIcon simple color='google'>
+                <i className='fab fa-google' />
               </Button>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
+              <Button href='#pablo' justIcon simple color='twitter'>
+                <i className='fab fa-twitter' />
               </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href='#pablo' justIcon simple color='dribbble'>
+                <i className='fab fa-dribbble' />
               </Button>
             </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
     </div>
-  );
+  )
 }
 
-export default withStyles(teamStyle)(SectionTeam);
+export default withStyles(teamStyle)(SectionTeam)

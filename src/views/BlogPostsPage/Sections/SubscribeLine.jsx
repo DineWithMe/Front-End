@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import InputAdornment from "@material-ui/core/InputAdornment";
+import withStyles from '@material-ui/core/styles/withStyles'
+import InputAdornment from '@material-ui/core/InputAdornment'
 // @material-ui/icons
-import Mail from "@material-ui/icons/Mail";
+import Mail from '@material-ui/icons/Mail'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
 
-import sectionSubscribeLineStyle from "assets/jss/material-kit-pro-react/views/blogPostsSections/sectionSubscribeLineStyle.jsx";
+import sectionSubscribeLineStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionSubscribeLineStyle.jsx'
 
 function SubscribeLine({ ...props }) {
-  const { classes } = props;
+  const { classes } = props
   return (
     <div className={classes.section}>
       <div className={classes.container}>
@@ -39,23 +39,23 @@ function SubscribeLine({ ...props }) {
                       className={classes.alignItemsCenter}
                     >
                       <CustomInput
-                        id="subscribe"
+                        id='subscribe'
                         formControlProps={{
                           fullWidth: true,
-                          className: classes.formControl
+                          className: classes.formControl,
                         }}
                         inputProps={{
                           startAdornment: (
-                            <InputAdornment position="start">
+                            <InputAdornment position='start'>
                               <Mail className={classes.icon} />
                             </InputAdornment>
                           ),
-                          placeholder: "Your Email..."
+                          placeholder: 'Your Email...',
                         }}
                       />
                     </GridItem>
                     <GridItem xs={12} sm={4} md={4}>
-                      <Button round block color="primary">
+                      <Button round block color='primary'>
                         Subscribe
                       </Button>
                     </GridItem>
@@ -67,7 +67,7 @@ function SubscribeLine({ ...props }) {
         </GridContainer>
       </div>
     </div>
-  );
+  )
 }
 
-export default withStyles(sectionSubscribeLineStyle)(SubscribeLine);
+export default withStyles(sectionSubscribeLineStyle)(SubscribeLine)

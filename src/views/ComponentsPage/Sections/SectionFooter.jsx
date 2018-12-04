@@ -1,33 +1,33 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import withStyles from '@material-ui/core/styles/withStyles'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
-import Mail from "@material-ui/icons/Mail";
-import Favorite from "@material-ui/icons/Favorite";
+import Mail from '@material-ui/icons/Mail'
+import Favorite from '@material-ui/icons/Favorite'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
-import Footer from "components/Footer/Footer.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
+import Footer from 'components/Footer/Footer.jsx'
 
-import face1 from "assets/img/faces/card-profile6-square.jpg";
-import face2 from "assets/img/faces/christian.jpg";
-import face3 from "assets/img/faces/card-profile4-square.jpg";
-import face4 from "assets/img/faces/card-profile1-square.jpg";
-import face5 from "assets/img/faces/marc.jpg";
-import face6 from "assets/img/faces/kendall.jpg";
-import face7 from "assets/img/faces/card-profile5-square.jpg";
-import face8 from "assets/img/faces/card-profile2-square.jpg";
+import face1 from '../../../../static/assets/img/faces/card-profile6-square.jpg'
+import face2 from '../../../../static/assets/img/faces/christian.jpg'
+import face3 from '../../../../static/assets/img/faces/card-profile4-square.jpg'
+import face4 from '../../../../static/assets/img/faces/card-profile1-square.jpg'
+import face5 from '../../../../static/assets/img/faces/marc.jpg'
+import face6 from '../../../../static/assets/img/faces/kendall.jpg'
+import face7 from '../../../../static/assets/img/faces/card-profile5-square.jpg'
+import face8 from '../../../../static/assets/img/faces/card-profile2-square.jpg'
 
-import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.jsx";
+import styles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.jsx'
 
-const SectionFooter = props => {
-  const { classes } = props;
+const SectionFooter = (props) => {
+  const { classes } = props
   return (
     <div className={classes.section}>
       <div className={classes.container}>
@@ -37,12 +37,12 @@ const SectionFooter = props => {
       </div>
       <div>
         <Footer
-          theme="white"
+          theme='white'
           content={
             <div>
               <div className={classes.left}>
                 <a
-                  href="https://www.creative-tim.com/product/material-kit-pro-react"
+                  href='https://www.creative-tim.com/product/material-kit-pro-react'
                   className={classes.footerBrand}
                 >
                   Material Kit PRO React
@@ -52,7 +52,7 @@ const SectionFooter = props => {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/"
+                      href='https://www.creative-tim.com/'
                       className={classes.block}
                     >
                       Creative Tim
@@ -60,7 +60,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
+                      href='https://www.creative-tim.com/presentation'
                       className={classes.block}
                     >
                       About us
@@ -68,7 +68,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="//blog.creative-tim.com/"
+                      href='//blog.creative-tim.com/'
                       className={classes.block}
                     >
                       Blog
@@ -76,7 +76,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/license"
+                      href='https://www.creative-tim.com/license'
                       className={classes.block}
                     >
                       Licenses
@@ -88,32 +88,32 @@ const SectionFooter = props => {
                 <ul>
                   <li>
                     <Button
-                      href="https://twitter.com/CreativeTim"
-                      color="twitter"
+                      href='https://twitter.com/CreativeTim'
+                      color='twitter'
                       justIcon
                       simple
                     >
-                      <i className="fab fa-twitter" />
+                      <i className='fab fa-twitter' />
                     </Button>
                   </li>
                   <li>
                     <Button
-                      href="https://dribbble.com/creativetim"
-                      color="dribbble"
+                      href='https://dribbble.com/creativetim'
+                      color='dribbble'
                       justIcon
                       simple
                     >
-                      <i className="fab fa-dribbble" />
+                      <i className='fab fa-dribbble' />
                     </Button>
                   </li>
                   <li>
                     <Button
-                      href="https://instagram.com/CreativeTimOfficial"
-                      color="google"
+                      href='https://instagram.com/CreativeTimOfficial'
+                      color='google'
                       justIcon
                       simple
                     >
-                      <i className="fab fa-google-plus-g" />
+                      <i className='fab fa-google-plus-g' />
                     </Button>
                   </li>
                 </ul>
@@ -130,7 +130,7 @@ const SectionFooter = props => {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/"
+                      href='https://www.creative-tim.com/'
                       className={classes.block}
                     >
                       Creative Tim
@@ -138,7 +138,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
+                      href='https://www.creative-tim.com/presentation'
                       className={classes.block}
                     >
                       About us
@@ -146,7 +146,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="//blog.creative-tim.com/"
+                      href='//blog.creative-tim.com/'
                       className={classes.block}
                     >
                       Blog
@@ -154,7 +154,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/license"
+                      href='https://www.creative-tim.com/license'
                       className={classes.block}
                     >
                       Licenses
@@ -163,14 +163,14 @@ const SectionFooter = props => {
                 </List>
               </div>
               <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{" "}
-                <Favorite className={classes.icon} /> by{" "}
+                &copy; {1900 + new Date().getYear()} , made with{' '}
+                <Favorite className={classes.icon} /> by{' '}
                 <a
-                  href="https://www.creative-tim.com"
+                  href='https://www.creative-tim.com'
                   className={classes.aClasses}
                 >
                   Creative Tim
-                </a>{" "}
+                </a>{' '}
                 for a better web.
               </div>
             </div>
@@ -179,12 +179,12 @@ const SectionFooter = props => {
         <br />
         <br />
         <Footer
-          theme="dark"
+          theme='dark'
           content={
             <div>
               <div className={classes.left}>
                 <a
-                  href="https://www.creative-tim.com/product/material-kit-pro-react"
+                  href='https://www.creative-tim.com/product/material-kit-pro-react'
                   className={classes.footerBrand}
                 >
                   Material Kit PRO React
@@ -194,7 +194,7 @@ const SectionFooter = props => {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="http://blog.creative-tim.com/"
+                      href='http://blog.creative-tim.com/'
                       className={classes.block}
                     >
                       Blog
@@ -202,7 +202,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
+                      href='https://www.creative-tim.com/presentation'
                       className={classes.block}
                     >
                       Presentation
@@ -210,8 +210,8 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablito"
-                      onClick={e => e.preventDefault()}
+                      href='#pablito'
+                      onClick={(e) => e.preventDefault()}
                       className={classes.block}
                     >
                       Discover
@@ -219,8 +219,8 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablito"
-                      onClick={e => e.preventDefault()}
+                      href='#pablito'
+                      onClick={(e) => e.preventDefault()}
                       className={classes.block}
                     >
                       Payment
@@ -228,7 +228,7 @@ const SectionFooter = props => {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/contact-us"
+                      href='https://www.creative-tim.com/contact-us'
                       className={classes.block}
                     >
                       Contact us
@@ -240,32 +240,32 @@ const SectionFooter = props => {
                 <ul>
                   <li>
                     <Button
-                      href="https://twitter.com/CreativeTim"
-                      color="white"
+                      href='https://twitter.com/CreativeTim'
+                      color='white'
                       justIcon
                       simple
                     >
-                      <i className="fab fa-twitter" />
+                      <i className='fab fa-twitter' />
                     </Button>
                   </li>
                   <li>
                     <Button
-                      href="https://dribbble.com/creativetim"
-                      color="white"
+                      href='https://dribbble.com/creativetim'
+                      color='white'
                       justIcon
                       simple
                     >
-                      <i className="fab fa-dribbble" />
+                      <i className='fab fa-dribbble' />
                     </Button>
                   </li>
                   <li>
                     <Button
-                      href="https://instagram.com/CreativeTimOfficial"
-                      color="white"
+                      href='https://instagram.com/CreativeTimOfficial'
+                      color='white'
                       justIcon
                       simple
                     >
-                      <i className="fab fa-instagram" />
+                      <i className='fab fa-instagram' />
                     </Button>
                   </li>
                 </ul>
@@ -276,52 +276,52 @@ const SectionFooter = props => {
         <br />
         <br />
         <Footer
-          theme="dark"
+          theme='dark'
           content={
             <div>
               <div className={classes.left}>
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablo"
+                      href='#pablo'
                       className={classes.block}
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Blog
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablo"
+                      href='#pablo'
                       className={classes.block}
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Presentation
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablo"
+                      href='#pablo'
                       className={classes.block}
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Discover
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablo"
+                      href='#pablo'
                       className={classes.block}
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Payment
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="#pablo"
+                      href='#pablo'
                       className={classes.block}
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Contact Us
                     </a>
@@ -329,13 +329,13 @@ const SectionFooter = props => {
                 </List>
               </div>
               <div className={classes.right}>
-                Copyright &copy; {1900 + new Date().getYear()}{" "}
+                Copyright &copy; {1900 + new Date().getYear()}{' '}
                 <a
-                  href="https://www.creative-tim.com"
+                  href='https://www.creative-tim.com'
                   className={classes.aClasses}
                 >
                   Creative Tim
-                </a>{" "}
+                </a>{' '}
                 All Rights Reserved.
               </div>
             </div>
@@ -346,27 +346,27 @@ const SectionFooter = props => {
               <h5>About Us</h5>
               <p>
                 Creative Tim is a startup that creates design tools that make
-                the web development process faster and easier.{" "}
+                the web development process faster and easier.{' '}
               </p>
               <p>
                 We love the web and care deeply for how users interact with a
                 digital product. We power businesses and individuals to create
-                better looking web projects around the world.{" "}
+                better looking web projects around the world.{' '}
               </p>
             </GridItem>
             <GridItem xs={12} sm={4} md={4}>
               <h5>Social Feed</h5>
               <div className={classes.socialFeed}>
                 <div>
-                  <i className="fab fa-twitter" />
+                  <i className='fab fa-twitter' />
                   <p>How to handle ethical disagreements with your clients.</p>
                 </div>
                 <div>
-                  <i className="fab fa-twitter" />
+                  <i className='fab fa-twitter' />
                   <p>The tangible benefits of designing at 1x pixel density.</p>
                 </div>
                 <div>
-                  <i className="fab fa-facebook-square" />
+                  <i className='fab fa-facebook-square' />
                   <p>
                     A collection of 25 stunning sites that you can use for
                     inspiration.
@@ -384,7 +384,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face2}
@@ -393,7 +393,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face3}
@@ -402,7 +402,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face4}
@@ -411,7 +411,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face5}
@@ -420,7 +420,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face6}
@@ -429,7 +429,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face7}
@@ -438,7 +438,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
                 <img
                   src={face8}
@@ -447,7 +447,7 @@ const SectionFooter = props => {
                     classes.imgRaised,
                     classes.imgRounded
                   )}
-                  alt="..."
+                  alt='...'
                 />
               </div>
             </GridItem>
@@ -456,11 +456,11 @@ const SectionFooter = props => {
         <br />
         <br />
         <Footer
-          theme="white"
+          theme='white'
           content={
             <div className={classNames(classes.pullCenter, classes.copyRight)}>
-              Copyright &copy; {1900 + new Date().getYear()}{" "}
-              <a href="https://www.creative-tim.com">Creative Tim</a> All Rights
+              Copyright &copy; {1900 + new Date().getYear()}{' '}
+              <a href='https://www.creative-tim.com'>Creative Tim</a> All Rights
               Reserved.
             </div>
           }
@@ -471,16 +471,16 @@ const SectionFooter = props => {
                 <h5>About Us</h5>
                 <ul className={classes.linksVertical}>
                   <li>
-                    <a href="#pablo">Blog</a>
+                    <a href='#pablo'>Blog</a>
                   </li>
                   <li>
-                    <a href="#pablo">About us</a>
+                    <a href='#pablo'>About us</a>
                   </li>
                   <li>
-                    <a href="#pablo">Presentation</a>
+                    <a href='#pablo'>Presentation</a>
                   </li>
                   <li>
-                    <a href="#pablo">Contact Us</a>
+                    <a href='#pablo'>Contact Us</a>
                   </li>
                 </ul>
               </GridItem>
@@ -488,22 +488,22 @@ const SectionFooter = props => {
                 <h5>Market</h5>
                 <ul className={classes.linksVertical}>
                   <li>
-                    <a href="#pablo">Sales FAQ</a>
+                    <a href='#pablo'>Sales FAQ</a>
                   </li>
                   <li>
-                    <a href="#pablo">How to register</a>
+                    <a href='#pablo'>How to register</a>
                   </li>
                   <li>
-                    <a href="#pablo">Sell goods</a>
+                    <a href='#pablo'>Sell goods</a>
                   </li>
                   <li>
-                    <a href="#pablo">Receive Payment</a>
+                    <a href='#pablo'>Receive Payment</a>
                   </li>
                   <li>
-                    <a href="#pablo">Transactions issues</a>
+                    <a href='#pablo'>Transactions issues</a>
                   </li>
                   <li>
-                    <a href="#pablo">Affiliates program</a>
+                    <a href='#pablo'>Affiliates program</a>
                   </li>
                 </ul>
               </GridItem>
@@ -511,19 +511,19 @@ const SectionFooter = props => {
                 <h5>Social Feed</h5>
                 <div className={classes.socialFeed}>
                   <div>
-                    <i className="fab fa-twitter" />
+                    <i className='fab fa-twitter' />
                     <p>
                       How to handle ethical disagreements with your clients.
                     </p>
                   </div>
                   <div>
-                    <i className="fab fa-twitter" />
+                    <i className='fab fa-twitter' />
                     <p>
                       The tangible benefits of designing at 1x pixel density.
                     </p>
                   </div>
                   <div>
-                    <i className="fab fa-facebook-square" />
+                    <i className='fab fa-facebook-square' />
                     <p>
                       A collection of 25 stunning sites that you can use for
                       inspiration.
@@ -535,28 +535,28 @@ const SectionFooter = props => {
                 <h5>Follow Us</h5>
                 <ul className={classes.socialButtons}>
                   <li>
-                    <Button justIcon simple href="#pablo" color="twitter">
-                      <i className="fab fa-twitter" />
+                    <Button justIcon simple href='#pablo' color='twitter'>
+                      <i className='fab fa-twitter' />
                     </Button>
                   </li>
                   <li>
-                    <Button justIcon simple href="#pablo" color="facebook">
-                      <i className="fab fa-facebook-square" />
+                    <Button justIcon simple href='#pablo' color='facebook'>
+                      <i className='fab fa-facebook-square' />
                     </Button>
                   </li>
                   <li>
-                    <Button justIcon simple href="#pablo" color="dribbble">
-                      <i className="fab fa-dribbble" />
+                    <Button justIcon simple href='#pablo' color='dribbble'>
+                      <i className='fab fa-dribbble' />
                     </Button>
                   </li>
                   <li>
-                    <Button justIcon simple href="#pablo" color="google">
-                      <i className="fab fa-google-plus-g" />
+                    <Button justIcon simple href='#pablo' color='google'>
+                      <i className='fab fa-google-plus-g' />
                     </Button>
                   </li>
                   <li>
-                    <Button justIcon simple href="#pablo" color="instagram">
-                      <i className="fab fa-instagram" />
+                    <Button justIcon simple href='#pablo' color='instagram'>
+                      <i className='fab fa-instagram' />
                     </Button>
                   </li>
                 </ul>
@@ -574,41 +574,41 @@ const SectionFooter = props => {
         <br />
         <br />
         <Footer
-          theme="white"
+          theme='white'
           content={
             <div>
               <ul className={classes.socialButtons}>
                 <li>
-                  <Button justIcon simple href="#pablo" color="twitter">
-                    <i className="fab fa-twitter" />
+                  <Button justIcon simple href='#pablo' color='twitter'>
+                    <i className='fab fa-twitter' />
                   </Button>
                 </li>
                 <li>
-                  <Button justIcon simple href="#pablo" color="facebook">
-                    <i className="fab fa-facebook-square" />
+                  <Button justIcon simple href='#pablo' color='facebook'>
+                    <i className='fab fa-facebook-square' />
                   </Button>
                 </li>
                 <li>
-                  <Button justIcon simple href="#pablo" color="dribbble">
-                    <i className="fab fa-dribbble" />
+                  <Button justIcon simple href='#pablo' color='dribbble'>
+                    <i className='fab fa-dribbble' />
                   </Button>
                 </li>
                 <li>
-                  <Button justIcon simple href="#pablo" color="google">
-                    <i className="fab fa-google-plus-g" />
+                  <Button justIcon simple href='#pablo' color='google'>
+                    <i className='fab fa-google-plus-g' />
                   </Button>
                 </li>
                 <li>
-                  <Button justIcon simple href="#pablo" color="youtube">
-                    <i className="fab fa-youtube" />
+                  <Button justIcon simple href='#pablo' color='youtube'>
+                    <i className='fab fa-youtube' />
                   </Button>
                 </li>
               </ul>
               <div
                 className={classNames(classes.pullCenter, classes.copyRight)}
               >
-                Copyright &copy; {1900 + new Date().getYear()}{" "}
-                <a href="https://www.creative-tim.com">Creative Tim</a> All
+                Copyright &copy; {1900 + new Date().getYear()}{' '}
+                <a href='https://www.creative-tim.com'>Creative Tim</a> All
                 Rights Reserved.
               </div>
             </div>
@@ -617,7 +617,7 @@ const SectionFooter = props => {
           <div className={classes.footer}>
             <GridContainer>
               <GridItem xs={12} sm={3} md={3}>
-                <a href="#pablo">
+                <a href='#pablo'>
                   <h5>Material Kit PRO</h5>
                 </a>
                 <p>
@@ -629,16 +629,16 @@ const SectionFooter = props => {
                 <h5>About</h5>
                 <ul className={classes.linksVertical}>
                   <li>
-                    <a href="#pablo">Blog</a>
+                    <a href='#pablo'>Blog</a>
                   </li>
                   <li>
-                    <a href="#pablo">About us</a>
+                    <a href='#pablo'>About us</a>
                   </li>
                   <li>
-                    <a href="#pablo">Presentation</a>
+                    <a href='#pablo'>Presentation</a>
                   </li>
                   <li>
-                    <a href="#pablo">Contact us</a>
+                    <a href='#pablo'>Contact us</a>
                   </li>
                 </ul>
               </GridItem>
@@ -646,19 +646,19 @@ const SectionFooter = props => {
                 <h5>Market</h5>
                 <ul className={classes.linksVertical}>
                   <li>
-                    <a href="#pablo">Sales FAQ</a>
+                    <a href='#pablo'>Sales FAQ</a>
                   </li>
                   <li>
-                    <a href="#pablo">How to register</a>
+                    <a href='#pablo'>How to register</a>
                   </li>
                   <li>
-                    <a href="#pablo">Sell Goods</a>
+                    <a href='#pablo'>Sell Goods</a>
                   </li>
                   <li>
-                    <a href="#pablo">Receive Payment</a>
+                    <a href='#pablo'>Receive Payment</a>
                   </li>
                   <li>
-                    <a href="#pablo">Transactions Issues</a>
+                    <a href='#pablo'>Transactions Issues</a>
                   </li>
                 </ul>
               </GridItem>
@@ -666,13 +666,13 @@ const SectionFooter = props => {
                 <h5>Legal</h5>
                 <ul className={classes.linksVertical}>
                   <li>
-                    <a href="#pablo">Transactions FAQ</a>
+                    <a href='#pablo'>Transactions FAQ</a>
                   </li>
                   <li>
-                    <a href="#pablo">Terms & conditions</a>
+                    <a href='#pablo'>Terms & conditions</a>
                   </li>
                   <li>
-                    <a href="#pablo">Licenses</a>
+                    <a href='#pablo'>Licenses</a>
                   </li>
                 </ul>
               </GridItem>
@@ -684,15 +684,15 @@ const SectionFooter = props => {
                 </p>
                 <form>
                   <CustomInput
-                    id="footeremail"
+                    id='footeremail'
                     formControlProps={{
-                      fullWidth: false
+                      fullWidth: false,
                     }}
                     inputProps={{
-                      placeholder: "Your Email..."
+                      placeholder: 'Your Email...',
                     }}
                   />
-                  <Button color="primary" justIcon>
+                  <Button color='primary' justIcon>
                     <Mail />
                   </Button>
                 </form>
@@ -702,7 +702,7 @@ const SectionFooter = props => {
         </Footer>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default withStyles(styles)(SectionFooter);
+export default withStyles(styles)(SectionFooter)

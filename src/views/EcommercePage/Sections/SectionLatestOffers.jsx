@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardHeader from 'components/Card/CardHeader.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Tooltip from "@material-ui/core/Tooltip";
+import withStyles from '@material-ui/core/styles/withStyles'
+import Tooltip from '@material-ui/core/Tooltip'
 // @material-ui icons
-import Favorite from "@material-ui/icons/Favorite";
+import Favorite from '@material-ui/icons/Favorite'
 
-import styles from "assets/jss/material-kit-pro-react/views/ecommerceSections/latestOffersStyle.jsx";
+import styles from '../../../../static/assets/jss/material-kit-pro-react/views/ecommerceSections/latestOffersStyle.jsx'
 
-import gucci from "assets/img/examples/gucci.jpg";
-import tomFord from "assets/img/examples/tom-ford.jpg";
-import dolce from "assets/img/examples/dolce.jpg";
+import gucci from '../../../../static/assets/img/examples/gucci.jpg'
+import tomFord from '../../../../static/assets/img/examples/tom-ford.jpg'
+import dolce from '../../../../static/assets/img/examples/dolce.jpg'
 
-const SectionLatestOffers = props => {
-  const { classes } = props;
+const SectionLatestOffers = (props) => {
+  const { classes } = props
   return (
     <div className={classes.section}>
       <div className={classes.container}>
@@ -31,8 +31,8 @@ const SectionLatestOffers = props => {
           <GridItem md={4} sm={4}>
             <Card product plain>
               <CardHeader image plain>
-                <a href="#pablo">
-                  <img src={gucci} alt="..." />
+                <a href='#pablo'>
+                  <img src={gucci} alt='...' />
                 </a>
                 <div
                   className={classes.coloredShadow}
@@ -50,22 +50,22 @@ const SectionLatestOffers = props => {
               <CardFooter plain>
                 <div className={classes.priceContainer}>
                   <span className={classNames(classes.price, classes.priceOld)}>
-                    {" "}
+                    {' '}
                     €1,430
                   </span>
                   <span className={classNames(classes.price, classes.priceNew)}>
-                    {" "}
+                    {' '}
                     €743
                   </span>
                 </div>
                 <div className={classNames(classes.stats, classes.mlAuto)}>
                   <Tooltip
-                    id="tooltip-top"
-                    title="Saved to Wishlist"
-                    placement="top"
+                    id='tooltip-top'
+                    title='Saved to Wishlist'
+                    placement='top'
                     classes={{ tooltip: classes.tooltip }}
                   >
-                    <Button justIcon simple color="rose">
+                    <Button justIcon simple color='rose'>
                       <Favorite />
                     </Button>
                   </Tooltip>
@@ -76,8 +76,8 @@ const SectionLatestOffers = props => {
           <GridItem md={4} sm={4}>
             <Card product plain>
               <CardHeader image plain>
-                <a href="#pablo">
-                  <img src={dolce} alt="..." />
+                <a href='#pablo'>
+                  <img src={dolce} alt='...' />
                 </a>
                 <div
                   className={classes.coloredShadow}
@@ -95,22 +95,22 @@ const SectionLatestOffers = props => {
               <CardFooter plain>
                 <div className={classes.priceContainer}>
                   <span className={classNames(classes.price, classes.priceOld)}>
-                    {" "}
+                    {' '}
                     €1,430
                   </span>
                   <span className={classNames(classes.price, classes.priceNew)}>
-                    {" "}
+                    {' '}
                     €743
                   </span>
                 </div>
                 <div className={classNames(classes.stats, classes.mlAuto)}>
                   <Tooltip
-                    id="tooltip-top"
-                    title="Saved to Wishlist"
-                    placement="top"
+                    id='tooltip-top'
+                    title='Saved to Wishlist'
+                    placement='top'
                     classes={{ tooltip: classes.tooltip }}
                   >
-                    <Button justIcon simple color="rose">
+                    <Button justIcon simple color='rose'>
                       <Favorite />
                     </Button>
                   </Tooltip>
@@ -121,8 +121,8 @@ const SectionLatestOffers = props => {
           <GridItem md={4} sm={4}>
             <Card product plain>
               <CardHeader image plain>
-                <a href="#pablo">
-                  <img src={tomFord} alt="..." />
+                <a href='#pablo'>
+                  <img src={tomFord} alt='...' />
                 </a>
                 <div
                   className={classes.coloredShadow}
@@ -140,22 +140,22 @@ const SectionLatestOffers = props => {
               <CardFooter plain>
                 <div className={classes.priceContainer}>
                   <span className={classNames(classes.price, classes.priceOld)}>
-                    {" "}
+                    {' '}
                     €1,430
                   </span>
                   <span className={classNames(classes.price, classes.priceNew)}>
-                    {" "}
+                    {' '}
                     €743
                   </span>
                 </div>
                 <div className={classNames(classes.stats, classes.mlAuto)}>
                   <Tooltip
-                    id="tooltip-top"
-                    title="Saved to Wishlist"
-                    placement="top"
+                    id='tooltip-top'
+                    title='Saved to Wishlist'
+                    placement='top'
                     classes={{ tooltip: classes.tooltip }}
                   >
-                    <Button justIcon simple color="rose">
+                    <Button justIcon simple color='rose'>
                       <Favorite />
                     </Button>
                   </Tooltip>
@@ -166,7 +166,7 @@ const SectionLatestOffers = props => {
         </GridContainer>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default withStyles(styles)(SectionLatestOffers);
+export default withStyles(styles)(SectionLatestOffers)

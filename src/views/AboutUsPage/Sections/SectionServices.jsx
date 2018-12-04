@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
-import Gesture from "@material-ui/icons/Gesture";
-import Build from "@material-ui/icons/Build";
+import Gesture from '@material-ui/icons/Gesture'
+import Build from '@material-ui/icons/Build'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import InfoArea from 'components/InfoArea/InfoArea.jsx'
 
-import servicesStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/servicesStyle.jsx";
+import servicesStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/servicesStyle.jsx'
 
 function SectionServices(props) {
-  const { classes } = props;
+  const { classes } = props
   return (
     <div className={classes.services}>
       <GridContainer>
@@ -37,58 +37,58 @@ function SectionServices(props) {
       <GridContainer>
         <GridItem md={4} sm={4}>
           <InfoArea
-            title="1. Design"
+            title='1. Design'
             description={
               <span>
                 <p>
                   The moment you use Material Kit, you know you’ve never felt
                   anything like it. With a single use, this powerfull UI Kit
-                  lets you do more than ever before.{" "}
+                  lets you do more than ever before.{' '}
                 </p>
-                <a href="#pablo">Find more...</a>
+                <a href='#pablo'>Find more...</a>
               </span>
             }
             icon={Gesture}
-            iconColor="rose"
+            iconColor='rose'
           />
         </GridItem>
         <GridItem md={4} sm={4}>
           <InfoArea
-            title="2. Develop"
+            title='2. Develop'
             description={
               <span>
                 <p>
                   Divide details about your product or agency work into parts.
                   Write a few lines about each one. A paragraph describing a
-                  feature will be enough.{" "}
+                  feature will be enough.{' '}
                 </p>
-                <a href="#pablo">Find more...</a>
+                <a href='#pablo'>Find more...</a>
               </span>
             }
             icon={Build}
-            iconColor="rose"
+            iconColor='rose'
           />
         </GridItem>
         <GridItem md={4} sm={4}>
           <InfoArea
-            title="3. Make Edits"
+            title='3. Make Edits'
             description={
               <span>
                 <p>
                   Divide details about your product or agency work into parts.
                   Write a few lines about each one. A paragraph describing a
-                  feature will be enough.{" "}
+                  feature will be enough.{' '}
                 </p>
-                <a href="#pablo">Find more...</a>
+                <a href='#pablo'>Find more...</a>
               </span>
             }
-            icon="mode_edit"
-            iconColor="rose"
+            icon='mode_edit'
+            iconColor='rose'
           />
         </GridItem>
       </GridContainer>
     </div>
-  );
+  )
 }
 
-export default withStyles(servicesStyle)(SectionServices);
+export default withStyles(servicesStyle)(SectionServices)

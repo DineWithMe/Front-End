@@ -1,34 +1,34 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
-import Weekend from "@material-ui/icons/Weekend";
-import Home from "@material-ui/icons/Home";
-import Business from "@material-ui/icons/Business";
-import AccountBalance from "@material-ui/icons/AccountBalance";
-import Check from "@material-ui/icons/Check";
-import Close from "@material-ui/icons/Close";
+import Weekend from '@material-ui/icons/Weekend'
+import Home from '@material-ui/icons/Home'
+import Business from '@material-ui/icons/Business'
+import AccountBalance from '@material-ui/icons/AccountBalance'
+import Check from '@material-ui/icons/Check'
+import Close from '@material-ui/icons/Close'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import NavPills from "components/NavPills/NavPills.jsx";
-import Success from "components/Typography/Success.jsx";
-import Danger from "components/Typography/Danger.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import NavPills from 'components/NavPills/NavPills.jsx'
+import Success from 'components/Typography/Success.jsx'
+import Danger from 'components/Typography/Danger.jsx'
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/pricingStyle.jsx";
+import pricingStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/pricingStyle.jsx'
 
-import bg11 from "assets/img/bg11.jpg";
-import city from "assets/img/examples/city.jpg";
-import cardBlog3 from "assets/img/examples/card-blog3.jpg";
+import bg11 from '../../../../static/assets/img/bg11.jpg'
+import city from '../../../../static/assets/img/examples/city.jpg'
+import cardBlog3 from '../../../../static/assets/img/examples/card-blog3.jpg'
 
 function SectionPricing({ ...props }) {
-  const { classes, ...rest } = props;
+  const { classes, ...rest } = props
   return (
-    <div className="cd-section" {...rest}>
+    <div className='cd-section' {...rest}>
       {/* Pricing 1 START */}
       <div
         className={`${classes.pricing} ${classes.pricing1} ${classes.section}`}
@@ -77,7 +77,7 @@ function SectionPricing({ ...props }) {
                     This is good if your company size is between 2 and 10
                     Persons.
                   </p>
-                  <Button round color="white">
+                  <Button round color='white'>
                     Choose plan
                   </Button>
                 </CardBody>
@@ -103,7 +103,7 @@ function SectionPricing({ ...props }) {
                     This is good if your company size is between 2 and 10
                     Persons.
                   </p>
-                  <Button round color="rose">
+                  <Button round color='rose'>
                     Choose plan
                   </Button>
                 </CardBody>
@@ -133,7 +133,7 @@ function SectionPricing({ ...props }) {
                     This is good if your company size is between 11 and 99
                     Persons.
                   </p>
-                  <Button round color="white">
+                  <Button round color='white'>
                     Choose plan
                   </Button>
                 </CardBody>
@@ -162,7 +162,7 @@ function SectionPricing({ ...props }) {
                   <p className={classes.cardCategory}>
                     This is good if your company size is 99+ persons.
                   </p>
-                  <Button round color="white">
+                  <Button round color='white'>
                     Choose plan
                   </Button>
                 </CardBody>
@@ -187,16 +187,16 @@ function SectionPricing({ ...props }) {
               <h2 className={classes.title}>Pick the best plan for you</h2>
               <NavPills
                 alignCenter
-                color="rose"
+                color='rose'
                 tabs={[
                   {
-                    tabButton: "Monthly",
-                    tabContent: ""
+                    tabButton: 'Monthly',
+                    tabContent: '',
                   },
                   {
-                    tabButton: "Yearly",
-                    tabContent: ""
-                  }
+                    tabButton: 'Yearly',
+                    tabContent: '',
+                  },
                 ]}
               />
               <div className={classes.sectionSpace} />
@@ -226,7 +226,7 @@ function SectionPricing({ ...props }) {
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="rose" round>
+                  <Button color='rose' round>
                     Get Started
                   </Button>
                 </CardFooter>
@@ -260,7 +260,7 @@ function SectionPricing({ ...props }) {
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="white" round>
+                  <Button color='white' round>
                     Get Started
                   </Button>
                 </CardFooter>
@@ -289,7 +289,7 @@ function SectionPricing({ ...props }) {
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="rose" round>
+                  <Button color='rose' round>
                     Get Started
                   </Button>
                 </CardFooter>
@@ -346,14 +346,14 @@ function SectionPricing({ ...props }) {
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="primary" round>
+                  <Button color='primary' round>
                     Get Started
                   </Button>
                 </CardFooter>
               </Card>
             </GridItem>
             <GridItem xs={12} sm={4} md={4} className={classes.mrAuto}>
-              <Card pricing color="primary">
+              <Card pricing color='primary'>
                 <CardBody pricing>
                   <h6
                     className={`${classes.cardCategory} ${
@@ -381,7 +381,7 @@ function SectionPricing({ ...props }) {
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="white" round>
+                  <Button color='white' round>
                     Get Started
                   </Button>
                 </CardFooter>
@@ -423,38 +423,38 @@ function SectionPricing({ ...props }) {
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Sharing Tools
                     </li>
                     <li>
                       <Danger>
                         <Close />
-                      </Danger>{" "}
+                      </Danger>{' '}
                       Design Tools
                     </li>
                     <li>
                       <Danger>
                         <Close />
-                      </Danger>{" "}
+                      </Danger>{' '}
                       Private Messages
                     </li>
                     <li>
                       <Danger>
                         <Close />
-                      </Danger>{" "}
+                      </Danger>{' '}
                       Personal Brand
                     </li>
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="danger" round>
+                  <Button color='danger' round>
                     Downgrade Plan
                   </Button>
                 </CardFooter>
               </Card>
             </GridItem>
             <GridItem xs={12} sm={6} md={6} lg={3}>
-              <Card pricing color="success">
+              <Card pricing color='success'>
                 <CardBody pricing>
                   <h6 className={classes.marginBottom30}>SMALL COMPANY</h6>
                   <h1 className={classes.cardTitleWhite}>
@@ -476,7 +476,7 @@ function SectionPricing({ ...props }) {
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="white" round disabled>
+                  <Button color='white' round disabled>
                     Current Plan
                   </Button>
                 </CardFooter>
@@ -493,31 +493,31 @@ function SectionPricing({ ...props }) {
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Sharing Tools
                     </li>
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Design Tools
                     </li>
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Private Messages
                     </li>
                     <li>
                       <Danger>
                         <Close />
-                      </Danger>{" "}
+                      </Danger>{' '}
                       Personal Brand
                     </li>
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="success" round>
+                  <Button color='success' round>
                     Upgrade Plan
                   </Button>
                 </CardFooter>
@@ -534,31 +534,31 @@ function SectionPricing({ ...props }) {
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Sharing Tools
                     </li>
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Design Tools
                     </li>
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Private Messages
                     </li>
                     <li>
                       <Success>
                         <Check />
-                      </Success>{" "}
+                      </Success>{' '}
                       Personal Brand
                     </li>
                   </ul>
                 </CardBody>
                 <CardFooter pricing className={classes.justifyContentCenter}>
-                  <Button color="success" round>
+                  <Button color='success' round>
                     Upgrade Plan
                   </Button>
                 </CardFooter>
@@ -597,10 +597,10 @@ function SectionPricing({ ...props }) {
             >
               <NavPills
                 alignCenter
-                color="primary"
+                color='primary'
                 tabs={[
                   {
-                    tabButton: "Personal",
+                    tabButton: 'Personal',
                     tabContent: (
                       <GridContainer>
                         <GridItem xs={12} sm={6} md={6}>
@@ -631,7 +631,7 @@ function SectionPricing({ ...props }) {
                               pricing
                               className={classes.justifyContentCenter}
                             >
-                              <Button color="primary" round>
+                              <Button color='primary' round>
                                 FREE DOWNLOAD
                               </Button>
                             </CardFooter>
@@ -665,17 +665,17 @@ function SectionPricing({ ...props }) {
                               pricing
                               className={classes.justifyContentCenter}
                             >
-                              <Button color="white" round>
+                              <Button color='white' round>
                                 BUY NOW
                               </Button>
                             </CardFooter>
                           </Card>
                         </GridItem>
                       </GridContainer>
-                    )
+                    ),
                   },
                   {
-                    tabButton: "Commercial",
+                    tabButton: 'Commercial',
                     tabContent: (
                       <GridContainer>
                         <GridItem xs={12} sm={6} md={6}>
@@ -706,7 +706,7 @@ function SectionPricing({ ...props }) {
                               pricing
                               className={classes.justifyContentCenter}
                             >
-                              <Button color="primary" round>
+                              <Button color='primary' round>
                                 BUY NOW
                               </Button>
                             </CardFooter>
@@ -740,15 +740,15 @@ function SectionPricing({ ...props }) {
                               pricing
                               className={classes.justifyContentCenter}
                             >
-                              <Button color="white" round>
+                              <Button color='white' round>
                                 BUY NOW
                               </Button>
                             </CardFooter>
                           </Card>
                         </GridItem>
                       </GridContainer>
-                    )
-                  }
+                    ),
+                  },
                 ]}
               />
             </GridItem>
@@ -757,7 +757,7 @@ function SectionPricing({ ...props }) {
       </div>
       {/* Pricing 5 END */}
     </div>
-  );
+  )
 }
 
-export default withStyles(pricingStyle)(SectionPricing);
+export default withStyles(pricingStyle)(SectionPricing)

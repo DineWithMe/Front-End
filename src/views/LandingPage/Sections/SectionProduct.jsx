@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import Chat from '@material-ui/icons/Chat'
+import VerifiedUser from '@material-ui/icons/VerifiedUser'
+import Fingerprint from '@material-ui/icons/Fingerprint'
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import InfoArea from 'components/InfoArea/InfoArea.jsx'
 
-import productStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/productStyle.jsx";
+import productStyle from '../../../../static/assets/jss/material-kit-pro-react/views/landingPageSections/productStyle.jsx'
 
 class SectionProduct extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.section}>
-        <GridContainer justify="center">
+        <GridContainer justify='center'>
           <GridItem xs={12} sm={8} md={8}>
             <h2 className={classes.title}>Let's talk product</h2>
             <h5 className={classes.description}>
@@ -34,36 +34,36 @@ class SectionProduct extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={4} md={4}>
               <InfoArea
-                title="Free Chat"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+                title='Free Chat'
+                description='Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.'
                 icon={Chat}
-                iconColor="info"
+                iconColor='info'
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={4} md={4}>
               <InfoArea
-                title="Verified Users"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+                title='Verified Users'
+                description='Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.'
                 icon={VerifiedUser}
-                iconColor="success"
+                iconColor='success'
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={4} md={4}>
               <InfoArea
-                title="Fingerprint"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+                title='Fingerprint'
+                description='Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.'
                 icon={Fingerprint}
-                iconColor="danger"
+                iconColor='danger'
                 vertical
               />
             </GridItem>
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(productStyle)(SectionProduct);
+export default withStyles(productStyle)(SectionProduct)

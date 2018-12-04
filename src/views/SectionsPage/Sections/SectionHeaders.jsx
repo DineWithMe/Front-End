@@ -1,125 +1,125 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // react component for creating beautiful carousel
-import Carousel from "react-slick";
+import Carousel from 'react-slick'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import withStyles from '@material-ui/core/styles/withStyles'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
-import Share from "@material-ui/icons/Share";
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
+import Share from '@material-ui/icons/Share'
+import ShoppingCart from '@material-ui/icons/ShoppingCart'
 // core components
-import Header from "components/Header/Header.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+import Header from 'components/Header/Header.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CustomInput from 'components/CustomInput/CustomInput.jsx'
 
-import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.jsx";
+import headersStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.jsx'
 
-import bg12 from "assets/img/bg12.jpg";
-import office2 from "assets/img/examples/office2.jpg";
-import dg1 from "assets/img/dg1.jpg";
-import dg2 from "assets/img/dg2.jpg";
-import dg3 from "assets/img/dg3.jpg";
+import bg12 from '../../../../static/assets/img/bg12.jpg'
+import office2 from '../../../../static/assets/img/examples/office2.jpg'
+import dg1 from '../../../../static/assets/img/dg1.jpg'
+import dg2 from '../../../../static/assets/img/dg2.jpg'
+import dg3 from '../../../../static/assets/img/dg3.jpg'
 
 function SectionHeaders({ ...props }) {
-  const { classes, ...rest } = props;
+  const { classes, ...rest } = props
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false
-  };
+    autoplay: false,
+  }
   return (
     // we've set the className to cd-section so we can make smooth scroll to it
-    <div className="cd-section" {...rest}>
-      <div className={classes.sectionBlank} id="blanksection" />
+    <div className='cd-section' {...rest}>
+      <div className={classes.sectionBlank} id='blanksection' />
       {/* HEADER 1 START */}
       <div>
         <Header
           absolute
-          brand="Creative Tim"
-          color="transparent"
+          brand='Creative Tim'
+          color='transparent'
           links={
             <div className={classes.collapse}>
-              <List className={classes.list + " " + classes.mlAuto}>
+              <List className={classes.list + ' ' + classes.mlAuto}>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     Home
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     About us
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     Products
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     Contact us
                   </Button>
                 </ListItem>
               </List>
-              <List className={classes.list + " " + classes.mlAuto}>
+              <List className={classes.list + ' ' + classes.mlAuto}>
                 <ListItem className={classes.listItem}>
                   <Button
-                    color="transparent"
-                    href="https://twitter.com/CreativeTim"
-                    target="_blank"
+                    color='transparent'
+                    href='https://twitter.com/CreativeTim'
+                    target='_blank'
                     className={`${classes.navLink} ${classes.navLinkJustIcon}`}
                   >
-                    <i className={"fab fa-twitter"} />
+                    <i className={'fab fa-twitter'} />
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    color="transparent"
-                    href="https://www.facebook.com/CreativeTim"
-                    target="_blank"
+                    color='transparent'
+                    href='https://www.facebook.com/CreativeTim'
+                    target='_blank'
                     className={`${classes.navLink} ${classes.navLinkJustIcon}`}
                   >
-                    <i className={"fab fa-facebook"} />
+                    <i className={'fab fa-facebook'} />
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    color="transparent"
-                    href="https://www.instagram.com/CreativeTimOfficial"
-                    target="_blank"
+                    color='transparent'
+                    href='https://www.instagram.com/CreativeTimOfficial'
+                    target='_blank'
                     className={`${classes.navLink} ${classes.navLinkJustIcon}`}
                   >
-                    <i className={"fab fa-instagram"} />
+                    <i className={'fab fa-instagram'} />
                   </Button>
                 </ListItem>
               </List>
@@ -141,25 +141,25 @@ function SectionHeaders({ ...props }) {
                 </h4>
                 <br />
                 <Button
-                  color="danger"
-                  size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
-                  rel=""
+                  color='danger'
+                  size='lg'
+                  href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+                  target='_blank'
+                  rel=''
                 >
-                  <i className="fas fa-ticket-alt" />
+                  <i className='fas fa-ticket-alt' />
                   Order Now
                 </Button>
               </GridItem>
               <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
                 <div className={classes.iframeContainer}>
                   <iframe
-                    height="250"
-                    src="https://www.youtube.com/embed/IN6QnLpVEPI"
-                    frameBorder="0"
-                    allow="encrypted-media"
-                    allowFullScreen=""
-                    title="Tesla"
+                    height='250'
+                    src='https://www.youtube.com/embed/IN6QnLpVEPI'
+                    frameBorder='0'
+                    allow='encrypted-media'
+                    allowFullScreen=''
+                    title='Tesla'
                   />
                 </div>
               </GridItem>
@@ -172,81 +172,81 @@ function SectionHeaders({ ...props }) {
       <div>
         <Header
           absolute
-          brand="Creative Tim"
-          color="transparent"
+          brand='Creative Tim'
+          color='transparent'
           links={
             <div className={classes.collapse}>
-              <List className={classes.list + " " + classes.mlAuto}>
+              <List className={classes.list + ' ' + classes.mlAuto}>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     Home
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     About us
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     Products
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#pablo"
+                    href='#pablo'
                     className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
+                    onClick={(e) => e.preventDefault()}
+                    color='transparent'
                   >
                     Contact us
                   </Button>
                 </ListItem>
               </List>
-              <List className={classes.list + " " + classes.mlAuto}>
+              <List className={classes.list + ' ' + classes.mlAuto}>
                 <ListItem className={classes.listItem}>
                   <Button
-                    color="transparent"
-                    href="https://twitter.com/CreativeTim"
-                    target="_blank"
+                    color='transparent'
+                    href='https://twitter.com/CreativeTim'
+                    target='_blank'
                     className={`${classes.navLink} ${classes.navLinkJustIcon}`}
                   >
-                    <i className={"fab fa-twitter"} />
+                    <i className={'fab fa-twitter'} />
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    color="transparent"
-                    href="https://www.facebook.com/CreativeTim"
-                    target="_blank"
+                    color='transparent'
+                    href='https://www.facebook.com/CreativeTim'
+                    target='_blank'
                     className={`${classes.navLink} ${classes.navLinkJustIcon}`}
                   >
-                    <i className={"fab fa-facebook"} />
+                    <i className={'fab fa-facebook'} />
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    color="transparent"
-                    href="https://www.instagram.com/CreativeTimOfficial"
-                    target="_blank"
+                    color='transparent'
+                    href='https://www.instagram.com/CreativeTimOfficial'
+                    target='_blank'
                     className={`${classes.navLink} ${classes.navLinkJustIcon}`}
                   >
-                    <i className={"fab fa-instagram"} />
+                    <i className={'fab fa-instagram'} />
                   </Button>
                 </ListItem>
               </List>
@@ -289,45 +289,45 @@ function SectionHeaders({ ...props }) {
                       <GridContainer>
                         <GridItem xs={12} sm={3} md={3}>
                           <CustomInput
-                            id="name"
+                            id='name'
                             inputProps={{
-                              placeholder: "Company name"
+                              placeholder: 'Company name',
                             }}
                             formControlProps={{
                               fullWidth: true,
-                              className: classes.formControl
+                              className: classes.formControl,
                             }}
                           />
                         </GridItem>
                         <GridItem xs={12} sm={3} md={3}>
                           <CustomInput
-                            id="email"
+                            id='email'
                             inputProps={{
-                              placeholder: "Company email"
+                              placeholder: 'Company email',
                             }}
                             formControlProps={{
                               fullWidth: true,
-                              className: classes.formControl
+                              className: classes.formControl,
                             }}
                           />
                         </GridItem>
                         <GridItem xs={12} sm={3} md={3}>
                           <CustomInput
-                            id="password"
+                            id='password'
                             inputProps={{
-                              placeholder: "Company password",
-                              type: "password"
+                              placeholder: 'Company password',
+                              type: 'password',
                             }}
                             formControlProps={{
                               fullWidth: true,
-                              className: classes.formControl
+                              className: classes.formControl,
                             }}
                           />
                         </GridItem>
                         <GridItem xs={12} sm={3} md={3}>
                           <Button
                             block
-                            color="primary"
+                            color='primary'
                             className={classes.button}
                           >
                             Sign up
@@ -347,46 +347,46 @@ function SectionHeaders({ ...props }) {
       <div>
         <Header
           absolute
-          brand="Creative Tim"
-          color="transparent"
+          brand='Creative Tim'
+          color='transparent'
           links={
-            <List className={classes.list + " " + classes.mlAuto}>
+            <List className={classes.list + ' ' + classes.mlAuto}>
               <ListItem className={classes.listItem}>
                 <Button
-                  href="#pablo"
+                  href='#pablo'
                   className={classes.navLink}
-                  onClick={e => e.preventDefault()}
-                  color="transparent"
+                  onClick={(e) => e.preventDefault()}
+                  color='transparent'
                 >
                   Home
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
                 <Button
-                  href="#pablo"
+                  href='#pablo'
                   className={classes.navLink}
-                  onClick={e => e.preventDefault()}
-                  color="transparent"
+                  onClick={(e) => e.preventDefault()}
+                  color='transparent'
                 >
                   About us
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
                 <Button
-                  href="#pablo"
+                  href='#pablo'
                   className={classes.navLink}
-                  onClick={e => e.preventDefault()}
-                  color="transparent"
+                  onClick={(e) => e.preventDefault()}
+                  color='transparent'
                 >
                   Products
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
                 <Button
-                  href="#pablo"
+                  href='#pablo'
                   className={classes.navLink}
-                  onClick={e => e.preventDefault()}
-                  color="transparent"
+                  onClick={(e) => e.preventDefault()}
+                  color='transparent'
                 >
                   Contact us
                 </Button>
@@ -412,17 +412,17 @@ function SectionHeaders({ ...props }) {
                       for the same fashion house.
                     </h4>
                     <br />
-                    <Button color="danger" size="lg">
+                    <Button color='danger' size='lg'>
                       Read more
                     </Button>
-                    <Button justIcon color="white" simple>
-                      <i className="fab fa-twitter" />
+                    <Button justIcon color='white' simple>
+                      <i className='fab fa-twitter' />
                     </Button>
-                    <Button justIcon color="white" simple>
-                      <i className="fab fa-facebook-square" />
+                    <Button justIcon color='white' simple>
+                      <i className='fab fa-facebook-square' />
                     </Button>
-                    <Button justIcon color="white" simple>
-                      <i className="fab fa-get-pocket" />
+                    <Button justIcon color='white' simple>
+                      <i className='fab fa-get-pocket' />
                     </Button>
                   </GridItem>
                 </GridContainer>
@@ -458,17 +458,17 @@ function SectionHeaders({ ...props }) {
                     <br />
                     <h6>Connect with us on:</h6>
                     <div>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-twitter" />
+                      <Button color='white' simple size='lg' justIcon>
+                        <i className='fab fa-twitter' />
                       </Button>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-facebook-square" />
+                      <Button color='white' simple size='lg' justIcon>
+                        <i className='fab fa-facebook-square' />
                       </Button>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-google-plus-g" />
+                      <Button color='white' simple size='lg' justIcon>
+                        <i className='fab fa-google-plus-g' />
                       </Button>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-instagram" />
+                      <Button color='white' simple size='lg' justIcon>
+                        <i className='fab fa-instagram' />
                       </Button>
                     </div>
                   </GridItem>
@@ -500,10 +500,10 @@ function SectionHeaders({ ...props }) {
                     </h4>
                     <br />
                     <div>
-                      <Button color="white" simple size="lg">
+                      <Button color='white' simple size='lg'>
                         <Share /> Share Offer
                       </Button>
-                      <Button color="danger" size="lg">
+                      <Button color='danger' size='lg'>
                         <ShoppingCart /> Shop now
                       </Button>
                     </div>
@@ -517,7 +517,7 @@ function SectionHeaders({ ...props }) {
       </div>
       {/* HEADER 3 END */}
     </div>
-  );
+  )
 }
 
-export default withStyles(headersStyle)(SectionHeaders);
+export default withStyles(headersStyle)(SectionHeaders)

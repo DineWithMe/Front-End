@@ -1,37 +1,37 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // import  from "@material-ui/icons/";
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import Muted from "components/Typography/Muted.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Card from 'components/Card/Card.jsx'
+import CardHeader from 'components/Card/CardHeader.jsx'
+import CardBody from 'components/Card/CardBody.jsx'
+import CardFooter from 'components/Card/CardFooter.jsx'
+import Muted from 'components/Typography/Muted.jsx'
+import Button from 'components/CustomButtons/Button.jsx'
 
-import cardProfile1Square from "assets/img/faces/card-profile1-square.jpg";
-import cardProfile2Square from "assets/img/faces/card-profile2-square.jpg";
-import cardProfile4Square from "assets/img/faces/card-profile4-square.jpg";
-import cardProfile6Square from "assets/img/faces/card-profile6-square.jpg";
+import cardProfile1Square from '../../../../static/assets/img/faces/card-profile1-square.jpg'
+import cardProfile2Square from '../../../../static/assets/img/faces/card-profile2-square.jpg'
+import cardProfile4Square from '../../../../static/assets/img/faces/card-profile4-square.jpg'
+import cardProfile6Square from '../../../../static/assets/img/faces/card-profile6-square.jpg'
 
-import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx";
-import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.jsx";
+import teamsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx'
+import teamStyle from '../../../../static/assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.jsx'
 
 const style = {
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
-    justifyContent: "center"
-  }
-};
+    justifyContent: 'center',
+  },
+}
 
 class SectionTeam extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div className={classes.section}>
         <h2 className={classes.title}>Here is our team</h2>
@@ -42,14 +42,14 @@ class SectionTeam extends React.Component {
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={cardProfile1Square} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={cardProfile1Square} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${cardProfile1Square})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -66,14 +66,14 @@ class SectionTeam extends React.Component {
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
-                      <Button justIcon simple color="twitter">
-                        <i className="fab fa-twitter" />
+                      <Button justIcon simple color='twitter'>
+                        <i className='fab fa-twitter' />
                       </Button>
-                      <Button justIcon simple color="facebook">
-                        <i className="fab fa-facebook-square" />
+                      <Button justIcon simple color='facebook'>
+                        <i className='fab fa-facebook-square' />
                       </Button>
-                      <Button justIcon simple color="google">
-                        <i className="fab fa-google" />
+                      <Button justIcon simple color='google'>
+                        <i className='fab fa-google' />
                       </Button>
                     </CardFooter>
                   </GridItem>
@@ -85,14 +85,14 @@ class SectionTeam extends React.Component {
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={cardProfile6Square} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={cardProfile6Square} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${cardProfile6Square})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -111,17 +111,17 @@ class SectionTeam extends React.Component {
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
-                      <Button justIcon simple color="linkedin">
-                        <i className="fab fa-linkedin-in" />
+                      <Button justIcon simple color='linkedin'>
+                        <i className='fab fa-linkedin-in' />
                       </Button>
-                      <Button justIcon simple color="facebook">
-                        <i className="fab fa-facebook-square" />
+                      <Button justIcon simple color='facebook'>
+                        <i className='fab fa-facebook-square' />
                       </Button>
-                      <Button justIcon simple color="dribbble">
-                        <i className="fab fa-dribbble" />
+                      <Button justIcon simple color='dribbble'>
+                        <i className='fab fa-dribbble' />
                       </Button>
-                      <Button justIcon simple color="google">
-                        <i className="fab fa-google" />
+                      <Button justIcon simple color='google'>
+                        <i className='fab fa-google' />
                       </Button>
                     </CardFooter>
                   </GridItem>
@@ -133,14 +133,14 @@ class SectionTeam extends React.Component {
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={cardProfile4Square} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={cardProfile4Square} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${cardProfile4Square})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -157,14 +157,14 @@ class SectionTeam extends React.Component {
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
-                      <Button justIcon simple color="youtube">
-                        <i className="fab fa-youtube" />
+                      <Button justIcon simple color='youtube'>
+                        <i className='fab fa-youtube' />
                       </Button>
-                      <Button justIcon simple color="twitter">
-                        <i className="fab fa-twitter" />
+                      <Button justIcon simple color='twitter'>
+                        <i className='fab fa-twitter' />
                       </Button>
-                      <Button justIcon simple color="instagram">
-                        <i className="fab fa-instagram" />
+                      <Button justIcon simple color='instagram'>
+                        <i className='fab fa-instagram' />
                       </Button>
                     </CardFooter>
                   </GridItem>
@@ -176,14 +176,14 @@ class SectionTeam extends React.Component {
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img src={cardProfile2Square} alt="..." />
+                      <a href='#pablo' onClick={(e) => e.preventDefault()}>
+                        <img src={cardProfile2Square} alt='...' />
                       </a>
                       <div
                         className={classes.coloredShadow}
                         style={{
                           backgroundImage: `url(${cardProfile2Square})`,
-                          opacity: "1"
+                          opacity: '1',
                         }}
                       />
                     </CardHeader>
@@ -200,14 +200,14 @@ class SectionTeam extends React.Component {
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
-                      <Button justIcon simple color="linkedin">
-                        <i className="fab fa-linkedin-in" />
+                      <Button justIcon simple color='linkedin'>
+                        <i className='fab fa-linkedin-in' />
                       </Button>
-                      <Button justIcon simple color="facebook">
-                        <i className="fab fa-facebook-square" />
+                      <Button justIcon simple color='facebook'>
+                        <i className='fab fa-facebook-square' />
                       </Button>
-                      <Button justIcon simple color="google">
-                        <i className="fab fa-google" />
+                      <Button justIcon simple color='google'>
+                        <i className='fab fa-google' />
                       </Button>
                     </CardFooter>
                   </GridItem>
@@ -217,8 +217,8 @@ class SectionTeam extends React.Component {
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(style)(SectionTeam);
+export default withStyles(style)(SectionTeam)

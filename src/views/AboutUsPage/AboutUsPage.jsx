@@ -1,50 +1,54 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import withStyles from '@material-ui/core/styles/withStyles'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Header from "components/Header/Header.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
-import Footer from "components/Footer/Footer.jsx";
+import Header from 'components/Header/Header.jsx'
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import Parallax from 'components/Parallax/Parallax.jsx'
+import Footer from 'components/Footer/Footer.jsx'
 // sections for this page
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.jsx";
-import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.jsx";
-import SectionServices from "views/AboutUsPage/Sections/SectionServices.jsx";
-import SectionOffice from "views/AboutUsPage/Sections/SectionOffice.jsx";
-import SectionContact from "views/AboutUsPage/Sections/SectionContact";
+import HeaderLinks from 'components/Header/HeaderLinks.jsx'
+import SectionDescription from 'views/AboutUsPage/Sections/SectionDescription.jsx'
+import SectionTeam from 'views/AboutUsPage/Sections/SectionTeam.jsx'
+import SectionServices from 'views/AboutUsPage/Sections/SectionServices.jsx'
+import SectionOffice from 'views/AboutUsPage/Sections/SectionOffice.jsx'
+import SectionContact from 'views/AboutUsPage/Sections/SectionContact'
 
-import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.jsx";
+import aboutUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/aboutUsStyle.jsx'
 
 class AboutUsPage extends React.Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0)
+    document.body.scrollTop = 0
   }
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <div>
         <Header
-          brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="info" />}
+          brand='Material Kit PRO React'
+          links={<HeaderLinks dropdownHoverColor='info' />}
           fixed
-          color="transparent"
+          color='transparent'
           changeColorOnScroll={{
             height: 300,
-            color: "info"
+            color: 'info',
           }}
         />
-        <Parallax image={require("assets/img/bg9.jpg")} filter="dark" small>
+        <Parallax
+          image={require('../../../static/assets/img/bg9.jpg')}
+          filter='dark'
+          small
+        >
           <div className={classes.container}>
-            <GridContainer justify="center">
+            <GridContainer justify='center'>
               <GridItem
                 md={8}
                 sm={8}
@@ -79,7 +83,7 @@ class AboutUsPage extends React.Component {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/"
+                      href='https://www.creative-tim.com/'
                       className={classes.block}
                     >
                       Creative Tim
@@ -87,7 +91,7 @@ class AboutUsPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
+                      href='https://www.creative-tim.com/presentation'
                       className={classes.block}
                     >
                       About us
@@ -95,7 +99,7 @@ class AboutUsPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="//blog.creative-tim.com/"
+                      href='//blog.creative-tim.com/'
                       className={classes.block}
                     >
                       Blog
@@ -103,7 +107,7 @@ class AboutUsPage extends React.Component {
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/license"
+                      href='https://www.creative-tim.com/license'
                       className={classes.block}
                     >
                       Licenses
@@ -112,17 +116,17 @@ class AboutUsPage extends React.Component {
                 </List>
               </div>
               <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{" "}
-                <Favorite className={classes.icon} /> by{" "}
-                <a href="https://www.creative-tim.com">Creative Tim</a> for a
+                &copy; {1900 + new Date().getYear()} , made with{' '}
+                <Favorite className={classes.icon} /> by{' '}
+                <a href='https://www.creative-tim.com'>Creative Tim</a> for a
                 better web.
               </div>
             </div>
           }
         />
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(aboutUsStyle)(AboutUsPage);
+export default withStyles(aboutUsStyle)(AboutUsPage)
