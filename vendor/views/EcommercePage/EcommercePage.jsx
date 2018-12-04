@@ -13,9 +13,9 @@ import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 // sections for this page
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import SectionLatestOffers from 'views/EcommercePage/Sections/SectionLatestOffers.jsx'
-import SectionProducts from 'views/EcommercePage/Sections/SectionProducts.jsx'
-import SectionBlog from 'views/EcommercePage/Sections/SectionBlog.jsx'
+import SectionLatestOffers from 'Sections/SectionLatestOffers.jsx'
+import SectionProducts from 'Sections/SectionProducts.jsx'
+import SectionBlog from 'Sections/SectionBlog.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
