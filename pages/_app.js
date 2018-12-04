@@ -1,28 +1,23 @@
-import App, { Container } from 'next/app';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { createLogger } from 'redux-logger';
-import thunkMiddleware from 'redux-thunk';
-import { Provider } from 'react-redux';
-import { searchRobots, requestRobots } from '../src/reducers';
+import App, { Container } from 'next/app'
+import { ApolloProvider } from 'react-apollo'
+import { Provider } from 'unstated'
+import { dataContainer } from '../src/utils/unstated'
+import withApollo from '../src/utils/withApollo'
 
-const logger = createLogger();
-const rootReducer = combineReducers({ searchRobots, requestRobots });
-const store = createStore(
-  rootReducer,
-  applyMiddleware(thunkMiddleware, logger)
-);
-
+let dataStore = new dataContainer()
 class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, apolloClient } = this.props
     return (
       <Container>
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
+        <ApolloProvider client={apolloClient}>
+          <Provider inject={[dataStore]}>
+            <Component {...pageProps} />
+          </Provider>
+        </ApolloProvider>
       </Container>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default withApollo(MyApp)

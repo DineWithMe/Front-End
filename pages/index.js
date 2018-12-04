@@ -1,14 +1,43 @@
-import Head from 'next/head';
-import App from '../src/container/App';
-// import 'tachyons';
-const Index = () => (
-  <div>
-    <Head>
-      <link href="/static/Index.css" rel="stylesheet" />
-      <link href="/static/tachyons.css" rel="stylesheet" />
-    </Head>
-    <App />
-  </div>
-);
+import Link from 'next/link'
+import Head from 'next/head'
+import { Fragment } from 'react'
+import { Query } from 'react-apollo'
+import { getUsdExchangeRate } from '../src/utils/operation'
+import { Subscribe } from 'unstated'
+import { dataContainer } from '../src/utils/unstated'
+import ExchangeRateList from '../src/components/ExchangeRateList'
 
-export default Index;
+const Index = () => {
+  return (
+    <Subscribe to={[dataContainer]}>
+      {(exchangeRate) => (
+        <Fragment>
+          <Head>
+            <title>USD Exchange Rate</title>
+            <meta
+              name='viewport'
+              content='initial-scale=1.0, width=device-width'
+              key='viewport'
+            />
+          </Head>
+          <Link href='about'>
+            <button>go to About</button>
+          </Link>
+          <h1>USD To</h1>
+          <Query notifyOnNetworkStatusChange query={getUsdExchangeRate}>
+            {({ loading, error, data }) => {
+              if (loading) return <p>Loading...</p>
+              if (error) return <p>Error :(</p>
+
+              return (
+                <ExchangeRateList data={data} exchangeRate={exchangeRate} />
+              )
+            }}
+          </Query>
+        </Fragment>
+      )}
+    </Subscribe>
+  )
+}
+
+export default Index

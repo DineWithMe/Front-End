@@ -1,38 +1,29 @@
 {
-  "name": "dine_with_me-client",
+  "name": "next-apollo-example",
   "version": "1.0.0",
-  "description": "app that serach for dining partner",
+  "description": "next-apollo-example",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jest": "",
+    "jest-ci": ""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DineWithMe/Front-End.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DineWithMe/Front-End/issues"
-  },
-  "homepage": "https://github.com/DineWithMe/Front-End#readme",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "apollo-boost": "^0.1.22",
     "axios": "^0.18.0",
-    "debug": "^4.1.0",
+    "graphql": "^14.0.2",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
-    "react": "^16.6.1",
+    "react": "^16.7.0-alpha.2",
+    "react-apollo": "^2.3.2",
     "react-dom": "^16.6.1",
-    "react-redux": "^5.1.0",
-    "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "tachyons": "^4.11.1"
+    "tachyons": "^4.11.1",
+    "unstated": "^2.1.1"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
@@ -40,5 +31,18 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.1",
     "pretty-quick": "^1.8.0"
+  },
+  "prettier": {
+    "eslintIntegration": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "trailingComma": "es5",
+    "semi": false,
+    "arrowParens": "always"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
