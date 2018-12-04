@@ -6,7 +6,7 @@ import {
   mrAuto,
   main,
   mainRaised,
-} from 'assets/jss/material-kit-pro-react.jsx'
+} from '../../material-kit-pro-react.jsx'
 
 import imagesStyle from '../imagesStyles.jsx'
 

@@ -6,7 +6,7 @@ import {
   mainRaised,
   mrAuto,
   mlAuto,
-} from 'assets/jss/material-kit-pro-react.jsx'
+} from '../../material-kit-pro-react.jsx'
 
 import buttonGroup from '../buttonGroupStyle.jsx'
 import tooltips from '../tooltipsStyle.jsx'

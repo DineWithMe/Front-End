@@ -6,8 +6,8 @@ import {
   mrAuto,
   title,
   description,
-  cardTitle
-} from "assets/jss/material-kit-pro-react.jsx";
+  cardTitle,
+} from '../../../material-kit-pro-react.jsx'
 
 const testimonialsSection = {
   container,
@@ -18,88 +18,88 @@ const testimonialsSection = {
   cardTitle,
   sectionDark: {
     ...sectionDark,
-    "& $cardDescription": {
-      color: "rgba(255, 255, 255, 0.76)"
+    '& $cardDescription': {
+      color: 'rgba(255, 255, 255, 0.76)',
     },
-    "& $cardTitle": {
-      color: "#FFFFFF"
+    '& $cardTitle': {
+      color: '#FFFFFF',
     },
-    backgroundSize: "550% 450%"
+    backgroundSize: '550% 450%',
   },
   cardDescription: {
-    ...description
+    ...description,
   },
   cardCategory: {
-    ...description
+    ...description,
   },
   sectionImage: {
     ...sectionDark,
     ...section,
-    position: "relative",
-    "& $container": {
-      zIndex: "2",
-      position: "relative"
+    position: 'relative',
+    '& $container': {
+      zIndex: '2',
+      position: 'relative',
     },
-    "&:after": {
-      position: "absolute",
-      zIndex: "1",
-      width: "100%",
-      height: "100%",
-      display: "block",
-      left: "0",
-      top: "0",
+    '&:after': {
+      position: 'absolute',
+      zIndex: '1',
+      width: '100%',
+      height: '100%',
+      display: 'block',
+      left: '0',
+      top: '0',
       content: "''",
-      backgroundColor: "rgba(0, 0, 0, 0.7)"
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
     },
-    "& $title": {
-      color: "#FFFFFF"
+    '& $title': {
+      color: '#FFFFFF',
     },
-    "& $description": {
-      color: "rgba(255, 255, 255, 0.76)"
-    }
+    '& $description': {
+      color: 'rgba(255, 255, 255, 0.76)',
+    },
   },
   testimonials: {
-    padding: "80px 0",
-    "& $cardDescription": {
-      fontStyle: "italic"
-    }
+    padding: '80px 0',
+    '& $cardDescription': {
+      fontStyle: 'italic',
+    },
   },
   textCenter: {
-    textAlign: "center"
+    textAlign: 'center',
   },
   icon: {
-    marginTop: "30px",
-    "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-      fontSize: "40px",
-      lineHeight: "40px"
+    marginTop: '30px',
+    '& .fab,& .fas,& .far,& .fal,& .material-icons': {
+      fontSize: '40px',
+      lineHeight: '40px',
     },
-    "& svg": {
-      width: "40px",
-      height: "40px"
-    }
+    '& svg': {
+      width: '40px',
+      height: '40px',
+    },
   },
   card1: {
-    "& $cardDescription": {
-      marginBottom: "50px",
-      fontStyle: "italic"
-    }
+    '& $cardDescription': {
+      marginBottom: '50px',
+      fontStyle: 'italic',
+    },
   },
   starIcons: {
-    width: "24px",
-    height: "24px"
+    width: '24px',
+    height: '24px',
   },
   testimonial2: {
-    "& .slick-dots": {
-      display: "none !important"
-    }
+    '& .slick-dots': {
+      display: 'none !important',
+    },
   },
   card2: {
-    maxWidth: "650px",
-    margin: "60px auto",
-    "& $cardDescription": {
-      fontStyle: "italic"
-    }
-  }
-};
+    maxWidth: '650px',
+    margin: '60px auto',
+    '& $cardDescription': {
+      fontStyle: 'italic',
+    },
+  },
+}
 
-export default testimonialsSection;
+export default testimonialsSection

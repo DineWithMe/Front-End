@@ -7,8 +7,8 @@ import {
   mrAuto,
   section,
   sectionDark,
-  coloredShadow
-} from "assets/jss/material-kit-pro-react.jsx";
+  coloredShadow,
+} from '../../../material-kit-pro-react.jsx'
 
 const teamsSection = {
   container,
@@ -19,66 +19,66 @@ const teamsSection = {
   coloredShadow,
   description,
   descriptionWhite: {
-    ...description
+    ...description,
   },
   textCenter: {
-    textAlign: "center"
+    textAlign: 'center',
   },
   team: {
-    padding: "80px 0",
-    "& h5$description,& h5$descriptionWhite": {
-      marginBottom: "80px"
-    }
+    padding: '80px 0',
+    '& h5$description,& h5$descriptionWhite': {
+      marginBottom: '80px',
+    },
   },
   section: {
     ...sectionDark,
     ...section,
-    position: "relative",
-    "& $title": {
-      color: "#FFFFFF"
+    position: 'relative',
+    '& $title': {
+      color: '#FFFFFF',
     },
-    "& $descriptionWhite": {
-      color: "rgba(255, 255, 255, 0.76)"
+    '& $descriptionWhite': {
+      color: 'rgba(255, 255, 255, 0.76)',
     },
-    "& $container": {
-      zIndex: "2",
-      position: "relative"
+    '& $container': {
+      zIndex: '2',
+      position: 'relative',
     },
-    "&:after": {
-      position: "absolute",
-      zIndex: "1",
-      width: "100%",
-      height: "100%",
-      display: "block",
-      left: "0",
-      top: "0",
+    '&:after': {
+      position: 'absolute',
+      zIndex: '1',
+      width: '100%',
+      height: '100%',
+      display: 'block',
+      left: '0',
+      top: '0',
       content: "''",
-      backgroundColor: "rgba(0, 0, 0, 0.7)"
-    }
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    },
   },
   justifyContent: {
-    WebkitBoxPack: "center !important",
-    MsFlexPack: "center !important",
-    justifyContent: "center !important"
+    WebkitBoxPack: 'center !important',
+    MsFlexPack: 'center !important',
+    justifyContent: 'center !important',
   },
   cardCategory: {
-    marginTop: "10px"
+    marginTop: '10px',
   },
   btn: {
-    marginTop: "0 !important"
+    marginTop: '0 !important',
   },
   card3: {
-    textAlign: "left"
+    textAlign: 'left',
   },
   card5: {
-    textAlign: "left",
-    "& $cardTitle": {
-      color: "#FFFFFF"
+    textAlign: 'left',
+    '& $cardTitle': {
+      color: '#FFFFFF',
     },
-    "& $description": {
-      color: "#FFFFFF"
-    }
-  }
-};
+    '& $description': {
+      color: '#FFFFFF',
+    },
+  },
+}
 
-export default teamsSection;
+export default teamsSection

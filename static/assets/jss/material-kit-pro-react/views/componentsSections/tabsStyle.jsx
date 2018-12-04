@@ -1,13 +1,13 @@
-import { container } from "assets/jss/material-kit-pro-react.jsx";
+import { container } from '../../../material-kit-pro-react.jsx'
 
 const tabsStyle = {
   section: {
-    padding: "70px 0"
+    padding: '70px 0',
   },
   container,
   textCenter: {
-    textAlign: "center"
-  }
-};
+    textAlign: 'center',
+  },
+}
 
-export default tabsStyle;
+export default tabsStyle

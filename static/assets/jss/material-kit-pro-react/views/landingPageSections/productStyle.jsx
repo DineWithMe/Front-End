@@ -1,20 +1,20 @@
-import { title } from "assets/jss/material-kit-pro-react.jsx";
+import { title } from '../../../material-kit-pro-react.jsx'
 
 const productStyle = {
   section: {
-    padding: "70px 0",
-    textAlign: "center"
+    padding: '70px 0',
+    textAlign: 'center',
   },
   title: {
     ...title,
-    marginBottom: "1rem",
-    marginTop: "30px",
-    minHeight: "32px",
-    textDecoration: "none"
+    marginBottom: '1rem',
+    marginTop: '30px',
+    minHeight: '32px',
+    textDecoration: 'none',
   },
   description: {
-    color: "#999"
-  }
-};
+    color: '#999',
+  },
+}
 
-export default productStyle;
+export default productStyle

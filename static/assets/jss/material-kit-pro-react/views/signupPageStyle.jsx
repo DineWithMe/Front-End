@@ -1,4 +1,4 @@
-import { container, cardTitle } from 'assets/jss/material-kit-pro-react.jsx'
+import { container, cardTitle } from '../../material-kit-pro-react.jsx'
 
 import customCheckboxRadioSwitchStyle from '../customCheckboxRadioSwitchStyle.jsx'
 

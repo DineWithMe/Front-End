@@ -2,9 +2,9 @@ import {
   title,
   description,
   mrAuto,
-  mlAuto
-} from "assets/jss/material-kit-pro-react.jsx";
-import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.jsx";
+  mlAuto,
+} from '../../../material-kit-pro-react.jsx'
+import customSelectStyle from '../../customSelectStyle.jsx'
 
 const contactStyle = {
   title,
@@ -13,19 +13,19 @@ const contactStyle = {
   ...customSelectStyle,
   description: {
     ...description,
-    marginBottom: "70px"
+    marginBottom: '70px',
   },
   textCenter: {
-    textAlign: "center!important"
+    textAlign: 'center!important',
   },
   selectUnderlineRoot: {
-    "& > div": {
-      marginTop: "13px"
-    }
+    '& > div': {
+      marginTop: '13px',
+    },
   },
   aboutUs: {
-    padding: "80px 0px"
-  }
-};
+    padding: '80px 0px',
+  },
+}
 
-export default contactStyle;
+export default contactStyle

@@ -2,20 +2,20 @@ import {
   container,
   mrAuto,
   mlAuto,
-  description
-} from "assets/jss/material-kit-pro-react.jsx";
+  description,
+} from '../../../material-kit-pro-react.jsx'
 
 const descriptionStyle = {
   container,
   textCenter: {
-    textAlign: "center"
+    textAlign: 'center',
   },
   aboutDescription: {
-    padding: "70px 0 0 0"
+    padding: '70px 0 0 0',
   },
   mrAuto,
   mlAuto,
-  description
-};
+  description,
+}
 
-export default descriptionStyle;
+export default descriptionStyle

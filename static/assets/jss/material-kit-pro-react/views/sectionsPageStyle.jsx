@@ -1,9 +1,9 @@
-import { main } from "assets/jss/material-kit-pro-react.jsx";
+import { main } from '../../material-kit-pro-react.jsx'
 
 const sectionsPageStyle = {
   main: {
-    ...main
-  }
-};
+    ...main,
+  },
+}
 
-export default sectionsPageStyle;
+export default sectionsPageStyle

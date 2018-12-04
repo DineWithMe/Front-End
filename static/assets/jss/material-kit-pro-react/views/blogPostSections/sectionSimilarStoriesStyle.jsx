@@ -2,8 +2,8 @@ import {
   container,
   title,
   cardTitle,
-  coloredShadow
-} from "assets/jss/material-kit-pro-react.jsx";
+  coloredShadow,
+} from '../../../material-kit-pro-react.jsx'
 
 const sectionSimilarStoriesStyle = {
   container,
@@ -11,16 +11,16 @@ const sectionSimilarStoriesStyle = {
   cardTitle,
   coloredShadow,
   textCenter: {
-    textAlign: "center"
+    textAlign: 'center',
   },
   section: {
-    backgroundPosition: "50%",
-    backgroundSize: "cover",
-    padding: "70px 0"
+    backgroundPosition: '50%',
+    backgroundSize: 'cover',
+    padding: '70px 0',
   },
   description: {
-    color: "#999"
-  }
-};
+    color: '#999',
+  },
+}
 
-export default sectionSimilarStoriesStyle;
+export default sectionSimilarStoriesStyle

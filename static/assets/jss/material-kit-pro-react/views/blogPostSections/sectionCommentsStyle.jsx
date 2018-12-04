@@ -1,38 +1,38 @@
-import { title } from "assets/jss/material-kit-pro-react.jsx";
+import { title } from '../../../material-kit-pro-react.jsx'
 
-import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.jsx";
+import tooltipsStyle from '../../tooltipsStyle.jsx'
 
 const sectionCommentsStyle = {
   ...tooltipsStyle,
   section: {
-    backgroundposition: "50%",
-    backgroundSize: "cover",
-    padding: "70px 0"
+    backgroundposition: '50%',
+    backgroundSize: 'cover',
+    padding: '70px 0',
   },
   title: {
     ...title,
-    marginBottom: "30px",
-    textAlign: "center"
+    marginBottom: '30px',
+    textAlign: 'center',
   },
   footerButtons: {
-    float: "right"
+    float: 'right',
   },
   footerIcons: {
-    width: "1.1rem",
-    height: "1.1rem",
-    position: "relative",
-    display: "inline-block",
-    top: "0",
-    marginTop: "-1em",
-    marginBottom: "-1em",
-    marginRight: "3px",
-    verticalAlign: "middle"
+    width: '1.1rem',
+    height: '1.1rem',
+    position: 'relative',
+    display: 'inline-block',
+    top: '0',
+    marginTop: '-1em',
+    marginBottom: '-1em',
+    marginRight: '3px',
+    verticalAlign: 'middle',
   },
   color555: {
-    "&,& *": {
-      color: "#555 !important"
-    }
-  }
-};
+    '&,& *': {
+      color: '#555 !important',
+    },
+  },
+}
 
-export default sectionCommentsStyle;
+export default sectionCommentsStyle

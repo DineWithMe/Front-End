@@ -7,7 +7,7 @@ import {
   title,
   cardTitle,
   roseColor,
-} from 'assets/jss/material-kit-pro-react.jsx'
+} from '../../material-kit-pro-react.jsx'
 
 import tooltipsStyle from '../tooltipsStyle.jsx'
 import imagesStyles from '../imagesStyles.jsx'
