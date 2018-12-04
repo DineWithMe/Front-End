@@ -8,10 +8,10 @@ import Select from '@material-ui/core/Select'
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import CustomInput from 'components/CustomInput/CustomInput.jsx'
-import Button from 'components/CustomButtons/Button.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
+import Button from '../../../components/CustomButtons/Button.jsx'
 
 import contactStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/contactStyle.jsx'
 

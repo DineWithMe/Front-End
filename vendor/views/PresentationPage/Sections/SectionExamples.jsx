@@ -4,9 +4,9 @@ import classNames from 'classnames'
 // react components for routing our app without refresh
 import { Link } from 'react-router-dom'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Card from 'components/Card/Card.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Card from '../../../components/Card/Card.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 

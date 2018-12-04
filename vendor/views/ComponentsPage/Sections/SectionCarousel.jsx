@@ -6,9 +6,9 @@ import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 import LocationOn from '@material-ui/icons/LocationOn'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Card from 'components/Card/Card.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Card from '../../../components/Card/Card.jsx'
 import carouselStyle from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/carouselStyle.jsx'
 import image1 from '../../../../static/assets/img/bg.jpg'
 import image2 from '../../../../static/assets/img/bg2.jpg'

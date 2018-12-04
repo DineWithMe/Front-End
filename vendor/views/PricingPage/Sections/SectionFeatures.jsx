@@ -1,8 +1,8 @@
 import React from 'react'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import InfoArea from 'components/InfoArea/InfoArea.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui icons

@@ -4,9 +4,9 @@ import classNames from 'classnames'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Quote from 'components/Typography/Quote.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Quote from '../../../components/Typography/Quote.jsx'
 // core components
 
 import blog4 from '../../../../static/assets/img/examples/blog4.jpg'

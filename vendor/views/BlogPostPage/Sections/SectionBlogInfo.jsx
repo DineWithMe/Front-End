@@ -4,12 +4,12 @@ import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Badge from 'components/Badge/Badge.jsx'
-import Button from 'components/CustomButtons/Button.jsx'
-import Card from 'components/Card/Card.jsx'
-import CardAvatar from 'components/Card/CardAvatar.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Badge from '../../../components/Badge/Badge.jsx'
+import Button from '../../../components/CustomButtons/Button.jsx'
+import Card from '../../../components/Card/Card.jsx'
+import CardAvatar from '../../../components/Card/CardAvatar.jsx'
 
 import profileImage from '../../../../static/assets/img/faces/card-profile1-square.jpg'
 

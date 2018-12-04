@@ -6,12 +6,12 @@ import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
 import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Header from 'components/Header/Header.jsx'
-import HeaderLinks from 'components/Header/HeaderLinks.jsx'
-import Footer from 'components/Footer/Footer.jsx'
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Parallax from 'components/Parallax/Parallax.jsx'
+import Header from '../../components/Header/Header.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import GridContainer from '../../components/Grid/GridContainer.jsx'
+import GridItem from '../../components/Grid/GridItem.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 // sections for this page
 import SectionPills from './Sections/SectionPills.jsx'
 import SectionInterested from './Sections/SectionInterested.jsx'

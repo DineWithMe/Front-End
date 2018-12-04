@@ -18,9 +18,9 @@ import ViewCarousel from '@material-ui/icons/ViewCarousel'
 import AccessTime from '@material-ui/icons/AccessTime'
 import AttachMoney from '@material-ui/icons/AttachMoney'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import InfoArea from 'components/InfoArea/InfoArea.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 
 import featuresStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/featuresStyle.jsx'
 

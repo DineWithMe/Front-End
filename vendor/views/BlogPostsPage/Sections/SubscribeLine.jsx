@@ -5,12 +5,12 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 // @material-ui/icons
 import Mail from '@material-ui/icons/Mail'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Card from 'components/Card/Card.jsx'
-import CardBody from 'components/Card/CardBody.jsx'
-import Button from 'components/CustomButtons/Button.jsx'
-import CustomInput from 'components/CustomInput/CustomInput.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Card from '../../../components/Card/Card.jsx'
+import CardBody from '../../../components/Card/CardBody.jsx'
+import Button from '../../../components/CustomButtons/Button.jsx'
+import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 
 import sectionSubscribeLineStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionSubscribeLineStyle.jsx'
 

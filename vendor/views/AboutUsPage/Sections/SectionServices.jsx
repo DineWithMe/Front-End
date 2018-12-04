@@ -7,9 +7,9 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Gesture from '@material-ui/icons/Gesture'
 import Build from '@material-ui/icons/Build'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import InfoArea from 'components/InfoArea/InfoArea.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 
 import servicesStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/servicesStyle.jsx'
 

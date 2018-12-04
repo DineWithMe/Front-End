@@ -12,12 +12,12 @@ import Settings from '@material-ui/icons/Settings'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import Explore from '@material-ui/icons/Explore'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Header from 'components/Header/Header.jsx'
-import CustomInput from 'components/CustomInput/CustomInput.jsx'
-import CustomDropdown from 'components/CustomDropdown/CustomDropdown.jsx'
-import Button from 'components/CustomButtons/Button.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Header from '../../../components/Header/Header.jsx'
+import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
+import CustomDropdown from '../../../components/CustomDropdown/CustomDropdown.jsx'
+import Button from '../../../components/CustomButtons/Button.jsx'
 
 import navbarsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/navbarsStyle.jsx'
 

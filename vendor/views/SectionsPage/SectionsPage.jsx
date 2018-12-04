@@ -4,8 +4,8 @@ import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
-import Header from 'components/Header/Header.jsx'
-import HeaderLinks from 'components/Header/HeaderLinks.jsx'
+import Header from '../../components/Header/Header.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 // sections of this Page
 import SectionHeaders from './Sections/SectionHeaders.jsx'
 import SectionFeatures from './Sections/SectionFeatures.jsx'

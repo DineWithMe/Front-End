@@ -7,11 +7,11 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Close from '@material-ui/icons/Close'
 import Check from '@material-ui/icons/Check'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Card from 'components/Card/Card.jsx'
-import CardBody from 'components/Card/CardBody.jsx'
-import Button from 'components/CustomButtons/Button.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
+import Card from '../../../components/Card/Card.jsx'
+import CardBody from '../../../components/Card/CardBody.jsx'
+import Button from '../../../components/CustomButtons/Button.jsx'
 
 import freeDemoStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/freeDemoStyle.jsx'
 

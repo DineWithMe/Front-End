@@ -1,7 +1,7 @@
 import React from 'react'
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
+import GridContainer from '../../../components/Grid/GridContainer.jsx'
+import GridItem from '../../../components/Grid/GridItem.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // library used for cool animations

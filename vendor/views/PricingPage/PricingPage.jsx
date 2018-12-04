@@ -8,12 +8,12 @@ import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
 import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Header from 'components/Header/Header.jsx'
-import HeaderLinks from 'components/Header/HeaderLinks.jsx'
-import Parallax from 'components/Parallax/Parallax.jsx'
-import GridContainer from 'components/Grid/GridContainer.jsx'
-import GridItem from 'components/Grid/GridItem.jsx'
-import Footer from 'components/Footer/Footer.jsx'
+import Header from '../../components/Header/Header.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
+import GridContainer from '../../components/Grid/GridContainer.jsx'
+import GridItem from '../../components/Grid/GridItem.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 // sections for this page
 import SectionPricing from 'views/PricingPage/Sections/SectionPricing.jsx'
 import SectionFeatures from 'views/PricingPage/Sections/SectionFeatures.jsx'
