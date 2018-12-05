@@ -6,6 +6,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 import Gesture from '@material-ui/icons/Gesture'
 import Build from '@material-ui/icons/Build'
+import Edit from '@material-ui/icons/Edit'
 // core components
 import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
@@ -82,7 +83,7 @@ function SectionServices(props) {
                 <a href='#pablo'>Find more...</a>
               </span>
             }
-            icon='mode_edit'
+            icon={Edit}
             iconColor='rose'
           />
         </GridItem>
