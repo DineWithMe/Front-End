@@ -31,7 +31,7 @@ export default (App) => {
               Component={Component}
               router={router}
               apolloClient={apolloClient}
-              pageContext={pageContext()}
+              pageContext={getPageContext()}
             />
           )
         } catch (error) {

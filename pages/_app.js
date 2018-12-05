@@ -8,6 +8,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext from '../src/utils/getPageContext'
+import '../static/assets/scss/material-kit-pro-react.css'
 
 let dataStore = new dataContainer()
 class MyApp extends App {
