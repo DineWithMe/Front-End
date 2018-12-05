@@ -35,6 +35,7 @@
     "react-dom": "^16.6.1",
     "react-google-maps": "^9.4.5",
     "react-image-gallery": "^0.8.12",
+    "react-jss": "^8.6.1",
     "react-router-dom": "^4.3.1",
     "react-slick": "^0.23.2",
     "react-swipeable-views": "^0.13.0",
@@ -43,6 +44,7 @@
     "unstated": "^2.1.1"
   },
   "devDependencies": {
+    "babel-plugin-css-in-js": "^1.5.1",
     "enzyme": "^3.7.0",
     "husky": "^1.1.3",
     "jest": "^23.6.0",
@@ -61,5 +63,13 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "css-in-js"
+    ]
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -11,10 +12,8 @@ import Favorite from '@material-ui/icons/Favorite'
 import Header from '../../components/Header/Header.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 // sections for this page
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import SectionDescription from './Sections/SectionDescription.jsx'
 import SectionTeam from './Sections/SectionTeam.jsx'
 import SectionServices from './Sections/SectionServices.jsx'
@@ -29,6 +28,20 @@ class AboutUsPage extends React.Component {
     document.body.scrollTop = 0
   }
   render() {
+    const HeaderLinks = dynamic(
+      () => import('../../components/Header/HeaderLinks.jsx'),
+      {
+        loading: () => <p>...</p>,
+        ssr: false,
+      }
+    )
+    const Parallax = dynamic(
+      () => import('../../components/Parallax/Parallax.jsx'),
+      {
+        loading: () => <p>...</p>,
+        ssr: false,
+      }
+    )
     const { classes } = this.props
     return (
       <div>
