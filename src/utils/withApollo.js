@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { initApollo } from './initApollo'
 import Head from 'next/head'
 import { getDataFromTree } from 'react-apollo'
+import getPageContext from './getPageContext'
 
 export default (App) => {
   return class Apollo extends Component {
@@ -30,6 +31,7 @@ export default (App) => {
               Component={Component}
               router={router}
               apolloClient={apolloClient}
+              pageContext={pageContext()}
             />
           )
         } catch (error) {
@@ -55,9 +57,16 @@ export default (App) => {
     constructor(props) {
       super(props)
       this.apolloClient = initApollo(props.apolloState)
+      this.pageContext = getPageContext()
     }
     render() {
-      return <App {...this.props} apolloClient={this.apolloClient} />
+      return (
+        <App
+          {...this.props}
+          apolloClient={this.apolloClient}
+          pageContext={this.pageContext}
+        />
+      )
     }
   }
 }
