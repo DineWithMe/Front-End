@@ -122,9 +122,6 @@ class ContactUsPage extends React.Component {
   }
   render() {
     const { classes } = this.props
-    {
-      console.log(publicRuntimeConfig.googleMap_apiKey)
-    }
     return (
       <div>
         <Header
