@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
@@ -8,8 +9,6 @@ import FormatAlignLeft from '@material-ui/icons/FormatAlignLeft'
 import Favorite from '@material-ui/icons/Favorite'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -21,6 +20,19 @@ import SectionComments from './Sections/SectionComments.jsx'
 import SectionSimilarStories from './Sections/SectionSimilarStories.jsx'
 
 import blogPostPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/blogPostPageStyle.jsx'
+
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 
 class BlogPostPage extends React.Component {
   componentDidMount() {

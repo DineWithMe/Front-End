@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react component used to create nice image meadia player
@@ -17,8 +18,6 @@ import VerifiedUser from '@material-ui/icons/VerifiedUser'
 import Favorite from '@material-ui/icons/Favorite'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
@@ -43,6 +42,18 @@ import product2 from '../../../static/assets/img/examples/product2.jpg'
 import product3 from '../../../static/assets/img/examples/product3.jpg'
 import product4 from '../../../static/assets/img/examples/product4.jpg'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class ProductPage extends React.Component {
   constructor(props) {
     super(props)

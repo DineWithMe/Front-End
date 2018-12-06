@@ -2,7 +2,7 @@ import React from 'react'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react components for routing our app without refresh
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 // core components
 import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
@@ -60,7 +60,7 @@ class SectionSections extends React.Component {
                   perfect pages. From headers to footers, you will be able to
                   choose the best combination for your project.
                 </h5>
-                <Link to={'/sections'}>
+                <Link href={'/sections'}>
                   <Button
                     color='rose'
                     target='_blank'

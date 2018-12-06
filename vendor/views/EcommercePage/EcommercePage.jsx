@@ -1,21 +1,20 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
 import Header from '../../components/Header/Header.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
 import Card from '../../components/Card/Card.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 // sections for this page
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import SectionLatestOffers from 'Sections/SectionLatestOffers.jsx'
-import SectionProducts from 'Sections/SectionProducts.jsx'
-import SectionBlog from 'Sections/SectionBlog.jsx'
+import SectionLatestOffers from './Sections/SectionLatestOffers.jsx'
+import SectionProducts from './Sections/SectionProducts.jsx'
+import SectionBlog from './Sections/SectionBlog.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
@@ -36,6 +35,18 @@ import face8 from '../../../static/assets/img/faces/card-profile2-square.jpg'
 
 import styles from '../../../static/assets/jss/material-kit-pro-react/views/ecommerceStyle.jsx'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class EcommercePage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

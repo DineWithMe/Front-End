@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -13,8 +14,6 @@ import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 
 import landingPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/landingPageStyle.jsx'
 
@@ -24,6 +23,19 @@ import SectionTeam from './Sections/SectionTeam.jsx'
 import SectionWork from './Sections/SectionWork.jsx'
 
 const dashboardRoutes = []
+
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 
 class LandingPage extends React.Component {
   componentDidMount() {

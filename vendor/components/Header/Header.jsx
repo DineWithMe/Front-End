@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import Link from 'next/link'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // nodejs library to set properties for components
@@ -71,7 +71,9 @@ class Header extends React.Component {
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
           <Button className={classes.title}>
-            {/* <Link to='/'>{brand}</Link> */}
+            <Link href='/'>
+              <a>{brand}</a>
+            </Link>
           </Button>
           <Hidden smDown implementation='css' className={classes.hidden}>
             <div className={classes.collapse}>{links}</div>

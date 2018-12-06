@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -12,8 +13,6 @@ import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 // sections for this page
 import SectionBasics from './Sections/SectionBasics.jsx'
 import SectionNavbars from './Sections/SectionNavbars.jsx'
@@ -29,6 +28,18 @@ import SectionCarousel from './Sections/SectionCarousel.jsx'
 
 import componentsStyle from '../../../static/assets/jss/material-kit-pro-react/views/componentsStyle.jsx'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class Components extends React.Component {
   componentDidMount() {
     var href = window.location.href.substring(

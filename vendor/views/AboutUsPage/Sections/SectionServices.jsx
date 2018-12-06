@@ -83,7 +83,7 @@ function SectionServices(props) {
                 <a href='#pablo'>Find more...</a>
               </span>
             }
-            icon={Edit}
+            icon='mode_edit'
             iconColor='rose'
           />
         </GridItem>

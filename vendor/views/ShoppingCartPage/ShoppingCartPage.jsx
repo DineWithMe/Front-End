@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -14,8 +15,6 @@ import Add from '@material-ui/icons/Add'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
@@ -30,6 +29,18 @@ import product1 from '../../../static/assets/img/product1.jpg'
 import product2 from '../../../static/assets/img/product2.jpg'
 import product3 from '../../../static/assets/img/product3.jpg'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class ShoppingCartPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

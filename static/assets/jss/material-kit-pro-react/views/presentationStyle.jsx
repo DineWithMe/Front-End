@@ -4,7 +4,7 @@ import {
   main,
   mainRaised,
 } from '../../material-kit-pro-react.jsx'
-import footerStyle from 'componentsSections/footerStyle.jsx'
+import footerStyle from './componentsSections/footerStyle.jsx'
 
 const presentationStyle = {
   ...footerStyle,

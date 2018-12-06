@@ -1,14 +1,14 @@
-import AboutUsPage from '../vendor/views/AboutUsPage/AboutUsPage'
+import PresentationPage from '../vendor/views/PresentationPage/PresentationPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 
-const Index = () => {
+const Presentation = () => {
   return (
     <Fragment>
       <Head />
-      <AboutUsPage />
+      <PresentationPage />
     </Fragment>
   )
 }
 
-export default Index
+export default Presentation

@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react components used to create a google map
@@ -19,7 +20,6 @@ import Phone from '@material-ui/icons/Phone'
 import BusinessCenter from '@material-ui/icons/BusinessCenter'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import InfoArea from '../../components/InfoArea/InfoArea.jsx'
@@ -28,6 +28,13 @@ import Button from '../../components/CustomButtons/Button.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 
 import contactUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/contactUsStyle.jsx'
+
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
 
 const CustomSkinMap = withScriptjs(
   withGoogleMap((props) => (

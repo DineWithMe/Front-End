@@ -11,20 +11,38 @@ class MyDocument extends Document {
       <html lang='en' dir='ltr'>
         <Head>
           <meta charSet='utf-8' />
-          {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
             name='viewport'
-            content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no'
+            content='minimum-scale=1,width=device-width, initial-scale=1, shrink-to-fit=no'
           />
-          {/* PWA primary color */}
-          <meta
-            name='theme-color'
-            content={pageContext.theme.palette.primary.main}
-          />
+          <meta name='theme-color' content='#000000' />
+          {/* manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
+          {/* <link rel='manifest' href='%PUBLIC_URL%/manifest.json' />
+          <link rel='shortcut icon' href='%PUBLIC_URL%/favicon.ico' />
+          <link
+            rel='apple-touch-icon'
+            sizes='76x76'
+            href='%PUBLIC_URL%/apple-icon.png'
+          /> */}
+          {/* Fonts and icons     */}
           <link
             rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'
+            type='text/css'
+            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons'
           />
+          <link
+            href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'
+            rel='stylesheet'
+          />
+          >
+          {/* Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`. */}
         </Head>
         <body>
           <Main />

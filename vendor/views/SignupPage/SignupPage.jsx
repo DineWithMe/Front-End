@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import InputAdornment from '@material-ui/core/InputAdornment'
@@ -17,7 +18,6 @@ import Check from '@material-ui/icons/Check'
 import Favorite from '@material-ui/icons/Favorite'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -31,6 +31,12 @@ import signupPageStyle from '../../../static/assets/jss/material-kit-pro-react/v
 
 import image from '../../../static/assets/img/bg7.jpg'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
 class Components extends React.Component {
   constructor(props) {
     super(props)

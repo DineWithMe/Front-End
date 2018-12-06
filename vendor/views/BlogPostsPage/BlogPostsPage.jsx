@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
@@ -7,11 +8,9 @@ import ListItem from '@material-ui/core/ListItem'
 import Favorite from '@material-ui/icons/Favorite'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 // sections for this page
 import SectionPills from './Sections/SectionPills.jsx'
 import SectionInterested from './Sections/SectionInterested.jsx'
@@ -20,6 +19,18 @@ import SubscribeLine from './Sections/SubscribeLine.jsx'
 
 import blogPostsPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/blogPostsPageStyle.jsx'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class BlogPostsPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

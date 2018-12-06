@@ -22,26 +22,24 @@ import SectionContact from './Sections/SectionContact.jsx'
 
 import aboutUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/aboutUsStyle.jsx'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class AboutUsPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
   render() {
-    const HeaderLinks = dynamic(
-      () => import('../../components/Header/HeaderLinks.jsx'),
-      {
-        loading: () => <p>...</p>,
-        ssr: false,
-      }
-    )
-    const Parallax = dynamic(
-      () => import('../../components/Parallax/Parallax.jsx'),
-      {
-        loading: () => <p>...</p>,
-        ssr: false,
-      }
-    )
     const { classes } = this.props
     return (
       <div>

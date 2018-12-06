@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -9,8 +10,6 @@ import ListItem from '@material-ui/core/ListItem'
 import Favorite from '@material-ui/icons/Favorite'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
@@ -20,6 +19,18 @@ import SectionFeatures from './Sections/SectionFeatures.jsx'
 
 import pricingStyle from '../../../static/assets/jss/material-kit-pro-react/views/pricingStyle.jsx'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
+const Parallax = dynamic(
+  () => import('../../components/Parallax/Parallax.jsx'),
+  {
+    ssr: false,
+  }
+)
 class PricingPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

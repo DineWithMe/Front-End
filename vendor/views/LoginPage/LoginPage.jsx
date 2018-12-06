@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import InputAdornment from '@material-ui/core/InputAdornment'
@@ -11,7 +12,6 @@ import Favorite from '@material-ui/icons/Favorite'
 import Face from '@material-ui/icons/Face'
 // core components
 import Header from '../../components/Header/Header.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -25,6 +25,12 @@ import loginPageStyle from '../../../static/assets/jss/material-kit-pro-react/vi
 
 import image from '../../../static/assets/img/bg7.jpg'
 
+const HeaderLinks = dynamic(
+  () => import('../../components/Header/HeaderLinks.jsx'),
+  {
+    ssr: false,
+  }
+)
 class LoginPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

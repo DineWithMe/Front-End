@@ -2,7 +2,7 @@ import React from 'react'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react components for routing our app without refresh
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 // core components
 import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
@@ -53,7 +53,7 @@ class SectionExamples extends React.Component {
             <GridItem md={4} sm={4} xs={12}>
               <h4 className={classes.title}>About Us</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/about-us'}>
+                <Link href={'/about-us'}>
                   <img
                     src={exAboutUs}
                     alt='About us'
@@ -63,7 +63,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Landing Page</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/landing-page'}>
+                <Link href={'/landing-page'}>
                   <img
                     src={exLanding}
                     alt='Landing Page'
@@ -73,7 +73,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Contact Us</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/contact-us'}>
+                <Link href={'/contact-us'}>
                   <img
                     src={exContact}
                     alt='Contact us'
@@ -85,7 +85,7 @@ class SectionExamples extends React.Component {
             <GridItem md={4} sm={4} xs={12}>
               <h4 className={classes.title}>Blog Post</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/blog-post'}>
+                <Link href={'/blog-post'}>
                   <img
                     src={exBlogPost}
                     alt='Blog Post'
@@ -95,7 +95,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Product Page</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/product-page'}>
+                <Link href={'/product-page'}>
                   <img
                     src={exProductPage}
                     alt='Product Pge'
@@ -105,7 +105,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Login Page</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/login-page'}>
+                <Link href={'/login-page'}>
                   <img
                     src={exLoginPage}
                     alt='Login Page'
@@ -117,7 +117,7 @@ class SectionExamples extends React.Component {
             <GridItem md={4} sm={4} xs={12}>
               <h4 className={classes.title}>Pricing Pge</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/pricing'}>
+                <Link href={'/pricing'}>
                   <img
                     src={exPricing}
                     alt='Pricing Page'
@@ -127,7 +127,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Signup Page</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/signup-page'}>
+                <Link href={'/signup-page'}>
                   <img
                     src={exSignup}
                     alt='Signup Page'
@@ -137,7 +137,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Profile Page</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/profile-page'}>
+                <Link href={'/profile-page'}>
                   <img
                     src={exProfile}
                     alt='Profile Page'
@@ -147,7 +147,7 @@ class SectionExamples extends React.Component {
               </Card>
               <h4 className={classes.title}>Blog Posts</h4>
               <Card className={classes.imgCardExtended}>
-                <Link to={'/blog-posts'}>
+                <Link href={'/blog-posts'}>
                   <img
                     src={exBlog}
                     alt='Blog Posts'
