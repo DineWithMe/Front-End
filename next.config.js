@@ -6,6 +6,7 @@ module.exports = withImages(
   withSASS(
     withCSS({
       serverRuntimeConfig: {
+        // https://github.com/zeit/next.js#exposing-configuration-to-the-server--client-side
         // Will only be available on the server side
         googleMap_apiKey: process.env.GOOGLEMAP_APIKEY, // Pass through env variables
       },
