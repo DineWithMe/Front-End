@@ -1,5 +1,6 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
+import getConfig from 'next/config'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react components used to create a google map
@@ -28,6 +29,9 @@ import Button from '../../components/CustomButtons/Button.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 
 import contactUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/contactUsStyle.jsx'
+
+// Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
+const { publicRuntimeConfig } = getConfig()
 
 const HeaderLinks = dynamic(
   () => import('../../components/Header/HeaderLinks.jsx'),
@@ -118,6 +122,9 @@ class ContactUsPage extends React.Component {
   }
   render() {
     const { classes } = this.props
+    {
+      console.log(publicRuntimeConfig.googleMap_apiKey)
+    }
     return (
       <div>
         <Header
@@ -128,7 +135,9 @@ class ContactUsPage extends React.Component {
         />
         <div className={classes.bigMap}>
           <CustomSkinMap
-            googleMapURL='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+              publicRuntimeConfig.googleMap_apiKey
+            }`}
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={
               <div
