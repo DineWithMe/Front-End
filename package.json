@@ -10,7 +10,6 @@
     "prod-next": "env-cmd ./.config/prod.env next",
     "prod-start": "env-cmd ./.config/prod.env next start",
     "build": "next build",
-    "export": "next export",
     "jest": "",
     "jest-ci": ""
   },
