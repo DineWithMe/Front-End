@@ -100,10 +100,10 @@ class ShoppingCartPage extends React.Component {
                   ]}
                   tableData={[
                     [
-                      <div className={classes.imgContainer}>
+                      <div className={classes.imgContainer} key='1'>
                         <img src={product1} alt='...' className={classes.img} />
                       </div>,
-                      <span>
+                      <span key='2'>
                         <a href='#jacket' className={classes.tdNameAnchor}>
                           Spring Jacket
                         </a>
@@ -114,10 +114,10 @@ class ShoppingCartPage extends React.Component {
                       </span>,
                       'Red',
                       'M',
-                      <span>
+                      <span key='3'>
                         <small className={classes.tdNumberSmall}>€</small> 549
                       </span>,
-                      <span>
+                      <span key='4'>
                         1{` `}
                         <div className={classes.buttonGroup}>
                           <Button
@@ -138,7 +138,7 @@ class ShoppingCartPage extends React.Component {
                           </Button>
                         </div>
                       </span>,
-                      <span>
+                      <span key='5'>
                         <small className={classes.tdNumberSmall}>€</small> 549
                       </span>,
                       <Tooltip
@@ -146,6 +146,7 @@ class ShoppingCartPage extends React.Component {
                         title='Remove item'
                         placement='left'
                         classes={{ tooltip: classes.tooltip }}
+                        key='6'
                       >
                         <Button link className={classes.actionButton}>
                           <Close />
@@ -153,10 +154,10 @@ class ShoppingCartPage extends React.Component {
                       </Tooltip>,
                     ],
                     [
-                      <div className={classes.imgContainer}>
+                      <div className={classes.imgContainer} key='7'>
                         <img src={product2} alt='...' className={classes.img} />
                       </div>,
-                      <span>
+                      <span key='8'>
                         <a href='#jacket' className={classes.tdNameAnchor}>
                           Short Pants{' '}
                         </a>
@@ -165,10 +166,10 @@ class ShoppingCartPage extends React.Component {
                       </span>,
                       'Purple',
                       'M',
-                      <span>
+                      <span key='9'>
                         <small className={classes.tdNumberSmall}>€</small> 499
                       </span>,
-                      <span>
+                      <span key='10'>
                         2{` `}
                         <div className={classes.buttonGroup}>
                           <Button
@@ -189,7 +190,7 @@ class ShoppingCartPage extends React.Component {
                           </Button>
                         </div>
                       </span>,
-                      <span>
+                      <span key='11'>
                         <small className={classes.tdNumberSmall}>€</small> 998
                       </span>,
                       <Tooltip
@@ -197,6 +198,7 @@ class ShoppingCartPage extends React.Component {
                         title='Remove item'
                         placement='left'
                         classes={{ tooltip: classes.tooltip }}
+                        key='12'
                       >
                         <Button link className={classes.actionButton}>
                           <Close />
@@ -204,10 +206,10 @@ class ShoppingCartPage extends React.Component {
                       </Tooltip>,
                     ],
                     [
-                      <div className={classes.imgContainer}>
+                      <div className={classes.imgContainer} key='13'>
                         <img src={product3} alt='...' className={classes.img} />
                       </div>,
-                      <span>
+                      <span key='14'>
                         <a href='#jacket' className={classes.tdNameAnchor}>
                           Pencil Skirt
                         </a>
@@ -218,10 +220,10 @@ class ShoppingCartPage extends React.Component {
                       </span>,
                       'White',
                       'XL',
-                      <span>
+                      <span key='15'>
                         <small className={classes.tdNumberSmall}>€</small> 799
                       </span>,
-                      <span>
+                      <span key='16'>
                         1{` `}
                         <div className={classes.buttonGroup}>
                           <Button
@@ -242,7 +244,7 @@ class ShoppingCartPage extends React.Component {
                           </Button>
                         </div>
                       </span>,
-                      <span>
+                      <span key='17'>
                         <small className={classes.tdNumberSmall}>€</small> 799
                       </span>,
                       <Tooltip
@@ -250,6 +252,7 @@ class ShoppingCartPage extends React.Component {
                         title='Remove item'
                         placement='left'
                         classes={{ tooltip: classes.tooltip }}
+                        key='18'
                       >
                         <Button link className={classes.actionButton}>
                           <Close />

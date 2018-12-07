@@ -61,8 +61,8 @@ class SectionTeam extends React.Component {
                         <h6 className={classes.cardCategory}>FOUNDER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        Don't be scared of the truth because we need to restart
-                        the human foundation in truth...
+                        {`Don't be scared of the truth because we need to restart
+                        the human foundation in truth...`}
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
@@ -106,8 +106,8 @@ class SectionTeam extends React.Component {
                         </h6>
                       </Muted>
                       <p className={classes.description}>
-                        Don't be scared of the truth because we need to restart
-                        the human foundation in truth...
+                        {`Don't be scared of the truth because we need to restart
+                        the human foundation in truth...`}
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
@@ -152,8 +152,8 @@ class SectionTeam extends React.Component {
                         <h6 className={classes.cardCategory}>WEB DESIGNER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        I love you like Kanye loves Kanye. Don't be scared of
-                        the truth.
+                        {`I love you like Kanye loves Kanye. Don't be scared of
+                        the truth.`}
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>
@@ -195,8 +195,8 @@ class SectionTeam extends React.Component {
                         <h6 className={classes.cardCategory}>BACKEND HACKER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        I love you like Kanye loves Kanye. Don't be scared of
-                        the truth.
+                        {`I love you like Kanye loves Kanye. Don't be scared of
+                        the truth.`}
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentCenter}>

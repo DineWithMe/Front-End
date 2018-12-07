@@ -155,8 +155,8 @@ class ContactUsPage extends React.Component {
               <GridContainer>
                 <GridItem md={6} sm={6}>
                   <p>
-                    You can contact us with anything related to our Products.
-                    We'll get in touch with you as soon as possible.
+                    {`You can contact us with anything related to our Products.
+                    We'll get in touch with you as soon as possible.`}
                     <br />
                     <br />
                   </p>

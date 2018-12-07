@@ -53,9 +53,9 @@ function SectionBlogInfo({ ...props }) {
               <GridItem xs={12} sm={8} md={8}>
                 <h4 className={classes.cardTitle}>Alec Thompson</h4>
                 <p className={classes.description}>
-                  I've been trying to figure out the bed design for the master
+                  {`I've been trying to figure out the bed design for the master
                   bedroom at our Hidden Hills compound...I like good music from
-                  Youtube.
+                  Youtube.`}
                 </p>
               </GridItem>
               <GridItem xs={12} sm={2} md={2}>

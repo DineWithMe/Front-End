@@ -274,8 +274,8 @@ class SectionJavascript extends React.Component {
                         imageClassName={classes.imageNoticeModal}
                       />
                       <p>
-                        If you have more questions, don't hesitate to contact us
-                        or send us a tweet @creativetim. We're here to help!
+                        {`If you have more questions, don't hesitate to contact us
+                        or send us a tweet @creativetim. We're here to help!`}
                       </p>
                     </DialogContent>
                     <DialogActions
@@ -576,9 +576,9 @@ class SectionJavascript extends React.Component {
                               title='Marketing'
                               description={
                                 <p>
-                                  We've created the marketing campaign of the
+                                  {`We've created the marketing campaign of the
                                   website. It was a very interesting
-                                  collaboration.
+                                  collaboration.`}
                                 </p>
                               }
                               icon={Timeline}
@@ -589,9 +589,9 @@ class SectionJavascript extends React.Component {
                               title='Fully Coded in HTML5'
                               description={
                                 <p>
-                                  We've developed the website with HTML5 and
+                                  {`We've developed the website with HTML5 and
                                   CSS3. The client has access to the code using
-                                  GitHub.
+                                  GitHub.`}
                                 </p>
                               }
                               icon={Code}

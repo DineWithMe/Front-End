@@ -45,8 +45,8 @@ function SectionImage({ ...props }) {
                       <h6>AUTHOR OF THE MONTH</h6>
                     </Muted>
                     <p className={classes.description}>
-                      Don't be scared of the truth because we need to restart
-                      the human foundation in truth...
+                      {`Don't be scared of the truth because we need to restart
+                      the human foundation in truth...`}
                     </p>
                   </CardBody>
                   <CardFooter profile plain>
@@ -81,8 +81,8 @@ function SectionImage({ ...props }) {
                       <h6>AUTHOR OF THE WEEK</h6>
                     </Muted>
                     <p className={classes.description}>
-                      Don't be scared of the truth because we need to restart
-                      the human foundation in truth...
+                      {`Don't be scared of the truth because we need to restart
+                      the human foundation in truth...`}
                     </p>
                   </CardBody>
                   <CardFooter profile plain>

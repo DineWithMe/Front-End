@@ -220,8 +220,9 @@ class SectionPricing extends React.Component {
               <p className={classes.description}>
                 You have <b>Free Unlimited Updates</b> and{' '}
                 <b>Premium Support</b> on each package. You also have
-                <b> 30 days</b> to request a refund if you're not happy with
-                your purchase.
+                <b> 30 days</b>
+                {` to request a refund if you're not happy with
+                your purchase.`}
               </p>
             </GridItem>
             <div className={classes.socialLine}>

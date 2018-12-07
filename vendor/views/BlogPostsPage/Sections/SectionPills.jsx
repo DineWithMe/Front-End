@@ -67,9 +67,9 @@ function SectionPills({ ...props }) {
                 </h3>
               </a>
               <p className={classes.category}>
-                Don't be scared of the truth because we need to restart the
+                {`Don't be scared of the truth because we need to restart the
                 human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+                I love Rick Owens’ bed design but the back is...`}
               </p>
               <Button round href='#pablo' color='danger'>
                 <FormatAlignLeft className={classes.icons} /> Read article
@@ -91,9 +91,9 @@ function SectionPills({ ...props }) {
                 </h3>
               </a>
               <p className={classes.category}>
-                Don't be scared of the truth because we need to restart the
+                {`Don't be scared of the truth because we need to restart the
                 human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+                I love Rick Owens’ bed design but the back is...`}
               </p>
               <Button round href='#pablo' color='primary'>
                 <FormatAlignLeft className={classes.icons} /> Read article
@@ -115,9 +115,9 @@ function SectionPills({ ...props }) {
                 </h3>
               </a>
               <p className={classes.category}>
-                Don't be scared of the truth because we need to restart the
+                {`Don't be scared of the truth because we need to restart the
                 human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+                I love Rick Owens’ bed design but the back is...`}
               </p>
               <Button round href='#pablo' color='warning'>
                 <FormatAlignLeft className={classes.icons} /> Read case study

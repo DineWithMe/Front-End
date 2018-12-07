@@ -193,6 +193,7 @@ class SectionContentAreas extends React.Component {
                         checked: classes.checked,
                         root: classes.checkRoot,
                       }}
+                      key='1'
                     />,
                     'Moleskine Agenda',
                     'Office',
@@ -212,6 +213,7 @@ class SectionContentAreas extends React.Component {
                         checked: classes.checked,
                         root: classes.checkRoot,
                       }}
+                      key='2'
                     />,
                     'Stabilo Pen',
                     'Office',
@@ -231,6 +233,7 @@ class SectionContentAreas extends React.Component {
                         checked: classes.checked,
                         root: classes.checkRoot,
                       }}
+                      key='3'
                     />,
                     'A4 Paper Pack',
                     'Office',
@@ -250,6 +253,7 @@ class SectionContentAreas extends React.Component {
                         checked: classes.checked,
                         root: classes.checkRoot,
                       }}
+                      key='4'
                     />,
                     'Apple iPad',
                     'Communication',
@@ -269,6 +273,7 @@ class SectionContentAreas extends React.Component {
                         checked: classes.checked,
                         root: classes.checkRoot,
                       }}
+                      key='5'
                     />,
                     'Apple iPhone',
                     'Communication',
@@ -320,10 +325,10 @@ class SectionContentAreas extends React.Component {
                 ]}
                 tableData={[
                   [
-                    <div className={classes.imgContainer}>
+                    <div className={classes.imgContainer} key='1'>
                       <img src={product1} alt='...' className={classes.img} />
                     </div>,
-                    <span>
+                    <span key='2'>
                       <a href='#jacket' className={classes.tdNameAnchor}>
                         Spring Jacket
                       </a>
@@ -334,10 +339,10 @@ class SectionContentAreas extends React.Component {
                     </span>,
                     'Red',
                     'M',
-                    <span>
+                    <span key='3'>
                       <small className={classes.tdNumberSmall}>€</small> 549
                     </span>,
-                    <span>
+                    <span key='4'>
                       1{` `}
                       <div className={classes.buttonGroup}>
                         <Button
@@ -358,7 +363,7 @@ class SectionContentAreas extends React.Component {
                         </Button>
                       </div>
                     </span>,
-                    <span>
+                    <span key='5'>
                       <small className={classes.tdNumberSmall}>€</small> 549
                     </span>,
                     <Tooltip
@@ -366,6 +371,7 @@ class SectionContentAreas extends React.Component {
                       title='Remove item'
                       placement='left'
                       classes={{ tooltip: classes.tooltip }}
+                      key='6'
                     >
                       <Button link className={classes.actionButton}>
                         <Close />
@@ -373,10 +379,10 @@ class SectionContentAreas extends React.Component {
                     </Tooltip>,
                   ],
                   [
-                    <div className={classes.imgContainer}>
+                    <div className={classes.imgContainer} key='7'>
                       <img src={product2} alt='...' className={classes.img} />
                     </div>,
-                    <span>
+                    <span key='8'>
                       <a href='#jacket' className={classes.tdNameAnchor}>
                         Short Pants{' '}
                       </a>
@@ -385,10 +391,10 @@ class SectionContentAreas extends React.Component {
                     </span>,
                     'Purple',
                     'M',
-                    <span>
+                    <span key='9'>
                       <small className={classes.tdNumberSmall}>€</small> 499
                     </span>,
-                    <span>
+                    <span key='10'>
                       2{` `}
                       <div className={classes.buttonGroup}>
                         <Button
@@ -409,7 +415,7 @@ class SectionContentAreas extends React.Component {
                         </Button>
                       </div>
                     </span>,
-                    <span>
+                    <span key='11'>
                       <small className={classes.tdNumberSmall}>€</small> 998
                     </span>,
                     <Tooltip
@@ -417,6 +423,7 @@ class SectionContentAreas extends React.Component {
                       title='Remove item'
                       placement='left'
                       classes={{ tooltip: classes.tooltip }}
+                      key='12'
                     >
                       <Button link className={classes.actionButton}>
                         <Close />
@@ -424,10 +431,10 @@ class SectionContentAreas extends React.Component {
                     </Tooltip>,
                   ],
                   [
-                    <div className={classes.imgContainer}>
+                    <div className={classes.imgContainer} key='13'>
                       <img src={product3} alt='...' className={classes.img} />
                     </div>,
-                    <span>
+                    <span key='14'>
                       <a href='#jacket' className={classes.tdNameAnchor}>
                         Pencil Skirt
                       </a>
@@ -438,10 +445,10 @@ class SectionContentAreas extends React.Component {
                     </span>,
                     'White',
                     'XL',
-                    <span>
+                    <span key='15'>
                       <small className={classes.tdNumberSmall}>€</small> 799
                     </span>,
-                    <span>
+                    <span key='16'>
                       1{` `}
                       <div className={classes.buttonGroup}>
                         <Button
@@ -462,7 +469,7 @@ class SectionContentAreas extends React.Component {
                         </Button>
                       </div>
                     </span>,
-                    <span>
+                    <span key='17'>
                       <small className={classes.tdNumberSmall}>€</small> 799
                     </span>,
                     <Tooltip
@@ -470,6 +477,7 @@ class SectionContentAreas extends React.Component {
                       title='Remove item'
                       placement='left'
                       classes={{ tooltip: classes.tooltip }}
+                      key='18'
                     >
                       <Button link className={classes.actionButton}>
                         <Close />
@@ -543,15 +551,15 @@ class SectionContentAreas extends React.Component {
                   body={
                     <span>
                       <p>
-                        Chance too good. God level bars. I'm so proud of
+                        {`Chance too good. God level bars. I'm so proud of
                         @LifeOfDesiigner #1 song in the country. Panda! Don't be
                         scared of the truth because we need to restart the human
                         foundation in truth I stand with the most humility. We
-                        are so blessed!
+                        are so blessed!`}
                       </p>
                       <p>
-                        All praises and blessings to the families of people who
-                        never gave up on dreams. Don't forget, You're Awesome!
+                        {`All praises and blessings to the families of people who
+                        never gave up on dreams. Don't forget, You're Awesome!`}
                       </p>
                     </span>
                   }
@@ -619,7 +627,7 @@ class SectionContentAreas extends React.Component {
                         be a lot of great stuff coming soon. We will keep you
                         posted for the latest news.
                       </p>
-                      <p>Don't forget, You're Awesome!</p>
+                      <p>{`Don't forget, You're Awesome!`}</p>
                     </span>
                   }
                   footer={
@@ -660,7 +668,7 @@ class SectionContentAreas extends React.Component {
                             will be a lot of great stuff coming soon. We will
                             keep you posted for the latest news.
                           </p>
-                          <p>Don't forget, You're Awesome!</p>
+                          <p>{`Don't forget, You're Awesome!`}</p>
                         </span>
                       }
                       footer={
@@ -706,7 +714,7 @@ class SectionContentAreas extends React.Component {
                         be a lot of great stuff coming soon. We will keep you
                         posted for the latest news.
                       </p>
-                      <p>Don't forget, You're Awesome!</p>
+                      <p>{`Don't forget, You're Awesome!`}</p>
                     </span>
                   }
                   footer={

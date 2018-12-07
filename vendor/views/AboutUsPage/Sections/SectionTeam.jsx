@@ -84,8 +84,8 @@ function SectionTeam(props) {
               <h4 className={classes.cardTitle}>Tania Andrew</h4>
               <h6 className={classes.textMuted}>DESIGNER</h6>
               <p className={classes.cardDescription}>
-                Don't be scared of the truth because we need to restart the
-                human foundation. And I love you like Kanye loves Kanye.
+                {`Don't be scared of the truth because we need to restart the
+                human foundation. And I love you like Kanye loves Kanye.`}
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
@@ -116,8 +116,8 @@ function SectionTeam(props) {
               <h4 className={classes.cardTitle}>Christian Mike</h4>
               <h6 className={classes.textMuted}>Web Developer</h6>
               <p className={classes.cardDescription}>
-                I love you like Kanye loves Kanye. Don't be scared of the truth
-                because we need to restart the human foundation.
+                {`I love you like Kanye loves Kanye. Don't be scared of the truth
+                because we need to restart the human foundation.`}
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>

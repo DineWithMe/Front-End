@@ -135,9 +135,9 @@ function SectionHeaders({ ...props }) {
               <GridItem xs={12} sm={6} md={6}>
                 <h1 className={classes.title}>Tesla Model 3.</h1>
                 <h4>
-                  There's no doubt that Tesla is delighted with the interest,
+                  {`There's no doubt that Tesla is delighted with the interest,
                   but the data also raises a few questions. How long will it
-                  take for Tesla to fulfill all those extra orders?
+                  take for Tesla to fulfill all those extra orders?`}
                 </h4>
                 <br />
                 <Button
@@ -271,10 +271,10 @@ function SectionHeaders({ ...props }) {
               >
                 <h1 className={classes.title}>You should work with us!</h1>
                 <h4>
-                  Now you have no excuses, it's time to surprise your clients,
+                  {`Now you have no excuses, it's time to surprise your clients,
                   your competitors, and why not, the world. You probably won't
                   have a better chance to show off all your potential if it's
-                  not by designing a website for your own agency or web studio.
+                  not by designing a website for your own agency or web studio.`}
                 </h4>
               </GridItem>
               <GridItem
@@ -493,10 +493,10 @@ function SectionHeaders({ ...props }) {
                   >
                     <h1 className={classes.title}>New Collection 50% Off</h1>
                     <h4>
-                      There's no doubt that Tesla is delighted with the
+                      {`There's no doubt that Tesla is delighted with the
                       interest, but the data also raises a few questions. How
                       long will it take for Tesla to fulfill all those extra
-                      orders?
+                      orders?`}
                     </h4>
                     <br />
                     <div>

@@ -81,9 +81,9 @@ class SectionOverview extends React.Component {
                   title='Save Time'
                   description={
                     <p>
-                      Using the Material Kit PRO will save you large amount of
+                      {`Using the Material Kit PRO will save you large amount of
                       time. You don't have to worry about customising the basic
-                      Bootstrap design or generating new components.
+                      Bootstrap design or generating new components.`}
                     </p>
                   }
                   icon={AccessTime}
@@ -118,8 +118,8 @@ class SectionOverview extends React.Component {
               >
                 <h2 className={classes.title}>Trusted by 330.000+ People</h2>
                 <h5 className={classes.description}>
-                  The UI Kits, Templates and Dashboards that we've created are
-                  used by
+                  {`The UI Kits, Templates and Dashboards that we've created are
+                  used by`}
                   <b> 330,000+ web developers</b> in over{' '}
                   <b> 576.000 Web Projects</b>. This is what some of them think:
                 </h5>
@@ -154,9 +154,9 @@ class SectionOverview extends React.Component {
                       <CardBody plain className={classes.alignLeft}>
                         <h4 className={classes.cardTitle}>Khaldi Yass</h4>
                         <p className={classes.cardDescription}>
-                          "As soon as I saw this kit, everything else isn't the
+                          {`"As soon as I saw this kit, everything else isn't the
                           same anymore, I just can't describe it guys! Thank you
-                          for this work!"
+                          for this work!"`}
                         </p>
                       </CardBody>
                     </GridItem>
@@ -191,9 +191,9 @@ class SectionOverview extends React.Component {
                       <CardBody plain className={classes.alignLeft}>
                         <h4 className={classes.cardTitle}>Josh Murray</h4>
                         <p className={classes.cardDescription}>
-                          "Great kit! Used this for a client already and he is
+                          {`"Great kit! Used this for a client already and he is
                           over the moon. Keep up the good work Creative Tim!
-                          10/10 for design, colours, and the feel of the kit."
+                          10/10 for design, colours, and the feel of the kit."`}
                         </p>
                       </CardBody>
                     </GridItem>
@@ -228,8 +228,8 @@ class SectionOverview extends React.Component {
                       <CardBody plain className={classes.alignLeft}>
                         <h4 className={classes.cardTitle}>Michael Onubogu</h4>
                         <p className={classes.cardDescription}>
-                          "Damn Daniel!!! This Material UI Kit is fresh AF!
-                          Amazing work!"
+                          {`"Damn Daniel!!! This Material UI Kit is fresh AF!
+                          Amazing work!"`}
                         </p>
                       </CardBody>
                     </GridItem>

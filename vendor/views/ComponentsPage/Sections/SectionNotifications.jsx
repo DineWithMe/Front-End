@@ -24,8 +24,9 @@ class SectionNotifications extends React.Component {
         <SnackbarContent
           message={
             <span>
-              <b>INFO ALERT:</b> You've got some friends nearby, stop looking at
-              your phone and find them...
+              <b>INFO ALERT:</b>{' '}
+              {`You've got some friends nearby, stop looking at
+              your phone and find them...`}
             </span>
           }
           close
@@ -35,8 +36,9 @@ class SectionNotifications extends React.Component {
         <SnackbarContent
           message={
             <span>
-              <b>SUCCESS ALERT:</b> You've got some friends nearby, stop looking
-              at your phone and find them...
+              <b>SUCCESS ALERT:</b>{' '}
+              {`You've got some friends nearby, stop looking
+              at your phone and find them...`}
             </span>
           }
           close
@@ -46,8 +48,9 @@ class SectionNotifications extends React.Component {
         <SnackbarContent
           message={
             <span>
-              <b>WARNING ALERT:</b> You've got some friends nearby, stop looking
-              at your phone and find them...
+              <b>WARNING ALERT:</b>{' '}
+              {`You've got some friends nearby, stop looking
+              at your phone and find them...`}
             </span>
           }
           close
@@ -57,8 +60,9 @@ class SectionNotifications extends React.Component {
         <SnackbarContent
           message={
             <span>
-              <b>DANGER ALERT:</b> You've got some friends nearby, stop looking
-              at your phone and find them...
+              <b>DANGER ALERT:</b>{' '}
+              {`You've got some friends nearby, stop looking
+              at your phone and find them...`}
             </span>
           }
           close

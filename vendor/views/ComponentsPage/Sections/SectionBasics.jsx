@@ -976,6 +976,7 @@ class SectionBasics extends React.Component {
                         { divider: true },
                         'One more separated link',
                         <CustomDropdown
+                          key='1'
                           ref='multi'
                           innerDropDown
                           buttonText='Submenu'
@@ -988,6 +989,7 @@ class SectionBasics extends React.Component {
                             'Submenu action',
                             'Submenu action',
                             <CustomDropdown
+                              key='2'
                               ref='multi'
                               innerDropDown
                               buttonText='Second submenu'

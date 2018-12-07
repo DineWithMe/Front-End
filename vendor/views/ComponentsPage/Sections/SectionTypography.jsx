@@ -136,7 +136,7 @@ class SectionTypography extends React.Component {
                 <h2>
                   Header with small subtitle
                   <br />
-                  <Small>Use "Small" tag for the headers</Small>
+                  <Small>{`Use "Small" tag for the headers`}</Small>
                 </h2>
               </div>
             </GridContainer>

@@ -117,10 +117,10 @@ class SectionCards extends React.Component {
                           <h6 className={classes.cardCategory}>FASHION</h6>
                         </Info>
                         <div className={classes.cardDescription}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </div>
                       </CardBody>
                     </Card>
@@ -132,8 +132,8 @@ class SectionCards extends React.Component {
                         </h5>
                         <h4 className={classes.cardTitleWhite}>
                           <a href='#pablo' onClick={(e) => e.preventDefault()}>
-                            "You Don't Have to Sacrifice Joy to Build a Fabulous
-                            Business and Life"
+                            {`"You Don't Have to Sacrifice Joy to Build a Fabulous
+                            Business and Life"`}
                           </a>
                         </h4>
                       </CardBody>
@@ -221,10 +221,10 @@ class SectionCards extends React.Component {
                           </a>
                         </h4>
                         <p className={classes.cardDescription}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </p>
                       </CardBody>
                       <CardFooter>
@@ -299,14 +299,14 @@ class SectionCards extends React.Component {
                         </h5>
                         <h4 className={classes.cardTitleWhite}>
                           <a href='#pablo' onClick={(e) => e.preventDefault()}>
-                            "Focus on Your Employees"
+                            {`"Focus on Your Employees"`}
                           </a>
                         </h4>
                         <p className={classes.cardDescriptionWhite}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </p>
                         <div
                           className={`${classes.stats} ${
@@ -353,10 +353,10 @@ class SectionCards extends React.Component {
                           <h6 className={classes.cardCategory}>WEB DESIGNER</h6>
                         </Info>
                         <p className={classes.cardDescription}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </p>
                       </CardBody>
                       <CardFooter
@@ -432,10 +432,10 @@ class SectionCards extends React.Component {
                         </h6>
                         <h4 className={classes.cardTitle}>Alec Thompson</h4>
                         <p className={classes.cardDescription}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </p>
                         <Button round color='info'>
                           Follow
@@ -469,10 +469,10 @@ class SectionCards extends React.Component {
                           </h3>
                         </a>
                         <p className={classes.cardDescriptionWhite}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </p>
                         <Button simple color='white'>
                           <Subject /> Read Article
@@ -496,10 +496,10 @@ class SectionCards extends React.Component {
                           </h3>
                         </a>
                         <p className={classes.cardDescriptionWhite}>
-                          Don't be scared of the truth because we need to
+                          {`Don't be scared of the truth because we need to
                           restart the human foundation in truth And I love you
                           like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
+                          but the back is...`}
                         </p>
                         <Button round color='danger'>
                           <Subject /> Read Article
@@ -682,10 +682,10 @@ class SectionCards extends React.Component {
                             </h3>
                           </a>
                           <p className={classes.cardDescriptionWhite}>
-                            Don't be scared of the truth because we need to
+                            {`Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            but the back is...`}
                           </p>
                         </CardBody>
                       </div>
@@ -741,10 +741,10 @@ class SectionCards extends React.Component {
                             </a>
                           </h4>
                           <p className={classes.cardDescription}>
-                            Don't be scared of the truth because we need to
+                            {`Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            but the back is...`}
                           </p>
                         </CardBody>
                       </div>
@@ -789,15 +789,15 @@ class SectionCards extends React.Component {
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
                             >
-                              "Dribbble just acquired Crew, a very interesting
-                              startup..."
+                              {`"Dribbble just acquired Crew, a very interesting
+                              startup..."`}
                             </a>
                           </h4>
                           <p className={classes.cardDescriptionWhite}>
-                            Don't be scared of the truth because we need to
+                            {`Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            but the back is...`}
                           </p>
                         </CardBody>
                         <CardFooter>
@@ -838,8 +838,8 @@ class SectionCards extends React.Component {
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
                             >
-                              "Dribbble just acquired Crew, a very interesting
-                              startup..."
+                              {`"Dribbble just acquired Crew, a very interesting
+                              startup..."`}
                             </a>
                           </h4>
                           <div>
@@ -880,15 +880,15 @@ class SectionCards extends React.Component {
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
                             >
-                              "This card is doing a full rotation, click on the
-                              rotate button"
+                              {`"This card is doing a full rotation, click on the
+                              rotate button"`}
                             </a>
                           </h4>
                           <p className={classes.cardDescription}>
-                            Don't be scared of the truth because we need to
+                            {`Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            but the back is...`}
                           </p>
                           <div className={classes.textCenter}>
                             <Button
@@ -962,8 +962,8 @@ class SectionCards extends React.Component {
                             </h3>
                           </a>
                           <p className={classes.cardDescriptionWhite}>
-                            Don't be scared of the truth because we need to
-                            restart the human...
+                            {`Don't be scared of the truth because we need to
+                            restart the human...`}
                           </p>
                           <div className={classes.textCenter}>
                             <Button
@@ -1042,15 +1042,15 @@ class SectionCards extends React.Component {
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
                             >
-                              "This card is doing a full rotation, click on the
-                              rotate button"
+                              {`"This card is doing a full rotation, click on the
+                              rotate button"`}
                             </a>
                           </h4>
                           <p className={classes.cardDescriptionWhite}>
-                            Don't be scared of the truth because we need to
+                            {`Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            but the back is...`}
                           </p>
                           <div className={classes.textCenter}>
                             <Button
@@ -1119,10 +1119,10 @@ class SectionCards extends React.Component {
                 <div className={classes.title}>
                   <h2>Dynamic Shadows™</h2>
                   <h4>
-                    Material Kit PRO is coming with the famous colored shadows.
+                    {`Material Kit PRO is coming with the famous colored shadows.
                     That means each image from the cards is getting an unique
                     color shadow. You don't have to do anything to activate
-                    them, just enjoy the new look of your website.
+                    them, just enjoy the new look of your website.`}
                   </h4>
                   <br />
                 </div>
@@ -1241,10 +1241,10 @@ class SectionCards extends React.Component {
                         <h6 className={classes.cardCategory}>FASHION</h6>
                       </Info>
                       <div className={classes.cardDescription}>
-                        Don't be scared of the truth because we need to restart
+                        {`Don't be scared of the truth because we need to restart
                         the human foundation in truth And I love you like Kanye
                         loves Kanye I love Rick Owens’ bed design but the back
-                        is...
+                        is...`}
                       </div>
                     </CardBody>
                   </Card>
@@ -1256,8 +1256,8 @@ class SectionCards extends React.Component {
                       </h5>
                       <h4 className={classes.cardTitleWhite}>
                         <a href='#pablo' onClick={(e) => e.preventDefault()}>
-                          "You Don't Have to Sacrifice Joy to Build a Fabulous
-                          Business and Life"
+                          {`"You Don't Have to Sacrifice Joy to Build a Fabulous
+                          Business and Life"`}
                         </a>
                       </h4>
                     </CardBody>
@@ -1307,10 +1307,10 @@ class SectionCards extends React.Component {
                         </a>
                       </h4>
                       <p className={classes.cardDescription}>
-                        Don't be scared of the truth because we need to restart
+                        {`Don't be scared of the truth because we need to restart
                         the human foundation in truth And I love you like Kanye
                         loves Kanye I love Rick Owens’ bed design but the back
-                        is...
+                        is...`}
                       </p>
                     </CardBody>
                     <CardFooter plain>
@@ -1379,14 +1379,14 @@ class SectionCards extends React.Component {
                       </h5>
                       <h4 className={classes.cardTitleWhite}>
                         <a href='#pablo' onClick={(e) => e.preventDefault()}>
-                          "Focus on Your Employees"
+                          {`"Focus on Your Employees"`}
                         </a>
                       </h4>
                       <p className={classes.cardDescriptionWhite}>
-                        Don't be scared of the truth because we need to restart
+                        {`Don't be scared of the truth because we need to restart
                         the human foundation in truth And I love you like Kanye
                         loves Kanye I love Rick Owens’ bed design but the back
-                        is...
+                        is...`}
                       </p>
                       <div
                         className={`${classes.stats} ${
@@ -1430,10 +1430,10 @@ class SectionCards extends React.Component {
                         <h6 className={classes.cardCategory}>WEB DESIGNER</h6>
                       </Info>
                       <p className={classes.cardDescription}>
-                        Don't be scared of the truth because we need to restart
+                        {`Don't be scared of the truth because we need to restart
                         the human foundation in truth And I love you like Kanye
                         loves Kanye I love Rick Owens’ bed design but the back
-                        is...
+                        is...`}
                       </p>
                     </CardBody>
                     <CardFooter
@@ -1511,10 +1511,10 @@ class SectionCards extends React.Component {
                       </h6>
                       <h4 className={classes.cardTitle}>Alec Thompson</h4>
                       <p className={classes.cardDescription}>
-                        Don't be scared of the truth because we need to restart
+                        {`Don't be scared of the truth because we need to restart
                         the human foundation in truth And I love you like Kanye
                         loves Kanye I love Rick Owens’ bed design but the back
-                        is...
+                        is...`}
                       </p>
                       <Button round color='info'>
                         Follow

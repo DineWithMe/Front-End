@@ -23,11 +23,11 @@ class SectionDescription extends React.Component {
           <GridContainer justify='center'>
             <GridItem md={8} sm={8}>
               <h4 className={classes.description}>
-                Material Kit React PRO is a Material-UI Kit with a fresh, new
+                {`Material Kit React PRO is a Material-UI Kit with a fresh, new
                 design inspired by Google's Material Design. You asked for it,
                 so we built it. It's a great pleasure to introduce to you the
                 material concepts in an easy to use and beautiful set of
-                components.
+                components.`}
               </h4>
             </GridItem>
           </GridContainer>

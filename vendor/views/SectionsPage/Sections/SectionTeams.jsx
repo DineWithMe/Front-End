@@ -119,8 +119,8 @@ function SectionTeams({ ...props }) {
                     <h6 className={classes.cardCategory}>DESIGNER</h6>
                   </Muted>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
-                    human foundation. And I love you like Kanye loves Kanye.
+                    {`Don't be scared of the truth because we need to restart the
+                    human foundation. And I love you like Kanye loves Kanye.`}
                   </p>
                 </CardBody>
                 <CardFooter profile className={classes.justifyContent}>
@@ -170,8 +170,8 @@ function SectionTeams({ ...props }) {
                     <h6 className={classes.cardCategory}>Web Developer</h6>
                   </Muted>
                   <p className={classes.description}>
-                    I love you like Kanye loves Kanye. Don't be scared of the
-                    truth because we need to restart the human foundation.
+                    {`I love you like Kanye loves Kanye. Don't be scared of the
+                    truth because we need to restart the human foundation.`}
                   </p>
                 </CardBody>
                 <CardFooter profile className={classes.justifyContent}>
@@ -419,8 +419,8 @@ function SectionTeams({ ...props }) {
                         <h6 className={classes.cardCategory}>FOUNDER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        Don't be scared of the truth because we need to restart
-                        the human foundation in truth...
+                        {`Don't be scared of the truth because we need to restart
+                        the human foundation in truth...`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -464,8 +464,8 @@ function SectionTeams({ ...props }) {
                         </h6>
                       </Muted>
                       <p className={classes.description}>
-                        Don't be scared of the truth because we need to restart
-                        the human foundation in truth...
+                        {`Don't be scared of the truth because we need to restart
+                        the human foundation in truth...`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -510,8 +510,8 @@ function SectionTeams({ ...props }) {
                         <h6 className={classes.cardCategory}>WEB DESIGNER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        I love you like Kanye loves Kanye. Don't be scared of
-                        the truth.
+                        {`I love you like Kanye loves Kanye. Don't be scared of
+                        the truth.`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -553,8 +553,8 @@ function SectionTeams({ ...props }) {
                         <h6 className={classes.cardCategory}>BACKEND HACKER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        I love you like Kanye loves Kanye. Don't be scared of
-                        the truth.
+                        {`I love you like Kanye loves Kanye. Don't be scared of
+                        the truth.`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -613,9 +613,9 @@ function SectionTeams({ ...props }) {
                     <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
                   </Muted>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                 </CardBody>
                 <CardFooter profile className={classes.justifyContent}>
@@ -644,9 +644,9 @@ function SectionTeams({ ...props }) {
                     <h6 className={classes.cardCategory}>BACKEND HACKER</h6>
                   </Muted>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                 </CardBody>
                 <CardFooter profile className={classes.justifyContent}>
@@ -672,9 +672,9 @@ function SectionTeams({ ...props }) {
                     <h6 className={classes.cardCategory}>WEB DESIGNER</h6>
                   </Muted>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                 </CardBody>
                 <CardFooter profile className={classes.justifyContent}>
@@ -735,8 +735,8 @@ function SectionTeams({ ...props }) {
                         <h6 className={classes.cardCategory}>FOUNDER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        Don't be scared of the truth because we need to restart
-                        the human foundation in truth...
+                        {`Don't be scared of the truth because we need to restart
+                        the human foundation in truth...`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -773,8 +773,8 @@ function SectionTeams({ ...props }) {
                         </h6>
                       </Muted>
                       <p className={classes.description}>
-                        Don't be scared of the truth because we need to restart
-                        the human foundation in truth...
+                        {`Don't be scared of the truth because we need to restart
+                        the human foundation in truth...`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -812,8 +812,8 @@ function SectionTeams({ ...props }) {
                         <h6 className={classes.cardCategory}>WEB DESIGNER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        I love you like Kanye loves Kanye. Don't be scared of
-                        the truth.
+                        {`I love you like Kanye loves Kanye. Don't be scared of
+                        the truth.`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>
@@ -848,8 +848,8 @@ function SectionTeams({ ...props }) {
                         <h6 className={classes.cardCategory}>BACKEND HACKER</h6>
                       </Muted>
                       <p className={classes.description}>
-                        I love you like Kanye loves Kanye. Don't be scared of
-                        the truth.
+                        {`I love you like Kanye loves Kanye. Don't be scared of
+                        the truth.`}
                       </p>
                     </CardBody>
                     <CardFooter profile plain>

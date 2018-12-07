@@ -30,17 +30,17 @@ function SectionText({ ...props }) {
             The Castle Looks Different at Night...
           </h3>
           <p>
-            This is the paragraph where you can write more details about your
+            {`This is the paragraph where you can write more details about your
             product. Keep you user engaged by providing meaningful information.
             Remember that by this time, the user is curious, otherwise he
             wouldn't scroll to get here. Add a button if you want the user to
-            see more. We are here to make life better.
+            see more. We are here to make life better.`}
             <br />
             <br />
-            And now I look and look around and there’s so many Kanyes I've been
+            {`And now I look and look around and there’s so many Kanyes I've been
             trying to figure out the bed design for the master bedroom at our
             Hidden Hills compound... and thank you for turning my personal jean
-            jacket into a couture piece.
+            jacket into a couture piece.`}
           </p>
           <Quote
             textClassName={classes.quoteText}
@@ -64,16 +64,16 @@ function SectionText({ ...props }) {
         <GridItem xs={12} sm={8} md={8}>
           <h3 className={classes.title}>Rest of the Story:</h3>
           <p>
-            We are here to make life better. And now I look and look around and
+            {`We are here to make life better. And now I look and look around and
             there’s so many Kanyes I've been trying to figure out the bed design
             for the master bedroom at our Hidden Hills compound... and thank you
             for turning my personal jean jacket into a couture piece.
             <br />I speak yell scream directly at the old guard on behalf of the
             future. daytime All respect prayers and love to Phife’s family Thank
-            you for so much inspiration.
+            you for so much inspiration.`}
           </p>
           <p>
-            Thank you Anna for the invite thank you to the whole Vogue team And
+            {`Thank you Anna for the invite thank you to the whole Vogue team And
             I love you like Kanye loves Kanye Pand Pand Panda I've been trying
             to figure out the bed design for the master bedroom at our Hidden
             Hills compound...The Pablo pop up was almost a pop up of influence.
@@ -81,13 +81,13 @@ function SectionText({ ...props }) {
             inspiration daytime I love this new Ferg album! The Life of Pablo is
             now available for purchase I have a dream. Thank you to everybody
             who made The Life of Pablo the number 1 album in the world! I'm so
-            proud of the nr #1 song in the country. Panda! Good music 2016!
+            proud of the nr #1 song in the country. Panda! Good music 2016!`}
           </p>
           <p>
-            I love this new Ferg album! The Life of Pablo is now available for
+            {`I love this new Ferg album! The Life of Pablo is now available for
             purchase I have a dream. Thank you to everybody who made The Life of
             Pablo the number 1 album in the world! I'm so proud of the nr #1
-            song in the country. Panda! Good music 2016!
+            song in the country. Panda! Good music 2016!`}
           </p>
         </GridItem>
       </GridContainer>

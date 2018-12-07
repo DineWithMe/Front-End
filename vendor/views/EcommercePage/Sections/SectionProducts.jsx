@@ -1049,7 +1049,7 @@ class SectionProducts extends React.Component {
                         <h4 className={classes.cardTitle}>Tom Ford</h4>
                       </a>
                       <p className={classes.description}>
-                        Immaculate tailoring is TOM FORD's forte.
+                        {`Immaculate tailoring is TOM FORD's forte.`}
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentBetween}>
@@ -1086,7 +1086,7 @@ class SectionProducts extends React.Component {
                         <h4 className={classes.cardTitle}>Thom Sweeney</h4>
                       </a>
                       <p className={classes.description}>
-                        It's made from lightweight grey wool woven.
+                        {`It's made from lightweight grey wool woven.`}
                       </p>
                     </CardBody>
                     <CardFooter plain className={classes.justifyContentBetween}>
@@ -1217,9 +1217,9 @@ class SectionProducts extends React.Component {
                     </h3>
                   </a>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                   <Button href='#' round color='white'>
                     <Subject /> Read
@@ -1244,9 +1244,9 @@ class SectionProducts extends React.Component {
                     </h3>
                   </a>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                   <Button href='#' round color='white'>
                     <Subject /> Read
@@ -1271,9 +1271,9 @@ class SectionProducts extends React.Component {
                     </h3>
                   </a>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                   <Button href='#' round color='white'>
                     <Subject /> Read
@@ -1298,9 +1298,9 @@ class SectionProducts extends React.Component {
                     </h3>
                   </a>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                   <Button href='#' round color='white'>
                     <Subject /> Read
@@ -1323,9 +1323,9 @@ class SectionProducts extends React.Component {
                     <h3 className={classes.cardTitle}>Fashion & Style 2017</h3>
                   </a>
                   <p className={classes.description}>
-                    Don't be scared of the truth because we need to restart the
+                    {`Don't be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves
-                    Kanye I love Rick Owens’ bed design but the back is...
+                    Kanye I love Rick Owens’ bed design but the back is...`}
                   </p>
                   <Button href='#' round color='white'>
                     <Subject /> Read
