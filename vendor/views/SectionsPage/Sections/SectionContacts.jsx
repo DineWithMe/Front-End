@@ -1,4 +1,5 @@
 import React from 'react'
+import getConfig from 'next/config'
 // react components used to create a google map
 import {
   withScriptjs,
@@ -28,6 +29,8 @@ import Button from '../../../components/CustomButtons/Button.jsx'
 import contactsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.jsx'
 
 import city from '../../../../static/assets/img/examples/city.jpg'
+
+const { publicRuntimeConfig } = getConfig()
 
 const RegularMap = withScriptjs(
   withGoogleMap((props) => (
@@ -252,7 +255,9 @@ class SectionContacts extends React.Component {
         <div className={classes.contacts2}>
           <div className={classes.map}>
             <RegularMap
-              googleMapURL='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+                publicRuntimeConfig.googleMap_apiKey
+              }`}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={
                 <div
