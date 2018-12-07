@@ -1,6 +1,7 @@
 import { defaultFont } from '../../material-kit-pro-react.jsx'
-
+/* eslint-disable */
 const customTabsStyle = (theme) => ({
+  /* eslint-disable */
   cardTitle: {
     ...defaultFont,
     float: 'left',

@@ -39,14 +39,14 @@ class ImageUpload extends React.Component {
     // you have to call it yourself
   }
   handleClick() {
-    this.refs.fileInput.click()
+    this.fileInput.click()
   }
   handleRemove() {
     this.setState({
       file: null,
       imagePreviewUrl: this.props.avatar ? defaultAvatar : defaultImage,
     })
-    this.refs.fileInput.value = null
+    this.fileInput.value = null
   }
   render() {
     var {
@@ -57,7 +57,13 @@ class ImageUpload extends React.Component {
     } = this.props
     return (
       <div className='fileinput text-center'>
-        <input type='file' onChange={this.handleImageChange} ref='fileInput' />
+        <input
+          type='file'
+          onChange={this.handleImageChange}
+          ref={(c) => {
+            this.fileInput = c
+          }}
+        />
         <div className={'thumbnail' + (avatar ? ' img-circle' : '')}>
           <img src={this.state.imagePreviewUrl} alt='...' />
         </div>

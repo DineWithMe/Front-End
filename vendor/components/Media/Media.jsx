@@ -34,7 +34,8 @@ function Media({ ...props }) {
         {body}
         <div className={classes.mediaFooter}>{footer}</div>
         {innerMedias !== undefined
-          ? innerMedias.map((prop, key) => {
+          ? /* eslint-disable */ innerMedias.map((prop, key) => {
+              /* eslint-disable */
               return prop
             })
           : null}

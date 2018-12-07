@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
@@ -30,6 +31,10 @@ function SectionDescription(props) {
       </GridContainer>
     </div>
   )
+}
+
+SectionDescription.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(descriptionStyle)(SectionDescription)

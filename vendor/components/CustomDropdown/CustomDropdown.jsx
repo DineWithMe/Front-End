@@ -149,7 +149,12 @@ class CustomDropdown extends React.Component {
             [classes.pooperNav]: open && navDropdown,
           })}
         >
-          {({ TransitionProps, placement }) => (
+          {({
+            /* eslint-disable */
+            TransitionProps,
+            placement,
+            /* eslint-disable */
+          }) => (
             <Grow
               in={open}
               id='menu-list'
@@ -163,7 +168,12 @@ class CustomDropdown extends React.Component {
                 {innerDropDown ? (
                   dropDownMenu
                 ) : (
-                  <ClickAwayListener onClickAway={this.handleClose} ref='cacat'>
+                  <ClickAwayListener
+                    onClickAway={this.handleClose}
+                    ref={(c) => {
+                      this.cacat = c
+                    }}
+                  >
                     {dropDownMenu}
                   </ClickAwayListener>
                 )}

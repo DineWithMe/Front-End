@@ -113,17 +113,7 @@
     "rules": {
       "react/react-in-jsx-scope": 0,
       "react/no-unused-prop-types": 1,
-      "no-unused-vars": 0,
-      "react/prop-types": [
-        2,
-        {
-          "ignore": [
-            "children",
-            "classes",
-            "className"
-          ]
-        }
-      ]
+      "no-unused-vars": 2
     }
   }
 }

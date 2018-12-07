@@ -47,13 +47,13 @@ class SectionBasics extends React.Component {
     this.handleChangeEnabled = this.handleChangeEnabled.bind(this)
   }
   componentDidMount() {
-    nouislider.create(this.refs.slider1, {
+    nouislider.create(this.slider1, {
       start: [40],
       connect: [true, false],
       step: 1,
       range: { min: 0, max: 100 },
     })
-    nouislider.create(this.refs.slider2, {
+    nouislider.create(this.slider2, {
       start: [20, 60],
       connect: [false, true, false],
       step: 1,
@@ -91,7 +91,9 @@ class SectionBasics extends React.Component {
     this.setState({ tags: regularTags })
   }
   render() {
+    /* eslint-disable */
     const { classes } = this.props
+    /* eslint-disable */
     return (
       <div className={classes.sections}>
         <div className={classes.container}>
@@ -977,7 +979,9 @@ class SectionBasics extends React.Component {
                         'One more separated link',
                         <CustomDropdown
                           key='1'
-                          ref='multi'
+                          ref={(c) => {
+                            this.multi = c
+                          }}
                           innerDropDown
                           buttonText='Submenu'
                           buttonProps={{
@@ -990,7 +994,9 @@ class SectionBasics extends React.Component {
                             'Submenu action',
                             <CustomDropdown
                               key='2'
-                              ref='multi'
+                              ref={(c) => {
+                                this.multi = c
+                              }}
                               innerDropDown
                               buttonText='Second submenu'
                               buttonProps={{
@@ -1161,9 +1167,19 @@ class SectionBasics extends React.Component {
                 <div className={classes.title}>
                   <h3>Sliders</h3>
                 </div>
-                <div ref='slider1' className='slider-primary' />
+                <div
+                  ref={(c) => {
+                    this.slider1 = c
+                  }}
+                  className='slider-primary'
+                />
                 <br />
-                <div ref='slider2' className='slider-info' />
+                <div
+                  ref={(c) => {
+                    this.slider2 = c
+                  }}
+                  className='slider-info'
+                />
               </GridItem>
               <GridItem xs={12} sm={6} md={6}>
                 <div className={classes.title}>

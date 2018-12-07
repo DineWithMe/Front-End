@@ -12,8 +12,9 @@ import {
   grayColor,
   defaultFont,
 } from '../../material-kit-pro-react.jsx'
-
+/* eslint-disable */
 const tableStyle = (theme) => ({
+  /* eslint-disable */
   warning: {
     color: warningColor,
   },

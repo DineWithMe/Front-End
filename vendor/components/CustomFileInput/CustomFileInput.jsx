@@ -18,7 +18,7 @@ class CustomFileInput extends React.Component {
     }
   }
   onFocus = (e) => {
-    this.refs.hiddenFile.click(e)
+    this.hiddenFile.click(e)
   }
   handleSubmit = (e) => {
     e.preventDefault()
@@ -77,7 +77,9 @@ class CustomFileInput extends React.Component {
           type='file'
           className={classes.inputFile}
           multiple={multiple}
-          ref='hiddenFile'
+          ref={(c) => {
+            this.hiddenFile = c
+          }}
           onChange={this.addFile}
         />
         <CustomInput

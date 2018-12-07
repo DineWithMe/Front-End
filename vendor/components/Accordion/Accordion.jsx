@@ -29,8 +29,9 @@ class Accordion extends React.Component {
       })
     }
   }
-
+  /* eslint-disable */
   handleChange = (panel) => (event, expanded) => {
+    /* eslint-disable */
     let newArray
 
     if (this.state.single) {
