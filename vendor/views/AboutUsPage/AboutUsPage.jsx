@@ -13,7 +13,6 @@ import Header from '../../components/Header/Header.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
-import CustomLinearProgress from '../../components/CustomLinearProgress/CustomLinearProgress.jsx'
 // sections for this page
 import SectionDescription from './Sections/SectionDescription.jsx'
 import SectionTeam from './Sections/SectionTeam.jsx'
