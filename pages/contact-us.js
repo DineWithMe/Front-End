@@ -1,4 +1,4 @@
-import ContactUsPage from '../vendor/views/ContactUsPage/ContactUsPage.jsx'
+import ContactUsPage from '../src/views/ContactUsPage/ContactUsPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

@@ -1,4 +1,4 @@
-import PresentationPage from '../vendor/views/PresentationPage/PresentationPage.jsx'
+import PresentationPage from '../src/views/PresentationPage/PresentationPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

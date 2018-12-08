@@ -1,4 +1,4 @@
-import ShoppingCartPage from '../vendor/views/ShoppingCartPage/ShoppingCartPage'
+import ShoppingCartPage from '../src/views/ShoppingCartPage/ShoppingCartPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

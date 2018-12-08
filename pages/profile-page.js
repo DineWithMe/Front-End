@@ -1,4 +1,4 @@
-import ProfilePage from '../vendor/views/ProfilePage/ProfilePage'
+import ProfilePage from '../src/views/ProfilePage/ProfilePage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

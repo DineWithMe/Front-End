@@ -1,4 +1,4 @@
-import ProductPage from '../vendor/views/ProductPage/ProductPage'
+import ProductPage from '../src/views/ProductPage/ProductPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

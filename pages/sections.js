@@ -1,4 +1,4 @@
-import SectionsPage from '../vendor/views/SectionsPage/SectionsPage'
+import SectionsPage from '../src/views/SectionsPage/SectionsPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

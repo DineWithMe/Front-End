@@ -1,4 +1,4 @@
-import LandingPage from '../vendor/views/LandingPage/LandingPage.jsx'
+import LandingPage from '../src/views/LandingPage/LandingPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

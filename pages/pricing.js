@@ -1,4 +1,4 @@
-import PricingPage from '../vendor/views/PricingPage/PricingPage'
+import PricingPage from '../src/views/PricingPage/PricingPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

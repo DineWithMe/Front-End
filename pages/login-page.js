@@ -1,4 +1,4 @@
-import LoginPage from '../vendor/views/LoginPage/LoginPage'
+import LoginPage from '../src/views/LoginPage/LoginPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 

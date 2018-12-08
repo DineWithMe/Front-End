@@ -1,4 +1,4 @@
-import BlogPostsPage from '../vendor/views/BlogPostsPage/BlogPostsPage.jsx'
+import BlogPostsPage from '../src/views/BlogPostsPage/BlogPostsPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 
