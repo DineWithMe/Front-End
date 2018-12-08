@@ -1,5 +1,14 @@
 version: 2
 jobs:
+  lint:
+    docker:
+      - image: circleci/node:8.12
+    steps:
+      - checkout
+      - run: echo "npm installing"
+      - run: npm i
+      - run: echo "lint"
+      - run: CI=true npm run lint
   test:
     docker:
       - image: circleci/node:8.12
@@ -13,5 +22,6 @@ workflows:
   version: 2
   build_test_and_lint: # workflow name
     jobs:
-      - test # run parallel
-
+      - test:
+          requires: # test job require hithere job to finish and succed
+            - lint
