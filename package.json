@@ -111,9 +111,7 @@
       "plugin:prettier/recommended"
     ],
     "rules": {
-      "react/react-in-jsx-scope": 0,
-      "react/no-unused-prop-types": 1,
-      "no-unused-vars": 2
+      "react/react-in-jsx-scope": 0
     }
   }
 }
