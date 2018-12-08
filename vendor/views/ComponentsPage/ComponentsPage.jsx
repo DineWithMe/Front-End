@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
@@ -350,6 +351,10 @@ class Components extends React.Component {
       </div>
     )
   }
+}
+
+Components.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(componentsStyle)(Components)

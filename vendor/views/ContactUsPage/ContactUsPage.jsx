@@ -42,7 +42,8 @@ const HeaderLinks = dynamic(
 
 const CustomSkinMap = withScriptjs(
   /* eslint-disable */
-  withGoogleMap((props /* eslint-disable */) => (
+  withGoogleMap((props) => (
+    /* eslint-disable */
     <GoogleMap
       defaultZoom={14}
       defaultCenter={{ lat: 44.43353, lng: 26.093928 }}

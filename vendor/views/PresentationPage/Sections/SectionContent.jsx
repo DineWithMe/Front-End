@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // core components
 import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
@@ -68,6 +69,10 @@ class SectionContent extends React.Component {
       </div>
     )
   }
+}
+
+SectionContent.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(contentStyle)(SectionContent)

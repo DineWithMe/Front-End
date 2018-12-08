@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
@@ -352,6 +353,10 @@ class ShoppingCartPage extends React.Component {
       </div>
     )
   }
+}
+
+ShoppingCartPage.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(shoppingCartStyle)(ShoppingCartPage)

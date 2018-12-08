@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
@@ -173,6 +174,10 @@ function SectionComments({ ...props }) {
       </GridContainer>
     </div>
   )
+}
+
+SectionComments.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(sectionCommentsStyle)(SectionComments)

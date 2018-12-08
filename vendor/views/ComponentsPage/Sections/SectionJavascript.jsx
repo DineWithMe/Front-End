@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // react plugin for creating date-time-picker
 import Datetime from 'react-datetime'
 // @material-ui/core components
@@ -1047,6 +1048,10 @@ class SectionJavascript extends React.Component {
       </div>
     )
   }
+}
+
+SectionJavascript.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(javascriptStyles)(SectionJavascript)

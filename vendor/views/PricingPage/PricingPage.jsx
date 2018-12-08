@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
@@ -67,7 +68,7 @@ class PricingPage extends React.Component {
                   classes.textCenter
                 )}
               >
-                <h1 className={classes.title}>Let's get started</h1>
+                <h1 className={classes.title}>{`Let's get started`}</h1>
                 <h4>
                   To get started, you will need to choose a plan for your needs.
                   You can opt in for the monthly of annual options and go with
@@ -135,6 +136,10 @@ class PricingPage extends React.Component {
       </div>
     )
   }
+}
+
+PricingPage.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(pricingStyle)(PricingPage)

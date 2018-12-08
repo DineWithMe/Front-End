@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -703,6 +704,10 @@ const SectionFooter = (props) => {
       </div>
     </div>
   )
+}
+
+SectionFooter.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(styles)(SectionFooter)

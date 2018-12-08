@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import getConfig from 'next/config'
 // react components used to create a google map
 import {
@@ -33,7 +34,9 @@ import city from '../../../../static/assets/img/examples/city.jpg'
 const { publicRuntimeConfig } = getConfig()
 
 const RegularMap = withScriptjs(
+  /* eslint-disable */
   withGoogleMap((props) => (
+    /* eslint-disable */
     <GoogleMap
       defaultZoom={14}
       defaultCenter={{ lat: 44.43353, lng: 26.093928 - 0.025 }}
@@ -371,6 +374,10 @@ class SectionContacts extends React.Component {
       </div>
     )
   }
+}
+
+SectionContacts.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(contactsStyle)(SectionContacts)

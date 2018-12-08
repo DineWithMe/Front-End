@@ -2,7 +2,7 @@ import React from 'react'
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
-
+import PropTypes from 'prop-types'
 // @material-ui/icons
 
 // core components
@@ -201,6 +201,10 @@ class SectionTypography extends React.Component {
       </div>
     )
   }
+}
+
+SectionTypography.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(typographyStyle)(SectionTypography)

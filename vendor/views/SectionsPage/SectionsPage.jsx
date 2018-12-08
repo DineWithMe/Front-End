@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
@@ -286,6 +287,10 @@ class SectionsPage extends React.Component {
       </div>
     )
   }
+}
+
+SectionsPage.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(sectionsPageStyle)(SectionsPage)

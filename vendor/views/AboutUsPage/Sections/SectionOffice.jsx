@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
@@ -93,6 +94,10 @@ function SectionOffice(props) {
       </GridContainer>
     </div>
   )
+}
+
+SectionOffice.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(officeStyle)(SectionOffice)

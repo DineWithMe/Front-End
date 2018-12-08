@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
@@ -758,6 +759,10 @@ function SectionPricing({ ...props }) {
       {/* Pricing 5 END */}
     </div>
   )
+}
+
+SectionPricing.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(pricingStyle)(SectionPricing)

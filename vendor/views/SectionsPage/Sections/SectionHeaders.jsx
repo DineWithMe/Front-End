@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react component for creating beautiful carousel
@@ -518,6 +519,10 @@ function SectionHeaders({ ...props }) {
       {/* HEADER 3 END */}
     </div>
   )
+}
+
+SectionHeaders.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(headersStyle)(SectionHeaders)

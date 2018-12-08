@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -164,6 +165,10 @@ class SectionFreeDemo extends React.Component {
       </div>
     )
   }
+}
+
+SectionFreeDemo.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(freeDemoStyle)(SectionFreeDemo)

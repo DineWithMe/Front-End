@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -93,6 +94,10 @@ function SectionText({ ...props }) {
       </GridContainer>
     </div>
   )
+}
+
+SectionText.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(sectionTextStyle)(SectionText)

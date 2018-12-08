@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
@@ -44,6 +45,10 @@ class SectionCards extends React.Component {
       </div>
     )
   }
+}
+
+SectionCards.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(cardsStyle)(SectionCards)

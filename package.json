@@ -12,7 +12,7 @@
     "build": "next build",
     "jest": "",
     "jest-ci": "",
-    "lint:check": "eslint . --ext=js,jsx",
+    "lint": "eslint . --ext=js,jsx",
     "lint:fix": "eslint . --ext=js,jsx --fix"
   },
   "dependencies": {

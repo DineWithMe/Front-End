@@ -17,6 +17,7 @@ function Info({ ...props }) {
 
 Info.propTypes = {
   classes: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
 export default withStyles(typographyStyle)(Info)

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
@@ -165,6 +166,10 @@ function SectionTeam(props) {
       </GridContainer>
     </div>
   )
+}
+
+SectionTeam.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(teamStyle)(SectionTeam)

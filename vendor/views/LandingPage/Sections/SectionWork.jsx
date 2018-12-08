@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
@@ -73,6 +74,10 @@ class SectionWork extends React.Component {
       </div>
     )
   }
+}
+
+SectionWork.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(workStyle)(SectionWork)

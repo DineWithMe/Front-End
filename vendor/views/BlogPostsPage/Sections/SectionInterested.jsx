@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
@@ -129,6 +130,10 @@ function SectionInterested({ ...props }) {
       </GridContainer>
     </div>
   )
+}
+
+SectionInterested.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(sectionInterestedStyle)(SectionInterested)

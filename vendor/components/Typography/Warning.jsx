@@ -17,6 +17,7 @@ function Warning({ ...props }) {
 
 Warning.propTypes = {
   classes: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
 export default withStyles(typographyStyle)(Warning)

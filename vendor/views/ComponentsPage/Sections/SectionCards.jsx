@@ -1,5 +1,4 @@
 import React from 'react'
-
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Icon from '@material-ui/core/Icon'

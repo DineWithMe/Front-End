@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react components for routing our app without refresh
@@ -161,6 +162,10 @@ class SectionExamples extends React.Component {
       </div>
     )
   }
+}
+
+SectionExamples.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(styles)(SectionExamples)

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
@@ -167,6 +168,10 @@ const SectionLatestOffers = (props) => {
       </div>
     </div>
   )
+}
+
+SectionLatestOffers.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(styles)(SectionLatestOffers)

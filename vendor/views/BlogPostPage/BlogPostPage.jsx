@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
@@ -134,6 +135,10 @@ class BlogPostPage extends React.Component {
       </div>
     )
   }
+}
+
+BlogPostPage.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(blogPostPageStyle)(BlogPostPage)

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
@@ -219,6 +220,10 @@ class SectionTeam extends React.Component {
       </div>
     )
   }
+}
+
+SectionTeam.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(style)(SectionTeam)

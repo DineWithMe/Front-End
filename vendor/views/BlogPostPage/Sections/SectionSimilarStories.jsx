@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
@@ -137,6 +137,10 @@ function SectionSimilarStories({ ...props }) {
       </div>
     </div>
   )
+}
+
+SectionSimilarStories.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(sectionSimilarStoriesStyle)(SectionSimilarStories)

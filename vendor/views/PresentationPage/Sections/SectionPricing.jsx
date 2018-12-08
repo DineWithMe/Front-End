@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // core components
@@ -251,6 +252,10 @@ class SectionPricing extends React.Component {
       </div>
     )
   }
+}
+
+SectionPricing.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(style)(SectionPricing)

@@ -8,6 +8,7 @@ import typographyStyle from '../../../static/assets/jss/material-kit-pro-react/c
 
 function Primary({ ...props }) {
   const { classes, children } = props
+
   return (
     <div className={classes.defaultFontStyle + ' ' + classes.primaryText}>
       {children}
@@ -17,6 +18,7 @@ function Primary({ ...props }) {
 
 Primary.propTypes = {
   classes: PropTypes.object.isRequired,
+  children: PropTypes.string,
 }
 
 export default withStyles(typographyStyle)(Primary)

@@ -1,5 +1,4 @@
 import React from 'react'
-
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Checkbox from '@material-ui/core/Checkbox'
