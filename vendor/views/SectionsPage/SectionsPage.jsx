@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
@@ -18,12 +17,8 @@ import SectionContacts from './Sections/SectionContacts.jsx'
 
 import sectionsPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/sectionsPageStyle.jsx'
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+
 class SectionsPage extends React.Component {
   componentDidMount() {
     var href = window.location.href.substring(

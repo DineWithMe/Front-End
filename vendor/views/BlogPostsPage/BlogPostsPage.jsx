@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
@@ -20,18 +19,9 @@ import SubscribeLine from './Sections/SubscribeLine.jsx'
 
 import blogPostsPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/blogPostsPageStyle.jsx'
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
-const Parallax = dynamic(
-  () => import('../../components/Parallax/Parallax.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
+
 class BlogPostsPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

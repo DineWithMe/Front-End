@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // react component used to create nice image meadia player
@@ -43,18 +42,9 @@ import product2 from '../../../static/assets/img/examples/product2.jpg'
 import product3 from '../../../static/assets/img/examples/product3.jpg'
 import product4 from '../../../static/assets/img/examples/product4.jpg'
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
-const Parallax = dynamic(
-  () => import('../../components/Parallax/Parallax.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
+
 class ProductPage extends React.Component {
   constructor(props) {
     super(props)

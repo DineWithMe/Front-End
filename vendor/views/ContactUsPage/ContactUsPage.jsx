@@ -1,5 +1,4 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 import getConfig from 'next/config'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
@@ -33,12 +32,7 @@ import contactUsStyle from '../../../static/assets/jss/material-kit-pro-react/vi
 // Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
 const { publicRuntimeConfig } = getConfig()
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
 
 const CustomSkinMap = withScriptjs(
   /* eslint-disable */

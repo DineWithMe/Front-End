@@ -1,5 +1,4 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -24,18 +23,8 @@ import SectionWork from './Sections/SectionWork.jsx'
 
 const dashboardRoutes = []
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
-const Parallax = dynamic(
-  () => import('../../components/Parallax/Parallax.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class LandingPage extends React.Component {
   componentDidMount() {

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React from 'react'
 import PropTypes from 'prop-types'
-import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -43,18 +42,9 @@ import cardProfile2Square from '../../../static/assets/img/faces/card-profile2-s
 
 import profilePageStyle from '../../../static/assets/jss/material-kit-pro-react/views/profilePageStyle.jsx'
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
-const Parallax = dynamic(
-  () => import('../../components/Parallax/Parallax.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
+
 class ProfilePage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)

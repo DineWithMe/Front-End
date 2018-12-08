@@ -1,5 +1,4 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import InputAdornment from '@material-ui/core/InputAdornment'
@@ -31,12 +30,8 @@ import signupPageStyle from '../../../static/assets/jss/material-kit-pro-react/v
 
 import image from '../../../static/assets/img/bg7.jpg'
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+
 class Components extends React.Component {
   constructor(props) {
     super(props)

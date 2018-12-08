@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -14,6 +13,7 @@ import Header from '../../components/Header/Header.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import CustomLinearProgress from '../../components/CustomLinearProgress/CustomLinearProgress.jsx'
 // sections for this page
 import SectionDescription from './Sections/SectionDescription.jsx'
 import SectionTeam from './Sections/SectionTeam.jsx'
@@ -23,18 +23,9 @@ import SectionContact from './Sections/SectionContact.jsx'
 
 import aboutUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/aboutUsStyle.jsx'
 
-const HeaderLinks = dynamic(
-  () => import('../../components/Header/HeaderLinks.jsx'),
-  {
-    ssr: false,
-  }
-)
-const Parallax = dynamic(
-  () => import('../../components/Parallax/Parallax.jsx'),
-  {
-    ssr: false,
-  }
-)
+import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
+import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
+
 class AboutUsPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
