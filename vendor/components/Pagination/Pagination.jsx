@@ -67,6 +67,7 @@ Pagination.propTypes = {
     })
   ).isRequired,
   color: PropTypes.oneOf(['primary', 'info', 'success', 'warning', 'danger']),
+  className: PropTypes.string,
 }
 
 export default withStyles(paginationStyle)(Pagination)

@@ -35,6 +35,7 @@ Badge.propTypes = {
     'gray',
   ]),
   className: PropTypes.string,
+  children: PropTypes.string,
 }
 
 export default withStyles(badgeStyle)(Badge)
