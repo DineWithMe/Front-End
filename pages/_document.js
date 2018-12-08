@@ -16,13 +16,16 @@ class MyDocument extends Document {
           <meta name='theme-color' content='#000000' />
           {/* manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
-          {/* <link rel='manifest' href='%PUBLIC_URL%/manifest.json' />
-          <link rel='shortcut icon' href='%PUBLIC_URL%/favicon.ico' />
+          <link rel='manifest' href='../static/assets/public/manifest.json' />
+          <link
+            rel='shortcut icon'
+            href='../static/assets/public/favicon.ico'
+          />
           <link
             rel='apple-touch-icon'
             sizes='76x76'
-            href='%PUBLIC_URL%/apple-icon.png'
-          /> */}
+            href='../static/assets/public/apple-icon.png'
+          />
           {/* Fonts and icons     */}
           <link
             rel='stylesheet'
