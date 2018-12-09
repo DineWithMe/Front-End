@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "alias": ["www.dinewithme.app"],
+  "builds": [{ "src": "index.html", "use": "@now/static" }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://dinewithme.app/$1" }
+    }
+  ]
+}

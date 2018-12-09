@@ -12,7 +12,7 @@
     "jest-ci": "jest --watch --runInBand",
     "lint": "eslint . --ext=js,jsx",
     "lint-fix": "eslint . --ext=js,jsx --fix",
-    "deploy": "now && now alias dinewithme.app && now alias www.dinewithme.app"
+    "deploy": "now && now alias && now scale dinewithme.app 1 auto"
   },
   "dependencies": {
     "@material-ui/core": "^3.6.1",
@@ -118,6 +118,7 @@
     "dotenv": "./.config/prod.env",
     "env": {
       "NODE_ENV": "production"
-    }
+    },
+    "alias": "dinewithme.app"
   }
 }

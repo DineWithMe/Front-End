@@ -1,0 +1,13 @@
+{
+  "name": "redirect",
+  "version": "1.0.0",
+  "description": "In this example we will be deploying a simple redirect from a `www` domain to a naked one.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "now && now alias"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
