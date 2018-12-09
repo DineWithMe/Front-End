@@ -5,6 +5,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
 import Header from '../../components/Header/Header.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 // sections of this Page
 import SectionHeaders from './Sections/SectionHeaders.jsx'
 import SectionFeatures from './Sections/SectionFeatures.jsx'
@@ -16,8 +17,6 @@ import SectionTestimonials from './Sections/SectionTestimonials.jsx'
 import SectionContacts from './Sections/SectionContacts.jsx'
 
 import sectionsPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/sectionsPageStyle.jsx'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
 
 class SectionsPage extends React.Component {
   componentDidMount() {

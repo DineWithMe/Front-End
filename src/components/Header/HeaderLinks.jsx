@@ -277,7 +277,7 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
+        {/* <Button
           href='https://www.creative-tim.com/product/material-kit-pro-react'
           color={window.innerWidth < 960 ? 'info' : 'white'}
           target='_blank'
@@ -285,7 +285,7 @@ function HeaderLinks({ ...props }) {
           round
         >
           <ShoppingCart className={classes.icons} /> buy now
-        </Button>
+        </Button> */}
       </ListItem>
     </List>
   )

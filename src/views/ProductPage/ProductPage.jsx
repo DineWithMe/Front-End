@@ -29,6 +29,8 @@ import CardHeader from '../../components/Card/CardHeader.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
 import CardFooter from '../../components/Card/CardFooter.jsx'
 import Tooltip from '@material-ui/core/Tooltip'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 
 import productStyle from '../../../static/assets/jss/material-kit-pro-react/views/productStyle.jsx'
 
@@ -41,9 +43,6 @@ import product1 from '../../../static/assets/img/examples/product1.jpg'
 import product2 from '../../../static/assets/img/examples/product2.jpg'
 import product3 from '../../../static/assets/img/examples/product3.jpg'
 import product4 from '../../../static/assets/img/examples/product4.jpg'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class ProductPage extends React.Component {
   constructor(props) {

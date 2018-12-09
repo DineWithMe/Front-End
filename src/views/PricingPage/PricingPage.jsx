@@ -13,14 +13,13 @@ import Header from '../../components/Header/Header.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 // sections for this page
 import SectionPricing from './Sections/SectionPricing.jsx'
 import SectionFeatures from './Sections/SectionFeatures.jsx'
 
 import pricingStyle from '../../../static/assets/jss/material-kit-pro-react/views/pricingStyle.jsx'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class PricingPage extends React.Component {
   componentDidMount() {

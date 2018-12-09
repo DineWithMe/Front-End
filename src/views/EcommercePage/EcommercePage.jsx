@@ -11,6 +11,8 @@ import Card from '../../components/Card/Card.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 // sections for this page
 import SectionLatestOffers from './Sections/SectionLatestOffers.jsx'
 import SectionProducts from './Sections/SectionProducts.jsx'
@@ -34,9 +36,6 @@ import face7 from '../../../static/assets/img/faces/card-profile5-square.jpg'
 import face8 from '../../../static/assets/img/faces/card-profile2-square.jpg'
 
 import styles from '../../../static/assets/jss/material-kit-pro-react/views/ecommerceStyle.jsx'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class EcommercePage extends React.Component {
   componentDidMount() {

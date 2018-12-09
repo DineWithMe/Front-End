@@ -13,6 +13,8 @@ import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 // sections for this page
 import SectionText from './Sections/SectionText.jsx'
 import SectionBlogInfo from './Sections/SectionBlogInfo.jsx'
@@ -20,9 +22,6 @@ import SectionComments from './Sections/SectionComments.jsx'
 import SectionSimilarStories from './Sections/SectionSimilarStories.jsx'
 
 import blogPostPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/blogPostPageStyle.jsx'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class BlogPostPage extends React.Component {
   componentDidMount() {

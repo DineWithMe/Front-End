@@ -27,6 +27,8 @@ import Badge from '../../components/Badge/Badge.jsx'
 import Muted from '../../components/Typography/Muted.jsx'
 import Clearfix from '../../components/Clearfix/Clearfix.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 
 import christian from '../../../static/assets/img/faces/christian.jpg'
 import oluEletu from '../../../static/assets/img/examples/olu-eletu.jpg'
@@ -41,9 +43,6 @@ import kendall from '../../../static/assets/img/faces/kendall.jpg'
 import cardProfile2Square from '../../../static/assets/img/faces/card-profile2-square.jpg'
 
 import profilePageStyle from '../../../static/assets/jss/material-kit-pro-react/views/profilePageStyle.jsx'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class ProfilePage extends React.Component {
   componentDidMount() {

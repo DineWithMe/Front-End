@@ -12,6 +12,8 @@ import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 // sections for this page
 import SectionDescription from './Sections/SectionDescription.jsx'
 import SectionComponents from './Sections/SectionComponents.jsx'
@@ -24,9 +26,6 @@ import SectionOverview from './Sections/SectionOverview.jsx'
 import SectionPricing from './Sections/SectionPricing.jsx'
 
 import presentationStyle from '../../../static/assets/jss/material-kit-pro-react/views/presentationStyle.jsx'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class PresentationPage extends React.Component {
   componentDidMount() {

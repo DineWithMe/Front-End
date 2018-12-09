@@ -26,13 +26,12 @@ import InfoArea from '../../components/InfoArea/InfoArea.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 
 import contactUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/contactUsStyle.jsx'
 
 // Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
 const { publicRuntimeConfig } = getConfig()
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
 
 const CustomSkinMap = withScriptjs(
   /* eslint-disable */

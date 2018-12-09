@@ -22,15 +22,14 @@ import Table from '../../components/Table/Table.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
 import Card from '../../components/Card/Card.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
 
 import shoppingCartStyle from '../../../static/assets/jss/material-kit-pro-react/views/shoppingCartStyle.jsx'
 
 import product1 from '../../../static/assets/img/product1.jpg'
 import product2 from '../../../static/assets/img/product2.jpg'
 import product3 from '../../../static/assets/img/product3.jpg'
-
-import { DynamicHeaderLinks as HeaderLinks } from '../../components/Header/DynamicHeaderLinks.jsx'
-import { DynamicParallax as Parallax } from '../../components/Parallax/DynamicParallax.jsx'
 
 class ShoppingCartPage extends React.Component {
   componentDidMount() {
