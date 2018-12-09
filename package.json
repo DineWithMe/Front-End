@@ -77,14 +77,6 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "babel": {
-    "presets": [
-      "next/babel"
-    ],
-    "plugins": [
-      "css-in-js"
-    ]
-  },
   "eslintConfig": {
     "parser": "babel-eslint",
     "env": {
