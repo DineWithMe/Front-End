@@ -1,14 +1,28 @@
 import App, { Container } from 'next/app'
+import Head from 'next/head'
+import Router from 'next/router'
+// client
 import { ApolloProvider } from 'react-apollo'
+import withApollo from '../src/utils/withApollo'
+// state
 import { Provider } from 'unstated'
 import { DataContainer } from '../src/utils/unstated'
-import withApollo from '../src/utils/withApollo'
-import Head from 'next/head'
+// jss
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext from '../src/utils/getPageContext'
+// css
 import '../static/assets/scss/material-kit-pro-react.css'
+import '../static/assets/css/nprogress.css'
+// component
+import NProgress from 'nprogress'
+
+Router.events.on('routeChangeStart', () => {
+  NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 let dataStore = new DataContainer()
 class MyApp extends App {

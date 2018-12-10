@@ -6,13 +6,13 @@
   "main": "pages/index.js",
   "scripts": {
     "build": "next build",
-    "dev": "env-cmd ./.config/prod.env next",
+    "dev": "env-cmd ./.config/dev.env next",
     "start": "next start",
     "jest": "jest --watch --runInBand",
     "jest-ci": "jest --watch --runInBand",
     "lint": "eslint . --ext=js,jsx",
     "lint-fix": "eslint . --ext=js,jsx --fix",
-    "deploy": "now && now alias && now scale dinewithme.app 1 auto"
+    "deploy": "now rm dinewithme && now && now alias && now scale dinewithme.app 1 auto"
   },
   "dependencies": {
     "@material-ui/core": "^3.6.1",
@@ -31,6 +31,7 @@
     "next": "^7.0.2",
     "next-images": "^1.0.3",
     "nouislider": "^12.1.0",
+    "nprogress": "^0.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0-alpha.2",
     "react-animate-on-scroll": "^2.1.5",
@@ -114,7 +115,7 @@
   },
   "now": {
     "version": 1,
-    "name": "Dine With Me",
+    "name": "dinewithme",
     "dotenv": "./.config/prod.env",
     "env": {
       "NODE_ENV": "production"
