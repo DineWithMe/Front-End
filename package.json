@@ -6,8 +6,8 @@
   "main": "pages/index.js",
   "scripts": {
     "build": "next build",
-    "dev": "env-cmd ./.config/dev.env next",
-    "start": "env-cmd ./.config/prod.env next start",
+    "dev": "env-cmd ./.config/prod.env next",
+    "start": "next start",
     "jest": "jest --watch --runInBand",
     "jest-ci": "jest --watch --runInBand",
     "lint": "eslint . --ext=js,jsx",
@@ -26,7 +26,6 @@
     "axios": "^0.18.0",
     "babel-plugin-css-in-js": "^1.5.1",
     "classnames": "^2.2.6",
-    "env-cmd": "^8.0.2",
     "graphql": "^14.0.2",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
@@ -51,6 +50,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
+    "env-cmd": "^8.0.2",
     "enzyme": "^3.7.0",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
