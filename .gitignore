@@ -10,4 +10,4 @@ node_modules/
 .DS_Store
 
 # environment
-.config/prod.env
+.config/dev.env
