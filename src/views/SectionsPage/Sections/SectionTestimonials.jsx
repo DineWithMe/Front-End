@@ -16,7 +16,7 @@ import CardAvatar from '../../../components/Card/CardAvatar.jsx'
 import Muted from '../../../components/Typography/Muted.jsx'
 import Warning from '../../../components/Typography/Warning.jsx'
 
-import testimonialsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/testimonialsStyle.jsx'
+import testimonialsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/testimonialsStyle.jsx'
 
 import dg2 from '../../../../static/assets/img/dg2.jpg'
 import cardProfile1Square from '../../../../static/assets/img/faces/card-profile1-square.jpg'

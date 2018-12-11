@@ -15,7 +15,7 @@ import dg6 from '../../../../static/assets/img/dg6.jpg'
 import dg10 from '../../../../static/assets/img/dg10.jpg'
 import dg9 from '../../../../static/assets/img/dg9.jpg'
 
-import styles from '../../../../static/assets/jss/material-kit-pro-react/views/ecommerceSections/blogStyle.jsx'
+import styles from '../../../jss/material-kit-pro-react/views/ecommerceSections/blogStyle.jsx'
 
 const SectionBlog = (props) => {
   const { classes } = props

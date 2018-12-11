@@ -18,7 +18,7 @@ import bg5 from '../../../../static/assets/img/bg5.jpg'
 import blog5 from '../../../../static/assets/img/examples/blog5.jpg'
 import blog6 from '../../../../static/assets/img/examples/blog6.jpg'
 
-import sectionInterestedStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionInterestedStyle.jsx'
+import sectionInterestedStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionInterestedStyle.jsx'
 
 function SectionInterested({ ...props }) {
   const { classes } = props

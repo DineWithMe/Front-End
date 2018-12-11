@@ -46,7 +46,7 @@ import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 import Accordion from '../../../components/Accordion/Accordion.jsx'
 import ImageUpload from '../../../components/CustomUpload/ImageUpload.jsx'
 
-import javascriptStyles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/javascriptStyles.jsx'
+import javascriptStyles from '../../../jss/material-kit-pro-react/views/componentsSections/javascriptStyles.jsx'
 
 import dg1 from '../../../../static/assets/img/dg1.jpg'
 import dg2 from '../../../../static/assets/img/dg2.jpg'

@@ -29,7 +29,7 @@ import Paginations from '../../../components/Pagination/Pagination.jsx'
 import Badge from '../../../components/Badge/Badge.jsx'
 import CustomDropdown from '../../../components/CustomDropdown/CustomDropdown.jsx'
 
-import basicsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/basicsStyle.jsx'
+import basicsStyle from '../../../jss/material-kit-pro-react/views/componentsSections/basicsStyle.jsx'
 
 class SectionBasics extends React.Component {
   constructor(props) {

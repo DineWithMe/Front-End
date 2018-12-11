@@ -20,7 +20,7 @@ import NavPills from '../../../components/NavPills/NavPills.jsx'
 import Success from '../../../components/Typography/Success.jsx'
 import Danger from '../../../components/Typography/Danger.jsx'
 
-import pricingStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/pricingStyle.jsx'
+import pricingStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/pricingStyle.jsx'
 
 import bg11 from '../../../../static/assets/img/bg11.jpg'
 import city from '../../../../static/assets/img/examples/city.jpg'

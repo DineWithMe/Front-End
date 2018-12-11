@@ -6,7 +6,7 @@ import GridItem from '../../../components/Grid/GridItem.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import componentsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/componentsStyle.jsx'
+import componentsStyle from '../../../jss/material-kit-pro-react/views/presentationSections/componentsStyle.jsx'
 
 import macbookImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/laptop-basics.png'
 import shoppingCartImage from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/table.jpg'

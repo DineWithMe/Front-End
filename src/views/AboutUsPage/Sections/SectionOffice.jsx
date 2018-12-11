@@ -8,7 +8,7 @@ import GridItem from '../../../components/Grid/GridItem.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import officeStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/officeStyle.jsx'
+import officeStyle from '../../../jss/material-kit-pro-react/views/aboutUsSections/officeStyle.jsx'
 
 // office
 import office1 from '../../../../static/assets/img/examples/office1.jpg'

@@ -33,7 +33,7 @@ import Warning from '../../../components/Typography/Warning.jsx'
 import Rose from '../../../components/Typography/Rose.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import styles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.jsx'
+import styles from '../../../jss/material-kit-pro-react/views/componentsSections/sectionCards.jsx'
 
 import cardBlog1 from '../../../../static/assets/img/examples/card-blog1.jpg'
 import cardBlog2 from '../../../../static/assets/img/examples/card-blog2.jpg'

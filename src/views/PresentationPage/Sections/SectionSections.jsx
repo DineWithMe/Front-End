@@ -12,7 +12,7 @@ import Button from '../../../components/CustomButtons/Button.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import sectionsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/sectionsStyle.jsx'
+import sectionsStyle from '../../../jss/material-kit-pro-react/views/presentationSections/sectionsStyle.jsx'
 
 // images array used in rendering a function for this section
 import imgs from '../../../../static/assets/img/assets-for-demo/sections/imgs.jsx'

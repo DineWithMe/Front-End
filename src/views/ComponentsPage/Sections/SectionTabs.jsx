@@ -11,7 +11,7 @@ import Build from '@material-ui/icons/Build'
 import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
 import CustomTabs from '../../../components/CustomTabs/CustomTabs.jsx'
-import tabsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/tabsStyle.jsx'
+import tabsStyle from '../../../jss/material-kit-pro-react/views/componentsSections/tabsStyle.jsx'
 
 class SectionTabs extends React.Component {
   render() {

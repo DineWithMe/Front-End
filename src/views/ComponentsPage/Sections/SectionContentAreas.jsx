@@ -22,7 +22,7 @@ import Media from '../../../components/Media/Media.jsx'
 import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 import Paginations from '../../../components/Pagination/Pagination.jsx'
 
-import style from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/contentAreas.jsx'
+import style from '../../../jss/material-kit-pro-react/views/componentsSections/contentAreas.jsx'
 
 import avatar from '../../../../static/assets/img/faces/avatar.jpg'
 import kendall from '../../../../static/assets/img/faces/kendall.jpg'

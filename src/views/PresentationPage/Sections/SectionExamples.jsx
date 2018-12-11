@@ -11,8 +11,8 @@ import Card from '../../../components/Card/Card.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import examplesStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/examplesStyle.jsx'
-import imagesStyles from '../../../../static/assets/jss/material-kit-pro-react/imagesStyles.jsx'
+import examplesStyle from '../../../jss/material-kit-pro-react/views/presentationSections/examplesStyle.jsx'
+import imagesStyles from '../../../jss/material-kit-pro-react/imagesStyles.jsx'
 
 import exAboutUs from '../../../../static/assets/img/assets-for-demo/example-pages/ex-about-us.jpg'
 import exLanding from '../../../../static/assets/img/assets-for-demo/example-pages/ex-landing.jpg'

@@ -17,7 +17,7 @@ import office2 from '../../../../static/assets/img/examples/office2.jpg'
 import blog8 from '../../../../static/assets/img/examples/blog8.jpg'
 import cardProject6 from '../../../../static/assets/img/examples/card-project6.jpg'
 
-import sectionPillsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionPillsStyle.jsx'
+import sectionPillsStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionPillsStyle.jsx'
 
 function SectionPills({ ...props }) {
   const { classes } = props

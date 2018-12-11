@@ -12,7 +12,7 @@ import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
 import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 
-import servicesStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/servicesStyle.jsx'
+import servicesStyle from '../../../jss/material-kit-pro-react/views/aboutUsSections/servicesStyle.jsx'
 
 function SectionServices(props) {
   const { classes } = props

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 // core components
-import parallaxStyle from '../../../static/assets/jss/material-kit-pro-react/components/parallaxStyle.jsx'
+import parallaxStyle from '../../jss/material-kit-pro-react/components/parallaxStyle.jsx'
 
 class Parallax extends React.Component {
   constructor(props) {

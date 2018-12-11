@@ -14,7 +14,7 @@ import CardFooter from '../../../components/Card/CardFooter.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 import Muted from '../../../components/Typography/Muted.jsx'
 
-import teamsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx'
+import teamsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx'
 
 import bg7 from '../../../../static/assets/img/bg7.jpg'
 import city from '../../../../static/assets/img/examples/city.jpg'

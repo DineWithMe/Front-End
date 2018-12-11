@@ -8,7 +8,7 @@ import Warning from '@material-ui/icons/Warning'
 // core components
 import SnackbarContent from '../../../components/Snackbar/SnackbarContent.jsx'
 import Clearfix from '../../../components/Clearfix/Clearfix.jsx'
-import notificationsStyles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/notificationsStyles.jsx'
+import notificationsStyles from '../../../jss/material-kit-pro-react/views/componentsSections/notificationsStyles.jsx'
 
 class SectionNotifications extends React.Component {
   render() {

@@ -15,7 +15,7 @@ import Danger from '../../../components/Typography/Danger.jsx'
 import Success from '../../../components/Typography/Success.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import blogsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/blogsStyle.jsx'
+import blogsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/blogsStyle.jsx'
 
 import cardBlog4 from '../../../../static/assets/img/examples/card-blog4.jpg'
 import office2 from '../../../../static/assets/img/office2.jpg'

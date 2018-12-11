@@ -24,7 +24,7 @@ import Muted from '../../../components/Typography/Muted.jsx'
 import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 import Badge from '../../../components/Badge/Badge.jsx'
 
-import projectsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.jsx'
+import projectsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/projectsStyle.jsx'
 
 import office2 from '../../../../static/assets/img/examples/office2.jpg'
 import cardBlog3 from '../../../../static/assets/img/examples/card-blog3.jpg'

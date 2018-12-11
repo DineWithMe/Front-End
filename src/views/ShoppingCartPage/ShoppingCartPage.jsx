@@ -25,7 +25,7 @@ import CardBody from '../../components/Card/CardBody.jsx'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
 
-import shoppingCartStyle from '../../../static/assets/jss/material-kit-pro-react/views/shoppingCartStyle.jsx'
+import shoppingCartStyle from '../../jss/material-kit-pro-react/views/shoppingCartStyle.jsx'
 
 import product1 from '../../../static/assets/img/product1.jpg'
 import product2 from '../../../static/assets/img/product2.jpg'

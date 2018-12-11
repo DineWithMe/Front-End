@@ -14,7 +14,7 @@ import blog4 from '../../../../static/assets/img/examples/blog4.jpg'
 import blog3 from '../../../../static/assets/img/examples/blog3.jpg'
 import blog1 from '../../../../static/assets/img/examples/blog1.jpg'
 
-import sectionTextStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostSections/sectionTextStyle.jsx'
+import sectionTextStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionTextStyle.jsx'
 
 function SectionText({ ...props }) {
   const { classes } = props

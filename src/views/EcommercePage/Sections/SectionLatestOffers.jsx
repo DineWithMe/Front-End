@@ -16,7 +16,7 @@ import Tooltip from '@material-ui/core/Tooltip'
 // @material-ui icons
 import Favorite from '@material-ui/icons/Favorite'
 
-import styles from '../../../../static/assets/jss/material-kit-pro-react/views/ecommerceSections/latestOffersStyle.jsx'
+import styles from '../../../jss/material-kit-pro-react/views/ecommerceSections/latestOffersStyle.jsx'
 
 import gucci from '../../../../static/assets/img/examples/gucci.jpg'
 import tomFord from '../../../../static/assets/img/examples/tom-ford.jpg'

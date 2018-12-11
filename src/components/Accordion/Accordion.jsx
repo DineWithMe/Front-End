@@ -9,7 +9,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 // @material-ui/icons
 import ExpandMore from '@material-ui/icons/ExpandMore'
 
-import accordionStyle from '../../../static/assets/jss/material-kit-pro-react/components/accordionStyle.jsx'
+import accordionStyle from '../../jss/material-kit-pro-react/components/accordionStyle.jsx'
 
 class Accordion extends React.Component {
   constructor(props) {

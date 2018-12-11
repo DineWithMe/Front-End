@@ -8,7 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 
 // core components
-import cardHeaderStyle from '../../../static/assets/jss/material-kit-pro-react/components/cardHeaderStyle.jsx'
+import cardHeaderStyle from '../../jss/material-kit-pro-react/components/cardHeaderStyle.jsx'
 
 function CardHeader({ ...props }) {
   const {

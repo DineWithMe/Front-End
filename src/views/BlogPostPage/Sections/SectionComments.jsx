@@ -17,7 +17,7 @@ import profile4 from '../../../../static/assets/img/faces/card-profile4-square.j
 import profile1 from '../../../../static/assets/img/faces/card-profile1-square.jpg'
 import profile6 from '../../../../static/assets/img/faces/card-profile6-square.jpg'
 
-import sectionCommentsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostSections/sectionCommentsStyle.jsx'
+import sectionCommentsStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionCommentsStyle.jsx'
 
 function SectionComments({ ...props }) {
   const { classes } = props

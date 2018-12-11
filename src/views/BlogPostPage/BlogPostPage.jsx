@@ -21,7 +21,7 @@ import SectionBlogInfo from './Sections/SectionBlogInfo.jsx'
 import SectionComments from './Sections/SectionComments.jsx'
 import SectionSimilarStories from './Sections/SectionSimilarStories.jsx'
 
-import blogPostPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/blogPostPageStyle.jsx'
+import blogPostPageStyle from '../../jss/material-kit-pro-react/views/blogPostPageStyle.jsx'
 
 class BlogPostPage extends React.Component {
   componentDidMount() {

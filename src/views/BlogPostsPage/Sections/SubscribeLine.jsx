@@ -13,7 +13,7 @@ import CardBody from '../../../components/Card/CardBody.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 
-import sectionSubscribeLineStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionSubscribeLineStyle.jsx'
+import sectionSubscribeLineStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionSubscribeLineStyle.jsx'
 
 function SubscribeLine({ ...props }) {
   const { classes } = props

@@ -16,7 +16,7 @@ import SectionPricing from './Sections/SectionPricing.jsx'
 import SectionTestimonials from './Sections/SectionTestimonials.jsx'
 import SectionContacts from './Sections/SectionContacts.jsx'
 
-import sectionsPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/sectionsPageStyle.jsx'
+import sectionsPageStyle from '../../jss/material-kit-pro-react/views/sectionsPageStyle.jsx'
 
 class SectionsPage extends React.Component {
   componentDidMount() {

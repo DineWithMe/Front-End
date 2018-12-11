@@ -11,7 +11,7 @@ import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
 import Favorite from '@material-ui/icons/Favorite'
 
-import footerStyle from '../../../static/assets/jss/material-kit-pro-react/components/footerStyle.jsx'
+import footerStyle from '../../jss/material-kit-pro-react/components/footerStyle.jsx'
 
 function Footer(props) {
   const { children, content, classes, theme, big, className } = props

@@ -12,7 +12,7 @@ import ViewCarousel from '@material-ui/icons/ViewCarousel'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import descriptionStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/descriptionStyle.jsx'
+import descriptionStyle from '../../../jss/material-kit-pro-react/views/presentationSections/descriptionStyle.jsx'
 
 class SectionDescription extends React.Component {
   render() {

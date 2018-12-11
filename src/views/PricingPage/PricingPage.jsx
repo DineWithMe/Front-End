@@ -19,7 +19,7 @@ import Parallax from '../../components/Parallax/Parallax.jsx'
 import SectionPricing from './Sections/SectionPricing.jsx'
 import SectionFeatures from './Sections/SectionFeatures.jsx'
 
-import pricingStyle from '../../../static/assets/jss/material-kit-pro-react/views/pricingStyle.jsx'
+import pricingStyle from '../../jss/material-kit-pro-react/views/pricingStyle.jsx'
 
 class PricingPage extends React.Component {
   componentDidMount() {

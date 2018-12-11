@@ -42,7 +42,7 @@ import marc from '../../../static/assets/img/faces/marc.jpg'
 import kendall from '../../../static/assets/img/faces/kendall.jpg'
 import cardProfile2Square from '../../../static/assets/img/faces/card-profile2-square.jpg'
 
-import profilePageStyle from '../../../static/assets/jss/material-kit-pro-react/views/profilePageStyle.jsx'
+import profilePageStyle from '../../jss/material-kit-pro-react/views/profilePageStyle.jsx'
 
 class ProfilePage extends React.Component {
   componentDidMount() {

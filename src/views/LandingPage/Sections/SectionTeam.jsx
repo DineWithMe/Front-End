@@ -19,8 +19,8 @@ import cardProfile2Square from '../../../../static/assets/img/faces/card-profile
 import cardProfile4Square from '../../../../static/assets/img/faces/card-profile4-square.jpg'
 import cardProfile6Square from '../../../../static/assets/img/faces/card-profile6-square.jpg'
 
-import teamsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx'
-import teamStyle from '../../../../static/assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.jsx'
+import teamsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx'
+import teamStyle from '../../../jss/material-kit-pro-react/views/landingPageSections/teamStyle.jsx'
 
 const style = {
   ...teamsStyle,

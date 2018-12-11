@@ -16,7 +16,7 @@ import Tab from '@material-ui/core/Tab'
 import Card from '../Card/Card.jsx'
 import CardBody from '../Card/CardBody.jsx'
 import CardHeader from '../Card/CardHeader.jsx'
-import customTabsStyle from '../../../static/assets/jss/material-kit-pro-react/components/customTabsStyle.jsx'
+import customTabsStyle from '../../jss/material-kit-pro-react/components/customTabsStyle.jsx'
 
 class CustomTabs extends React.Component {
   state = {

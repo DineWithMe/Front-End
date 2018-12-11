@@ -18,7 +18,7 @@ import bg10 from '../../../../static/assets/img/bg10.jpg'
 import cardProfile1 from '../../../../static/assets/img/faces/card-profile1-square.jpg'
 import cardProfile4 from '../../../../static/assets/img/faces/card-profile4-square.jpg'
 
-import sectionImageStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostsSections/sectionImageStyle.jsx'
+import sectionImageStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionImageStyle.jsx'
 
 function SectionImage({ ...props }) {
   const { classes } = props

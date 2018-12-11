@@ -28,7 +28,7 @@ import SectionCards from './Sections/SectionCards.jsx'
 import SectionJavascript from './Sections/SectionJavascript.jsx'
 import SectionCarousel from './Sections/SectionCarousel.jsx'
 
-import componentsStyle from '../../../static/assets/jss/material-kit-pro-react/views/componentsStyle.jsx'
+import componentsStyle from '../../jss/material-kit-pro-react/views/componentsStyle.jsx'
 
 class Components extends React.Component {
   componentDidMount() {

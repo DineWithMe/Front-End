@@ -6,7 +6,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 // @material-ui/icons
 // core components
 
-import mediaStyle from '../../../static/assets/jss/material-kit-pro-react/components/mediaStyle.jsx'
+import mediaStyle from '../../jss/material-kit-pro-react/components/mediaStyle.jsx'
 
 function Media({ ...props }) {
   const {

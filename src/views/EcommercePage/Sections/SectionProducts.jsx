@@ -37,7 +37,7 @@ import color2 from '../../../../static/assets/img/examples/color2.jpg'
 import dg3 from '../../../../static/assets/img/dg3.jpg'
 import dg1 from '../../../../static/assets/img/dg1.jpg'
 
-import styles from '../../../../static/assets/jss/material-kit-pro-react/views/ecommerceSections/productsStyle.jsx'
+import styles from '../../../jss/material-kit-pro-react/views/ecommerceSections/productsStyle.jsx'
 
 class SectionProducts extends React.Component {
   constructor(props) {

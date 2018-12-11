@@ -32,7 +32,7 @@ import Tooltip from '@material-ui/core/Tooltip'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
 
-import productStyle from '../../../static/assets/jss/material-kit-pro-react/views/productStyle.jsx'
+import productStyle from '../../jss/material-kit-pro-react/views/productStyle.jsx'
 
 // images
 import cardProduct1 from '../../../static/assets/img/examples/card-product1.jpg'

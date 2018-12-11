@@ -9,7 +9,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import GridContainer from '../Grid/GridContainer.jsx'
 import GridItem from '../Grid/GridItem'
 
-import instructionStyle from '../../../static/assets/jss/material-kit-pro-react/components/instructionStyle.jsx'
+import instructionStyle from '../../jss/material-kit-pro-react/components/instructionStyle.jsx'
 
 function Instruction({ ...props }) {
   const {

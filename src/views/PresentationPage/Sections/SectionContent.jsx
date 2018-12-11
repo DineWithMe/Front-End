@@ -9,7 +9,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 
-import contentStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/contentStyle.jsx'
+import contentStyle from '../../../jss/material-kit-pro-react/views/presentationSections/contentStyle.jsx'
 // images
 import presentationiPad from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/presentation-ipad.jpg'
 import presentationiPadComments from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/ipad-comments.jpg'

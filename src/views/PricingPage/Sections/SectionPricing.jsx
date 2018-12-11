@@ -12,7 +12,7 @@ import Button from '../../../components/CustomButtons/Button.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import pricingStyle from '../../../../static/assets/jss/material-kit-pro-react/views/pricingSections/pricingStyle.jsx'
+import pricingStyle from '../../../jss/material-kit-pro-react/views/pricingSections/pricingStyle.jsx'
 
 function SectionPricing(props) {
   const { classes } = props

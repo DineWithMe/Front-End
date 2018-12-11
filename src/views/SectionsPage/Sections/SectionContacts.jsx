@@ -27,7 +27,7 @@ import CardFooter from '../../../components/Card/CardFooter.jsx'
 import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import contactsStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.jsx'
+import contactsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/contactsStyle.jsx'
 
 import city from '../../../../static/assets/img/examples/city.jpg'
 

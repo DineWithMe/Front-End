@@ -22,7 +22,7 @@ import CardHeader from '../../components/Card/CardHeader.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 
-import loginPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/loginPageStyle.jsx'
+import loginPageStyle from '../../jss/material-kit-pro-react/views/loginPageStyle.jsx'
 
 import image from '../../../static/assets/img/bg7.jpg'
 

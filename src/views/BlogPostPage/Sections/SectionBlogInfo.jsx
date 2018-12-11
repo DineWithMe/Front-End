@@ -13,7 +13,7 @@ import CardAvatar from '../../../components/Card/CardAvatar.jsx'
 
 import profileImage from '../../../../static/assets/img/faces/card-profile1-square.jpg'
 
-import sectionBlogInfoStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostSections/sectionBlogInfoStyle.jsx'
+import sectionBlogInfoStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionBlogInfoStyle.jsx'
 
 function SectionBlogInfo({ ...props }) {
   const { classes } = props

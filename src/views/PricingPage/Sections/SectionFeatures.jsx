@@ -12,7 +12,7 @@ import CardGiftCard from '@material-ui/icons/CardGiftcard'
 import AttachMoney from '@material-ui/icons/AttachMoney'
 import QuestionAnswer from '@material-ui/icons/QuestionAnswer'
 
-import featuresStyle from '../../../../static/assets/jss/material-kit-pro-react/views/pricingSections/featuresStyle.jsx'
+import featuresStyle from '../../../jss/material-kit-pro-react/views/pricingSections/featuresStyle.jsx'
 
 function SectionFeatures(props) {
   const { classes } = props

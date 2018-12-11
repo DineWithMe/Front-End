@@ -8,7 +8,7 @@ import GridItem from '../../../components/Grid/GridItem.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import descriptionStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/descriptionStyle.jsx'
+import descriptionStyle from '../../../jss/material-kit-pro-react/views/aboutUsSections/descriptionStyle.jsx'
 
 function SectionDescription(props) {
   const { classes } = props

@@ -41,7 +41,7 @@ import LineStyle from '@material-ui/icons/LineStyle'
 import CustomDropdown from '../CustomDropdown/CustomDropdown.jsx'
 import { DynamicButton as Button } from '../CustomButtons/DynamicButton.jsx'
 
-import headerLinksStyle from '../../../static/assets/jss/material-kit-pro-react/components/headerLinksStyle.jsx'
+import headerLinksStyle from '../../jss/material-kit-pro-react/components/headerLinksStyle.jsx'
 
 function HeaderLinks({ ...props }) {
   const easeInOutQuad = (t, b, c, d) => {

@@ -28,7 +28,7 @@ import Button from '../../components/CustomButtons/Button.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 
-import contactUsStyle from '../../../static/assets/jss/material-kit-pro-react/views/contactUsStyle.jsx'
+import contactUsStyle from '../../jss/material-kit-pro-react/views/contactUsStyle.jsx'
 
 // Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
 const { publicRuntimeConfig } = getConfig()

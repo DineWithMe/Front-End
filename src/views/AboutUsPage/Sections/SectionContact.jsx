@@ -14,7 +14,7 @@ import GridItem from '../../../components/Grid/GridItem.jsx'
 import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import contactStyle from '../../../../static/assets/jss/material-kit-pro-react/views/aboutUsSections/contactStyle.jsx'
+import contactStyle from '../../../jss/material-kit-pro-react/views/aboutUsSections/contactStyle.jsx'
 
 class SectionContact extends React.Component {
   constructor(props) {

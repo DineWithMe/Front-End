@@ -25,7 +25,7 @@ import SectionFreeDemo from './Sections/SectionFreeDemo.jsx'
 import SectionOverview from './Sections/SectionOverview.jsx'
 import SectionPricing from './Sections/SectionPricing.jsx'
 
-import presentationStyle from '../../../static/assets/jss/material-kit-pro-react/views/presentationStyle.jsx'
+import presentationStyle from '../../jss/material-kit-pro-react/views/presentationStyle.jsx'
 
 class PresentationPage extends React.Component {
   componentDidMount() {

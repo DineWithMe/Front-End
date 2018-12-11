@@ -12,7 +12,7 @@ import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
 import InfoArea from '../../../components/InfoArea/InfoArea.jsx'
 
-import productStyle from '../../../../static/assets/jss/material-kit-pro-react/views/landingPageSections/productStyle.jsx'
+import productStyle from '../../../jss/material-kit-pro-react/views/landingPageSections/productStyle.jsx'
 
 class SectionProduct extends React.Component {
   render() {

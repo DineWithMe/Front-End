@@ -16,7 +16,7 @@ import Button from '../../components/CustomButtons/Button.jsx'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
 
-import landingPageStyle from '../../../static/assets/jss/material-kit-pro-react/views/landingPageStyle.jsx'
+import landingPageStyle from '../../jss/material-kit-pro-react/views/landingPageStyle.jsx'
 
 // Sections for this page
 import SectionProduct from './Sections/SectionProduct.jsx'

@@ -25,7 +25,7 @@ import face6 from '../../../../static/assets/img/faces/kendall.jpg'
 import face7 from '../../../../static/assets/img/faces/card-profile5-square.jpg'
 import face8 from '../../../../static/assets/img/faces/card-profile2-square.jpg'
 
-import styles from '../../../../static/assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.jsx'
+import styles from '../../../jss/material-kit-pro-react/views/componentsSections/footerStyle.jsx'
 
 const SectionFooter = (props) => {
   const { classes } = props

@@ -7,7 +7,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import CustomInput from '../CustomInput/CustomInput.jsx'
 import Button from '../CustomButtons/Button.jsx'
 
-import styles from '../../../static/assets/jss/material-kit-pro-react/components/customFileInputStyle.jsx'
+import styles from '../../jss/material-kit-pro-react/components/customFileInputStyle.jsx'
 
 class CustomFileInput extends React.Component {
   constructor(props) {

@@ -20,7 +20,7 @@ import Card from '../../../components/Card/Card.jsx'
 import CardBody from '../../../components/Card/CardBody.jsx'
 import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 
-import headersStyle from '../../../../static/assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.jsx'
+import headersStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/headersStyle.jsx'
 
 import bg12 from '../../../../static/assets/img/bg12.jpg'
 import office2 from '../../../../static/assets/img/examples/office2.jpg'

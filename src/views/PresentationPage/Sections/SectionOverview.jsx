@@ -26,7 +26,7 @@ import profilePic1 from '../../../../static/assets/img/assets-for-demo/test1.jpg
 import profilePic2 from '../../../../static/assets/img/assets-for-demo/test2.jpg'
 import profilePic3 from '../../../../static/assets/img/assets-for-demo/test3.jpg'
 
-import overviewStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/overviewStyle.jsx'
+import overviewStyle from '../../../jss/material-kit-pro-react/views/presentationSections/overviewStyle.jsx'
 
 class SectionOverview extends React.Component {
   render() {

@@ -14,7 +14,7 @@ import Card from '../../../components/Card/Card.jsx'
 import CardBody from '../../../components/Card/CardBody.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import freeDemoStyle from '../../../../static/assets/jss/material-kit-pro-react/views/presentationSections/freeDemoStyle.jsx'
+import freeDemoStyle from '../../../jss/material-kit-pro-react/views/presentationSections/freeDemoStyle.jsx'
 
 class SectionFreeDemo extends React.Component {
   render() {

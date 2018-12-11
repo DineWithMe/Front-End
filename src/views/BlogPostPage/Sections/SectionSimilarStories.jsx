@@ -18,7 +18,7 @@ import blog6 from '../../../../static/assets/img/examples/blog6.jpg'
 import blog8 from '../../../../static/assets/img/examples/blog8.jpg'
 import blog7 from '../../../../static/assets/img/examples/blog7.jpg'
 
-import sectionSimilarStoriesStyle from '../../../../static/assets/jss/material-kit-pro-react/views/blogPostSections/sectionSimilarStoriesStyle.jsx'
+import sectionSimilarStoriesStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionSimilarStoriesStyle.jsx'
 
 function SectionSimilarStories({ ...props }) {
   const { classes } = props
