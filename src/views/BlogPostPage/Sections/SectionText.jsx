@@ -10,9 +10,9 @@ import GridItem from '../../../components/Grid/GridItem.jsx'
 import Quote from '../../../components/Typography/Quote.jsx'
 // core components
 
-import blog4 from '../../../../static/assets/img/examples/blog4.jpg'
-import blog3 from '../../../../static/assets/img/examples/blog3.jpg'
-import blog1 from '../../../../static/assets/img/examples/blog1.jpg'
+import blog4 from '../../../../static/img/examples/blog4.jpg'
+import blog3 from '../../../../static/img/examples/blog3.jpg'
+import blog1 from '../../../../static/img/examples/blog1.jpg'
 
 import sectionTextStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionTextStyle.jsx'
 

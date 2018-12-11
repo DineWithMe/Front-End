@@ -11,9 +11,9 @@ import 'animate.css/animate.min.css'
 
 import contentStyle from '../../../jss/material-kit-pro-react/views/presentationSections/contentStyle.jsx'
 // images
-import presentationiPad from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/presentation-ipad.jpg'
-import presentationiPadComments from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/ipad-comments.jpg'
-import presentationiPadTable from '../../../../static/assets/img/assets-for-demo/presentationViewSectionComponent/ipad-table.jpg'
+import presentationiPad from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/presentation-ipad.jpg'
+import presentationiPadComments from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/ipad-comments.jpg'
+import presentationiPadTable from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/ipad-table.jpg'
 
 class SectionContent extends React.Component {
   render() {

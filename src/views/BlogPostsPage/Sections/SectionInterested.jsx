@@ -14,9 +14,9 @@ import Info from '../../../components/Typography/Info.jsx'
 import Success from '../../../components/Typography/Success.jsx'
 import Danger from '../../../components/Typography/Danger.jsx'
 
-import bg5 from '../../../../static/assets/img/bg5.jpg'
-import blog5 from '../../../../static/assets/img/examples/blog5.jpg'
-import blog6 from '../../../../static/assets/img/examples/blog6.jpg'
+import bg5 from '../../../../static/img/bg5.jpg'
+import blog5 from '../../../../static/img/examples/blog5.jpg'
+import blog6 from '../../../../static/img/examples/blog6.jpg'
 
 import sectionInterestedStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionInterestedStyle.jsx'
 

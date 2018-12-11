@@ -35,14 +35,14 @@ import Parallax from '../../components/Parallax/Parallax.jsx'
 import productStyle from '../../jss/material-kit-pro-react/views/productStyle.jsx'
 
 // images
-import cardProduct1 from '../../../static/assets/img/examples/card-product1.jpg'
-import cardProduct3 from '../../../static/assets/img/examples/card-product3.jpg'
-import cardProduct4 from '../../../static/assets/img/examples/card-product4.jpg'
-import cardProduct2 from '../../../static/assets/img/examples/card-product2.jpg'
-import product1 from '../../../static/assets/img/examples/product1.jpg'
-import product2 from '../../../static/assets/img/examples/product2.jpg'
-import product3 from '../../../static/assets/img/examples/product3.jpg'
-import product4 from '../../../static/assets/img/examples/product4.jpg'
+import cardProduct1 from '../../../static/img/examples/card-product1.jpg'
+import cardProduct3 from '../../../static/img/examples/card-product3.jpg'
+import cardProduct4 from '../../../static/img/examples/card-product4.jpg'
+import cardProduct2 from '../../../static/img/examples/card-product2.jpg'
+import product1 from '../../../static/img/examples/product1.jpg'
+import product2 from '../../../static/img/examples/product2.jpg'
+import product3 from '../../../static/img/examples/product3.jpg'
+import product4 from '../../../static/img/examples/product4.jpg'
 
 class ProductPage extends React.Component {
   constructor(props) {
@@ -92,7 +92,7 @@ class ProductPage extends React.Component {
           }}
         />
         <Parallax
-          image={require('../../../static/assets/img/bg6.jpg')}
+          image={require('../../../static/img/bg6.jpg')}
           filter='rose'
           className={classes.pageHeader}
         >

@@ -13,9 +13,9 @@ import Media from '../../../components/Media/Media.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 
-import profile4 from '../../../../static/assets/img/faces/card-profile4-square.jpg'
-import profile1 from '../../../../static/assets/img/faces/card-profile1-square.jpg'
-import profile6 from '../../../../static/assets/img/faces/card-profile6-square.jpg'
+import profile4 from '../../../../static/img/faces/card-profile4-square.jpg'
+import profile1 from '../../../../static/img/faces/card-profile1-square.jpg'
+import profile6 from '../../../../static/img/faces/card-profile6-square.jpg'
 
 import sectionCommentsStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionCommentsStyle.jsx'
 

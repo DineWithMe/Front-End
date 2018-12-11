@@ -24,13 +24,13 @@ import Paginations from '../../../components/Pagination/Pagination.jsx'
 
 import style from '../../../jss/material-kit-pro-react/views/componentsSections/contentAreas.jsx'
 
-import avatar from '../../../../static/assets/img/faces/avatar.jpg'
-import kendall from '../../../../static/assets/img/faces/kendall.jpg'
-import marc from '../../../../static/assets/img/faces/marc.jpg'
-import placeholder from '../../../../static/assets/img/placeholder.jpg'
-import product1 from '../../../../static/assets/img/product1.jpg'
-import product2 from '../../../../static/assets/img/product2.jpg'
-import product3 from '../../../../static/assets/img/product3.jpg'
+import avatar from '../../../../static/img/faces/avatar.jpg'
+import kendall from '../../../../static/img/faces/kendall.jpg'
+import marc from '../../../../static/img/faces/marc.jpg'
+import placeholder from '../../../../static/img/placeholder.jpg'
+import product1 from '../../../../static/img/product1.jpg'
+import product2 from '../../../../static/img/product2.jpg'
+import product3 from '../../../../static/img/product3.jpg'
 
 class SectionContentAreas extends React.Component {
   constructor(props) {

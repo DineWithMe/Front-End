@@ -11,11 +11,11 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import officeStyle from '../../../jss/material-kit-pro-react/views/aboutUsSections/officeStyle.jsx'
 
 // office
-import office1 from '../../../../static/assets/img/examples/office1.jpg'
-import office2 from '../../../../static/assets/img/examples/office2.jpg'
-import office3 from '../../../../static/assets/img/examples/office3.jpg'
-import office4 from '../../../../static/assets/img/examples/office4.jpg'
-import office5 from '../../../../static/assets/img/examples/office5.jpg'
+import office1 from '../../../../static/img/examples/office1.jpg'
+import office2 from '../../../../static/img/examples/office2.jpg'
+import office3 from '../../../../static/img/examples/office3.jpg'
+import office4 from '../../../../static/img/examples/office4.jpg'
+import office5 from '../../../../static/img/examples/office5.jpg'
 
 function SectionOffice(props) {
   const { classes } = props

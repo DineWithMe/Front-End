@@ -13,9 +13,9 @@ import Card from '../../../components/Card/Card.jsx'
 import CardBody from '../../../components/Card/CardBody.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import office2 from '../../../../static/assets/img/examples/office2.jpg'
-import blog8 from '../../../../static/assets/img/examples/blog8.jpg'
-import cardProject6 from '../../../../static/assets/img/examples/card-project6.jpg'
+import office2 from '../../../../static/img/examples/office2.jpg'
+import blog8 from '../../../../static/img/examples/blog8.jpg'
+import cardProject6 from '../../../../static/img/examples/card-project6.jpg'
 
 import sectionPillsStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionPillsStyle.jsx'
 

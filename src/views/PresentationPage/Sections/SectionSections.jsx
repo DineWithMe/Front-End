@@ -15,7 +15,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import sectionsStyle from '../../../jss/material-kit-pro-react/views/presentationSections/sectionsStyle.jsx'
 
 // images array used in rendering a function for this section
-import imgs from '../../../../static/assets/img/assets-for-demo/sections/imgs.jsx'
+import imgs from '../../../../static/img/assets-for-demo/sections/imgs.jsx'
 
 class SectionSections extends React.Component {
   renderContainerFluid(cssClass) {
@@ -32,7 +32,7 @@ class SectionSections extends React.Component {
                 className={cssClass}
               >
                 <img
-                  src={require(`../../../../static/assets/img/assets-for-demo/sections/${el}.jpg`)}
+                  src={require(`../../../../static/img/assets-for-demo/sections/${el}.jpg`)}
                   alt={el}
                   key={el[index]}
                 />

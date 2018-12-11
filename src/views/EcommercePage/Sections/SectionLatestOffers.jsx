@@ -18,9 +18,9 @@ import Favorite from '@material-ui/icons/Favorite'
 
 import styles from '../../../jss/material-kit-pro-react/views/ecommerceSections/latestOffersStyle.jsx'
 
-import gucci from '../../../../static/assets/img/examples/gucci.jpg'
-import tomFord from '../../../../static/assets/img/examples/tom-ford.jpg'
-import dolce from '../../../../static/assets/img/examples/dolce.jpg'
+import gucci from '../../../../static/img/examples/gucci.jpg'
+import tomFord from '../../../../static/img/examples/tom-ford.jpg'
+import dolce from '../../../../static/img/examples/dolce.jpg'
 
 const SectionLatestOffers = (props) => {
   const { classes } = props

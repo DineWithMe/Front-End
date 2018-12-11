@@ -26,14 +26,14 @@ import Badge from '../../../components/Badge/Badge.jsx'
 
 import projectsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/projectsStyle.jsx'
 
-import office2 from '../../../../static/assets/img/examples/office2.jpg'
-import cardBlog3 from '../../../../static/assets/img/examples/card-blog3.jpg'
-import cardProject1 from '../../../../static/assets/img/examples/card-project1.jpg'
-import cardProject2 from '../../../../static/assets/img/examples/card-project2.jpg'
-import cardProject3 from '../../../../static/assets/img/examples/card-project3.jpg'
-import cardProject4 from '../../../../static/assets/img/examples/card-project4.jpg'
-import cardProject5 from '../../../../static/assets/img/examples/card-project5.jpg'
-import cardProject6 from '../../../../static/assets/img/examples/card-project6.jpg'
+import office2 from '../../../../static/img/examples/office2.jpg'
+import cardBlog3 from '../../../../static/img/examples/card-blog3.jpg'
+import cardProject1 from '../../../../static/img/examples/card-project1.jpg'
+import cardProject2 from '../../../../static/img/examples/card-project2.jpg'
+import cardProject3 from '../../../../static/img/examples/card-project3.jpg'
+import cardProject4 from '../../../../static/img/examples/card-project4.jpg'
+import cardProject5 from '../../../../static/img/examples/card-project5.jpg'
+import cardProject6 from '../../../../static/img/examples/card-project6.jpg'
 
 function SectionProjects({ ...props }) {
   const { classes, ...rest } = props

@@ -41,7 +41,7 @@ class BlogPostsPage extends React.Component {
           }}
         />
         <Parallax
-          image={require('../../../static/assets/img/bg10.jpg')}
+          image={require('../../../static/img/bg10.jpg')}
           filter='dark'
           small
         >

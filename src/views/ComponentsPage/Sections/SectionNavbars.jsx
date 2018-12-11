@@ -21,8 +21,8 @@ import Button from '../../../components/CustomButtons/Button.jsx'
 
 import navbarsStyle from '../../../jss/material-kit-pro-react/views/componentsSections/navbarsStyle.jsx'
 
-import image from '../../../../static/assets/img/bg.jpg'
-import profileImage from '../../../../static/assets/img/faces/avatar.jpg'
+import image from '../../../../static/img/bg.jpg'
+import profileImage from '../../../../static/img/faces/avatar.jpg'
 
 class SectionNavbars extends React.Component {
   render() {

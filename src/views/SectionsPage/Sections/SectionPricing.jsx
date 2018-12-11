@@ -22,9 +22,9 @@ import Danger from '../../../components/Typography/Danger.jsx'
 
 import pricingStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/pricingStyle.jsx'
 
-import bg11 from '../../../../static/assets/img/bg11.jpg'
-import city from '../../../../static/assets/img/examples/city.jpg'
-import cardBlog3 from '../../../../static/assets/img/examples/card-blog3.jpg'
+import bg11 from '../../../../static/img/bg11.jpg'
+import city from '../../../../static/img/examples/city.jpg'
+import cardBlog3 from '../../../../static/img/examples/card-blog3.jpg'
 
 function SectionPricing({ ...props }) {
   const { classes, ...rest } = props

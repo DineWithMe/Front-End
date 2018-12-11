@@ -10,7 +10,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 import cardsStyle from '../../../jss/material-kit-pro-react/views/presentationSections/cardsStyle.jsx'
 
-import cardsTest from '../../../../static/assets/img/assets-for-demo/cards-test.png'
+import cardsTest from '../../../../static/img/assets-for-demo/cards-test.png'
 
 class SectionCards extends React.Component {
   render() {
