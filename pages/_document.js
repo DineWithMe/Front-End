@@ -13,20 +13,35 @@ class MyDocument extends Document {
             name='viewport'
             content='minimum-scale=1,width=device-width, initial-scale=1, shrink-to-fit=no'
           />
-          <meta name='theme-color' content='#000000' />
-          {/* manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
-          <link rel='manifest' href='../static/assets/public/manifest.json' />
-          <link
-            rel='shortcut icon'
-            href='../static/assets/public/favicon.ico'
-          />
           <link
             rel='apple-touch-icon'
             sizes='76x76'
-            href='../static/assets/public/apple-icon.png'
+            href='../static/public/apple-touch-icon.png'
           />
-          {/* Fonts and icons     */}
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='../static/public/favicon-32x32.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='../static/public/favicon-16x16.png'
+          />
+          {/* site.webmanifest provides metadata used when your web app is added to the
+      home screen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
+          <link rel='manifest' href='../static/public/site.webmanifest' />
+          <link
+            rel='mask-icon'
+            href='../static/public/safari-pinned-tab.svg'
+            color='#5bbad5'
+          />
+          <meta name='apple-mobile-web-app-title' content='Dine With Me' />
+          <meta name='application-name' content='Dine With Me' />
+          <meta name='msapplication-TileColor' content='#da532c' />
+          <meta name='theme-color' content='#ffffff' />
           <link
             rel='stylesheet'
             type='text/css'
@@ -36,13 +51,6 @@ class MyDocument extends Document {
             href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'
             rel='stylesheet'
           />
-          {/* Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`. */}
         </Head>
         <body>
           <Main />

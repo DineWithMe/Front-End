@@ -13,10 +13,12 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext from '../src/utils/getPageContext'
 // css
-import '../static/assets/scss/material-kit-pro-react.css'
-import '../static/assets/css/nprogress.css'
-// component
+import '../src/scss/material-kit-pro-react.css'
+import '../src/scss/nprogress.css'
+// progress bar
 import NProgress from 'nprogress'
+// fetch api ponyfill
+import 'isomorphic-unfetch'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -36,6 +38,15 @@ class MyApp extends App {
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles)
+    }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/serviceWorker.js').catch((err) =>
+        // eslint-disable-next-line no-console
+        console.error('Service worker registration failed', err)
+      )
+    } else {
+      // eslint-disable-next-line no-console
+      console.log('Service worker not supported')
     }
   }
 

@@ -150,10 +150,10 @@ class CustomDropdown extends React.Component {
           })}
         >
           {({
-            /* eslint-disable */
+            /* eslint-disable no-unused-vars*/
             TransitionProps,
             placement,
-            /* eslint-disable */
+            /* eslint-enable */
           }) => (
             <Grow
               in={open}

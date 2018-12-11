@@ -91,9 +91,9 @@ class SectionBasics extends React.Component {
     this.setState({ tags: regularTags })
   }
   render() {
-    /* eslint-disable */
+    // eslint-disable-next-line react/prop-types
     const { classes } = this.props
-    /* eslint-disable */
+
     return (
       <div className={classes.sections}>
         <div className={classes.container}>

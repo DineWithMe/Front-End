@@ -1,4 +1,3 @@
-import 'isomorphic-unfetch'
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
 
 let apolloClient = null

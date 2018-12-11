@@ -58,9 +58,8 @@ class SectionProducts extends React.Component {
         connect: true,
         range: { min: 30, max: 900 },
         step: 1,
-      }) /* eslint-disable */
+      }) // eslint-disable-next-line no-unused-vars
       .on('update', function(values, handle) {
-        /* eslint-disable */
         let currencyLow = priceLow.dataset.currency
         let currencyHigh = priceHigh.dataset.currency
         priceLow.innerHTML = currencyLow + Math.round(values[0])
@@ -84,6 +83,7 @@ class SectionProducts extends React.Component {
   }
 
   render() {
+    // eslint-disable-next-line react/prop-types
     const { classes } = this.props
 
     return (

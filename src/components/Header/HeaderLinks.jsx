@@ -39,7 +39,7 @@ import LineStyle from '@material-ui/icons/LineStyle'
 
 // core components
 import CustomDropdown from '../CustomDropdown/CustomDropdown.jsx'
-import Button from '../CustomButtons/Button.jsx'
+import { DynamicButton as Button } from '../CustomButtons/DynamicButton.jsx'
 
 import headerLinksStyle from '../../../static/assets/jss/material-kit-pro-react/components/headerLinksStyle.jsx'
 
@@ -277,15 +277,15 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/* <Button
+        <Button
           href='https://www.creative-tim.com/product/material-kit-pro-react'
-          color={window.innerWidth < 960 ? 'info' : 'white'}
           target='_blank'
+          // color={window.innerWidth < 960 ? 'info' : 'white'}
           className={classes.navButton}
           round
         >
           <ShoppingCart className={classes.icons} /> buy now
-        </Button> */}
+        </Button>
       </ListItem>
     </List>
   )

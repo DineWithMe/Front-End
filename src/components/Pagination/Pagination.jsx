@@ -34,9 +34,8 @@ function Pagination({ ...props }) {
             ) : (
               <Button
                 onClick={() => {
-                  /* eslint-disable */
+                  // eslint-disable-next-line no-console
                   console.log("you've clicked " + prop.text)
-                  /* eslint-disable */
                 }}
                 className={paginationLink}
                 disabled={prop.disabled}
