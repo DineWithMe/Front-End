@@ -13,7 +13,7 @@
     "jest-ci": "jest --watch --runInBand",
     "lint": "eslint . --ext=js,jsx",
     "lint-fix": "eslint . --ext=js,jsx --fix",
-    "deploy": "now rm dinewithme && now && now alias && now scale dinewithme.app 1 auto"
+    "deploy": "now rm dinewithme -y && now && now alias && now scale dinewithme.app 1 auto"
   },
   "dependencies": {
     "@material-ui/core": "^3.6.1",
