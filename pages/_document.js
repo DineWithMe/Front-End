@@ -16,26 +16,26 @@ class MyDocument extends Document {
           <link
             rel='apple-touch-icon'
             sizes='76x76'
-            href='../static/public/apple-touch-icon.png'
+            href='/static/public/apple-touch-icon.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='32x32'
-            href='../static/public/favicon-32x32.png'
+            href='/static/public/favicon-32x32.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='16x16'
-            href='../static/public/favicon-16x16.png'
+            href='/static/public/favicon-16x16.png'
           />
           {/* site.webmanifest provides metadata used when your web app is added to the
       home screen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
-          <link rel='manifest' href='../static/public/site.webmanifest' />
+          <link rel='manifest' href='/static/public/site.webmanifest' />
           <link
             rel='mask-icon'
-            href='../static/public/safari-pinned-tab.svg'
+            href='/static/public/safari-pinned-tab.svg'
             color='#5bbad5'
           />
           <meta name='apple-mobile-web-app-title' content='Dine With Me' />
