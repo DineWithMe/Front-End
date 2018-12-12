@@ -20,7 +20,7 @@ import SectionContentAreas from './SectionContentAreas.jsx'
 
 import typographyStyle from '../../../jss/material-kit-pro-react/views/componentsSections/typographyStyle.jsx'
 
-import image from '../../../../static/img/faces/avatar.jpg?webp'
+import image from '../../../../static/img/faces/avatar.jpg'
 class SectionTypography extends React.Component {
   render() {
     const { classes } = this.props

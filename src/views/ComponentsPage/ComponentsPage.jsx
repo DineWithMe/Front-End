@@ -116,7 +116,7 @@ class Components extends React.Component {
           }}
         />
         <Parallax
-          image={require('../../../static/img/bg4.jpg?webp')}
+          image={require('../../../static/img/bg4.jpg')}
           className={classes.parallax}
         >
           <div className={classes.container}>

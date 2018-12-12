@@ -26,14 +26,14 @@ import Badge from '../../../components/Badge/Badge.jsx'
 
 import projectsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/projectsStyle.jsx'
 
-import office2 from '../../../../static/img/examples/office2.jpg?webp'
-import cardBlog3 from '../../../../static/img/examples/card-blog3.jpg?webp'
-import cardProject1 from '../../../../static/img/examples/card-project1.jpg?webp'
-import cardProject2 from '../../../../static/img/examples/card-project2.jpg?webp'
-import cardProject3 from '../../../../static/img/examples/card-project3.jpg?webp'
-import cardProject4 from '../../../../static/img/examples/card-project4.jpg?webp'
-import cardProject5 from '../../../../static/img/examples/card-project5.jpg?webp'
-import cardProject6 from '../../../../static/img/examples/card-project6.jpg?webp'
+import office2 from '../../../../static/img/examples/office2.jpg'
+import cardBlog3 from '../../../../static/img/examples/card-blog3.jpg'
+import cardProject1 from '../../../../static/img/examples/card-project1.jpg'
+import cardProject2 from '../../../../static/img/examples/card-project2.jpg'
+import cardProject3 from '../../../../static/img/examples/card-project3.jpg'
+import cardProject4 from '../../../../static/img/examples/card-project4.jpg'
+import cardProject5 from '../../../../static/img/examples/card-project5.jpg'
+import cardProject6 from '../../../../static/img/examples/card-project6.jpg'
 
 function SectionProjects({ ...props }) {
   const { classes, ...rest } = props
@@ -182,7 +182,7 @@ function SectionProjects({ ...props }) {
                   <CardHeader image plain>
                     <img
                       src={
-                        'https://s3.amazonaws.com/creativetim_bucket/products/83/original/opt_mk_react_thumbnail.jpg?webp?1525851474'
+                        'https://s3.amazonaws.com/creativetim_bucket/products/83/original/opt_mk_react_thumbnail.jpg?1525851474'
                       }
                       alt='...'
                     />
@@ -190,7 +190,7 @@ function SectionProjects({ ...props }) {
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage:
-                          "url('https://s3.amazonaws.com/creativetim_bucket/products/83/original/opt_mk_react_thumbnail.jpg?webp?1525851474')",
+                          "url('https://s3.amazonaws.com/creativetim_bucket/products/83/original/opt_mk_react_thumbnail.jpg?1525851474')",
                         opacity: '1',
                       }}
                     />
@@ -225,14 +225,14 @@ function SectionProjects({ ...props }) {
                 >
                   <CardHeader image plain>
                     <img
-                      src='https://s3.amazonaws.com/creativetim_bucket/products/66/thumb/opt_lbdp_react_thumbnail.jpg?webp?1509466309'
+                      src='https://s3.amazonaws.com/creativetim_bucket/products/66/thumb/opt_lbdp_react_thumbnail.jpg?1509466309'
                       alt='...'
                     />
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage:
-                          "url('https://s3.amazonaws.com/creativetim_bucket/products/66/thumb/opt_lbdp_react_thumbnail.jpg?webp?1509466309')",
+                          "url('https://s3.amazonaws.com/creativetim_bucket/products/66/thumb/opt_lbdp_react_thumbnail.jpg?1509466309')",
                         opacity: '1',
                       }}
                     />
@@ -267,14 +267,14 @@ function SectionProjects({ ...props }) {
                 >
                   <CardHeader image plain>
                     <img
-                      src='https://s3.amazonaws.com/creativetim_bucket/products/73/original/opt_nudp_react_thumbnail.jpg?webp?1518533306'
+                      src='https://s3.amazonaws.com/creativetim_bucket/products/73/original/opt_nudp_react_thumbnail.jpg?1518533306'
                       alt='...'
                     />
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage:
-                          "url('https://s3.amazonaws.com/creativetim_bucket/products/73/original/opt_nudp_react_thumbnail.jpg?webp?1518533306')",
+                          "url('https://s3.amazonaws.com/creativetim_bucket/products/73/original/opt_nudp_react_thumbnail.jpg?1518533306')",
                         opacity: '1',
                       }}
                     />

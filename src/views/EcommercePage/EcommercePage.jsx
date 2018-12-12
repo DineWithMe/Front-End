@@ -25,15 +25,15 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 // @material-ui icons
 import Mail from '@material-ui/icons/Mail'
 
-import ecommerceHeader from '../../../static/img/examples/ecommerce-header.jpg?webp'
-import face1 from '../../../static/img/faces/card-profile6-square.jpg?webp'
-import face2 from '../../../static/img/faces/christian.jpg?webp'
-import face3 from '../../../static/img/faces/card-profile4-square.jpg?webp'
-import face4 from '../../../static/img/faces/card-profile1-square.jpg?webp'
-import face5 from '../../../static/img/faces/marc.jpg?webp'
-import face6 from '../../../static/img/faces/kendall.jpg?webp'
-import face7 from '../../../static/img/faces/card-profile5-square.jpg?webp'
-import face8 from '../../../static/img/faces/card-profile2-square.jpg?webp'
+import ecommerceHeader from '../../../static/img/examples/ecommerce-header.jpg'
+import face1 from '../../../static/img/faces/card-profile6-square.jpg'
+import face2 from '../../../static/img/faces/christian.jpg'
+import face3 from '../../../static/img/faces/card-profile4-square.jpg'
+import face4 from '../../../static/img/faces/card-profile1-square.jpg'
+import face5 from '../../../static/img/faces/marc.jpg'
+import face6 from '../../../static/img/faces/kendall.jpg'
+import face7 from '../../../static/img/faces/card-profile5-square.jpg'
+import face8 from '../../../static/img/faces/card-profile2-square.jpg'
 
 import styles from '../../jss/material-kit-pro-react/views/ecommerceStyle.jsx'
 
@@ -57,7 +57,7 @@ class EcommercePage extends React.Component {
           }}
         />
         <Parallax
-          image={require('../../../static/img/examples/clark-street-merc.jpg?webp')}
+          image={require('../../../static/img/examples/clark-street-merc.jpg')}
           filter='dark'
           small
         >

@@ -17,13 +17,13 @@ import Button from '../../../components/CustomButtons/Button.jsx'
 
 import blogsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/blogsStyle.jsx'
 
-import cardBlog4 from '../../../../static/img/examples/card-blog4.jpg?webp'
-import office2 from '../../../../static/img/office2.jpg?webp'
-import blog5 from '../../../../static/img/examples/blog5.jpg?webp'
-import blog6 from '../../../../static/img/examples/blog6.jpg?webp'
-import blog7 from '../../../../static/img/examples/blog7.jpg?webp'
-import blog8 from '../../../../static/img/examples/blog8.jpg?webp'
-import bg5 from '../../../../static/img/bg5.jpg?webp'
+import cardBlog4 from '../../../../static/img/examples/card-blog4.jpg'
+import office2 from '../../../../static/img/office2.jpg'
+import blog5 from '../../../../static/img/examples/blog5.jpg'
+import blog6 from '../../../../static/img/examples/blog6.jpg'
+import blog7 from '../../../../static/img/examples/blog7.jpg'
+import blog8 from '../../../../static/img/examples/blog8.jpg'
+import bg5 from '../../../../static/img/bg5.jpg'
 
 function SectionBlogs({ ...props }) {
   const { classes, ...rest } = props

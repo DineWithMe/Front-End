@@ -10,9 +10,9 @@ import GridContainer from '../../../components/Grid/GridContainer.jsx'
 import GridItem from '../../../components/Grid/GridItem.jsx'
 import Card from '../../../components/Card/Card.jsx'
 import carouselStyle from '../../../jss/material-kit-pro-react/views/componentsSections/carouselStyle.jsx'
-import image1 from '../../../../static/img/bg.jpg?webp'
-import image2 from '../../../../static/img/bg2.jpg?webp'
-import image3 from '../../../../static/img/bg3.jpg?webp'
+import image1 from '../../../../static/img/bg.jpg'
+import image2 from '../../../../static/img/bg2.jpg'
+import image3 from '../../../../static/img/bg3.jpg'
 
 class SectionCarousel extends React.Component {
   render() {

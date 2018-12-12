@@ -13,10 +13,10 @@ import CardFooter from '../../../components/Card/CardFooter.jsx'
 import Muted from '../../../components/Typography/Muted.jsx'
 import Button from '../../../components/CustomButtons/Button.jsx'
 
-import bg10 from '../../../../static/img/bg10.jpg?webp'
+import bg10 from '../../../../static/img/bg10.jpg'
 
-import cardProfile1 from '../../../../static/img/faces/card-profile1-square.jpg?webp'
-import cardProfile4 from '../../../../static/img/faces/card-profile4-square.jpg?webp'
+import cardProfile1 from '../../../../static/img/faces/card-profile1-square.jpg'
+import cardProfile4 from '../../../../static/img/faces/card-profile4-square.jpg'
 
 import sectionImageStyle from '../../../jss/material-kit-pro-react/views/blogPostsSections/sectionImageStyle.jsx'
 

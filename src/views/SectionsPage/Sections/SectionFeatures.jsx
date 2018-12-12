@@ -26,7 +26,7 @@ import featuresStyle from '../../../jss/material-kit-pro-react/views/sectionsSec
 
 import iphone from '../../../../static/img/sections/iphone.png'
 import iphone2 from '../../../../static/img/sections/iphone2.png'
-import bg9 from '../../../../static/img/bg9.jpg?webp'
+import bg9 from '../../../../static/img/bg9.jpg'
 
 function SectionFeatures({ ...props }) {
   const { classes, ...rest } = props

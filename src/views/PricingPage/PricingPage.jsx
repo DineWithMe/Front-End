@@ -42,7 +42,7 @@ class PricingPage extends React.Component {
         />
 
         <Parallax
-          image={require('../../../static/img/bg2.jpg?webp')}
+          image={require('../../../static/img/bg2.jpg')}
           filter='dark'
           small
         >

@@ -14,6 +14,18 @@ const nextConfig = {
   },
 }
 module.exports = withPlugins(
-  [[withSASS], [withCSS], [withOptimizedImages]],
+  [
+    [withSASS],
+    [withCSS],
+    [
+      withOptimizedImages,
+      {
+        mozjpeg: {
+          quality: 75,
+        },
+        optimizeImagesInDev: process.env.IMAGE_OPT,
+      },
+    ],
+  ],
   nextConfig
 )

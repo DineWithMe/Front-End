@@ -32,7 +32,7 @@ class SectionSections extends React.Component {
                 className={cssClass}
               >
                 <img
-                  src={require(`../../../../static/img/assets-for-demo/sections/${el}.jpg?webp`)}
+                  src={require(`../../../../static/img/assets-for-demo/sections/${el}.jpg`)}
                   alt={el}
                   key={el[index]}
                 />

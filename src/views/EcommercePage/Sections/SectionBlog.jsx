@@ -11,9 +11,9 @@ import CardBody from '../../../components/Card/CardBody.jsx'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import dg6 from '../../../../static/img/dg6.jpg?webp'
-import dg10 from '../../../../static/img/dg10.jpg?webp'
-import dg9 from '../../../../static/img/dg9.jpg?webp'
+import dg6 from '../../../../static/img/dg6.jpg'
+import dg10 from '../../../../static/img/dg10.jpg'
+import dg9 from '../../../../static/img/dg9.jpg'
 
 import styles from '../../../jss/material-kit-pro-react/views/ecommerceSections/blogStyle.jsx'
 
