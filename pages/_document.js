@@ -9,6 +9,7 @@ class MyDocument extends Document {
       <html lang='en' dir='ltr'>
         <Head>
           <meta charSet='utf-8' />
+          <meta name='Description' content='App that look for dining partner' />
           <meta
             name='viewport'
             content='minimum-scale=1,width=device-width, initial-scale=1, shrink-to-fit=no'

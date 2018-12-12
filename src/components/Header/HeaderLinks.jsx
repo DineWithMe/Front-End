@@ -280,6 +280,7 @@ function HeaderLinks({ ...props }) {
         <Button
           href='https://www.creative-tim.com/product/material-kit-pro-react'
           target='_blank'
+          rel='noreferrer'
           // color={window.innerWidth < 960 ? 'info' : 'white'}
           className={classes.navButton}
           round
