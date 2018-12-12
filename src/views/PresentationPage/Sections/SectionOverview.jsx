@@ -18,13 +18,13 @@ import AttachMoney from '@material-ui/icons/AttachMoney'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 // images
-import Vodafone from '../../../../static/img/assets-for-demo/ourClients/vodafone.jpg'
-import Microsoft from '../../../../static/img/assets-for-demo/ourClients/microsoft.jpg'
-import Harvard from '../../../../static/img/assets-for-demo/ourClients/harvard.jpg'
-import Standford from '../../../../static/img/assets-for-demo/ourClients/stanford.jpg'
-import profilePic1 from '../../../../static/img/assets-for-demo/test1.jpg'
-import profilePic2 from '../../../../static/img/assets-for-demo/test2.jpg'
-import profilePic3 from '../../../../static/img/assets-for-demo/test3.jpg'
+import Vodafone from '../../../../static/img/assets-for-demo/ourClients/vodafone.jpg?webp'
+import Microsoft from '../../../../static/img/assets-for-demo/ourClients/microsoft.jpg?webp'
+import Harvard from '../../../../static/img/assets-for-demo/ourClients/harvard.jpg?webp'
+import Standford from '../../../../static/img/assets-for-demo/ourClients/stanford.jpg?webp'
+import profilePic1 from '../../../../static/img/assets-for-demo/test1.jpg?webp'
+import profilePic2 from '../../../../static/img/assets-for-demo/test2.jpg?webp'
+import profilePic3 from '../../../../static/img/assets-for-demo/test3.jpg?webp'
 
 import overviewStyle from '../../../jss/material-kit-pro-react/views/presentationSections/overviewStyle.jsx'
 
@@ -36,7 +36,7 @@ class SectionOverview extends React.Component {
         <div
           className={classes.features5}
           style={{
-            backgroundImage: `url(${require('../../../../static/img/assets-for-demo/features-5.jpg')})`,
+            backgroundImage: `url(${require('../../../../static/img/assets-for-demo/features-5.jpg?webp')})`,
           }}
         >
           <GridItem

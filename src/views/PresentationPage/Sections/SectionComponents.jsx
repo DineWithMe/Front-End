@@ -9,12 +9,12 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import componentsStyle from '../../../jss/material-kit-pro-react/views/presentationSections/componentsStyle.jsx'
 
 import macbookImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/laptop-basics.png'
-import shoppingCartImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/table.jpg'
-import shareButtonImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/share-btn.jpg'
-import cardImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/coloured-card-with-btn.jpg'
-import twitterImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/coloured-card.jpg'
-import iconsImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/social-row.jpg'
-import repostImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/pin-btn.jpg'
+import shoppingCartImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/table.jpg?webp'
+import shareButtonImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/share-btn.jpg?webp'
+import cardImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/coloured-card-with-btn.jpg?webp'
+import twitterImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/coloured-card.jpg?webp'
+import iconsImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/social-row.jpg?webp'
+import repostImage from '../../../../static/img/assets-for-demo/presentationViewSectionComponent/pin-btn.jpg?webp'
 
 class SectionComponents extends React.Component {
   render() {

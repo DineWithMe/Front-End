@@ -44,7 +44,7 @@ class AboutUsPage extends React.Component {
           }}
         />
         <Parallax
-          image={require('../../../static/img/bg9.jpg')}
+          image={require('../../../static/img/bg9.jpg?webp')}
           filter='dark'
           small
         >

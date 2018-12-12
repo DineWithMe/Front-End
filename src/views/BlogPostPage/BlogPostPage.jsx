@@ -42,7 +42,10 @@ class BlogPostPage extends React.Component {
             color: 'info',
           }}
         />
-        <Parallax image={require('../../../static/img/bg5.jpg')} filter='dark'>
+        <Parallax
+          image={require('../../../static/img/bg5.jpg?webp')}
+          filter='dark'
+        >
           <div className={classes.container}>
             <GridContainer justify='center'>
               <GridItem md={8} className={classes.textCenter}>

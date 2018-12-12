@@ -15,7 +15,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 // @material-ui icons
 import Mail from '@material-ui/icons/Mail'
 
-import bg7 from '../../../../static/img/bg7.jpg'
+import bg7 from '../../../../static/img/bg7.jpg?webp'
 
 import styles from '../../../jss/material-kit-pro-react/views/componentsSections/preFooter.jsx'
 

@@ -48,8 +48,8 @@ import ImageUpload from '../../../components/CustomUpload/ImageUpload.jsx'
 
 import javascriptStyles from '../../../jss/material-kit-pro-react/views/componentsSections/javascriptStyles.jsx'
 
-import dg1 from '../../../../static/img/dg1.jpg'
-import dg2 from '../../../../static/img/dg2.jpg'
+import dg1 from '../../../../static/img/dg1.jpg?webp'
+import dg2 from '../../../../static/img/dg2.jpg?webp'
 
 function Transition(props) {
   return <Slide direction='down' {...props} />

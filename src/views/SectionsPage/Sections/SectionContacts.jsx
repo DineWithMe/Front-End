@@ -29,7 +29,7 @@ import Button from '../../../components/CustomButtons/Button.jsx'
 
 import contactsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/contactsStyle.jsx'
 
-import city from '../../../../static/img/examples/city.jpg'
+import city from '../../../../static/img/examples/city.jpg?webp'
 
 const { publicRuntimeConfig } = getConfig()
 

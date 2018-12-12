@@ -14,9 +14,9 @@ import Info from '../../../components/Typography/Info.jsx'
 import Success from '../../../components/Typography/Success.jsx'
 import Danger from '../../../components/Typography/Danger.jsx'
 
-import blog6 from '../../../../static/img/examples/blog6.jpg'
-import blog8 from '../../../../static/img/examples/blog8.jpg'
-import blog7 from '../../../../static/img/examples/blog7.jpg'
+import blog6 from '../../../../static/img/examples/blog6.jpg?webp'
+import blog8 from '../../../../static/img/examples/blog8.jpg?webp'
+import blog7 from '../../../../static/img/examples/blog7.jpg?webp'
 
 import sectionSimilarStoriesStyle from '../../../jss/material-kit-pro-react/views/blogPostSections/sectionSimilarStoriesStyle.jsx'
 

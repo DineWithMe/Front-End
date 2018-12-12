@@ -22,11 +22,11 @@ import CustomInput from '../../../components/CustomInput/CustomInput.jsx'
 
 import headersStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/headersStyle.jsx'
 
-import bg12 from '../../../../static/img/bg12.jpg'
-import office2 from '../../../../static/img/examples/office2.jpg'
-import dg1 from '../../../../static/img/dg1.jpg'
-import dg2 from '../../../../static/img/dg2.jpg'
-import dg3 from '../../../../static/img/dg3.jpg'
+import bg12 from '../../../../static/img/bg12.jpg?webp'
+import office2 from '../../../../static/img/examples/office2.jpg?webp'
+import dg1 from '../../../../static/img/dg1.jpg?webp'
+import dg2 from '../../../../static/img/dg2.jpg?webp'
+import dg3 from '../../../../static/img/dg3.jpg?webp'
 
 function SectionHeaders({ ...props }) {
   const { classes, ...rest } = props

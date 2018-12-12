@@ -30,17 +30,17 @@ import Button from '../../components/CustomButtons/Button.jsx'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
 
-import christian from '../../../static/img/faces/christian.jpg'
-import oluEletu from '../../../static/img/examples/olu-eletu.jpg'
-import clemOnojeghuo from '../../../static/img/examples/clem-onojeghuo.jpg'
-import cynthiaDelRio from '../../../static/img/examples/cynthia-del-rio.jpg'
-import mariyaGeorgieva from '../../../static/img/examples/mariya-georgieva.jpg'
-import clemOnojegaw from '../../../static/img/examples/clem-onojegaw.jpg'
-import darrenColeshill from '../../../static/img/examples/darren-coleshill.jpg'
-import avatar from '../../../static/img/faces/avatar.jpg'
-import marc from '../../../static/img/faces/marc.jpg'
-import kendall from '../../../static/img/faces/kendall.jpg'
-import cardProfile2Square from '../../../static/img/faces/card-profile2-square.jpg'
+import christian from '../../../static/img/faces/christian.jpg?webp'
+import oluEletu from '../../../static/img/examples/olu-eletu.jpg?webp'
+import clemOnojeghuo from '../../../static/img/examples/clem-onojeghuo.jpg?webp'
+import cynthiaDelRio from '../../../static/img/examples/cynthia-del-rio.jpg?webp'
+import mariyaGeorgieva from '../../../static/img/examples/mariya-georgieva.jpg?webp'
+import clemOnojegaw from '../../../static/img/examples/clem-onojegaw.jpg?webp'
+import darrenColeshill from '../../../static/img/examples/darren-coleshill.jpg?webp'
+import avatar from '../../../static/img/faces/avatar.jpg?webp'
+import marc from '../../../static/img/faces/marc.jpg?webp'
+import kendall from '../../../static/img/faces/kendall.jpg?webp'
+import cardProfile2Square from '../../../static/img/faces/card-profile2-square.jpg?webp'
 
 import profilePageStyle from '../../jss/material-kit-pro-react/views/profilePageStyle.jsx'
 
@@ -71,7 +71,7 @@ class ProfilePage extends React.Component {
           {...rest}
         />
         <Parallax
-          image={require('../../../static/img/examples/city.jpg')}
+          image={require('../../../static/img/examples/city.jpg?webp')}
           filter='dark'
           className={classes.parallax}
         />

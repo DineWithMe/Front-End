@@ -47,7 +47,7 @@ class PresentationPage extends React.Component {
           }}
         />
         <Parallax
-          image={require('../../../static/img/bg4.jpg')}
+          image={require('../../../static/img/bg4.jpg?webp')}
           className={classes.parallax}
         >
           <div className={classes.container}>

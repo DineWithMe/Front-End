@@ -18,13 +18,13 @@ import Warning from '../../../components/Typography/Warning.jsx'
 
 import testimonialsStyle from '../../../jss/material-kit-pro-react/views/sectionsSections/testimonialsStyle.jsx'
 
-import dg2 from '../../../../static/img/dg2.jpg'
-import cardProfile1Square from '../../../../static/img/faces/card-profile1-square.jpg'
-import cardProfile2Square from '../../../../static/img/faces/card-profile2-square.jpg'
-import cardProfile4Square from '../../../../static/img/faces/card-profile4-square.jpg'
-import cardProfile6Square from '../../../../static/img/faces/card-profile6-square.jpg'
-import kendall from '../../../../static/img/faces/kendall.jpg'
-import christian from '../../../../static/img/faces/christian.jpg'
+import dg2 from '../../../../static/img/dg2.jpg?webp'
+import cardProfile1Square from '../../../../static/img/faces/card-profile1-square.jpg?webp'
+import cardProfile2Square from '../../../../static/img/faces/card-profile2-square.jpg?webp'
+import cardProfile4Square from '../../../../static/img/faces/card-profile4-square.jpg?webp'
+import cardProfile6Square from '../../../../static/img/faces/card-profile6-square.jpg?webp'
+import kendall from '../../../../static/img/faces/kendall.jpg?webp'
+import christian from '../../../../static/img/faces/christian.jpg?webp'
 
 function SectionTestimonials({ ...props }) {
   const { classes, ...rest } = props

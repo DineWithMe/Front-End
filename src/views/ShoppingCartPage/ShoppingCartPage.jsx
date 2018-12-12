@@ -27,9 +27,9 @@ import Parallax from '../../components/Parallax/Parallax.jsx'
 
 import shoppingCartStyle from '../../jss/material-kit-pro-react/views/shoppingCartStyle.jsx'
 
-import product1 from '../../../static/img/product1.jpg'
-import product2 from '../../../static/img/product2.jpg'
-import product3 from '../../../static/img/product3.jpg'
+import product1 from '../../../static/img/product1.jpg?webp'
+import product2 from '../../../static/img/product2.jpg?webp'
+import product3 from '../../../static/img/product3.jpg?webp'
 
 class ShoppingCartPage extends React.Component {
   componentDidMount() {
@@ -52,7 +52,7 @@ class ShoppingCartPage extends React.Component {
         />
 
         <Parallax
-          image={require('../../../static/img/examples/bg2.jpg')}
+          image={require('../../../static/img/examples/bg2.jpg?webp')}
           filter='dark'
           small
         >
