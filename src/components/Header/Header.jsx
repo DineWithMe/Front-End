@@ -71,7 +71,7 @@ class Header extends React.Component {
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
           <Button className={classes.title}>
-            <Link href='/'>
+            <Link href='/' prefetch passHref>
               <a>{brand}</a>
             </Link>
           </Button>
