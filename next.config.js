@@ -8,11 +8,11 @@ const nextConfig = {
   serverRuntimeConfig: {
     // https://github.com/zeit/next.js#exposing-configuration-to-the-server--client-side
     // Will only be available on the server side
-    googleMap_apiKey: process.env.GOOGLEMAP_APIKEY, // Pass through env variables
   },
   publicRuntimeConfig: {
     // Will be available on both server and client
-    googleMap_apiKey: process.env.GOOGLEMAP_APIKEY,
+    googleMap_apiKey: process.env.GOOGLEMAP_APIKEY, // Pass through env variables
+    service_worker: process.env.SERVICE_WORKER,
   },
   webpack: (config) => {
     config.plugins.push(

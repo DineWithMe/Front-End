@@ -6,7 +6,7 @@
   "main": "pages/index.js",
   "scripts": {
     "build": "next build",
-    "dev": "env-cmd ./.config/dev.env node server.js",
+    "dev": "env-cmd ./.config/dev.env next",
     "prod": "npm run build && env-cmd ./.config/prod.env node server.js",
     "start": "node server.js",
     "jest": "jest --watch --runInBand",
@@ -127,7 +127,8 @@
     "name": "dinewithme",
     "dotenv": "./.config/prod.env",
     "env": {
-      "NODE_ENV": "production"
+      "NODE_ENV": "production",
+      "SERVICE_WORKER": true
     },
     "alias": "dinewithme.app"
   }

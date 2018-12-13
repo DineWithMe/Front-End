@@ -12,7 +12,7 @@ class MyDocument extends Document {
           <meta name='Description' content='App that look for dining partner' />
           <meta
             name='viewport'
-            content='minimum-scale=1,width=device-width, initial-scale=1, shrink-to-fit=no'
+            content='minimum-scale=1, width=device-width, initial-scale=1, shrink-to-fit=no'
           />
           <link
             rel='apple-touch-icon'

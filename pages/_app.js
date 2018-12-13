@@ -1,6 +1,7 @@
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
+import getConfig from 'next/config'
 // client
 import { ApolloProvider } from 'react-apollo'
 import withApollo from '../src/utils/withApollo'
@@ -19,6 +20,8 @@ import '../src/scss/nprogress.css'
 import NProgress from 'nprogress'
 // fetch api ponyfill
 import 'isomorphic-unfetch'
+
+const { publicRuntimeConfig } = getConfig()
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -39,7 +42,7 @@ class MyApp extends App {
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles)
     }
-    if ('serviceWorker' in navigator) {
+    if (publicRuntimeConfig.service_worker && 'serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/service-worker.js')
         // eslint-disable-next-line no-unused-vars

@@ -1,14 +1,14 @@
-import PresentationPage from '../src/views/PresentationPage/PresentationPage.jsx'
+import LandingPage from '../src/views/LandingPage/LandingPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 
-const Presentation = () => {
+const Landing = () => {
   return (
     <Fragment>
       <Head />
-      <PresentationPage />
+      <LandingPage />
     </Fragment>
   )
 }
 
-export default Presentation
+export default Landing
