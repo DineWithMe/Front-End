@@ -41,7 +41,7 @@ module.exports = withPlugins(
         mozjpeg: {
           quality: 65,
         },
-        optimizeImagesInDev: process.env.IMAGE_OPT,
+        optimizeImagesInDev: process.env.IMAGE_OPTIMIZATION,
       },
     ],
   ],

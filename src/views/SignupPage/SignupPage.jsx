@@ -16,7 +16,6 @@ import Email from '@material-ui/icons/Email'
 import Check from '@material-ui/icons/Check'
 import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -25,7 +24,7 @@ import Card from '../../components/Card/Card.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
 import InfoArea from '../../components/InfoArea/InfoArea.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
 import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
 
@@ -62,13 +61,7 @@ class Components extends React.Component {
     const { classes, ...rest } = this.props
     return (
       <div>
-        <Header
-          absolute
-          color='transparent'
-          brand='Material Kit PRO React'
-          links={<HeaderLinks dropdownHoverColor='rose' />}
-          {...rest}
-        />
+        <Navbar {...rest} />
         <div
           className={classes.pageHeader}
           style={{

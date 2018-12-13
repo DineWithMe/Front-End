@@ -64,7 +64,7 @@ class MyApp extends App {
         <ApolloProvider client={apolloClient}>
           <Provider inject={[dataStore]}>
             <Head>
-              <title>Material Kit PRO React</title>
+              <title>{`Dine With Me`}</title>
             </Head>
             {/* Wrap every page in Jss and Theme providers */}
             <JssProvider

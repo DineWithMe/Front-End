@@ -7,23 +7,22 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
 import Favorite from '@material-ui/icons/Favorite'
+
 // core components
-import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
+// style
 import landingPageStyle from '../../jss/material-kit-pro-react/views/landingPageStyle.jsx'
 
 // Sections for this page
 import SectionProduct from './Sections/SectionProduct.jsx'
 import SectionTeam from './Sections/SectionTeam.jsx'
 import SectionWork from './Sections/SectionWork.jsx'
-
-const dashboardRoutes = []
 
 class LandingPage extends React.Component {
   componentDidMount() {
@@ -34,18 +33,7 @@ class LandingPage extends React.Component {
     const { classes, ...rest } = this.props
     return (
       <div>
-        <Header
-          color='transparent'
-          routes={dashboardRoutes}
-          brand='Material Kit PRO React'
-          links={<HeaderLinks dropdownHoverColor='info' />}
-          fixed
-          changeColorOnScroll={{
-            height: 300,
-            color: 'info',
-          }}
-          {...rest}
-        />
+        <Navbar {...rest} />
         <Parallax image={require('../../../static/img/bg8.jpg')} filter='dark'>
           <div className={classes.container}>
             <GridContainer>

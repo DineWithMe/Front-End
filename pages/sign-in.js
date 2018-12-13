@@ -1,14 +1,14 @@
-import LoginPage from '../src/views/LoginPage/LoginPage'
+import SignInPage from '../src/views/SignInPage/SignInPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 
-const Login = () => {
+const SignIn = () => {
   return (
     <Fragment>
       <Head />
-      <LoginPage />
+      <SignInPage />
     </Fragment>
   )
 }
 
-export default Login
+export default SignIn

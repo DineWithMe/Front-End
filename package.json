@@ -128,7 +128,7 @@
     "dotenv": "./.config/prod.env",
     "env": {
       "NODE_ENV": "production",
-      "SERVICE_WORKER": true
+      "SERVICE_WORKER": "true"
     },
     "alias": "dinewithme.app"
   }

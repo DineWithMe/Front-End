@@ -1,14 +1,14 @@
-import SignupPage from '../src/views/SignupPage/SignupPage'
+import SignUpPage from '../src/views/SignUpPage/SignUpPage'
 import Head from 'next/head'
 import { Fragment } from 'react'
 
-const Signup = () => {
+const SignUp = () => {
   return (
     <Fragment>
       <Head />
-      <SignupPage />
+      <SignUpPage />
     </Fragment>
   )
 }
 
-export default Signup
+export default SignUp
