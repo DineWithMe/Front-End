@@ -40,13 +40,17 @@ class MyApp extends App {
       jssStyles.parentNode.removeChild(jssStyles)
     }
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/serviceWorker.js').catch((err) =>
-        // eslint-disable-next-line no-console
-        console.error('Service worker registration failed', err)
-      )
-    } else {
-      // eslint-disable-next-line no-console
-      console.log('Service worker not supported')
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        // eslint-disable-next-line no-unused-vars
+        .then((registration) => {
+          // eslint-disable-next-line no-console
+          console.log('service worker registration successful')
+        })
+        .catch((err) => {
+          // eslint-disable-next-line no-console
+          console.warn('service worker registration failed', err.message)
+        })
     }
   }
 
