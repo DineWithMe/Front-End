@@ -5,6 +5,7 @@ const withOptimizedImages = require('next-optimized-images')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 const nextConfig = {
+  distDir: 'build',
   serverRuntimeConfig: {
     // https://github.com/zeit/next.js#exposing-configuration-to-the-server--client-side
     // Will only be available on the server side

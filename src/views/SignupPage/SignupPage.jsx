@@ -102,19 +102,34 @@ class Components extends React.Component {
                       </GridItem>
                       <GridItem xs={12} sm={5} md={5}>
                         <div className={classes.textCenter}>
-                          <Button justIcon round color='twitter'>
+                          <Button
+                            justIcon
+                            round
+                            color='twitter'
+                            aria-label='sign up with Twitter'
+                          >
                             <i
                               className={classes.socials + ' fab fa-twitter'}
                             />
                           </Button>
                           {` `}
-                          <Button justIcon round color='dribbble'>
+                          <Button
+                            justIcon
+                            round
+                            color='dribbble'
+                            aria-label='sign up with dribble'
+                          >
                             <i
                               className={classes.socials + ' fab fa-dribbble'}
                             />
                           </Button>
                           {` `}
-                          <Button justIcon round color='facebook'>
+                          <Button
+                            justIcon
+                            round
+                            color='facebook'
+                            aria-label='sign up with facebook'
+                          >
                             <i
                               className={classes.socials + ' fab fa-facebook-f'}
                             />

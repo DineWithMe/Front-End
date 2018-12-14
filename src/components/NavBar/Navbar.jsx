@@ -38,6 +38,7 @@ class NavBar extends React.Component {
                   href='#pablo'
                   className={classes.navLink}
                   color='transparent'
+                  aria-label='go to dine with me sing ip page'
                 >
                   {`Sign In`}
                 </Button>
@@ -49,6 +50,7 @@ class NavBar extends React.Component {
                   href='#pablo'
                   className={classes.navLink}
                   color='transparent'
+                  aria-label='go to dine with me sing up page'
                 >
                   {`Sign Up`}
                 </Button>
