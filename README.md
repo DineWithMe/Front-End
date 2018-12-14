@@ -1,6 +1,6 @@
 # README
 
-1. Always create a new branch to work on, never push to master branch.
+1. If more than one person working on the repo, always create a new branch to work on, never push to master branch.
 
 2. Please study [Creative Tim Tutorial](https://demos.creative-tim.com/material-kit-pro-react/#/documentation/tutorial), it greatly reduces the stress developing CSS and components.
 

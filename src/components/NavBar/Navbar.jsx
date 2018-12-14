@@ -33,28 +33,26 @@ class NavBar extends React.Component {
         links={
           <List className={classes.list + ' ' + classes.mlAuto}>
             <ListItem className={classes.listItem}>
-              <Button
-                href='#pablo'
-                className={classes.navLink}
-                onClick={(e) => e.preventDefault()}
-                color='transparent'
-              >
-                <Link href='/sign-in' prefetch passHref>
-                  <div>{`Sign In`}</div>
-                </Link>
-              </Button>
+              <Link href='/sign-in' prefetch passHref>
+                <Button
+                  href='#pablo'
+                  className={classes.navLink}
+                  color='transparent'
+                >
+                  {`Sign In`}
+                </Button>
+              </Link>
             </ListItem>
             <ListItem className={classes.listItem}>
-              <Button
-                href='#pablo'
-                className={classes.navLink}
-                onClick={(e) => e.preventDefault()}
-                color='transparent'
-              >
-                <Link href='/sign-up' prefetch passHref>
-                  <div>{`Sign Up`}</div>
-                </Link>
-              </Button>
+              <Link href='/sign-up' prefetch passHref>
+                <Button
+                  href='#pablo'
+                  className={classes.navLink}
+                  color='transparent'
+                >
+                  {`Sign Up`}
+                </Button>
+              </Link>
             </ListItem>
             <ListItem className={classes.listItem}>
               <Button
