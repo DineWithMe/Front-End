@@ -26,7 +26,6 @@ function RegularButton(props) {
     className,
     ...rest
   } = props
-  console.log(rest)
   const btnClasses = classNames({
     [classes.button]: true,
     [classes[size]]: size,
