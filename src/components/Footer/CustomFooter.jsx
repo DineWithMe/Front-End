@@ -12,6 +12,7 @@ const CustomFooter = (props) => {
 
   return (
     <Footer
+      className={classes.footer}
       content={
         <div>
           <div className={classes.left}>

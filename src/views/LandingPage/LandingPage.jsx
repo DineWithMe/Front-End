@@ -23,6 +23,7 @@ import landingPageStyle from '../../jss/material-kit-pro-react/views/landingPage
 import SectionProduct from './Sections/SectionProduct.jsx'
 import SectionTeam from './Sections/SectionTeam.jsx'
 import SectionWork from './Sections/SectionWork.jsx'
+import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 
 class LandingPage extends React.Component {
   componentDidMount() {
@@ -67,54 +68,7 @@ class LandingPage extends React.Component {
             <SectionWork />
           </div>
         </div>
-        <Footer
-          content={
-            <div>
-              <div className={classes.left}>
-                <List className={classes.list}>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='https://www.creative-tim.com/'
-                      className={classes.block}
-                    >
-                      Creative Tim
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='https://www.creative-tim.com/presentation'
-                      className={classes.block}
-                    >
-                      About us
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='//blog.creative-tim.com/'
-                      className={classes.block}
-                    >
-                      Blog
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='https://www.creative-tim.com/license'
-                      className={classes.block}
-                    >
-                      Licenses
-                    </a>
-                  </ListItem>
-                </List>
-              </div>
-              <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{' '}
-                <Favorite className={classes.icon} /> by{' '}
-                <a href='https://www.creative-tim.com'>Creative Tim</a> for a
-                better web.
-              </div>
-            </div>
-          }
-        />
+        <CustomFooter classes={classes} />
       </div>
     )
   }
