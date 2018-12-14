@@ -30,6 +30,7 @@ const ButtonDropDownStyle = {
   marginTop: '-12.5%',
   marginBottom: '-12.5%',
   marginLeft: '-20%',
+  paddingRight: '+130%',
   textTransform: 'capitalize',
 }
 
