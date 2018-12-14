@@ -10,6 +10,13 @@ import PersonAdd from '@material-ui/icons/PersonAdd'
 import ExitToApp from '@material-ui/icons/ExitToApp'
 import Notifications from '@material-ui/icons/Notifications'
 import LocalDining from '@material-ui/icons/LocalDining'
+import AccountBox from '@material-ui/icons/AccountBox'
+import SettingsApplications from '@material-ui/icons/SettingsApplications'
+import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew'
+import LocalBar from '@material-ui/icons/LocalBar'
+import ChatBubble from '@material-ui/icons/ChatBubble'
+import ChatBubbleOutline from '@material-ui/icons/ChatBubbleOutline'
+import Restaurant from '@material-ui/icons/Restaurant'
 // core components
 import Header from '../Header/Header.jsx'
 import CustomDropdown from '../CustomDropdown/CustomDropdown.jsx'
@@ -18,6 +25,13 @@ import Button from '../CustomButtons/Button.jsx'
 import navbarsStyle from '../../jss/material-kit-pro-react/views/componentsSections/navbarsStyle.jsx'
 // image
 import profileImage from '../../../static/img/faces/avatar.jpg'
+
+const ButtonDropDownStyle = {
+  marginTop: '-12.5%',
+  marginBottom: '-12.5%',
+  marginLeft: '-20%',
+  textTransform: 'capitalize',
+}
 
 class NavBar extends React.Component {
   render() {
@@ -34,18 +48,17 @@ class NavBar extends React.Component {
         color='dark'
         fixed
         changeColorOnScroll={{
-          height: 300,
+          height: 600,
           color: 'primary',
         }}
         links={
           <List className={classes.list + ' ' + classes.mlAuto}>
             <ListItem className={classes.listItem}>
-              <Link href='/sign-in' prefetch passHref>
+              <Link href='/login' prefetch passHref>
                 <Button
-                  href='#pablo'
                   className={classes.navLink}
                   color='transparent'
-                  aria-label='go to dine with me sing ip page'
+                  aria-label='go to sign in page'
                 >
                   <ExitToApp />
                   {`Sign In`}
@@ -53,12 +66,11 @@ class NavBar extends React.Component {
               </Link>
             </ListItem>
             <ListItem className={classes.listItem}>
-              <Link href='/sign-up' prefetch passHref>
+              <Link href='/register' prefetch passHref>
                 <Button
-                  href='#pablo'
                   className={classes.navLink}
                   color='transparent'
-                  aria-label='go to dine with me sing up page'
+                  aria-label='go to sign up page'
                 >
                   <PersonAdd />
                   {`Sign Up`}
@@ -66,8 +78,48 @@ class NavBar extends React.Component {
               </Link>
             </ListItem>
             <ListItem className={classes.listItem}>
+              <CustomDropdown
+                left
+                hoverColor='dark'
+                dropPlacement='bottom'
+                buttonText={
+                  <Fragment>
+                    <LocalBar />
+                    {'Discover'}
+                  </Fragment>
+                }
+                buttonProps={{
+                  style: { marginTop: '-15%', marginBottom: '-15%' },
+                  className: classes.navLink,
+                  color: 'transparent',
+                  'aria-label': 'discover host or guest',
+                }}
+                dropdownList={[
+                  <Button
+                    style={ButtonDropDownStyle}
+                    className={classes.navLink}
+                    color='transparent'
+                    aria-label='discover host'
+                    key='discover guest'
+                  >
+                    <ChatBubbleOutline />
+                    &#160;&#160;&#160;{'guest'}
+                  </Button>,
+                  <Button
+                    style={ButtonDropDownStyle}
+                    className={classes.navLink}
+                    color='transparent'
+                    aria-label='discover host'
+                    key='discover host'
+                  >
+                    <ChatBubble />
+                    &#160;&#160;&#160;{'Host'}
+                  </Button>,
+                ]}
+              />
+            </ListItem>
+            <ListItem className={classes.listItem}>
               <Button
-                href='#pablo'
                 className={classes.navLink}
                 color='transparent'
                 aria-label='read notifications'
@@ -78,9 +130,7 @@ class NavBar extends React.Component {
             <ListItem className={classes.listItem}>
               <CustomDropdown
                 left
-                caret={false}
                 hoverColor='dark'
-                dropdownHeader='Dropdown Header'
                 buttonText={
                   <img
                     src={profileImage}
@@ -89,11 +139,54 @@ class NavBar extends React.Component {
                   />
                 }
                 buttonProps={{
-                  style: { marginTop: -10, marginBottom: -10 },
+                  style: { marginTop: '-15%', marginBottom: '-15%' },
                   className: classes.navLink,
                   color: 'transparent',
+                  'aria-label': 'user setting and profile',
                 }}
-                dropdownList={['Me', 'Settings and other stuff', 'Sign out']}
+                dropdownList={[
+                  <Link href='/profile' prefetch passHref key='user profile'>
+                    <Button
+                      style={ButtonDropDownStyle}
+                      className={classes.navLink}
+                      color='transparent'
+                      aria-label='user profile'
+                    >
+                      <AccountBox />
+                      &#160;&#160;&#160;{'Profile'}
+                    </Button>
+                  </Link>,
+                  <Button
+                    style={ButtonDropDownStyle}
+                    className={classes.navLink}
+                    color='transparent'
+                    aria-label='my upcoming dinner'
+                    key='my upcoming dinner'
+                  >
+                    <Restaurant />
+                    &#160;&#160;&#160;{'Upcoming Dinner'}
+                  </Button>,
+                  <Button
+                    style={ButtonDropDownStyle}
+                    className={classes.navLink}
+                    color='transparent'
+                    aria-label='user settings'
+                    key='user setting'
+                  >
+                    <SettingsApplications />
+                    &#160;&#160;&#160;{'Setting'}
+                  </Button>,
+                  <Button
+                    style={ButtonDropDownStyle}
+                    className={classes.navLink}
+                    color='transparent'
+                    aria-label='user sign out'
+                    key='user sign out'
+                  >
+                    <PowerSettingsNew />
+                    &#160;&#160;&#160;{'Sign Out'}
+                  </Button>,
+                ]}
               />
             </ListItem>
           </List>

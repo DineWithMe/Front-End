@@ -4,8 +4,6 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
 import Icon from '@material-ui/core/Icon'
 // @material-ui/icons
 import Timeline from '@material-ui/icons/Timeline'
@@ -14,9 +12,7 @@ import Group from '@material-ui/icons/Group'
 import Face from '@material-ui/icons/Face'
 import Email from '@material-ui/icons/Email'
 import Check from '@material-ui/icons/Check'
-import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
@@ -25,6 +21,7 @@ import CardBody from '../../components/Card/CardBody.jsx'
 import InfoArea from '../../components/InfoArea/InfoArea.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
+import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 
 import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
 
@@ -242,54 +239,7 @@ class Components extends React.Component {
               </GridItem>
             </GridContainer>
           </div>
-          <Footer
-            content={
-              <div>
-                <div className={classes.left}>
-                  <List className={classes.list}>
-                    <ListItem className={classes.inlineBlock}>
-                      <a
-                        href='https://www.creative-tim.com/'
-                        className={classes.block}
-                      >
-                        Creative Tim
-                      </a>
-                    </ListItem>
-                    <ListItem className={classes.inlineBlock}>
-                      <a
-                        href='https://www.creative-tim.com/presentation'
-                        className={classes.block}
-                      >
-                        About us
-                      </a>
-                    </ListItem>
-                    <ListItem className={classes.inlineBlock}>
-                      <a
-                        href='//blog.creative-tim.com/'
-                        className={classes.block}
-                      >
-                        Blog
-                      </a>
-                    </ListItem>
-                    <ListItem className={classes.inlineBlock}>
-                      <a
-                        href='https://www.creative-tim.com/license'
-                        className={classes.block}
-                      >
-                        Licenses
-                      </a>
-                    </ListItem>
-                  </List>
-                </div>
-                <div className={classes.right}>
-                  &copy; {1900 + new Date().getYear()} , made with{' '}
-                  <Favorite className={classes.icon} /> by{' '}
-                  <a href='https://www.creative-tim.com'>Creative Tim</a> for a
-                  better web.
-                </div>
-              </div>
-            }
-          />
+          <CustomFooter classes={classes} />
         </div>
       </div>
     )

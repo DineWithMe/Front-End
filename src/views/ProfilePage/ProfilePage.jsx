@@ -6,17 +6,12 @@ import classNames from 'classnames'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
 import Camera from '@material-ui/icons/Camera'
 import Palette from '@material-ui/icons/Palette'
 import People from '@material-ui/icons/People'
 import Add from '@material-ui/icons/Add'
-import Favorite from '@material-ui/icons/Favorite'
 // core components
-import Header from '../../components/Header/Header.jsx'
-import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import NavPills from '../../components/NavPills/NavPills.jsx'
@@ -27,9 +22,9 @@ import Badge from '../../components/Badge/Badge.jsx'
 import Muted from '../../components/Typography/Muted.jsx'
 import Clearfix from '../../components/Clearfix/Clearfix.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
-import HeaderLinks from '../../components/Header/HeaderLinks.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
-
+import CustomFooter from '../../components/Footer/CustomFooter.jsx'
+// image
 import christian from '../../../static/img/faces/christian.jpg'
 import oluEletu from '../../../static/img/examples/olu-eletu.jpg'
 import clemOnojeghuo from '../../../static/img/examples/clem-onojeghuo.jpg'
@@ -41,8 +36,9 @@ import avatar from '../../../static/img/faces/avatar.jpg'
 import marc from '../../../static/img/faces/marc.jpg'
 import kendall from '../../../static/img/faces/kendall.jpg'
 import cardProfile2Square from '../../../static/img/faces/card-profile2-square.jpg'
-
+// style
 import profilePageStyle from '../../jss/material-kit-pro-react/views/profilePageStyle.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
 class ProfilePage extends React.Component {
   componentDidMount() {
@@ -59,17 +55,7 @@ class ProfilePage extends React.Component {
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery)
     return (
       <div>
-        <Header
-          color='transparent'
-          brand='Material Kit PRO React'
-          links={<HeaderLinks dropdownHoverColor='info' />}
-          fixed
-          changeColorOnScroll={{
-            height: 200,
-            color: 'info',
-          }}
-          {...rest}
-        />
+        <Navbar {...rest} />
         <Parallax
           image={require('../../../static/img/examples/city.jpg')}
           filter='dark'
@@ -513,54 +499,7 @@ class ProfilePage extends React.Component {
             <Clearfix />
           </div>
         </div>
-        <Footer
-          content={
-            <div>
-              <div className={classes.left}>
-                <List className={classes.list}>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='https://www.creative-tim.com/'
-                      className={classes.block}
-                    >
-                      Creative Tim
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='https://www.creative-tim.com/presentation'
-                      className={classes.block}
-                    >
-                      About us
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='//blog.creative-tim.com/'
-                      className={classes.block}
-                    >
-                      Blog
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      href='https://www.creative-tim.com/license'
-                      className={classes.block}
-                    >
-                      Licenses
-                    </a>
-                  </ListItem>
-                </List>
-              </div>
-              <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{' '}
-                <Favorite className={classes.icon} /> by{' '}
-                <a href='https://www.creative-tim.com'>Creative Tim</a> for a
-                better web.
-              </div>
-            </div>
-          }
-        />
+        <CustomFooter classes={classes} />
       </div>
     )
   }
