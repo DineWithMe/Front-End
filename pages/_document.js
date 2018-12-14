@@ -16,7 +16,7 @@ class MyDocument extends Document {
           />
           <link
             rel='apple-touch-icon'
-            sizes='76x76'
+            sizes='180x180'
             href='/static/public/apple-touch-icon.png'
           />
           <link
@@ -31,17 +31,20 @@ class MyDocument extends Document {
             sizes='16x16'
             href='/static/public/favicon-16x16.png'
           />
-          {/* site.webmanifest provides metadata used when your web app is added to the
-      home screen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
           <link rel='manifest' href='/static/public/site.webmanifest' />
           <link
             rel='mask-icon'
             href='/static/public/safari-pinned-tab.svg'
             color='#5bbad5'
           />
+          <link rel='shortcut icon' href='/static/public/favicon.ico' />
           <meta name='apple-mobile-web-app-title' content='Dine With Me' />
           <meta name='application-name' content='Dine With Me' />
           <meta name='msapplication-TileColor' content='#da532c' />
+          <meta
+            name='msapplication-config'
+            content='/static/public/browserconfig.xml'
+          />
           <meta name='theme-color' content='#ffffff' />
           <link
             rel='stylesheet'
