@@ -30,7 +30,8 @@ const ButtonDropDownStyle = {
   marginTop: '-12.5%',
   marginBottom: '-12.5%',
   marginLeft: '-20%',
-  paddingRight: '+130%',
+  // marginRight: '+100%',
+  // paddingRight: '+50%',
   textTransform: 'capitalize',
 }
 
@@ -154,7 +155,7 @@ class NavBar extends React.Component {
                       aria-label='user profile'
                     >
                       <AccountBox />
-                      &#160;&#160;&#160;{'Profile'}
+                      &#160;&#160;&#160;{`Profile`}
                     </Button>
                   </Link>,
                   <Button

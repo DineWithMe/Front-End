@@ -3,13 +3,7 @@ import React from 'react'
 import classNames from 'classnames'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-// @material-ui/icons
-import Favorite from '@material-ui/icons/Favorite'
-
 // core components
-import Footer from '../../components/Footer/Footer.jsx'
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
@@ -34,7 +28,7 @@ class LandingPage extends React.Component {
     const { classes, ...rest } = this.props
     return (
       <div>
-        <Navbar {...rest} />
+        <Navbar />
         <Parallax image={require('../../../static/img/bg8.jpg')} filter='dark'>
           <div className={classes.container}>
             <GridContainer>
