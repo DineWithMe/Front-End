@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 // @material-ui/core components
@@ -6,15 +6,17 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 // @material-ui/icons
-import Email from '@material-ui/icons/Email'
-
+import PersonAdd from '@material-ui/icons/PersonAdd'
+import ExitToApp from '@material-ui/icons/ExitToApp'
+import Notifications from '@material-ui/icons/Notifications'
+import LocalDining from '@material-ui/icons/LocalDining'
 // core components
 import Header from '../Header/Header.jsx'
 import CustomDropdown from '../CustomDropdown/CustomDropdown.jsx'
 import Button from '../CustomButtons/Button.jsx'
-
+// style
 import navbarsStyle from '../../jss/material-kit-pro-react/views/componentsSections/navbarsStyle.jsx'
-
+// image
 import profileImage from '../../../static/img/faces/avatar.jpg'
 
 class NavBar extends React.Component {
@@ -23,7 +25,12 @@ class NavBar extends React.Component {
     const { classes, ...rest } = this.props
     return (
       <Header
-        brand='Dine With Me'
+        brand={
+          <Fragment>
+            <LocalDining />
+            {'Dine With Me'}
+          </Fragment>
+        }
         color='dark'
         fixed
         changeColorOnScroll={{
@@ -40,6 +47,7 @@ class NavBar extends React.Component {
                   color='transparent'
                   aria-label='go to dine with me sing ip page'
                 >
+                  <ExitToApp />
                   {`Sign In`}
                 </Button>
               </Link>
@@ -52,6 +60,7 @@ class NavBar extends React.Component {
                   color='transparent'
                   aria-label='go to dine with me sing up page'
                 >
+                  <PersonAdd />
                   {`Sign Up`}
                 </Button>
               </Link>
@@ -59,13 +68,11 @@ class NavBar extends React.Component {
             <ListItem className={classes.listItem}>
               <Button
                 href='#pablo'
-                className={classes.notificationNavLink}
-                onClick={(e) => e.preventDefault()}
-                color='rose'
-                justIcon
-                round
+                className={classes.navLink}
+                color='transparent'
+                aria-label='read notifications'
               >
-                <Email />
+                <Notifications />
               </Button>
             </ListItem>
             <ListItem className={classes.listItem}>
@@ -82,8 +89,8 @@ class NavBar extends React.Component {
                   />
                 }
                 buttonProps={{
-                  className:
-                    classes.navLink + ' ' + classes.imageDropdownButton,
+                  style: { marginTop: -10, marginBottom: -10 },
+                  className: classes.navLink,
                   color: 'transparent',
                 }}
                 dropdownList={['Me', 'Settings and other stuff', 'Sign out']}
