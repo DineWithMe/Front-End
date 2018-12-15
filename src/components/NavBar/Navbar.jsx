@@ -38,7 +38,7 @@ const ButtonDropDownStyle = {
 class NavBar extends React.Component {
   componentDidMount() {
     const { router } = this.props
-    router.prefetch('/dynamic')
+    router.prefetch('/profile')
   }
 
   render() {
