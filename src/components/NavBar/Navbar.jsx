@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 import Link from 'next/link'
+import { withRouter } from 'next/router'
+// set component props types
 import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
@@ -34,11 +36,17 @@ const ButtonDropDownStyle = {
 }
 
 class NavBar extends React.Component {
+  componentDidMount() {
+    const { router } = this.props
+    router.prefetch('/dynamic')
+  }
+
   render() {
     // eslint-disable-next-line no-unused-vars
-    const { classes, ...rest } = this.props
+    const { router, classes, ...rest } = this.props
     return (
       <Header
+        {...rest}
         brand={
           <Fragment>
             <LocalDining />
@@ -145,17 +153,21 @@ class NavBar extends React.Component {
                   'aria-label': 'user setting and profile',
                 }}
                 dropdownList={[
-                  <Link href='/profile' prefetch passHref key='user profile'>
-                    <Button
-                      style={ButtonDropDownStyle}
-                      className={classes.navLink}
-                      color='transparent'
-                      aria-label='user profile'
-                    >
-                      <AccountBox />
-                      &#160;&#160;&#160;{`Profile`}
-                    </Button>
-                  </Link>,
+                  // <Link href='/profile' prefetch passHref key='user profile'>
+                  <Button
+                    key='user profile'
+                    style={ButtonDropDownStyle}
+                    className={classes.navLink}
+                    color='transparent'
+                    aria-label='user profile'
+                    onClick={() => {
+                      router.push('/profile')
+                    }}
+                  >
+                    <AccountBox />
+                    &#160;&#160;&#160;{`Profile`}
+                  </Button>,
+                  // </Link>,
                   <Button
                     style={ButtonDropDownStyle}
                     className={classes.navLink}
@@ -200,4 +212,4 @@ NavBar.propTypes = {
   classes: PropTypes.object,
 }
 
-export default withStyles(navbarsStyle)(NavBar)
+export default withRouter(withStyles(navbarsStyle)(NavBar))

@@ -44,6 +44,7 @@ class CustomDropdown extends React.Component {
     if (this.props && this.props.onClick) {
       this.props.onClick(param)
     }
+    param.props.onClick && param.props.onClick()
   }
   render() {
     const { open } = this.state
