@@ -30,8 +30,6 @@ const ButtonDropDownStyle = {
   marginTop: '-12.5%',
   marginBottom: '-12.5%',
   marginLeft: '-20%',
-  // marginRight: '+100%',
-  // paddingRight: '+50%',
   textTransform: 'capitalize',
 }
 
@@ -166,7 +164,7 @@ class NavBar extends React.Component {
                     key='my upcoming dinner'
                   >
                     <Restaurant />
-                    &#160;&#160;&#160;{'Upcoming Dinner'}
+                    &#160;&#160;&#160;{'Upcoming'}
                   </Button>,
                   <Button
                     style={ButtonDropDownStyle}
