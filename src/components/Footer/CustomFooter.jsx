@@ -18,7 +18,7 @@ const CustomFooter = (props) => {
           <div className={classes.left}>
             <List className={classes.list}>
               <ListItem className={classes.inlineBlock}>
-                <a className={classes.block}>{`About us`}</a>
+                <a href='#pablo' className={classes.block}>{`About us`}</a>
               </ListItem>
             </List>
           </div>
