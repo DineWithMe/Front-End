@@ -87,6 +87,7 @@ class NavBar extends React.Component {
             </ListItem>
             <ListItem className={classes.listItem}>
               <CustomDropdown
+                innerStyle={{ marginTop: +10 }}
                 left
                 hoverColor='dark'
                 dropPlacement='bottom'
@@ -97,7 +98,6 @@ class NavBar extends React.Component {
                   </Fragment>
                 }
                 buttonProps={{
-                  style: { marginTop: '-15%', marginBottom: '-15%' },
                   className: classes.navLink,
                   color: 'transparent',
                   'aria-label': 'discover host or guest',

@@ -63,6 +63,7 @@ class CustomDropdown extends React.Component {
       noLiPadding,
       innerDropDown,
       navDropdown,
+      innerStyle,
     } = this.props
     const caretClasses = classNames({
       [classes.caret]: true,
@@ -165,7 +166,7 @@ class CustomDropdown extends React.Component {
                   : { transformOrigin: '0 0 0' }
               }
             >
-              <Paper className={classes.dropdown}>
+              <Paper className={classes.dropdown} style={innerStyle}>
                 {innerDropDown ? (
                   dropDownMenu
                 ) : (
@@ -231,6 +232,7 @@ CustomDropdown.propTypes = {
   navDropdown: PropTypes.bool,
   // This is a function that returns the clicked menu item
   onClick: PropTypes.func,
+  innerStyle: PropTypes.object,
 }
 
 export default withStyles(customDropdownStyle)(CustomDropdown)
