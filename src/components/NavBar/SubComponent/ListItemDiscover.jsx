@@ -11,7 +11,7 @@ import ChatBubbleOutline from '@material-ui/icons/ChatBubbleOutline'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
 // style
-import ButtonDropDownStyle from '../style/ButtonDropDownStyle'
+import { ButtonDropDownStyle } from '../jss/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'

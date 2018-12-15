@@ -5,4 +5,4 @@ const ButtonDropDownStyle = {
   textTransform: 'capitalize',
 }
 
-export default ButtonDropDownStyle
+export { ButtonDropDownStyle }

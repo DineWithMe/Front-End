@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 // next routing
 // import Link from 'next/link'
 import { withRouter } from 'next/router'
+// import material ui width
+import withWidth from '@material-ui/core/withWidth'
 // material ui icons
 import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
@@ -14,7 +16,7 @@ import ListItem from '@material-ui/core/ListItem'
 // image
 import profileImage from '../../../../static/img/faces/avatar.jpg'
 // style
-import ButtonDropDownStyle from '../style/ButtonDropDownStyle'
+import { ButtonDropDownStyle } from '../jss/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'
@@ -26,8 +28,11 @@ class ListItemProfile extends Component {
   }
 
   render() {
-    const { classes, router } = this.props
-
+    const { classes, router, width } = this.props
+    const buttonStyle =
+      width === 'xs' || width === 'sm'
+        ? {}
+        : { marginTop: '-15%', marginBottom: '-15%' }
     return (
       <ListItem className={classes.listItem}>
         <CustomDropdown
@@ -37,7 +42,7 @@ class ListItemProfile extends Component {
             <img src={profileImage} className={classes.img} alt='profile' />
           }
           buttonProps={{
-            style: { marginTop: '-15%', marginBottom: '-15%' },
+            style: buttonStyle,
             className: classes.navLink,
             color: 'transparent',
             'aria-label': 'user setting and profile',
@@ -97,6 +102,7 @@ class ListItemProfile extends Component {
 ListItemProfile.propTypes = {
   classes: PropTypes.object,
   router: PropTypes.object,
+  width: PropTypes.string,
 }
 
-export default withRouter(ListItemProfile)
+export default withRouter(withWidth()(ListItemProfile))
