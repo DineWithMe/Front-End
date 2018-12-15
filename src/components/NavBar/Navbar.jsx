@@ -153,7 +153,6 @@ class NavBar extends React.Component {
                   'aria-label': 'user setting and profile',
                 }}
                 dropdownList={[
-                  // <Link href='/profile' prefetch passHref key='user profile'>
                   <Button
                     key='user profile'
                     style={ButtonDropDownStyle}
@@ -167,7 +166,7 @@ class NavBar extends React.Component {
                     <AccountBox />
                     &#160;&#160;&#160;{`Profile`}
                   </Button>,
-                  // </Link>,
+
                   <Button
                     style={ButtonDropDownStyle}
                     className={classes.navLink}
