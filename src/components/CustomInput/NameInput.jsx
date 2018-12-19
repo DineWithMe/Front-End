@@ -25,18 +25,20 @@ class NameInput extends Component {
     // name must contains only alphabet and number
     // name must be longer than 3 letters
     if (name === '') this.setState({ validation: NEUTRAL, message: '' })
-    else if (
-      !(
-        validator.isAlphanumeric(name) &&
-        validator.isAlpha(name[0]) &&
-        name.length > 2 &&
-        name.length < 21
-      )
-    )
+    else if (!validator.isAlphanumeric(name))
       this.setState({
         validation: FAILED,
-        message:
-          'Name must contains only alphabets and numbers and the length must be within 3 to 20 letters',
+        message: 'Name must contains only alphabets and numbers',
+      })
+    else if (!validator.isAlpha(name[0]))
+      this.setState({
+        validation: FAILED,
+        message: 'Name must start with alphabet',
+      })
+    else if (!(name.length > 2 && name.length < 21))
+      this.setState({
+        validation: FAILED,
+        message: 'the length must be within 3 to 20 letters',
       })
     else {
       this.setState({ validation: LOADING, message: '' })
