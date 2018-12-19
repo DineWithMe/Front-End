@@ -9,9 +9,13 @@ import Icon from '@material-ui/core/Icon'
 import Timeline from '@material-ui/icons/Timeline'
 import Code from '@material-ui/icons/Code'
 import Group from '@material-ui/icons/Group'
-import Face from '@material-ui/icons/Face'
+
 import Email from '@material-ui/icons/Email'
 import Check from '@material-ui/icons/Check'
+// style
+import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
+// image
+import image from '../../../static/img/bg7.jpg'
 // core components
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -22,16 +26,19 @@ import InfoArea from '../../components/InfoArea/InfoArea.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
 import CustomFooter from '../../components/Footer/CustomFooter.jsx'
-
-import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
-
-import image from '../../../static/img/bg7.jpg'
+import SignUpButton from '../../components/CustomButtons/SignUpButton.jsx'
+import NameInput from '../../components/CustomInput/NameInput.jsx'
 
 class Components extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       checked: [1],
+      registrationData: {
+        name: '',
+        email: '',
+        password: '',
+      },
     }
     this.handleToggle = this.handleToggle.bind(this)
   }
@@ -39,7 +46,6 @@ class Components extends React.Component {
     const { checked } = this.state
     const currentIndex = checked.indexOf(value)
     const newChecked = [...checked]
-
     if (currentIndex === -1) {
       newChecked.push(value)
     } else {
@@ -56,6 +62,7 @@ class Components extends React.Component {
   }
   render() {
     const { classes, ...rest } = this.props
+    const { checked, registrationData } = this.state
     return (
       <div>
         <Navbar {...rest} />
@@ -137,24 +144,9 @@ class Components extends React.Component {
                           </h4>
                         </div>
                         <form className={classes.form}>
-                          <CustomInput
-                            formControlProps={{
-                              fullWidth: true,
-                              className: classes.customFormControlClasses,
-                            }}
-                            inputProps={{
-                              startAdornment: (
-                                <InputAdornment
-                                  position='start'
-                                  className={classes.inputAdornment}
-                                >
-                                  <Face
-                                    className={classes.inputAdornmentIcon}
-                                  />
-                                </InputAdornment>
-                              ),
-                              placeholder: 'First Name...',
-                            }}
+                          <NameInput
+                            classes={classes}
+                            registrationData={registrationData}
                           />
                           <CustomInput
                             formControlProps={{
@@ -162,6 +154,11 @@ class Components extends React.Component {
                               className: classes.customFormControlClasses,
                             }}
                             inputProps={{
+                              type: 'email',
+                              autoComplete: 'username',
+                              onChange: (e) => {
+                                registrationData.email = e.target.value
+                              },
                               startAdornment: (
                                 <InputAdornment
                                   position='start'
@@ -181,6 +178,11 @@ class Components extends React.Component {
                               className: classes.customFormControlClasses,
                             }}
                             inputProps={{
+                              autoComplete: 'new-password',
+                              type: 'password',
+                              onChange: (e) => {
+                                registrationData.password = e.target.value
+                              },
                               startAdornment: (
                                 <InputAdornment
                                   position='start'
@@ -226,11 +228,11 @@ class Components extends React.Component {
                               </span>
                             }
                           />
-                          <div className={classes.textCenter}>
-                            <Button round color='primary'>
-                              Get started
-                            </Button>
-                          </div>
+                          <SignUpButton
+                            classes={classes}
+                            registrationData={registrationData}
+                            disabled={checked[0]}
+                          />
                         </form>
                       </GridItem>
                     </GridContainer>
