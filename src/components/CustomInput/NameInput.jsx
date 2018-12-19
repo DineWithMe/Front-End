@@ -23,7 +23,7 @@ class NameInput extends Component {
   validateUserName = async (name, client) => {
     // name must starts with alphabet
     // name must contains only alphabet and number
-    // name must be longer than 3 letters
+    // name must be longer than 3 characters
     if (name === '') this.setState({ validation: NEUTRAL, message: '' })
     else if (!validator.isAlphanumeric(name))
       this.setState({
@@ -38,21 +38,28 @@ class NameInput extends Component {
     else if (!(name.length > 2 && name.length < 21))
       this.setState({
         validation: FAILED,
-        message: 'the length must be within 3 to 20 letters',
+        message: 'the length must be within 3 to 20 characters',
       })
     else {
       this.setState({ validation: LOADING, message: '' })
       // name must not be duplicate
-      const { data } = await client.query({
-        query: userExist,
-        variables: { query: name },
-      })
-      if (data.userExist !== null)
+      try {
+        const { data } = await client.query({
+          query: userExist,
+          variables: { query: name },
+        })
+        if (data.userExist !== null)
+          this.setState({
+            validation: FAILED,
+            message: 'username already exists',
+          })
+        else this.setState({ validation: PASSED, message: '' })
+      } catch (err) {
         this.setState({
           validation: FAILED,
-          message: 'username already exists',
+          message: err.message.split('GraphQL error:'),
         })
-      else this.setState({ validation: PASSED, message: '' })
+      }
     }
   }
   render() {

@@ -20,7 +20,7 @@ class PasswordInput extends Component {
     else if (!(password.length > 7 && password.length < 65))
       this.setState({
         validation: FAILED,
-        message: 'Password length must be at least 8 letters',
+        message: 'Password length must be at least 8 characters',
       })
     else this.setState({ validation: PASSED, message: '' })
   }
