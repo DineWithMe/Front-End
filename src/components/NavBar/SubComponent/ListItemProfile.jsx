@@ -16,7 +16,7 @@ import ListItem from '@material-ui/core/ListItem'
 // image
 import profileImage from '../../../../static/img/faces/avatar.jpg'
 // style
-import { ButtonDropDownStyle } from '../jss/styles'
+import { ButtonDropDownStyle } from '../style/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'

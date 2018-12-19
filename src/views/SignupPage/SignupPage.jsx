@@ -1,16 +1,12 @@
 import React from 'react'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
-import InputAdornment from '@material-ui/core/InputAdornment'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Icon from '@material-ui/core/Icon'
 // @material-ui/icons
 import Timeline from '@material-ui/icons/Timeline'
 import Code from '@material-ui/icons/Code'
 import Group from '@material-ui/icons/Group'
-
-import Email from '@material-ui/icons/Email'
 import Check from '@material-ui/icons/Check'
 // style
 import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
@@ -23,22 +19,21 @@ import Button from '../../components/CustomButtons/Button.jsx'
 import Card from '../../components/Card/Card.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
 import InfoArea from '../../components/InfoArea/InfoArea.jsx'
-import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
 import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 import SignUpButton from '../../components/CustomButtons/SignUpButton.jsx'
 import NameInput from '../../components/CustomInput/NameInput.jsx'
+import EmailInput from '../../components/CustomInput/EmailInput.jsx'
+import PasswordInput from '../../components/CustomInput/PasswordInput.jsx'
 
 class Components extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       checked: [1],
-      registrationData: {
-        name: '',
-        email: '',
-        password: '',
-      },
+      name: '',
+      email: '',
+      password: '',
     }
     this.handleToggle = this.handleToggle.bind(this)
   }
@@ -60,9 +55,18 @@ class Components extends React.Component {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
+  updateEmail = (email) => {
+    this.setState({ email: email })
+  }
+  updateName = (name) => {
+    this.setState({ name: name })
+  }
+  updatePassword = (password) => {
+    this.setState({ password: password })
+  }
   render() {
     const { classes, ...rest } = this.props
-    const { checked, registrationData } = this.state
+    const { checked, name, email, password } = this.state
     return (
       <div>
         <Navbar {...rest} />
@@ -146,55 +150,15 @@ class Components extends React.Component {
                         <form className={classes.form}>
                           <NameInput
                             classes={classes}
-                            registrationData={registrationData}
+                            updateName={this.updateName}
                           />
-                          <CustomInput
-                            formControlProps={{
-                              fullWidth: true,
-                              className: classes.customFormControlClasses,
-                            }}
-                            inputProps={{
-                              type: 'email',
-                              autoComplete: 'username',
-                              onChange: (e) => {
-                                registrationData.email = e.target.value
-                              },
-                              startAdornment: (
-                                <InputAdornment
-                                  position='start'
-                                  className={classes.inputAdornment}
-                                >
-                                  <Email
-                                    className={classes.inputAdornmentIcon}
-                                  />
-                                </InputAdornment>
-                              ),
-                              placeholder: 'Email...',
-                            }}
+                          <EmailInput
+                            classes={classes}
+                            updateEmail={this.updateEmail}
                           />
-                          <CustomInput
-                            formControlProps={{
-                              fullWidth: true,
-                              className: classes.customFormControlClasses,
-                            }}
-                            inputProps={{
-                              autoComplete: 'new-password',
-                              type: 'password',
-                              onChange: (e) => {
-                                registrationData.password = e.target.value
-                              },
-                              startAdornment: (
-                                <InputAdornment
-                                  position='start'
-                                  className={classes.inputAdornment}
-                                >
-                                  <Icon className={classes.inputAdornmentIcon}>
-                                    lock_outline
-                                  </Icon>
-                                </InputAdornment>
-                              ),
-                              placeholder: 'Password...',
-                            }}
+                          <PasswordInput
+                            classes={classes}
+                            updatePassword={this.updatePassword}
                           />
                           <FormControlLabel
                             classes={{
@@ -230,7 +194,9 @@ class Components extends React.Component {
                           />
                           <SignUpButton
                             classes={classes}
-                            registrationData={registrationData}
+                            name={name}
+                            email={email}
+                            password={password}
                             disabled={checked[0]}
                           />
                         </form>

@@ -1,11 +1,17 @@
 import { gql } from 'apollo-boost'
 
-const searchUser = gql`
+const userExist = gql`
   query($query: String) {
-    users(query: $query) {
+    userExist(query: $query) {
       name
-      email
     }
   }
 `
-export { searchUser }
+const emailExist = gql`
+  query($query: String) {
+    emailExist(query: $query) {
+      name
+    }
+  }
+`
+export { userExist, emailExist }
