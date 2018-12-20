@@ -61,7 +61,10 @@ class UsernameInput extends Component {
           updateState(PASSED, 'username is available')
         }
       } catch (err) {
-        updateState(ERROR, err.message.split(':')[1])
+        updateState(
+          ERROR,
+          (err.message && (err.message.split(':')[1] || err.message)) || err
+        )
       }
     }
   }

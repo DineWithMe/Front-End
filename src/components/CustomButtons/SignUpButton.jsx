@@ -11,20 +11,19 @@ import { Mutation } from 'react-apollo'
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
 
+const initialState = {
+  neutral: false,
+  pass: false,
+  failed: false,
+  error: false,
+  resError: false,
+  message: undefined,
+}
+
 class SignUpButton extends Component {
-  state = {
-    neutral: false,
-  }
-
-  render() {
-    const {
-      props: { enabled, classes, registrationData },
-      state: { neutral },
-    } = this
-
-    let message = ''
-
-    const pass =
+  state = initialState
+  updateMessage = (registrationData, createUser) => {
+    const passed =
       registrationData.username.flag === PASSED &&
       registrationData.email.flag === PASSED &&
       registrationData.password.flag === PASSED
@@ -39,14 +38,66 @@ class SignUpButton extends Component {
       registrationData.email.flag === ERROR ||
       registrationData.password.flag === ERROR
 
-    const dNeutral =
+    const neutral =
       registrationData.username.flag === NEUTRAL ||
       registrationData.email.flag === NEUTRAL ||
       registrationData.password.flag === NEUTRAL
 
-    if (error) message = 'network error occurred'
-    else if (failed) message = '🔴please fix all the required field(s)🔴'
-    else if (dNeutral) message = '🔷please fill in the empty field(s)🔷'
+    if (error)
+      this.setState({
+        ...initialState,
+        error,
+        message: '❗️error occurred in field(s)❗️',
+      })
+    else if (failed) {
+      this.setState({
+        ...initialState,
+        failed,
+        message: '🔴please fix all the required field(s)🔴',
+      })
+    } else if (neutral)
+      this.setState({
+        ...initialState,
+        neutral,
+        message: '🔷please fill in the empty field(s)🔷',
+      })
+    else if (passed) {
+      createUser({
+        variables: {
+          data: {
+            name: registrationData.username.value,
+            username: registrationData.username.value,
+            email: registrationData.email.value,
+            password: registrationData.password.value,
+          },
+        },
+      })
+        .then(() => {
+          this.setState({
+            ...initialState,
+            passed,
+            message: '🍑Sign Up Success!🍑',
+          })
+        })
+        .catch((err) => {
+          this.setState({
+            ...initialState,
+            resError: true,
+            message: `❗️${(err.message &&
+              ((err.message && (err.message.split(':')[1] || err.message)) ||
+                err)) ||
+              err}❗️`,
+          })
+        })
+    }
+  }
+
+  render() {
+    const {
+      props: { enabled, classes, registrationData },
+      state: { neutral, failed, error, resError, message },
+      updateMessage,
+    } = this
 
     return (
       <Mutation mutation={createUser}>
@@ -59,25 +110,12 @@ class SignUpButton extends Component {
                 disabled={!enabled}
                 onClick={(e) => {
                   e.preventDefault()
-                  if (!error && !failed && dNeutral) {
-                    this.setState({ neutral: true })
-                  }
-                  pass &&
-                    createUser({
-                      variables: {
-                        data: {
-                          name: registrationData.username.value,
-                          username: registrationData.username.value,
-                          email: registrationData.email.value,
-                          password: registrationData.password.value,
-                        },
-                      },
-                    })
+                  updateMessage(registrationData, createUser)
                 }}
               >
-                Get started
+                Sign Up!
               </Button>
-              {(failed || error || neutral) && (
+              {(failed || error || neutral || resError) && (
                 <ValidationMessage classes={classes} message={message} />
               )}
             </div>
