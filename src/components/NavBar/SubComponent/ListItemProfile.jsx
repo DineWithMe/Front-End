@@ -16,7 +16,7 @@ import ListItem from '@material-ui/core/ListItem'
 // image
 import profileImage from '../../../../static/img/faces/avatar.jpg'
 // style
-import { ButtonDropDownStyle } from '../style/styles'
+import { buttonDropDownStyle } from '../style/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'
@@ -50,7 +50,7 @@ class ListItemProfile extends Component {
           dropdownList={[
             <Button
               key='user profile'
-              style={ButtonDropDownStyle}
+              style={buttonDropDownStyle}
               className={classes.navLink}
               color='transparent'
               aria-label='user profile'
@@ -63,7 +63,7 @@ class ListItemProfile extends Component {
             </Button>,
 
             <Button
-              style={ButtonDropDownStyle}
+              style={buttonDropDownStyle}
               className={classes.navLink}
               color='transparent'
               aria-label='my upcoming dinner'
@@ -73,7 +73,7 @@ class ListItemProfile extends Component {
               &#160;&#160;&#160;{'Upcoming'}
             </Button>,
             <Button
-              style={ButtonDropDownStyle}
+              style={buttonDropDownStyle}
               className={classes.navLink}
               color='transparent'
               aria-label='user settings'
@@ -83,7 +83,7 @@ class ListItemProfile extends Component {
               &#160;&#160;&#160;{'Setting'}
             </Button>,
             <Button
-              style={ButtonDropDownStyle}
+              style={buttonDropDownStyle}
               className={classes.navLink}
               color='transparent'
               aria-label='user sign out'

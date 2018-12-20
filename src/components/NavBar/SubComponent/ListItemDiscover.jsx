@@ -11,7 +11,7 @@ import ChatBubbleOutline from '@material-ui/icons/ChatBubbleOutline'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
 // style
-import { ButtonDropDownStyle } from '../style/styles'
+import { buttonDropDownStyle } from '../style/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'
@@ -44,7 +44,7 @@ class ListItemDiscover extends Component {
           }}
           dropdownList={[
             <Button
-              style={ButtonDropDownStyle}
+              style={buttonDropDownStyle}
               className={classes.navLink}
               color='transparent'
               aria-label='discover host'
@@ -54,7 +54,7 @@ class ListItemDiscover extends Component {
               &#160;&#160;&#160;{'guest'}
             </Button>,
             <Button
-              style={ButtonDropDownStyle}
+              style={buttonDropDownStyle}
               className={classes.navLink}
               color='transparent'
               aria-label='discover host'

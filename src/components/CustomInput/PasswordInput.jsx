@@ -1,6 +1,12 @@
 import { Component, Fragment } from 'react'
 // constants
-import { FAILED, PASSED, NEUTRAL, LOADING } from './utils/constants'
+import {
+  FAILED,
+  PASSED,
+  NEUTRAL,
+  LOADING,
+  PASSWORD,
+} from '../../utils/constants'
 // type react properties
 import PropTypes from 'prop-types'
 // material ui icon
@@ -8,34 +14,41 @@ import LockOutlined from '@material-ui/icons/LockOutlined'
 // material ui components
 import InputAdornment from '@material-ui/core/InputAdornment'
 import CircularProgress from '@material-ui/core/CircularProgress'
+// styles
+import { validationMessageStyle } from './style/styles'
 // core components
 import CustomInput from './CustomInput.jsx'
+import ValidationMessage from '../CustomText/ValidationMessage.jsx'
 
 class PasswordInput extends Component {
-  state = { validation: NEUTRAL, message: '' }
+  state = { flag: NEUTRAL, message: '' }
 
-  validateUserPassword = (password) => {
+  validateUserPassword = (password, updateRegistrationData) => {
+    const updateState = (flag, message) => {
+      this.setState({ flag, message })
+      updateRegistrationData(PASSWORD, password, flag)
+    }
     // password must be within 8 to 64 character
-    if (password === '') this.setState({ validation: NEUTRAL, message: '' })
-    else if (!(password.length > 7 && password.length < 65))
-      this.setState({
-        validation: FAILED,
-        message: 'Password length must be at least 8 characters',
-      })
-    else this.setState({ validation: PASSED, message: '' })
+    if (password === '') {
+      updateState(NEUTRAL, '')
+    } else if (!(password.length > 7 && password.length < 65)) {
+      updateState(FAILED, 'Password length must be at least 8 characters')
+    } else {
+      updateState(PASSED, '')
+    }
   }
 
   render() {
     const {
       validateUserPassword,
-      props: { classes, updatePassword },
-      state: { validation, message },
+      props: { classes, updateRegistrationData },
+      state: { flag, message },
     } = this
     return (
       <Fragment>
         <CustomInput
-          error={validation === FAILED}
-          success={validation === PASSED}
+          error={flag === FAILED}
+          success={flag === PASSED}
           formControlProps={{
             fullWidth: true,
             className: classes.customFormControlClasses,
@@ -44,13 +57,10 @@ class PasswordInput extends Component {
             autoComplete: 'new-password',
             type: 'password',
             onFocus: () => {
-              this.setState({ validation: NEUTRAL, message: '' })
+              this.setState({ flag: NEUTRAL, message: '' })
             },
             onBlur: (e) => {
-              validateUserPassword(e.target.value)
-            },
-            onChange: (e) => {
-              updatePassword(e.target.value)
+              validateUserPassword(e.target.value, updateRegistrationData)
             },
             startAdornment: (
               <InputAdornment
@@ -60,7 +70,7 @@ class PasswordInput extends Component {
                 <LockOutlined className={classes.inputAdornmentIcon} />
               </InputAdornment>
             ),
-            endAdornment: validation === LOADING && (
+            endAdornment: flag === LOADING && (
               <InputAdornment position='end' className={classes.inputAdornment}>
                 <CircularProgress
                   variant='indeterminate'
@@ -73,13 +83,12 @@ class PasswordInput extends Component {
             placeholder: 'Password...',
           }}
         />
-        {validation === FAILED && (
-          <p
-            className={classes.textCenter}
-            style={{ color: '#999', marginTop: '-5%', fontSize: '12px' }}
-          >
-            {message}
-          </p>
+        {flag === FAILED && (
+          <ValidationMessage
+            classes={classes}
+            message={message}
+            style={validationMessageStyle}
+          />
         )}
       </Fragment>
     )
@@ -90,7 +99,7 @@ PasswordInput.propTypes = {
   classes: PropTypes.object,
   registrationData: PropTypes.object,
   disabled: PropTypes.number,
-  updatePassword: PropTypes.func,
+  updateRegistrationData: PropTypes.func,
 }
 
 export default PasswordInput

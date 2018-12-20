@@ -1,6 +1,6 @@
 import { Component, Fragment } from 'react'
 // graphql query constant
-import { emailExist } from '../../utils/queryConstant.js'
+import { userExist } from '../../utils/queryConstant.js'
 // Apollo client
 import { ApolloConsumer } from 'react-apollo'
 // constants
@@ -10,49 +10,55 @@ import {
   NEUTRAL,
   LOADING,
   ERROR,
-  EMAIL,
+  USERNAME,
 } from '../../utils/constants'
 // type react properties
 import PropTypes from 'prop-types'
-// validator
+// string validator
 import validator from 'validator'
 // material ui icon
-import Email from '@material-ui/icons/Email'
+import Face from '@material-ui/icons/Face'
 // material ui components
 import InputAdornment from '@material-ui/core/InputAdornment'
 import CircularProgress from '@material-ui/core/CircularProgress'
 // styles
 import { validationMessageStyle } from './style/styles'
 // core components
-import CustomInput from '../../components/CustomInput/CustomInput.jsx'
+import CustomInput from './CustomInput.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
 
-class EmailInput extends Component {
+class UsernameInput extends Component {
   state = { flag: NEUTRAL, message: '' }
 
-  validateUserEmail = async (email, updateRegistrationData, client) => {
+  validateUserName = async (username, updateRegistrationData, client) => {
     const updateState = (flag, message) => {
       this.setState({ flag, message })
-      updateRegistrationData(EMAIL, email, flag)
+      updateRegistrationData(USERNAME, username, flag)
     }
-    // check if email is valid and exists
-    if (email === '') {
+    // username must starts with alphabet
+    // username must contains only alphabet and number
+    // username must be longer than 3 characters
+    if (username === '') {
       updateState(NEUTRAL, '')
-    } else if (!validator.isEmail(email) || email.length > 254) {
-      updateState(FAILED, 'invalid email')
+    } else if (!validator.isAlphanumeric(username)) {
+      updateState(FAILED, 'Name must contains only alphabets and numbers')
+    } else if (!validator.isAlpha(username[0])) {
+      updateState(FAILED, 'Name must start with alphabet')
+    } else if (!(username.length > 2 && username.length < 21)) {
+      updateState(FAILED, 'the length must be within 3 to 20 characters')
     } else {
       // loading
       updateState(LOADING, '')
-      // email must not be duplicate
+      // username must not be duplicate
       try {
-        const res = await client.query({
-          query: emailExist,
-          variables: { query: email },
+        const { data } = await client.query({
+          query: userExist,
+          variables: { query: username },
         })
-        if (res.data.emailExist !== null) {
-          updateState(FAILED, 'email already taken')
+        if (data.userExist !== null) {
+          updateState(FAILED, 'username already taken')
         } else {
-          updateState(PASSED, 'valid email')
+          updateState(PASSED, 'username is available')
         }
       } catch (err) {
         updateState(ERROR, err.message.split(':')[1])
@@ -61,7 +67,7 @@ class EmailInput extends Component {
   }
   render() {
     const {
-      validateUserEmail,
+      validateUserName,
       props: { classes, updateRegistrationData },
       state: { flag, message },
     } = this
@@ -78,13 +84,11 @@ class EmailInput extends Component {
                 className: classes.customFormControlClasses,
               }}
               inputProps={{
-                type: 'email',
-                autoComplete: 'username',
                 onFocus: () => {
                   this.setState({ flag: NEUTRAL, message: '' })
                 },
                 onBlur: (e) => {
-                  validateUserEmail(
+                  validateUserName(
                     e.target.value.toLowerCase(),
                     updateRegistrationData,
                     client
@@ -95,7 +99,7 @@ class EmailInput extends Component {
                     position='start'
                     className={classes.inputAdornment}
                   >
-                    <Email className={classes.inputAdornmentIcon} />
+                    <Face className={classes.inputAdornmentIcon} />
                   </InputAdornment>
                 ),
                 endAdornment: flag === LOADING && (
@@ -111,7 +115,7 @@ class EmailInput extends Component {
                     />
                   </InputAdornment>
                 ),
-                placeholder: 'Email...',
+                placeholder: 'Username...',
               }}
             />
             {error && (
@@ -128,11 +132,11 @@ class EmailInput extends Component {
   }
 }
 
-EmailInput.propTypes = {
+UsernameInput.propTypes = {
   classes: PropTypes.object,
   registrationData: PropTypes.object,
   disabled: PropTypes.number,
   updateRegistrationData: PropTypes.func,
 }
 
-export default EmailInput
+export default UsernameInput

@@ -10,6 +10,8 @@ import Group from '@material-ui/icons/Group'
 import Check from '@material-ui/icons/Check'
 // style
 import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
+// constant
+import { USERNAME, EMAIL, PASSWORD, NEUTRAL } from '../../utils/constants'
 // image
 import image from '../../../static/img/bg7.jpg'
 // core components
@@ -22,7 +24,7 @@ import InfoArea from '../../components/InfoArea/InfoArea.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
 import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 import SignUpButton from '../../components/CustomButtons/SignUpButton.jsx'
-import NameInput from '../../components/CustomInput/NameInput.jsx'
+import UsernameInput from '../../components/CustomInput/UsernameInput.jsx'
 import EmailInput from '../../components/CustomInput/EmailInput.jsx'
 import PasswordInput from '../../components/CustomInput/PasswordInput.jsx'
 
@@ -31,9 +33,11 @@ class Components extends React.Component {
     super(props)
     this.state = {
       checked: [1],
-      name: '',
-      email: '',
-      password: '',
+      registrationData: {
+        [USERNAME]: { value: '', flag: NEUTRAL },
+        [EMAIL]: { value: '', flag: NEUTRAL },
+        [PASSWORD]: { value: '', flag: NEUTRAL },
+      },
     }
     this.handleToggle = this.handleToggle.bind(this)
   }
@@ -55,18 +59,23 @@ class Components extends React.Component {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
-  updateEmail = (email) => {
-    this.setState({ email: email })
+
+  updateRegistrationData = (property, value, flag) => {
+    this.setState(
+      {
+        registrationData: {
+          ...this.state.registrationData,
+          [property]: { value, flag },
+        },
+      }
+      // another way to write it https://stackoverflow.com/questions/43040721/how-to-update-nested-state-properties-in-react
+      // (state) => ((state.registrationData[property] = { value, flag }), state)
+    )
   }
-  updateName = (name) => {
-    this.setState({ name: name })
-  }
-  updatePassword = (password) => {
-    this.setState({ password: password })
-  }
+
   render() {
     const { classes, ...rest } = this.props
-    const { checked, name, email, password } = this.state
+    const { checked, registrationData } = this.state
     return (
       <div>
         <Navbar {...rest} />
@@ -148,17 +157,17 @@ class Components extends React.Component {
                           </h4>
                         </div>
                         <form className={classes.form}>
-                          <NameInput
+                          <UsernameInput
                             classes={classes}
-                            updateName={this.updateName}
+                            updateRegistrationData={this.updateRegistrationData}
                           />
                           <EmailInput
                             classes={classes}
-                            updateEmail={this.updateEmail}
+                            updateRegistrationData={this.updateRegistrationData}
                           />
                           <PasswordInput
                             classes={classes}
-                            updatePassword={this.updatePassword}
+                            updateRegistrationData={this.updateRegistrationData}
                           />
                           <FormControlLabel
                             classes={{
@@ -194,10 +203,8 @@ class Components extends React.Component {
                           />
                           <SignUpButton
                             classes={classes}
-                            name={name}
-                            email={email}
-                            password={password}
-                            disabled={checked[0]}
+                            registrationData={registrationData}
+                            enabled={checked[0]}
                           />
                         </form>
                       </GridItem>
