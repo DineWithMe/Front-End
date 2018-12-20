@@ -1,4 +1,6 @@
 import React from 'react'
+// type react properties
+import PropTypes from 'prop-types'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -9,10 +11,8 @@ import GridItem from '../../components/Grid/GridItem.jsx'
 import Button from '../../components/CustomButtons/Button.jsx'
 import Parallax from '../../components/Parallax/Parallax.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
-
 // style
 import landingPageStyle from '../../jss/material-kit-pro-react/views/landingPageStyle.jsx'
-
 // Sections for this page
 import SectionProduct from './Sections/SectionProduct.jsx'
 import SectionTeam from './Sections/SectionTeam.jsx'
@@ -25,7 +25,7 @@ class LandingPage extends React.Component {
     document.body.scrollTop = 0
   }
   render() {
-    const { classes, ...rest } = this.props
+    const { classes } = this.props
     return (
       <div>
         <Navbar />
@@ -66,6 +66,9 @@ class LandingPage extends React.Component {
       </div>
     )
   }
+}
+LandingPage.propTypes = {
+  classes: PropTypes.object,
 }
 
 export default withStyles(landingPageStyle)(LandingPage)
