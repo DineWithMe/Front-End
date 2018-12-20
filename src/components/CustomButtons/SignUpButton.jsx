@@ -53,13 +53,13 @@ class SignUpButton extends Component {
       this.setState({
         ...initialState,
         failed,
-        message: '🔴please fix all the required field(s)🔴',
+        message: '🔴Please correct required field(s)🔴',
       })
     } else if (neutral)
       this.setState({
         ...initialState,
         neutral,
-        message: '🔷please fill in the empty field(s)🔷',
+        message: '🔷Please fill in the empty field(s)🔷',
       })
     else if (passed) {
       createUser({
@@ -76,7 +76,7 @@ class SignUpButton extends Component {
           this.setState({
             ...initialState,
             passed,
-            message: '🍑Sign Up Success!🍑',
+            message: '🍑You have successfully signed up!🍑',
           })
         })
         .catch((err) => {
@@ -95,7 +95,7 @@ class SignUpButton extends Component {
   render() {
     const {
       props: { enabled, classes, registrationData },
-      state: { neutral, failed, error, resError, message },
+      state: { message },
       updateMessage,
     } = this
 
@@ -115,9 +115,7 @@ class SignUpButton extends Component {
               >
                 Sign Up!
               </Button>
-              {(failed || error || neutral || resError) && (
-                <ValidationMessage classes={classes} message={message} />
-              )}
+              {<ValidationMessage classes={classes} message={message} />}
             </div>
           )
         }}
