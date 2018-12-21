@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import getConfig from 'next/config'
 // type react properties
 import PropTypes from 'prop-types'
 // constants
@@ -7,9 +8,14 @@ import { FAILED, PASSED, ERROR, NEUTRAL } from '../../utils/constants'
 import { createUser } from '../../utils/mutationConstants'
 // mutation component
 import { Mutation } from 'react-apollo'
+// styles
+import 'tachyons'
 //core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
+import Reaptcha from 'reaptcha'
+
+const { publicRuntimeConfig } = getConfig()
 
 const initialState = {
   neutral: false,
@@ -18,10 +24,21 @@ const initialState = {
   error: false,
   resError: false,
   message: undefined,
+  verified: false,
 }
 
 class SignUpButton extends Component {
   state = initialState
+
+  onVerify = () => {
+    this.setState({
+      verified: true,
+      message: '🐱Captcha verification successful!🐱',
+    })
+  }
+  onLoad = () => {
+    this.captcha.renderExplicitly()
+  }
   updateMessage = (registrationData, createUser) => {
     const passed =
       registrationData.username.flag === PASSED &&
@@ -95,8 +112,10 @@ class SignUpButton extends Component {
   render() {
     const {
       props: { enabled, classes, registrationData },
-      state: { message },
+      state: { message, verified },
       updateMessage,
+      onVerify,
+      onLoad,
     } = this
 
     return (
@@ -104,17 +123,28 @@ class SignUpButton extends Component {
         {(createUser) => {
           return (
             <div className={classes.textCenter}>
-              <Button
-                round
-                color='primary'
-                disabled={!enabled}
-                onClick={(e) => {
-                  e.preventDefault()
-                  updateMessage(registrationData, createUser)
-                }}
-              >
-                Sign Up!
-              </Button>
+              {verified ? (
+                <Button
+                  round
+                  color='primary'
+                  disabled={!enabled}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    updateMessage(registrationData, createUser)
+                  }}
+                >
+                  Sign Up!
+                </Button>
+              ) : (
+                <Reaptcha
+                  ref={(e) => (this.captcha = e)}
+                  sitekey={publicRuntimeConfig.recaptcha_apiKey}
+                  onVerify={onVerify}
+                  onLoad={onLoad}
+                  explicit
+                  theme='dark'
+                />
+              )}
               {<ValidationMessage classes={classes} message={message} />}
             </div>
           )
