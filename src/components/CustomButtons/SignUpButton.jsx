@@ -9,7 +9,6 @@ import { createUser } from '../../utils/mutationConstants'
 // mutation component
 import { Mutation } from 'react-apollo'
 // styles
-import 'tachyons'
 //core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
