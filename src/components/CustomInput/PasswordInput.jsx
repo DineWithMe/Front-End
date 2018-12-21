@@ -31,7 +31,7 @@ class PasswordInput extends Component {
     // password must be within 8 to 64 character
     if (password === '') {
       updateState(NEUTRAL, '')
-    } else if (!(password.length > 7 && password.length < 65)) {
+    } else if (!(password.length > 7 && password.length < 1025)) {
       updateState(FAILED, 'Password length must be at least 8 characters')
     } else {
       updateState(PASSED, '')
