@@ -56,7 +56,7 @@ class UsernameInput extends Component {
           variables: { query: username },
         })
         if (data.userExist !== null) {
-          updateState(FAILED, 'username already taken')
+          updateState(FAILED, 'username is already taken')
         } else {
           updateState(PASSED, 'username is available')
         }

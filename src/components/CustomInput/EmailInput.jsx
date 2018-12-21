@@ -39,7 +39,7 @@ class EmailInput extends Component {
     if (email === '') {
       updateState(NEUTRAL, '')
     } else if (!validator.isEmail(email) || email.length > 254) {
-      updateState(FAILED, 'invalid email')
+      updateState(FAILED, 'invalid email format')
     } else {
       // loading
       updateState(LOADING, '')
@@ -50,7 +50,7 @@ class EmailInput extends Component {
           variables: { query: email },
         })
         if (res.data.emailExist !== null) {
-          updateState(FAILED, 'email already taken')
+          updateState(FAILED, 'email is already taken')
         } else {
           updateState(PASSED, 'valid email')
         }
