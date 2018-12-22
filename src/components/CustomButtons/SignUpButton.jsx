@@ -8,7 +8,8 @@ import { FAILED, PASSED, ERROR, NEUTRAL } from '../../utils/constants'
 import { createUser } from '../../utils/mutationConstants'
 // mutation component
 import { Mutation } from 'react-apollo'
-// styles
+// fetch
+import request from 'superagent'
 //core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
@@ -16,18 +17,8 @@ import Reaptcha from 'reaptcha'
 
 const { publicRuntimeConfig } = getConfig()
 
-const initialState = {
-  neutral: false,
-  pass: false,
-  failed: false,
-  error: false,
-  resError: false,
-  message: undefined,
-  verified: false,
-}
-
 class SignUpButton extends Component {
-  state = initialState
+  state = { message: undefined, verified: false }
 
   onVerify = () => {
     this.setState({
@@ -38,7 +29,7 @@ class SignUpButton extends Component {
   onLoad = () => {
     this.captcha.renderExplicitly()
   }
-  updateMessage = (registrationData, createUser) => {
+  updateMessage = async (registrationData, createUser) => {
     const passed =
       registrationData.username.flag === PASSED &&
       registrationData.email.flag === PASSED &&
@@ -61,24 +52,18 @@ class SignUpButton extends Component {
 
     if (error)
       this.setState({
-        ...initialState,
-        error,
         message: '❗️error occurred in field(s)❗️',
       })
     else if (failed) {
       this.setState({
-        ...initialState,
-        failed,
-        message: '🔴Please correct required field(s)🔴',
+        message: '🔴Please correct the required field(s)🔴',
       })
     } else if (neutral)
       this.setState({
-        ...initialState,
-        neutral,
         message: '🔷Please fill in the empty field(s)🔷',
       })
     else if (passed) {
-      createUser({
+      await createUser({
         variables: {
           data: {
             name: registrationData.username.value,
@@ -88,17 +73,13 @@ class SignUpButton extends Component {
           },
         },
       })
-        .then(() => {
+        .then(async () => {
           this.setState({
-            ...initialState,
-            passed,
             message: '🍑You have successfully signed up!🍑',
           })
         })
         .catch((err) => {
           this.setState({
-            ...initialState,
-            resError: true,
             message: `❗️${(err.message &&
               ((err.message && (err.message.split(':')[1] || err.message)) ||
                 err)) ||

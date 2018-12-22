@@ -8,6 +8,7 @@ build/
 
 # misc
 .DS_Store
+experiment.js
 
 # environment
 .config/dev.env
