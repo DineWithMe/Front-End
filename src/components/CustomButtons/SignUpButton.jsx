@@ -8,8 +8,6 @@ import { FAILED, PASSED, ERROR, NEUTRAL } from '../../utils/constants'
 import { createUser } from '../../utils/mutationConstants'
 // mutation component
 import { Mutation } from 'react-apollo'
-// fetch
-import request from 'superagent'
 //core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
