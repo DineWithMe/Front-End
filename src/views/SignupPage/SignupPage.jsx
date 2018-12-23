@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Checkbox from '@material-ui/core/Checkbox'
@@ -10,6 +10,7 @@ import Group from '@material-ui/icons/Group'
 import Check from '@material-ui/icons/Check'
 // style
 import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
+import styles from '../../jss/material-kit-pro-react/views/componentsSections/preFooter.jsx'
 // constant
 import { USERNAME, EMAIL, PASSWORD, NEUTRAL } from '../../utils/constants'
 // image
@@ -38,6 +39,7 @@ class Components extends React.Component {
         [EMAIL]: { value: '', flag: NEUTRAL },
         [PASSWORD]: { value: '', flag: NEUTRAL },
       },
+      flag: false,
     }
     this.handleToggle = this.handleToggle.bind(this)
   }
@@ -59,7 +61,9 @@ class Components extends React.Component {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
-
+  onSignUpSuccess = () => {
+    this.setState({ flag: true })
+  }
   updateRegistrationData = (property, value, flag) => {
     this.setState(
       {
@@ -74,10 +78,15 @@ class Components extends React.Component {
   }
 
   render() {
-    const { classes, ...rest } = this.props
-    const { checked, registrationData } = this.state
+    const {
+      props: { classes, ...rest },
+      state: { checked, registrationData, flag },
+      onSignUpSuccess,
+      handleToggle,
+      updateRegistrationData,
+    } = this
     return (
-      <div>
+      <Fragment>
         <Navbar {...rest} />
         <div
           className={classes.pageHeader}
@@ -91,132 +100,184 @@ class Components extends React.Component {
             <GridContainer justify='center'>
               <GridItem xs={12} sm={10} md={10}>
                 <Card className={classes.cardSignup}>
-                  <h2 className={classes.cardTitle}>Register</h2>
-                  <CardBody>
-                    <GridContainer justify='center'>
-                      <GridItem xs={12} sm={5} md={5}>
-                        <InfoArea
-                          className={classes.infoArea}
-                          title='Marketing'
-                          description="We've created the marketing campaign of the website. It was a very interesting collaboration."
-                          icon={Timeline}
-                          iconColor='rose'
-                        />
-                        <InfoArea
-                          className={classes.infoArea}
-                          title='Fully Coded in HTML5'
-                          description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
-                          icon={Code}
-                          iconColor='primary'
-                        />
-                        <InfoArea
-                          className={classes.infoArea}
-                          title='Built Audience'
-                          description='There is also a Fully Customizable CMS Admin Dashboard for this product.'
-                          icon={Group}
-                          iconColor='info'
-                        />
-                      </GridItem>
-                      <GridItem xs={12} sm={5} md={5}>
-                        <div className={classes.textCenter}>
-                          <Button
-                            justIcon
-                            round
-                            color='twitter'
-                            aria-label='sign up with Twitter'
-                          >
-                            <i
-                              className={classes.socials + ' fab fa-twitter'}
-                            />
-                          </Button>
-                          {` `}
-                          <Button
-                            justIcon
-                            round
-                            color='dribbble'
-                            aria-label='sign up with dribble'
-                          >
-                            <i
-                              className={classes.socials + ' fab fa-dribbble'}
-                            />
-                          </Button>
-                          {` `}
-                          <Button
-                            justIcon
-                            round
-                            color='facebook'
-                            aria-label='sign up with facebook'
-                          >
-                            <i
-                              className={classes.socials + ' fab fa-facebook-f'}
-                            />
-                          </Button>
-                          {` `}
-                          <h4 className={classes.socialTitle}>
-                            or be classical
-                          </h4>
-                        </div>
-                        <form className={classes.form}>
-                          <UsernameInput
-                            classes={classes}
-                            updateRegistrationData={this.updateRegistrationData}
-                          />
-                          <EmailInput
-                            classes={classes}
-                            updateRegistrationData={this.updateRegistrationData}
-                          />
-                          <PasswordInput
-                            classes={classes}
-                            updateRegistrationData={this.updateRegistrationData}
-                          />
-                          <FormControlLabel
-                            classes={{
-                              label: classes.label,
-                            }}
-                            control={
-                              <Checkbox
-                                tabIndex={-1}
-                                onClick={() => this.handleToggle(1)}
-                                checkedIcon={
-                                  <Check className={classes.checkedIcon} />
-                                }
-                                icon={
-                                  <Check className={classes.uncheckedIcon} />
-                                }
-                                classes={{
-                                  checked: classes.checked,
-                                  root: classes.checkRoot,
+                  {flag ? (
+                    <CardBody>
+                      <GridContainer justify='center'>
+                        <GridItem xs={12} sm={5} md={5}>
+                          <div style={styles.textCenter}>
+                            <h3
+                              style={{
+                                ...styles.title,
+                                textAlign: 'center',
+                              }}
+                            >
+                              One last step!
+                            </h3>
+                            <p
+                              style={{
+                                ...styles.description,
+                                textAlign: 'center',
+                              }}
+                            >
+                              You are almost, please head to{' '}
+                              <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href={`https://${
+                                  registrationData.email.value.split('@')[1]
+                                }`}
+                                style={{
+                                  textDecoration: 'underline',
+                                  fontWeight: 'bold',
                                 }}
-                                checked={
-                                  this.state.checked.indexOf(1) !== -1
-                                    ? true
-                                    : false
+                              >
+                                {registrationData.email.value}
+                              </a>{' '}
+                              to finish the registration.
+                            </p>
+                          </div>
+                        </GridItem>
+                      </GridContainer>
+                    </CardBody>
+                  ) : (
+                    <Fragment>
+                      <h2 className={classes.cardTitle}>Register</h2>
+                      <CardBody>
+                        <GridContainer justify='center'>
+                          <GridItem xs={12} sm={5} md={5}>
+                            <InfoArea
+                              className={classes.infoArea}
+                              title='Marketing'
+                              description="We've created the marketing campaign of the website. It was a very interesting collaboration."
+                              icon={Timeline}
+                              iconColor='rose'
+                            />
+                            <InfoArea
+                              className={classes.infoArea}
+                              title='Fully Coded in HTML5'
+                              description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
+                              icon={Code}
+                              iconColor='primary'
+                            />
+                            <InfoArea
+                              className={classes.infoArea}
+                              title='Built Audience'
+                              description='There is also a Fully Customizable CMS Admin Dashboard for this product.'
+                              icon={Group}
+                              iconColor='info'
+                            />
+                          </GridItem>
+                          <GridItem xs={12} sm={5} md={5}>
+                            <div className={classes.textCenter}>
+                              <Button
+                                justIcon
+                                round
+                                color='twitter'
+                                aria-label='sign up with Twitter'
+                              >
+                                <i
+                                  className={
+                                    classes.socials + ' fab fa-twitter'
+                                  }
+                                />
+                              </Button>
+                              {` `}
+                              <Button
+                                justIcon
+                                round
+                                color='dribbble'
+                                aria-label='sign up with dribble'
+                              >
+                                <i
+                                  className={
+                                    classes.socials + ' fab fa-dribbble'
+                                  }
+                                />
+                              </Button>
+                              {` `}
+                              <Button
+                                justIcon
+                                round
+                                color='facebook'
+                                aria-label='sign up with facebook'
+                              >
+                                <i
+                                  className={
+                                    classes.socials + ' fab fa-facebook-f'
+                                  }
+                                />
+                              </Button>
+                              {` `}
+                              <h4 className={classes.socialTitle}>
+                                or be classical
+                              </h4>
+                            </div>
+                            <form className={classes.form}>
+                              <UsernameInput
+                                classes={classes}
+                                updateRegistrationData={updateRegistrationData}
+                              />
+                              <EmailInput
+                                classes={classes}
+                                updateRegistrationData={updateRegistrationData}
+                              />
+                              <PasswordInput
+                                classes={classes}
+                                updateRegistrationData={updateRegistrationData}
+                              />
+                              <FormControlLabel
+                                classes={{
+                                  label: classes.label,
+                                }}
+                                control={
+                                  <Checkbox
+                                    tabIndex={-1}
+                                    onClick={() => handleToggle(1)}
+                                    checkedIcon={
+                                      <Check className={classes.checkedIcon} />
+                                    }
+                                    icon={
+                                      <Check
+                                        className={classes.uncheckedIcon}
+                                      />
+                                    }
+                                    classes={{
+                                      checked: classes.checked,
+                                      root: classes.checkRoot,
+                                    }}
+                                    checked={
+                                      this.state.checked.indexOf(1) !== -1
+                                        ? true
+                                        : false
+                                    }
+                                  />
+                                }
+                                label={
+                                  <span>
+                                    I agree to the{' '}
+                                    <a href='#pablo'>terms and conditions</a>.
+                                  </span>
                                 }
                               />
-                            }
-                            label={
-                              <span>
-                                I agree to the{' '}
-                                <a href='#pablo'>terms and conditions</a>.
-                              </span>
-                            }
-                          />
-                          <SignUpButton
-                            classes={classes}
-                            registrationData={registrationData}
-                            enabled={checked[0]}
-                          />
-                        </form>
-                      </GridItem>
-                    </GridContainer>
-                  </CardBody>
+                              <SignUpButton
+                                classes={classes}
+                                registrationData={registrationData}
+                                enabled={checked[0]}
+                                onSignUpSuccess={onSignUpSuccess}
+                              />
+                            </form>
+                          </GridItem>
+                        </GridContainer>
+                      </CardBody>
+                    </Fragment>
+                  )}
                 </Card>
               </GridItem>
             </GridContainer>
           </div>
           <CustomFooter classes={classes} />
         </div>
-      </div>
+      </Fragment>
     )
   }
 }
