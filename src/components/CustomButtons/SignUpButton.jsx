@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import getConfig from 'next/config'
+import Router, { withRouter } from 'next/router'
 // type react properties
 import PropTypes from 'prop-types'
 // constants
@@ -16,18 +17,19 @@ import Reaptcha from 'reaptcha'
 const { publicRuntimeConfig } = getConfig()
 
 class SignUpButton extends Component {
-  state = { message: undefined, verified: false }
+  state = { message: undefined, verified: false, recaptchaToken: '' }
 
-  onVerify = () => {
+  onVerify = (recaptchaToken) => {
     this.setState({
       verified: true,
       message: '🐱Captcha verification successful!🐱',
+      recaptchaToken,
     })
   }
   onLoad = () => {
     this.captcha.renderExplicitly()
   }
-  updateMessage = async (registrationData, createUser) => {
+  updateMessage = async (registrationData, createUser, onSignUpSuccess) => {
     const passed =
       registrationData.username.flag === PASSED &&
       registrationData.email.flag === PASSED &&
@@ -68,12 +70,14 @@ class SignUpButton extends Component {
             username: registrationData.username.value,
             email: registrationData.email.value,
             password: registrationData.password.value,
+            recaptchaToken: this.state.recaptchaToken,
           },
         },
       })
-        .then(async () => {
-          this.setState({
-            message: '🍑You have successfully signed up!🍑',
+        .then(() => {
+          onSignUpSuccess()
+          Router.push('/register?verified=false', '/register?verified=false', {
+            shallow: true,
           })
         })
         .catch((err) => {
@@ -89,7 +93,7 @@ class SignUpButton extends Component {
 
   render() {
     const {
-      props: { enabled, classes, registrationData },
+      props: { enabled, classes, registrationData, onSignUpSuccess },
       state: { message, verified },
       updateMessage,
       onVerify,
@@ -108,7 +112,7 @@ class SignUpButton extends Component {
                   disabled={!enabled}
                   onClick={(e) => {
                     e.preventDefault()
-                    updateMessage(registrationData, createUser)
+                    updateMessage(registrationData, createUser, onSignUpSuccess)
                   }}
                 >
                   Sign Up!
@@ -136,5 +140,6 @@ SignUpButton.propTypes = {
   classes: PropTypes.object,
   registrationData: PropTypes.object,
   enabled: PropTypes.number,
+  onSignUpSuccess: PropTypes.func,
 }
-export default SignUpButton
+export default withRouter(SignUpButton)
