@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import getConfig from 'next/config'
 import Router, { withRouter } from 'next/router'
+import handleError from '../../utils/handleError'
 // type react properties
 import PropTypes from 'prop-types'
 // constants
@@ -17,13 +18,13 @@ import Reaptcha from 'reaptcha'
 const { publicRuntimeConfig } = getConfig()
 
 class SignUpButton extends Component {
-  state = { message: undefined, verified: false, recaptchaToken: '' }
+  state = { message: undefined, verified: false, reCAPTCHAToken: '' }
 
-  onVerify = (recaptchaToken) => {
+  onVerify = (reCAPTCHAToken) => {
     this.setState({
       verified: true,
       message: '🐱Captcha verification successful!🐱',
-      recaptchaToken,
+      reCAPTCHAToken,
     })
   }
   onLoad = () => {
@@ -70,7 +71,7 @@ class SignUpButton extends Component {
             username: registrationData.username.value,
             email: registrationData.email.value,
             password: registrationData.password.value,
-            recaptchaToken: this.state.recaptchaToken,
+            reCAPTCHAToken: this.state.reCAPTCHAToken,
           },
         },
       })
@@ -81,11 +82,10 @@ class SignUpButton extends Component {
           })
         })
         .catch((err) => {
+          const error = handleError(err)
           this.setState({
-            message: `❗️${(err.message &&
-              ((err.message && (err.message.split(':')[1] || err.message)) ||
-                err)) ||
-              err}❗️`,
+            verified: false,
+            message: error.message,
           })
         })
     }

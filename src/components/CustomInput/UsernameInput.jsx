@@ -1,4 +1,5 @@
 import { Component, Fragment } from 'react'
+import handleError from '../../utils/handleError'
 // graphql query constant
 import { userExist } from '../../utils/queryConstant.js'
 // Apollo client
@@ -61,10 +62,7 @@ class UsernameInput extends Component {
           updateState(PASSED, 'username is available')
         }
       } catch (err) {
-        updateState(
-          ERROR,
-          (err.message && (err.message.split(':')[1] || err.message)) || err
-        )
+        updateState(ERROR, handleError(err).message)
       }
     }
   }

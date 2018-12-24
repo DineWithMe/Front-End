@@ -1,4 +1,5 @@
 import { Component, Fragment } from 'react'
+import handleError from '../../utils/handleError'
 // graphql query constant
 import { emailExist } from '../../utils/queryConstant.js'
 // Apollo client
@@ -55,10 +56,7 @@ class EmailInput extends Component {
           updateState(PASSED, 'valid email')
         }
       } catch (err) {
-        updateState(
-          ERROR,
-          (err.message && (err.message.split(':')[1] || err.message)) || err
-        )
+        updateState(ERROR, handleError(err).message)
       }
     }
   }

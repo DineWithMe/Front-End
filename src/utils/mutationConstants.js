@@ -7,7 +7,6 @@ const createUser = gql`
       user {
         id
         name
-        email
       }
     }
   }

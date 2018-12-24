@@ -119,7 +119,7 @@ class Components extends React.Component {
                                 textAlign: 'center',
                               }}
                             >
-                              You are almost, please head to{' '}
+                              You are almost there, please head to{' '}
                               <a
                                 target='_blank'
                                 rel='noopener noreferrer'
