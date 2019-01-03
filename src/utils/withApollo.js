@@ -2,7 +2,6 @@ import { Component } from 'react'
 import { initApollo } from './initApollo'
 import Head from 'next/head'
 import { getDataFromTree } from 'react-apollo'
-import getPageContext from './getPageContext'
 
 export default (App) => {
   return class Apollo extends Component {
@@ -15,8 +14,8 @@ export default (App) => {
       if (App.getInitialProps) {
         appProps = await App.getInitialProps(ctx)
       }
-      //cant find documentation of this code, but seem to be standard
-      //marked as to ask in forum #1
+      // cant find documentation of this code, but seem to be standard
+      // marked as to ask in forum #1
 
       // run all graphql queries in the component tree
       // and extract the resulting data
@@ -31,7 +30,6 @@ export default (App) => {
               Component={Component}
               router={router}
               apolloClient={apolloClient}
-              pageContext={getPageContext()}
             />
           )
         } catch (error) {
@@ -58,16 +56,9 @@ export default (App) => {
     constructor(props) {
       super(props)
       this.apolloClient = initApollo(props.apolloState)
-      this.pageContext = getPageContext()
     }
     render() {
-      return (
-        <App
-          {...this.props}
-          apolloClient={this.apolloClient}
-          pageContext={this.pageContext}
-        />
-      )
+      return <App {...this.props} apolloClient={this.apolloClient} />
     }
   }
 }
