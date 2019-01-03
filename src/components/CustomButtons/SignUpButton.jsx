@@ -3,7 +3,7 @@ import { Component } from 'react'
 import getConfig from 'next/config'
 // router
 import Router, { withRouter } from 'next/router'
-// utils
+// error handling
 import handleError from '../../utils/handleError'
 //cookies
 import Cookies from 'js-cookie'
@@ -11,11 +11,11 @@ import Cookies from 'js-cookie'
 import PropTypes from 'prop-types'
 // constants
 import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
-// mutation constant
+import { USER_SESSION } from '../../constants/cookies'
 import { createUser } from '../../constants/mutationOperations'
 // mutation component
 import { Mutation } from 'react-apollo'
-//core components
+// core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
 import Reaptcha from 'reaptcha'
@@ -82,7 +82,7 @@ class SignUpButton extends Component {
       })
         .then(({ data }) => {
           onSignUpSuccess()
-          Cookies.set('user token', data.createUser.token, { expires: 60 })
+          Cookies.set(USER_SESSION, data.createUser.token, { expires: 30 })
           Router.push('/register?verified=false', '/register?verified=false', {
             shallow: true,
           })
