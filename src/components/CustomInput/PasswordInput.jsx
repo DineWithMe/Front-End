@@ -6,7 +6,7 @@ import {
   NEUTRAL,
   LOADING,
   PASSWORD,
-} from '../../utils/constants'
+} from '../../constants/general'
 // type react properties
 import PropTypes from 'prop-types'
 // material ui icon

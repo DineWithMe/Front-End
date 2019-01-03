@@ -1,7 +1,7 @@
 import { Component, Fragment } from 'react'
 import handleError from '../../utils/handleError'
 // graphql query constant
-import { emailExist } from '../../utils/queryConstant.js'
+import { emailExist } from '../../constants/queryOperations.js'
 // Apollo client
 import { ApolloConsumer } from 'react-apollo'
 // constants
@@ -12,7 +12,7 @@ import {
   LOADING,
   ERROR,
   EMAIL,
-} from '../../utils/constants'
+} from '../../constants/general'
 // type react properties
 import PropTypes from 'prop-types'
 // validator

@@ -35,7 +35,10 @@ class MyApp extends App {
     super(props)
     this.pageContext = getPageContext()
   }
-
+  // static async getInitialProps(args) {
+  //   console.log('hihi')
+  //   return {}
+  // }
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
