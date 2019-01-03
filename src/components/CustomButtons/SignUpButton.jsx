@@ -1,13 +1,18 @@
 import { Component } from 'react'
+// environment variable
 import getConfig from 'next/config'
+// router
 import Router, { withRouter } from 'next/router'
+// utils
 import handleError from '../../utils/handleError'
+//cookies
+import Cookies from 'js-cookie'
 // type react properties
 import PropTypes from 'prop-types'
 // constants
-import { FAILED, PASSED, ERROR, NEUTRAL } from '../../utils/constants'
+import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
 // mutation constant
-import { createUser } from '../../utils/mutationConstants'
+import { createUser } from '../../constants/mutationOperations'
 // mutation component
 import { Mutation } from 'react-apollo'
 //core components
@@ -75,8 +80,9 @@ class SignUpButton extends Component {
           },
         },
       })
-        .then(() => {
+        .then(({ data }) => {
           onSignUpSuccess()
+          Cookies.set('user token', data.createUser.token, { expires: 60 })
           Router.push('/register?verified=false', '/register?verified=false', {
             shallow: true,
           })
@@ -120,11 +126,23 @@ class SignUpButton extends Component {
               ) : (
                 <Reaptcha
                   ref={(e) => (this.captcha = e)}
-                  sitekey={publicRuntimeConfig.recaptcha_apiKey}
+                  sitekey={publicRuntimeConfig.reCAPTCHA_apiKey}
                   onVerify={onVerify}
                   onLoad={onLoad}
                   explicit
                   theme='dark'
+                  onExpire={() => {
+                    this.setState({
+                      verified: false,
+                      message: 'reCAPTCHA expired, please re-verify',
+                    })
+                  }}
+                  onError={() => {
+                    this.setState({
+                      verified: false,
+                      message: 'reCAPTCHA error, please re-verify',
+                    })
+                  }}
                 />
               )}
               {<ValidationMessage classes={classes} message={message} />}
