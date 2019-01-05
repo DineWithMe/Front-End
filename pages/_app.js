@@ -7,7 +7,6 @@ import { ApolloProvider } from 'react-apollo'
 import withApollo from '../src/utils/withApollo'
 // state
 import { Provider } from 'unstated'
-import { userStateStore } from '../src/utils/unstated'
 // jss
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -60,7 +59,7 @@ class MyApp extends App {
 
   render() {
     const {
-      props: { Component, pageProps, apolloClient },
+      props: { Component, pageProps, apolloClient, userStateStore },
       pageContext,
     } = this
 
