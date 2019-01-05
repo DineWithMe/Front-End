@@ -6,6 +6,9 @@ const handleError = (error) => {
     err.statusCode = 0
     err.message = error.message
   }
+
+  // eslint-disable-next-line no-console
+  process.browser && console.log(err)
   return {
     statusCode: err.statusCode,
     message: `${err.statusCode}: ${err.message}`,
