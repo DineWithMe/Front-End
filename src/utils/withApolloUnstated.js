@@ -32,6 +32,7 @@ export default (App) => {
             },
           },
         } = context
+        userStateStore.resetState()
         if (cookie) {
           const userToken = cookie.split('=')[1]
           // verify userToken
@@ -101,8 +102,12 @@ export default (App) => {
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
       if (process.browser && userToken) {
-        userStateStore.initUserState({ login: true, ...userState })
-        Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
+        if (userToken) {
+          userStateStore.initUserState({ login: true, ...userState })
+          Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
+        } else {
+          userStateStore.resetState()
+        }
       }
       this.apolloClient = initApollo(props.apolloState, userToken)
     }
