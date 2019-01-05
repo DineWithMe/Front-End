@@ -14,4 +14,13 @@ const emailExist = gql`
     }
   }
 `
-export { userExist, emailExist }
+
+const verifyEmail = gql`
+  query {
+    me {
+      name
+      username
+    }
+  }
+`
+export { userExist, emailExist, verifyEmail }

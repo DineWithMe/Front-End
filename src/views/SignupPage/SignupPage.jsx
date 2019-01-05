@@ -12,7 +12,7 @@ import Check from '@material-ui/icons/Check'
 import signupPageStyle from '../../jss/material-kit-pro-react/views/signupPageStyle.jsx'
 import styles from '../../jss/material-kit-pro-react/views/componentsSections/preFooter.jsx'
 // constant
-import { USERNAME, EMAIL, PASSWORD, NEUTRAL } from '../../utils/constants'
+import { USERNAME, EMAIL, PASSWORD, NEUTRAL } from '../../constants/general'
 // image
 import image from '../../../static/img/bg7.jpg'
 // core components
@@ -119,7 +119,7 @@ class Components extends React.Component {
                                 textAlign: 'center',
                               }}
                             >
-                              You are almost, please head to{' '}
+                              You are almost there, please head to{' '}
                               <a
                                 target='_blank'
                                 rel='noopener noreferrer'

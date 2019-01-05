@@ -1,6 +1,7 @@
 import { Component, Fragment } from 'react'
+import handleError from '../../utils/handleError'
 // graphql query constant
-import { userExist } from '../../utils/queryConstant.js'
+import { userExist } from '../../constants/queryOperations.js'
 // Apollo client
 import { ApolloConsumer } from 'react-apollo'
 // constants
@@ -11,7 +12,7 @@ import {
   LOADING,
   ERROR,
   USERNAME,
-} from '../../utils/constants'
+} from '../../constants/general'
 // type react properties
 import PropTypes from 'prop-types'
 // string validator
@@ -61,10 +62,7 @@ class UsernameInput extends Component {
           updateState(PASSED, 'username is available')
         }
       } catch (err) {
-        updateState(
-          ERROR,
-          (err.message && (err.message.split(':')[1] || err.message)) || err
-        )
+        updateState(ERROR, handleError(err).message)
       }
     }
   }

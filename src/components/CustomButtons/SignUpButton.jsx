@@ -1,15 +1,21 @@
 import { Component } from 'react'
+// environment variable
 import getConfig from 'next/config'
+// router
 import Router, { withRouter } from 'next/router'
+// error handling
+import handleError from '../../utils/handleError'
+//cookies
+import Cookies from 'js-cookie'
 // type react properties
 import PropTypes from 'prop-types'
 // constants
-import { FAILED, PASSED, ERROR, NEUTRAL } from '../../utils/constants'
-// mutation constant
-import { createUser } from '../../utils/mutationConstants'
+import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
+import { USER_SESSION, EXPIRES } from '../../constants/cookies'
+import { createUser } from '../../constants/mutationOperations'
 // mutation component
 import { Mutation } from 'react-apollo'
-//core components
+// core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
 import Reaptcha from 'reaptcha'
@@ -17,13 +23,13 @@ import Reaptcha from 'reaptcha'
 const { publicRuntimeConfig } = getConfig()
 
 class SignUpButton extends Component {
-  state = { message: undefined, verified: false, recaptchaToken: '' }
+  state = { message: undefined, verified: false, reCAPTCHAToken: '' }
 
-  onVerify = (recaptchaToken) => {
+  onVerify = (reCAPTCHAToken) => {
     this.setState({
       verified: true,
       message: '🐱Captcha verification successful!🐱',
-      recaptchaToken,
+      reCAPTCHAToken,
     })
   }
   onLoad = () => {
@@ -70,22 +76,24 @@ class SignUpButton extends Component {
             username: registrationData.username.value,
             email: registrationData.email.value,
             password: registrationData.password.value,
-            recaptchaToken: this.state.recaptchaToken,
+            reCAPTCHAToken: this.state.reCAPTCHAToken,
           },
         },
       })
-        .then(() => {
+        .then(({ data }) => {
           onSignUpSuccess()
+          Cookies.set(USER_SESSION, data.createUser.userToken, {
+            expires: EXPIRES,
+          })
           Router.push('/register?verified=false', '/register?verified=false', {
             shallow: true,
           })
         })
         .catch((err) => {
+          const error = handleError(err)
           this.setState({
-            message: `❗️${(err.message &&
-              ((err.message && (err.message.split(':')[1] || err.message)) ||
-                err)) ||
-              err}❗️`,
+            verified: false,
+            message: error.message,
           })
         })
     }
@@ -120,11 +128,23 @@ class SignUpButton extends Component {
               ) : (
                 <Reaptcha
                   ref={(e) => (this.captcha = e)}
-                  sitekey={publicRuntimeConfig.recaptcha_apiKey}
+                  sitekey={publicRuntimeConfig.reCAPTCHA_apiKey}
                   onVerify={onVerify}
                   onLoad={onLoad}
                   explicit
                   theme='dark'
+                  onExpire={() => {
+                    this.setState({
+                      verified: false,
+                      message: 'reCAPTCHA expired, please re-verify',
+                    })
+                  }}
+                  onError={() => {
+                    this.setState({
+                      verified: false,
+                      message: 'reCAPTCHA error, please re-verify',
+                    })
+                  }}
                 />
               )}
               {<ValidationMessage classes={classes} message={message} />}

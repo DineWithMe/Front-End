@@ -1,13 +1,26 @@
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
+import getConfig from 'next/config'
+const { publicRuntimeConfig } = getConfig()
 
 let apolloClient = null
 
+let uri
+
+if (publicRuntimeConfig.env === 'development') {
+  uri = 'http://localhost:4000'
+} else if (publicRuntimeConfig.env === 'production') {
+  uri = 'https://node.tylim.com'
+}
+
 //create apollo client
-const getClient = (initialState) =>
+const getClient = (initialState, userToken) =>
   new ApolloClient({
     link: new HttpLink({
-      uri: 'https://node.tylim.com', //Server URL (must be absolute)
+      uri, //Server URL (must be absolute)
       credentials: 'same-origin', //Additional fetch() options like `credential` or `headers`
+      headers: {
+        Authorization: `Bearer ${userToken}`,
+      },
     }),
     ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
     connectToDevTools: process.browser,

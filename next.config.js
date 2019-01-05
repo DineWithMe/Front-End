@@ -14,7 +14,8 @@ const nextConfig = {
     // Will be available on both server and client
     googleMap_apiKey: process.env.GOOGLEMAP_APIKEY, // Pass through env variables
     service_worker: process.env.SERVICE_WORKER,
-    recaptcha_apiKey: process.env.RECAPTCHA_APIKEY,
+    reCAPTCHA_apiKey: process.env.RECAPTCHA_APIKEY,
+    env: process.env.NODE_ENV,
   },
   webpack: (config) => {
     config.plugins.push(

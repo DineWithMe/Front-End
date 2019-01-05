@@ -20,15 +20,18 @@ import SectionWork from './Sections/SectionWork.jsx'
 import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   componentDidMount() {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
   render() {
-    const { classes } = this.props
+    const { classes, userState } = this.props
     return (
       <div>
-        <Navbar />
+        <Navbar userState={userState} />
         <Parallax image={require('../../../static/img/bg8.jpg')} filter='dark'>
           <div className={classes.container}>
             <GridContainer>
@@ -69,6 +72,7 @@ class LandingPage extends React.Component {
 }
 LandingPage.propTypes = {
   classes: PropTypes.object,
+  userState: PropTypes.object,
 }
 
 export default withStyles(landingPageStyle)(LandingPage)
