@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import Head from 'next/head'
 // query constant
-import { verifyEmail } from '../constants/queryOperations'
+import { verifyToken } from '../constants/queryOperations'
 // apollo
 import { initApollo } from './initApollo'
 import { getDataFromTree } from 'react-apollo'
@@ -10,6 +10,8 @@ import { userStateStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
+// error
+import handleError from './handleError'
 
 export default (App) => {
   return class Apollo extends Component {
@@ -30,23 +32,20 @@ export default (App) => {
             },
           },
         } = context
-
         if (cookie) {
           const userToken = cookie.split('=')[1]
-
           // verify userToken
           await initApollo(undefined, userToken)
             .query({
-              query: verifyEmail,
+              query: verifyToken,
             })
             .then((res) => {
               userStateStore.initUserState({
                 login: true,
-                ...res.data,
-                userToken,
+                ...res.data.verifyToken,
               })
             })
-            .catch(() => {})
+            .catch((err) => handleError(err))
         }
       }
       // it will still able to initApollo with correct userToken on client side
@@ -67,6 +66,7 @@ export default (App) => {
               Component={Component}
               router={router}
               apolloClient={apolloClient}
+              userStateStore={userStateStore}
             />
           )
         } catch (error) {
@@ -100,14 +100,20 @@ export default (App) => {
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
-      userStateStore.initUserState({ login: true, ...userState })
       if (process.browser && userToken) {
+        userStateStore.initUserState({ login: true, ...userState })
         Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
       }
       this.apolloClient = initApollo(props.apolloState, userToken)
     }
     render() {
-      return <App {...this.props} apolloClient={this.apolloClient} />
+      return (
+        <App
+          {...this.props}
+          apolloClient={this.apolloClient}
+          userStateStore={userStateStore}
+        />
+      )
     }
   }
 }
