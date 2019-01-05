@@ -15,12 +15,11 @@ const emailExist = gql`
   }
 `
 
-const verifyEmail = gql`
+const verifyToken = gql`
   query {
-    me {
-      name
-      username
+    verifyToken {
+      userToken
     }
   }
 `
-export { userExist, emailExist, verifyEmail }
+export { userExist, emailExist, verifyToken }

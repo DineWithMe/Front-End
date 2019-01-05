@@ -4,10 +4,9 @@ import Router from 'next/router'
 import getConfig from 'next/config'
 // client
 import { ApolloProvider } from 'react-apollo'
-import withApollo from '../src/utils/withApollo'
+import withApolloUnstated from '../src/utils/withApolloUnstated'
 // state
 import { Provider } from 'unstated'
-import { userStateStore } from '../src/utils/unstated'
 // jss
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -60,7 +59,7 @@ class MyApp extends App {
 
   render() {
     const {
-      props: { Component, pageProps, apolloClient },
+      props: { Component, pageProps, apolloClient, userStateStore },
       pageContext,
     } = this
 
@@ -96,4 +95,4 @@ class MyApp extends App {
   }
 }
 
-export default withApollo(MyApp)
+export default withApolloUnstated(MyApp)

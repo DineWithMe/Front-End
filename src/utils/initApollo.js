@@ -13,8 +13,8 @@ if (publicRuntimeConfig.env === 'development') {
 }
 
 //create apollo client
-const getClient = (initialState, userToken) =>
-  new ApolloClient({
+const getClient = (initialState, userToken) => {
+  return new ApolloClient({
     link: new HttpLink({
       uri, //Server URL (must be absolute)
       credentials: 'same-origin', //Additional fetch() options like `credential` or `headers`
@@ -26,17 +26,18 @@ const getClient = (initialState, userToken) =>
     connectToDevTools: process.browser,
     cache: new InMemoryCache().restore(initialState || {}),
   })
+}
 
-export const initApollo = (initialState) => {
+export const initApollo = (initialState, userToken) => {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!process.browser) {
-    return getClient(initialState)
+    return getClient(initialState, userToken)
   }
 
   // Reuse client on the client-side
   if (!apolloClient) {
-    apolloClient = getClient(initialState)
+    apolloClient = getClient(initialState, userToken)
   }
 
   return apolloClient
