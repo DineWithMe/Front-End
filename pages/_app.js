@@ -5,8 +5,6 @@ import getConfig from 'next/config'
 // client
 import { ApolloProvider } from 'react-apollo'
 import withApollo from '../src/utils/withApollo'
-// jwt
-import jwt from 'jsonwebtoken'
 // state
 import { Provider } from 'unstated'
 import { userStateStore } from '../src/utils/unstated'
@@ -33,31 +31,7 @@ Router.events.on('routeChangeError', () => NProgress.done())
 
 class MyApp extends App {
   // get initial props run first before constructor
-  static async getInitialProps(context) {
-    // if (!process.browser) {
-    //   const {
-    //     ctx: {
-    //       req: {
-    //         headers: { cookie },
-    //       },
-    //     },
-    //   } = context
-    //   const isJwtExist = cookie.split('=')[1]
-    //   let userState
-    //   if (isJwtExist) {
-    //     const userInfo = jwt.decode(isJwtExist)
-    //     userState = {
-    //       login: true,
-    //       ...userInfo,
-    //       jwt: isJwtExist,
-    //     }
-    //     userStateStore.initUserState(userState)
-    //   }
-    //   return { serverInitialState: userState }
-    // } else if (process.browser) {
-    //   return { clientInitialState: userStateStore.getState() }
-    // }
-  }
+  static async getInitialProps() {}
   constructor(props) {
     super(props)
     this.pageContext = getPageContext()
@@ -86,16 +60,10 @@ class MyApp extends App {
 
   render() {
     const {
-      props: { Component, pageProps, apolloClient, serverInitialState },
+      props: { Component, pageProps, apolloClient },
       pageContext,
     } = this
 
-    // hydrate state in client
-    // serverInitialState value preserve from server to client before user navigate another next/link
-    // use this chance to hydrate the state
-    // if (serverInitialState && process.browser) {
-    //   userStateStore.initUserState({ login: true, ...serverInitialState })
-    // }
     return (
       <Container>
         <ApolloProvider client={apolloClient}>
