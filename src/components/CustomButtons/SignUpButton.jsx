@@ -11,7 +11,7 @@ import Cookies from 'js-cookie'
 import PropTypes from 'prop-types'
 // constants
 import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
-import { USER_SESSION } from '../../constants/cookies'
+import { USER_SESSION, EXPIRES } from '../../constants/cookies'
 import { createUser } from '../../constants/mutationOperations'
 // mutation component
 import { Mutation } from 'react-apollo'
@@ -82,7 +82,9 @@ class SignUpButton extends Component {
       })
         .then(({ data }) => {
           onSignUpSuccess()
-          Cookies.set(USER_SESSION, data.createUser.token, { expires: 30 })
+          Cookies.set(USER_SESSION, data.createUser.userToken, {
+            expires: EXPIRES,
+          })
           Router.push('/register?verified=false', '/register?verified=false', {
             shallow: true,
           })
