@@ -1,12 +1,15 @@
 import { Component } from 'react'
 import Head from 'next/head'
+// query constant
+import { verifyEmail } from '../constants/queryOperations'
 // apollo
 import { initApollo } from './initApollo'
 import { getDataFromTree } from 'react-apollo'
 // unstated
 import { userStateStore } from './unstated'
-// jwt
-import jwt from 'jsonwebtoken'
+// cookies
+import Cookies from 'js-cookie'
+import { USER_SESSION, EXPIRES } from '../constants/cookies'
 
 export default (App) => {
   return class Apollo extends Component {
@@ -14,13 +17,9 @@ export default (App) => {
     static async getInitialProps(context) {
       const { Component, router } = context
       let appProps = {}
-      let userState
       if (App.getInitialProps) {
         appProps = await App.getInitialProps(context)
       }
-      // cant find documentation of this code, but seem to be standard
-      // marked as to ask in forum #1
-
       // unstated
       // handle cookies and state on server side
       if (!process.browser) {
@@ -32,22 +31,31 @@ export default (App) => {
           },
         } = context
 
-        const isJwtExist = cookie.split('=')[1]
+        if (cookie) {
+          const userToken = cookie.split('=')[1]
 
-        if (isJwtExist) {
-          const userInfo = jwt.decode(isJwtExist)
-          userState = {
-            login: true,
-            ...userInfo,
-            jwt: isJwtExist,
-          }
-          userStateStore.initUserState(userState)
+          // verify userToken
+          await initApollo(undefined, userToken)
+            .query({
+              query: verifyEmail,
+            })
+            .then((res) => {
+              userStateStore.initUserState({
+                login: true,
+                ...res.data,
+                userToken,
+              })
+            })
+            .catch(() => {})
         }
       }
-      // it will still able to initApollo with correct jwt on client side
+      // it will still able to initApollo with correct userToken on client side
       // the first time page loaded on client, get initial prop will not run
       // but constructor will run and hydrate unstated
-      const apolloClient = initApollo(undefined, userStateStore.getState().jwt)
+      const apolloClient = initApollo(
+        undefined,
+        userStateStore.getState().userToken
+      )
       // run all graphql queries in the component tree
       // and extract the resulting data
       if (!process.browser) {
@@ -80,17 +88,23 @@ export default (App) => {
       return {
         ...appProps,
         apolloState,
-        userState,
+        userState: userStateStore.getState(),
       }
     }
     constructor(props) {
       super(props)
+      const {
+        userState: { userToken },
+        userState,
+      } = props
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
-      userStateStore.initUserState({ login: true, ...props.userState })
-
-      this.apolloClient = initApollo(props.apolloState, props.userState.jwt)
+      userStateStore.initUserState({ login: true, ...userState })
+      if (process.browser && userToken) {
+        Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
+      }
+      this.apolloClient = initApollo(props.apolloState, userToken)
     }
     render() {
       return <App {...this.props} apolloClient={this.apolloClient} />

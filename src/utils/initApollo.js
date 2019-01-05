@@ -3,13 +3,13 @@ import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
 let apolloClient = null
 
 //create apollo client
-const getClient = (initialState, token) =>
+const getClient = (initialState, userToken) =>
   new ApolloClient({
     link: new HttpLink({
       uri: 'https://node.tylim.com', //Server URL (must be absolute)
       credentials: 'same-origin', //Additional fetch() options like `credential` or `headers`
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${userToken}`,
       },
     }),
     ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)

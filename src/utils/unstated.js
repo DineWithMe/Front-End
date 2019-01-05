@@ -5,7 +5,7 @@ class UserStateContainer extends Container {
     login: false,
     name: undefined,
     username: undefined,
-    jwt: undefined,
+    userToken: undefined,
   }
   initUserState = (state) => {
     this.state = state
