@@ -1,9 +1,12 @@
-import { Component, Fragment } from 'react'
+import { Component } from 'react'
 // set component props types
 import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
+// state
+import { UserStateContainer } from '../../utils/unstated'
+import { Subscribe } from 'unstated'
 // @material-ui/icons
 import LocalDining from '@material-ui/icons/LocalDining'
 // style
@@ -19,32 +22,43 @@ import ListItemProfile from './SubComponent/ListItemProfile.jsx'
 class NavBar extends Component {
   render() {
     // eslint-disable-next-line no-unused-vars
-    const { router, classes, ...rest } = this.props
+    const { router, classes, userState, ...rest } = this.props
     return (
-      <Header
-        {...rest}
-        brand={
-          <Fragment>
-            <LocalDining />
-            {'Dine With Me'}
-          </Fragment>
-        }
-        color='dark'
-        fixed
-        changeColorOnScroll={{
-          height: 600,
-          color: 'primary',
-        }}
-        links={
-          <List className={classes.list + ' ' + classes.mlAuto}>
-            <ListItemSignIn classes={classes} />
-            <ListItemSignUp classes={classes} />
-            <ListItemDiscover classes={classes} />
-            <ListItemNotifications classes={classes} />
-            <ListItemProfile classes={classes} />
-          </List>
-        }
-      />
+      <Subscribe to={[UserStateContainer]}>
+        {(userData) => (
+          <Header
+            {...rest}
+            brand={
+              <>
+                <LocalDining />
+                {'Dine With Me'}
+              </>
+            }
+            color='dark'
+            fixed
+            changeColorOnScroll={{
+              height: 600,
+              color: 'primary',
+            }}
+            links={
+              <List className={classes.list + ' ' + classes.mlAuto}>
+                {userData.getState().login ? (
+                  <>
+                    <ListItemDiscover classes={classes} />
+                    <ListItemNotifications classes={classes} />
+                    <ListItemProfile classes={classes} />
+                  </>
+                ) : (
+                  <>
+                    <ListItemSignIn classes={classes} />
+                    <ListItemSignUp classes={classes} />
+                  </>
+                )}
+              </List>
+            }
+          />
+        )}
+      </Subscribe>
     )
   }
 }

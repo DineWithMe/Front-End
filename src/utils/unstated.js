@@ -1,11 +1,20 @@
 import { Container } from 'unstated'
 
-class DataContainer extends Container {
-  state = {}
-  insertData = (data) => {
-    this.setState(data)
+class UserStateContainer extends Container {
+  state = {
+    login: false,
+    name: undefined,
+    username: undefined,
+    jwt: undefined,
   }
-  getData = () => this.state
-}
+  initUserState = (state) => {
+    this.state = state
+  }
+  setUserState = (state) => {
+    this.setState(state)
+  }
 
-export { DataContainer }
+  getState = () => this.state
+}
+const userStateStore = new UserStateContainer()
+export { UserStateContainer, userStateStore }
