@@ -8,7 +8,7 @@ const handleError = (error) => {
   }
 
   // eslint-disable-next-line no-console
-  process.browser && console.log(err)
+  !process.browser && console.log(err)
   return {
     statusCode: err.statusCode,
     message: `${err.statusCode}: ${err.message}`,
