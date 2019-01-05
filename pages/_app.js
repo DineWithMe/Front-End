@@ -4,7 +4,7 @@ import Router from 'next/router'
 import getConfig from 'next/config'
 // client
 import { ApolloProvider } from 'react-apollo'
-import withApollo from '../src/utils/withApollo'
+import withApolloUnstated from '../src/utils/withApolloUnstated'
 // state
 import { Provider } from 'unstated'
 // jss
@@ -95,4 +95,4 @@ class MyApp extends App {
   }
 }
 
-export default withApollo(MyApp)
+export default withApolloUnstated(MyApp)

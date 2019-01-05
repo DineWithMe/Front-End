@@ -15,7 +15,7 @@ import handleError from './handleError'
 
 export default (App) => {
   return class Apollo extends Component {
-    static displayName = 'withApollo(App)'
+    static displayName = 'withApolloUnstated(App)'
     static async getInitialProps(context) {
       const { Component, router } = context
       let appProps = {}
