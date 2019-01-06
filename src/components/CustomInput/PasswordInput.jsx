@@ -54,7 +54,6 @@ class PasswordInput extends Component {
             className: classes.customFormControlClasses,
           }}
           inputProps={{
-            autoComplete: 'new-password',
             type: 'password',
             onFocus: () => {
               this.setState({ flag: NEUTRAL, message: '' })
