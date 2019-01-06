@@ -10,6 +10,9 @@ import { userStateStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
+// jwt
+import jwt from 'jsonwebtoken'
+
 // error
 import handleError from './handleError'
 
@@ -41,9 +44,15 @@ export default (App) => {
               query: verifyToken,
             })
             .then((res) => {
+              const { name, username } = jwt.decode(
+                res.data.verifyToken.userToken
+              )
+
               userStateStore.initUserState({
                 login: true,
-                ...res.data.verifyToken,
+                name,
+                username,
+                userToken,
               })
             })
             .catch((err) => handleError(err))
@@ -105,12 +114,12 @@ export default (App) => {
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
-      if (process.browser && userToken) {
+      if (process.browser) {
         if (userToken) {
           userStateStore.initUserState({ login: true, ...userState })
           Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
         } else {
-          userStateStore.resetState()
+          Cookies.remove(USER_SESSION)
         }
       }
       this.apolloClient = initApollo(props.apolloState, userToken)
