@@ -52,10 +52,7 @@ export default (App) => {
       // it will still able to initApollo with correct userToken on client side
       // the first time page loaded on client, get initial prop will not run
       // but constructor will run and hydrate unstated
-      const apolloClient = initApollo(
-        undefined,
-        userStateStore.getState().userToken
-      )
+      const apolloClient = initApollo(undefined, userStateStore.state.userToken)
       // run all graphql queries in the component tree
       // and extract the resulting data
       if (!process.browser) {
@@ -89,7 +86,7 @@ export default (App) => {
       return {
         ...appProps,
         apolloState,
-        userState: userStateStore.getState(),
+        userState: userStateStore.state,
       }
     }
     constructor(props) {
