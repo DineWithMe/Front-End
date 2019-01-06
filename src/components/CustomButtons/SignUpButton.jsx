@@ -71,6 +71,9 @@ class SignUpButton extends Component {
         message: '🔷Please fill in the empty field(s)🔷',
       })
     else if (passed) {
+      this.setState({
+        message: '🐇Signing up, please wait...🐇',
+      })
       await createUser({
         variables: {
           data: {
