@@ -10,6 +10,9 @@ import { userStateStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
+// jwt
+import jwt from 'jsonwebtoken'
+
 // error
 import handleError from './handleError'
 
@@ -41,9 +44,15 @@ export default (App) => {
               query: verifyToken,
             })
             .then((res) => {
+              const { name, username } = jwt.decode(
+                res.data.verifyToken.userToken
+              )
+
               userStateStore.initUserState({
                 login: true,
-                ...res.data.verifyToken,
+                name,
+                username,
+                userToken,
               })
             })
             .catch((err) => handleError(err))
@@ -52,10 +61,7 @@ export default (App) => {
       // it will still able to initApollo with correct userToken on client side
       // the first time page loaded on client, get initial prop will not run
       // but constructor will run and hydrate unstated
-      const apolloClient = initApollo(
-        undefined,
-        userStateStore.getState().userToken
-      )
+      const apolloClient = initApollo(undefined, userStateStore.state.userToken)
       // run all graphql queries in the component tree
       // and extract the resulting data
       if (!process.browser) {
@@ -86,10 +92,17 @@ export default (App) => {
       // Extract query data from Apollo store
       const apolloState = apolloClient.cache.extract()
 
-      return {
-        ...appProps,
-        apolloState,
-        userState: userStateStore.getState(),
+      if (!process.browser) {
+        return {
+          ...appProps,
+          apolloState,
+          userState: userStateStore.state,
+        }
+      } else {
+        return {
+          ...appProps,
+          apolloState,
+        }
       }
     }
     constructor(props) {
@@ -101,12 +114,12 @@ export default (App) => {
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
-      if (process.browser && userToken) {
+      if (process.browser) {
         if (userToken) {
           userStateStore.initUserState({ login: true, ...userState })
           Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
         } else {
-          userStateStore.resetState()
+          Cookies.remove(USER_SESSION)
         }
       }
       this.apolloClient = initApollo(props.apolloState, userToken)

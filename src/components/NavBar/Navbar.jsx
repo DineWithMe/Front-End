@@ -42,7 +42,7 @@ class NavBar extends Component {
             }}
             links={
               <List className={classes.list + ' ' + classes.mlAuto}>
-                {userData.getState().login ? (
+                {userData.state.login ? (
                   <>
                     <ListItemDiscover classes={classes} />
                     <ListItemNotifications classes={classes} />

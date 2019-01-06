@@ -19,8 +19,6 @@ class UserStateContainer extends Container {
   setUserState = (state) => {
     this.setState(state)
   }
-
-  getState = () => this.state
 }
 const userStateStore = new UserStateContainer()
 export { UserStateContainer, userStateStore }
