@@ -1,6 +1,8 @@
 import { Component } from 'react'
 // environment variable
 import getConfig from 'next/config'
+// state
+import { userStateStore } from '../../utils/unstated'
 // router
 import Router, { withRouter } from 'next/router'
 // error handling
@@ -81,6 +83,7 @@ class SignUpButton extends Component {
         },
       })
         .then(({ data }) => {
+          userStateStore.setState({ login: true })
           onSignUpSuccess()
           Cookies.set(USER_SESSION, data.createUser.userToken, {
             expires: EXPIRES,
