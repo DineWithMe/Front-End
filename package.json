@@ -129,10 +129,6 @@
     "version": 1,
     "name": "dinewithme",
     "dotenv": "./.config/prod.env",
-    "env": {
-      "NODE_ENV": "production",
-      "SERVICE_WORKER": "true"
-    },
     "alias": "dinewithme.app"
   }
 }
