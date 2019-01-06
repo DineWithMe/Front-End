@@ -83,10 +83,17 @@ export default (App) => {
       // Extract query data from Apollo store
       const apolloState = apolloClient.cache.extract()
 
-      return {
-        ...appProps,
-        apolloState,
-        userState: userStateStore.state,
+      if (!process.browser) {
+        return {
+          ...appProps,
+          apolloState,
+          userState: userStateStore.state,
+        }
+      } else {
+        return {
+          ...appProps,
+          apolloState,
+        }
       }
     }
     constructor(props) {
