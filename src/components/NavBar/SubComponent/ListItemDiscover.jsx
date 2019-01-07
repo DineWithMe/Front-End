@@ -1,4 +1,4 @@
-import { Component, Fragment } from 'react'
+import { Component } from 'react'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
@@ -32,10 +32,10 @@ class ListItemDiscover extends Component {
           hoverColor='dark'
           dropPlacement='bottom'
           buttonText={
-            <Fragment>
+            <>
               <LocalBar />
               {'Discover'}
-            </Fragment>
+            </>
           }
           buttonProps={{
             className: classes.navLink,

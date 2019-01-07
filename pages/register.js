@@ -1,14 +1,20 @@
+import { Component } from 'react'
 import SignUpPage from '../src/views/SignUpPage/SignupPage.jsx'
 import Head from 'next/head'
-import { Fragment } from 'react'
-
-const SignUp = () => {
-  return (
-    <Fragment>
-      <Head />
-      <SignUpPage />
-    </Fragment>
-  )
+import redirectIndex from '../src/utils/redirectIndex.js'
+class SignUp extends Component {
+  static async getInitialProps(ctx) {
+    await redirectIndex(ctx)
+    return {}
+  }
+  render() {
+    return (
+      <>
+        <Head />
+        <SignUpPage />
+      </>
+    )
+  }
 }
 
 export default SignUp

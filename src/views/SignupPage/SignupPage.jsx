@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 // type react properties
 import PropTypes from 'prop-types'
 // @material-ui/core components
@@ -88,7 +88,7 @@ class SignupPage extends React.Component {
       updateRegistrationData,
     } = this
     return (
-      <Fragment>
+      <>
         <Navbar {...rest} />
         <div
           className={classes.pageHeader}
@@ -142,7 +142,7 @@ class SignupPage extends React.Component {
                       </GridContainer>
                     </CardBody>
                   ) : (
-                    <Fragment>
+                    <>
                       <h2 className={classes.cardTitle}>Register</h2>
                       <CardBody>
                         <GridContainer justify='center'>
@@ -271,7 +271,7 @@ class SignupPage extends React.Component {
                           </GridItem>
                         </GridContainer>
                       </CardBody>
-                    </Fragment>
+                    </>
                   )}
                 </Card>
               </GridItem>
@@ -279,7 +279,7 @@ class SignupPage extends React.Component {
           </div>
           <CustomFooter classes={classes} />
         </div>
-      </Fragment>
+      </>
     )
   }
 }

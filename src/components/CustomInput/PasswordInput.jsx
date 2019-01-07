@@ -1,4 +1,4 @@
-import { Component, Fragment } from 'react'
+import { Component } from 'react'
 // constants
 import {
   FAILED,
@@ -45,7 +45,7 @@ class PasswordInput extends Component {
       state: { flag, message },
     } = this
     return (
-      <Fragment>
+      <>
         <CustomInput
           error={flag === FAILED}
           success={flag === PASSED}
@@ -89,7 +89,7 @@ class PasswordInput extends Component {
             style={validationMessageStyle}
           />
         )}
-      </Fragment>
+      </>
     )
   }
 }

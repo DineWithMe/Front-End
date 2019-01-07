@@ -1,4 +1,4 @@
-import { Component, Fragment } from 'react'
+import { Component } from 'react'
 import handleError from '../../utils/handleError'
 // graphql query constant
 import { emailExist } from '../../constants/queryOperations.js'
@@ -70,7 +70,7 @@ class EmailInput extends Component {
     return (
       <ApolloConsumer>
         {(client) => (
-          <Fragment>
+          <>
             <CustomInput
               error={error}
               success={flag === PASSED}
@@ -122,7 +122,7 @@ class EmailInput extends Component {
                 style={validationMessageStyle}
               />
             )}
-          </Fragment>
+          </>
         )}
       </ApolloConsumer>
     )
