@@ -1,4 +1,4 @@
-import SignUpPage from '../src/views/SignUpPage/SignUpPage'
+import SignUpPage from '../src/views/SignUpPage/SignupPage.jsx'
 import Head from 'next/head'
 import { Fragment } from 'react'
 
