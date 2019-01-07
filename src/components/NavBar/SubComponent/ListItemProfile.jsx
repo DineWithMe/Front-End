@@ -2,10 +2,11 @@ import { Component } from 'react'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
-// import Link from 'next/link'
 import { withRouter } from 'next/router'
 // import material ui width
 import withWidth from '@material-ui/core/withWidth'
+// unstated
+import { userStateStore } from '../../../utils/unstated'
 // material ui icons
 import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
@@ -59,8 +60,10 @@ class ListItemProfile extends Component {
               }}
             >
               <AccountBox />
-              &#160;&#160;&#160;{`Profile`}
+              &#160;&#160;&#160;
+              {`${userStateStore.state.name}`}
             </Button>,
+            { divider: true },
 
             <Button
               style={buttonDropDownStyle}
