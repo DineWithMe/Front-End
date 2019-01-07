@@ -38,6 +38,7 @@ export default (App) => {
         } = context
         userStateStore.resetState()
         if (cookie) {
+          // get specific token
           const userToken = cookie.split(`${USER_SESSION}=`)[1].split(';')[0]
           // verify userToken
           await initApollo(undefined, userToken)
@@ -122,8 +123,6 @@ export default (App) => {
         if (userToken) {
           userStateStore.initUserState({ login: true, ...userState })
           Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
-        } else {
-          // Cookies.remove(USER_SESSION)
         }
       }
       this.apolloClient = initApollo(apolloState, userToken)
