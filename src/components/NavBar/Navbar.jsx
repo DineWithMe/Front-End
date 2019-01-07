@@ -21,8 +21,7 @@ import ListItemProfile from './SubComponent/ListItemProfile.jsx'
 
 class NavBar extends Component {
   render() {
-    // eslint-disable-next-line no-unused-vars
-    const { router, classes, userState, ...rest } = this.props
+    const { classes, ...rest } = this.props
     return (
       <Subscribe to={[UserStateContainer]}>
         {(userData) => (

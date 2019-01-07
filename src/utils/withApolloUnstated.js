@@ -19,6 +19,7 @@ import handleError from './handleError'
 export default (App) => {
   return class Apollo extends Component {
     static displayName = 'withApolloUnstated(App)'
+    // get initial props run first before constructor
     static async getInitialProps(context) {
       const { Component, router } = context
       let appProps = {}
@@ -37,7 +38,8 @@ export default (App) => {
         } = context
         userStateStore.resetState()
         if (cookie) {
-          const userToken = cookie.split('=')[1]
+          // get specific token
+          const userToken = cookie.split(`${USER_SESSION}=`)[1].split(';')[0]
           // verify userToken
           await initApollo(undefined, userToken)
             .query({
@@ -107,10 +109,13 @@ export default (App) => {
     }
     constructor(props) {
       super(props)
+      /* eslint-disable react/prop-types */
       const {
         userState: { userToken },
         userState,
+        apolloState,
       } = props
+      /* eslint-enable react/prop-types */
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
@@ -118,11 +123,9 @@ export default (App) => {
         if (userToken) {
           userStateStore.initUserState({ login: true, ...userState })
           Cookies.set(USER_SESSION, userToken, { expires: EXPIRES })
-        } else {
-          Cookies.remove(USER_SESSION)
         }
       }
-      this.apolloClient = initApollo(props.apolloState, userToken)
+      this.apolloClient = initApollo(apolloState, userToken)
     }
     render() {
       return (

@@ -49,6 +49,7 @@ Media.defaultProps = {
 }
 
 Media.propTypes = {
+  classes: PropTypes.object,
   avatarLink: PropTypes.string,
   avatar: PropTypes.string,
   avatarAlt: PropTypes.string,

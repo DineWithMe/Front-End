@@ -1,4 +1,6 @@
 import React from 'react'
+// type react properties
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Icon from '@material-ui/core/Icon'
@@ -1529,6 +1531,10 @@ class SectionCards extends React.Component {
       </div>
     )
   }
+}
+SectionCards.propTypes = {
+  classes: PropTypes.object,
+  userState: PropTypes.object,
 }
 
 export default withStyles(styles)(SectionCards)

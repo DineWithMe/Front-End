@@ -1,4 +1,6 @@
 import React from 'react'
+// nodejs library to set properties for components
+import PropTypes from 'prop-types'
 // react component for creating beautiful carousel
 import Carousel from 'react-slick'
 // @material-ui/core components
@@ -316,5 +318,7 @@ function SectionTestimonials({ ...props }) {
     </div>
   )
 }
-
+SectionTestimonials.propTypes = {
+  classes: PropTypes.object,
+}
 export default withStyles(testimonialsStyle)(SectionTestimonials)

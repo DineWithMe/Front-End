@@ -29,8 +29,6 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 class MyApp extends App {
-  // get initial props run first before constructor
-  static async getInitialProps() {}
   constructor(props) {
     super(props)
     this.pageContext = getPageContext()

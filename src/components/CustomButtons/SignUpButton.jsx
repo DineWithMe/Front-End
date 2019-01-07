@@ -38,25 +38,24 @@ class SignUpButton extends Component {
     this.captcha.renderExplicitly()
   }
   updateMessage = async (registrationData, createUser, onSignUpSuccess) => {
+    const { username, email, password } = registrationData
     const passed =
-      registrationData.username.flag === PASSED &&
-      registrationData.email.flag === PASSED &&
-      registrationData.password.flag === PASSED
+      username.flag === PASSED &&
+      email.flag === PASSED &&
+      password.flag === PASSED
 
     const failed =
-      registrationData.username.flag === FAILED ||
-      registrationData.email.flag === FAILED ||
-      registrationData.password.flag === FAILED
+      username.flag === FAILED ||
+      email.flag === FAILED ||
+      password.flag === FAILED
 
     const error =
-      registrationData.username.flag === ERROR ||
-      registrationData.email.flag === ERROR ||
-      registrationData.password.flag === ERROR
+      username.flag === ERROR || email.flag === ERROR || password.flag === ERROR
 
     const neutral =
-      registrationData.username.flag === NEUTRAL ||
-      registrationData.email.flag === NEUTRAL ||
-      registrationData.password.flag === NEUTRAL
+      username.flag === NEUTRAL ||
+      email.flag === NEUTRAL ||
+      password.flag === NEUTRAL
 
     if (error)
       this.setState({
@@ -71,21 +70,35 @@ class SignUpButton extends Component {
         message: '🔷Please fill in the empty field(s)🔷',
       })
     else if (passed) {
+      this.setState({
+        message: '🐇Signing up, please wait...🐇',
+      })
       await createUser({
         variables: {
           data: {
-            name: registrationData.username.value,
-            username: registrationData.username.value,
-            email: registrationData.email.value,
-            password: registrationData.password.value,
+            name: username.value,
+            username: username.value,
+            email: email.value,
+            password: password.value,
             reCAPTCHAToken: this.state.reCAPTCHAToken,
           },
         },
       })
         .then(({ data }) => {
-          userStateStore.setState({ login: true })
+          const {
+            createUser: {
+              user: { username, name },
+              userToken,
+            },
+          } = data
+          userStateStore.setState({
+            login: true,
+            username: username,
+            name: name,
+            userToken: userToken,
+          })
           onSignUpSuccess()
-          Cookies.set(USER_SESSION, data.createUser.userToken, {
+          Cookies.set(USER_SESSION, userToken, {
             expires: EXPIRES,
           })
           Router.push('/register?verified=false', '/register?verified=false', {
