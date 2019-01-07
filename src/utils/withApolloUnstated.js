@@ -108,10 +108,13 @@ export default (App) => {
     }
     constructor(props) {
       super(props)
+      /* eslint-disable react/prop-types */
       const {
         userState: { userToken },
         userState,
+        apolloState,
       } = props
+      /* eslint-enable react/prop-types */
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
@@ -123,7 +126,7 @@ export default (App) => {
           // Cookies.remove(USER_SESSION)
         }
       }
-      this.apolloClient = initApollo(props.apolloState, userToken)
+      this.apolloClient = initApollo(apolloState, userToken)
     }
     render() {
       return (
