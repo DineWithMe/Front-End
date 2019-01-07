@@ -1,7 +1,5 @@
 import { Component } from 'react'
 import Head from 'next/head'
-// query constant
-import { verifyToken } from '../constants/queryOperations'
 // apollo
 import { initApollo } from './initApollo'
 import { getDataFromTree } from 'react-apollo'
@@ -10,11 +8,6 @@ import { userStateStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
-// jwt
-import jwt from 'jsonwebtoken'
-
-// error
-import handleError from './handleError'
 
 export default (App) => {
   return class Apollo extends Component {
@@ -26,43 +19,7 @@ export default (App) => {
       if (App.getInitialProps) {
         appProps = await App.getInitialProps(context)
       }
-      // unstated
-      // handle cookies and state on server side
-      if (!process.browser) {
-        const {
-          ctx: {
-            req: {
-              headers: { cookie },
-            },
-          },
-        } = context
-        userStateStore.resetUserState()
-        if (cookie) {
-          // get specific token
-          const userToken = cookie.split(`${USER_SESSION}=`)[1].split(';')[0]
-          // verify userToken
-          await initApollo(undefined, userToken)
-            .query({
-              query: verifyToken,
-            })
-            .then((res) => {
-              const { name, username } = jwt.decode(
-                res.data.verifyToken.userToken
-              )
 
-              userStateStore.initUserState({
-                login: true,
-                name,
-                username,
-                userToken,
-              })
-            })
-            .catch((err) => handleError(err))
-        }
-      }
-      // it will still able to initApollo with correct userToken on client side
-      // the first time page loaded on client, get initial prop will not run
-      // but constructor will run and hydrate unstated
       const apolloClient = initApollo(undefined, userStateStore.state.userToken)
       // run all graphql queries in the component tree
       // and extract the resulting data
