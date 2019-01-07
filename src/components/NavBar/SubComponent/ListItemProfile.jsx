@@ -26,10 +26,17 @@ class ListItemProfile extends Component {
   componentDidMount() {
     const { router } = this.props
     router.prefetch('/profile')
+    router.prefetch('/')
   }
-
+  signOut = () => {
+    userStateStore.resetUserState(true)
+    this.props.router.push('/')
+  }
   render() {
-    const { classes, router, width } = this.props
+    const {
+      props: { classes, router, width },
+      signOut,
+    } = this
     const buttonStyle =
       width === 'xs' || width === 'sm'
         ? {}
@@ -91,6 +98,9 @@ class ListItemProfile extends Component {
               color='transparent'
               aria-label='user sign out'
               key='user sign out'
+              onClick={() => {
+                signOut()
+              }}
             >
               <PowerSettingsNew />
               &#160;&#160;&#160;{'Sign Out'}
