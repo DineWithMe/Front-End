@@ -36,7 +36,7 @@ export default (App) => {
             },
           },
         } = context
-        userStateStore.resetState()
+        userStateStore.resetUserState()
         if (cookie) {
           // get specific token
           const userToken = cookie.split(`${USER_SESSION}=`)[1].split(';')[0]
