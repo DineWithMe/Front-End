@@ -106,6 +106,7 @@ CustomFileInput.defaultProps = {
 
 CustomFileInput.propTypes = {
   id: PropTypes.string,
+  classes: PropTypes.object,
   endButton: PropTypes.object,
   startButton: PropTypes.object,
   inputProps: PropTypes.object,

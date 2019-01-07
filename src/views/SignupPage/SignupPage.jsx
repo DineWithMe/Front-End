@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react'
+// type react properties
+import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Checkbox from '@material-ui/core/Checkbox'
@@ -29,7 +31,7 @@ import UsernameInput from '../../components/CustomInput/UsernameInput.jsx'
 import EmailInput from '../../components/CustomInput/EmailInput.jsx'
 import PasswordInput from '../../components/CustomInput/PasswordInput.jsx'
 
-class Components extends React.Component {
+class SignupPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -281,5 +283,8 @@ class Components extends React.Component {
     )
   }
 }
-
-export default withStyles(signupPageStyle)(Components)
+SignupPage.propTypes = {
+  classes: PropTypes.object,
+  userState: PropTypes.object,
+}
+export default withStyles(signupPageStyle)(SignupPage)
