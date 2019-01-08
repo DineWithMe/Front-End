@@ -33,7 +33,11 @@ export default (App) => {
         userStateStore.resetUserState()
         if (cookie) {
           // get specific token
-          const userToken = cookie.split(`${USER_SESSION}=`)[1].split(';')[0]
+          const userTokenPart1 = cookie.split(`${USER_SESSION}=`)[1]
+          let userToken = ''
+          if (userTokenPart1) {
+            userToken = userTokenPart1.split(';')[0]
+          }
           // verify userToken
           await initApollo(undefined, userToken)
             .query({
