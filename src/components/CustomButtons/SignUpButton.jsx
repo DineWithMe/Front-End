@@ -1,4 +1,6 @@
 import { Component } from 'react'
+// apollo mutation component
+import { Mutation } from 'react-apollo'
 // environment variable
 import getConfig from 'next/config'
 // state
@@ -17,8 +19,6 @@ import { USER_SESSION, EXPIRES } from '../../constants/cookies'
 import { createUser } from '../../constants/mutationOperations'
 // google recaptcha
 import Reaptcha from 'reaptcha'
-// mutation component
-import { Mutation } from 'react-apollo'
 // core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
