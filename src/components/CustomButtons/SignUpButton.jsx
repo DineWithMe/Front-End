@@ -6,7 +6,7 @@ import getConfig from 'next/config'
 // state
 import { userStateStore } from '../../utils/unstated'
 // router
-import Router, { withRouter } from 'next/router'
+import Router from 'next/router'
 // error handling
 import handleError from '../../utils/handleError'
 //cookies
@@ -88,15 +88,16 @@ class SignUpButton extends Component {
         .then(({ data }) => {
           const {
             createUser: {
-              user: { username, name },
+              user: { id, username, name },
               userToken,
             },
           } = data
           userStateStore.setState({
             login: true,
-            username: username,
-            name: name,
-            userToken: userToken,
+            userId: id,
+            username,
+            name,
+            userToken,
           })
           onSignUpSuccess()
           Cookies.set(USER_SESSION, userToken, {
@@ -179,4 +180,4 @@ SignUpButton.propTypes = {
   enabled: PropTypes.number,
   onSignUpSuccess: PropTypes.func,
 }
-export default withRouter(SignUpButton)
+export default SignUpButton
