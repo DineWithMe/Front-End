@@ -15,12 +15,13 @@ import PropTypes from 'prop-types'
 import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
 import { USER_SESSION, EXPIRES } from '../../constants/cookies'
 import { createUser } from '../../constants/mutationOperations'
+// google recaptcha
+import Reaptcha from 'reaptcha'
 // mutation component
 import { Mutation } from 'react-apollo'
 // core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
-import Reaptcha from 'reaptcha'
 
 const { publicRuntimeConfig } = getConfig()
 
@@ -126,21 +127,27 @@ class SignUpButton extends Component {
 
     return (
       <Mutation mutation={createUser}>
-        {(createUser) => {
+        {(createUser, { loading }) => {
           return (
             <div className={classes.textCenter}>
               {verified ? (
-                <Button
-                  round
-                  color='primary'
-                  disabled={!enabled}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    updateMessage(registrationData, createUser, onSignUpSuccess)
-                  }}
-                >
-                  Sign Up!
-                </Button>
+                <>
+                  <Button
+                    round
+                    color='primary'
+                    disabled={!enabled || loading}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      updateMessage(
+                        registrationData,
+                        createUser,
+                        onSignUpSuccess
+                      )
+                    }}
+                  >
+                    Sign Up!
+                  </Button>
+                </>
               ) : (
                 <Reaptcha
                   ref={(e) => (this.captcha = e)}
