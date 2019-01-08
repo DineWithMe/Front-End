@@ -131,23 +131,17 @@ class SignUpButton extends Component {
           return (
             <div className={classes.textCenter}>
               {verified ? (
-                <>
-                  <Button
-                    round
-                    color='primary'
-                    disabled={!enabled || loading}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      updateMessage(
-                        registrationData,
-                        createUser,
-                        onSignUpSuccess
-                      )
-                    }}
-                  >
-                    Sign Up!
-                  </Button>
-                </>
+                <Button
+                  round
+                  color='primary'
+                  disabled={!enabled || loading}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    updateMessage(registrationData, createUser, onSignUpSuccess)
+                  }}
+                >
+                  Sign Up!
+                </Button>
               ) : (
                 <Reaptcha
                   ref={(e) => (this.captcha = e)}
