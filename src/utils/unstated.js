@@ -5,6 +5,7 @@ import { USER_SESSION } from '../constants/cookies'
 
 const initialState = {
   login: false,
+  userId: undefined,
   name: undefined,
   username: undefined,
   userToken: undefined,
