@@ -10,8 +10,6 @@ import { userStateStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
-// jwt
-import jwt from 'jsonwebtoken'
 
 // error
 import handleError from './handleError'
@@ -22,10 +20,6 @@ export default (App) => {
     // get initial props run first before constructor
     static async getInitialProps(context) {
       const { Component, router } = context
-      let appProps = {}
-      if (App.getInitialProps) {
-        appProps = await App.getInitialProps(context)
-      }
       // unstated
       // handle cookies and state on server side
       if (!process.browser) {
@@ -36,22 +30,24 @@ export default (App) => {
             },
           },
         } = context
-        userStateStore.resetState()
+        userStateStore.resetUserState()
         if (cookie) {
           // get specific token
-          const userToken = cookie.split(`${USER_SESSION}=`)[1].split(';')[0]
+          const userTokenPart1 = cookie.split(`${USER_SESSION}=`)[1]
+          let userToken = ''
+          if (userTokenPart1) {
+            userToken = userTokenPart1.split(';')[0]
+          }
           // verify userToken
           await initApollo(undefined, userToken)
             .query({
               query: verifyToken,
             })
             .then((res) => {
-              const { name, username } = jwt.decode(
-                res.data.verifyToken.userToken
-              )
-
+              const { id, name, username } = res.data.verifyToken.user
               userStateStore.initUserState({
                 login: true,
+                userId: id,
                 name,
                 username,
                 userToken,
@@ -64,6 +60,12 @@ export default (App) => {
       // the first time page loaded on client, get initial prop will not run
       // but constructor will run and hydrate unstated
       const apolloClient = initApollo(undefined, userStateStore.state.userToken)
+
+      let appProps = {}
+      if (App.getInitialProps) {
+        appProps = await App.getInitialProps(context)
+      }
+
       // run all graphql queries in the component tree
       // and extract the resulting data
       if (!process.browser) {
@@ -85,15 +87,12 @@ export default (App) => {
           // eslint-disable-next-line no-console
           console.error('Error while running `getDataFromTree`', error)
         }
-
         // getDataFromTree does not call componentWillUnmount (source? #2)
         // head side effect therefore need to be cleared manually (source? #3)
         Head.rewind() //unknown method #4
       }
-
       // Extract query data from Apollo store
       const apolloState = apolloClient.cache.extract()
-
       if (!process.browser) {
         return {
           ...appProps,

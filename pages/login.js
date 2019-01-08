@@ -1,14 +1,21 @@
+import { Component } from 'react'
 import SignInPage from '../src/views/SignInPage/SignInPage'
 import Head from 'next/head'
-import { Fragment } from 'react'
+import redirectIndex from '../src/utils/redirectIndex.js'
 
-const SignIn = () => {
-  return (
-    <Fragment>
-      <Head />
-      <SignInPage />
-    </Fragment>
-  )
+class SignIn extends Component {
+  static async getInitialProps(ctx) {
+    await redirectIndex(ctx)
+    return {}
+  }
+  render() {
+    return (
+      <>
+        <Head />
+        <SignInPage />
+      </>
+    )
+  }
 }
 
 export default SignIn

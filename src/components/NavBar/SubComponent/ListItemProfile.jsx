@@ -2,7 +2,7 @@ import { Component } from 'react'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
-import { withRouter } from 'next/router'
+import Router from 'next/router'
 // import material ui width
 import withWidth from '@material-ui/core/withWidth'
 // unstated
@@ -24,12 +24,18 @@ import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'
 
 class ListItemProfile extends Component {
   componentDidMount() {
-    const { router } = this.props
-    router.prefetch('/profile')
+    Router.prefetch(`/profile?username=${userStateStore.state.username}`)
+    // prefetch is not working in dev mode as the js is only generated on request
   }
-
+  signOut = () => {
+    userStateStore.resetUserState(true)
+    Router.push('/')
+  }
   render() {
-    const { classes, router, width } = this.props
+    const {
+      props: { classes, width },
+      signOut,
+    } = this
     const buttonStyle =
       width === 'xs' || width === 'sm'
         ? {}
@@ -56,13 +62,14 @@ class ListItemProfile extends Component {
               color='transparent'
               aria-label='user profile'
               onClick={() => {
-                router.push('/profile')
+                Router.push('/profile')
               }}
             >
               <AccountBox />
               &#160;&#160;&#160;
               {`${userStateStore.state.name}`}
             </Button>,
+
             { divider: true },
 
             <Button
@@ -91,6 +98,9 @@ class ListItemProfile extends Component {
               color='transparent'
               aria-label='user sign out'
               key='user sign out'
+              onClick={() => {
+                signOut()
+              }}
             >
               <PowerSettingsNew />
               &#160;&#160;&#160;{'Sign Out'}
@@ -104,8 +114,7 @@ class ListItemProfile extends Component {
 
 ListItemProfile.propTypes = {
   classes: PropTypes.object,
-  router: PropTypes.object,
   width: PropTypes.string,
 }
 
-export default withRouter(withWidth()(ListItemProfile))
+export default withWidth()(ListItemProfile)

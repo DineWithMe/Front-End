@@ -1,10 +1,12 @@
 import { Component } from 'react'
+// apollo mutation component
+import { Mutation } from 'react-apollo'
 // environment variable
 import getConfig from 'next/config'
 // state
 import { userStateStore } from '../../utils/unstated'
 // router
-import Router, { withRouter } from 'next/router'
+import Router from 'next/router'
 // error handling
 import handleError from '../../utils/handleError'
 //cookies
@@ -15,12 +17,11 @@ import PropTypes from 'prop-types'
 import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
 import { USER_SESSION, EXPIRES } from '../../constants/cookies'
 import { createUser } from '../../constants/mutationOperations'
-// mutation component
-import { Mutation } from 'react-apollo'
+// google recaptcha
+import Reaptcha from 'reaptcha'
 // core components
 import Button from '../../components/CustomButtons/Button.jsx'
 import ValidationMessage from '../CustomText/ValidationMessage.jsx'
-import Reaptcha from 'reaptcha'
 
 const { publicRuntimeConfig } = getConfig()
 
@@ -87,15 +88,16 @@ class SignUpButton extends Component {
         .then(({ data }) => {
           const {
             createUser: {
-              user: { username, name },
+              user: { id, username, name },
               userToken,
             },
           } = data
           userStateStore.setState({
             login: true,
-            username: username,
-            name: name,
-            userToken: userToken,
+            userId: id,
+            username,
+            name,
+            userToken,
           })
           onSignUpSuccess()
           Cookies.set(USER_SESSION, userToken, {
@@ -126,14 +128,14 @@ class SignUpButton extends Component {
 
     return (
       <Mutation mutation={createUser}>
-        {(createUser) => {
+        {(createUser, { loading }) => {
           return (
             <div className={classes.textCenter}>
               {verified ? (
                 <Button
                   round
                   color='primary'
-                  disabled={!enabled}
+                  disabled={!enabled || loading}
                   onClick={(e) => {
                     e.preventDefault()
                     updateMessage(registrationData, createUser, onSignUpSuccess)
@@ -178,4 +180,4 @@ SignUpButton.propTypes = {
   enabled: PropTypes.number,
   onSignUpSuccess: PropTypes.func,
 }
-export default withRouter(SignUpButton)
+export default SignUpButton

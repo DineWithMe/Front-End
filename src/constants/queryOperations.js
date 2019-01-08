@@ -18,6 +18,11 @@ const emailExist = gql`
 const verifyToken = gql`
   query {
     verifyToken {
+      user {
+        id
+        name
+        username
+      }
       userToken
     }
   }

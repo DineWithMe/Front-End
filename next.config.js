@@ -16,6 +16,7 @@ const nextConfig = {
     service_worker: process.env.SERVICE_WORKER,
     reCAPTCHA_apiKey: process.env.RECAPTCHA_APIKEY,
     env: process.env.NODE_ENV,
+    indexPage: process.env.INDEX_PAGE,
   },
   webpack: (config) => {
     config.plugins.push(
