@@ -10,8 +10,6 @@ import { userStateStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
-// jwt
-import jwt from 'jsonwebtoken'
 
 // error
 import handleError from './handleError'
@@ -42,12 +40,10 @@ export default (App) => {
               query: verifyToken,
             })
             .then((res) => {
-              const { name, username } = jwt.decode(
-                res.data.verifyToken.userToken
-              )
-
+              const { id, name, username } = res.data.verifyToken.user
               userStateStore.initUserState({
                 login: true,
+                userId: id,
                 name,
                 username,
                 userToken,
