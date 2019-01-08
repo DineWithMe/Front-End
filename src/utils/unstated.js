@@ -11,12 +11,18 @@ const initialState = {
   userToken: '',
 }
 
+const initialData = {
+  email: '',
+  password: '',
+}
+
 class UserStateContainer extends Container {
   state = initialState
+  data = initialData
   setUserState = (state) => {
     this.setState(state)
   }
-  // these two methods doesn't need setState as they run before rendering
+  // these methods doesn't need setState as they do not require rendering when run
   initUserState = (state) => {
     this.state = state
   }
