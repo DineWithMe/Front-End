@@ -1,13 +1,19 @@
 import React from 'react'
+// state
+import { userStateStore } from '../../utils/unstated'
 // type react properties
 import PropTypes from 'prop-types'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import Icon from '@material-ui/core/Icon'
 // @material-ui/icons
 import Email from '@material-ui/icons/Email'
-import Face from '@material-ui/icons/Face'
+import Lock from '@material-ui/icons/Lock'
+// style
+import loginPageStyle from '../../jss/material-kit-pro-react/views/loginPageStyle.jsx'
+// image
+import image from '../../../static/img/bg7.jpg'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 // core components
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -17,11 +23,7 @@ import CardBody from '../../components/Card/CardBody.jsx'
 import CardHeader from '../../components/Card/CardHeader.jsx'
 import CustomInput from '../../components/CustomInput/CustomInput.jsx'
 import CustomFooter from '../../components/Footer/CustomFooter.jsx'
-// style
-import loginPageStyle from '../../jss/material-kit-pro-react/views/loginPageStyle.jsx'
-// image
-import image from '../../../static/img/bg7.jpg'
-import Navbar from '../../components/NavBar/Navbar.jsx'
+import LoginButton from '../../components/CustomButtons/LoginButton.js'
 
 class LoginPage extends React.Component {
   componentDidMount() {
@@ -29,7 +31,9 @@ class LoginPage extends React.Component {
     document.body.scrollTop = 0
   }
   render() {
-    const { classes } = this.props
+    const {
+      props: { classes },
+    } = this
     return (
       <div>
         <Navbar />
@@ -86,27 +90,15 @@ class LoginPage extends React.Component {
                     </p>
                     <CardBody signup>
                       <CustomInput
-                        id='first'
-                        formControlProps={{
-                          fullWidth: true,
-                        }}
-                        inputProps={{
-                          placeholder: 'First Name...',
-                          type: 'text',
-                          startAdornment: (
-                            <InputAdornment position='start'>
-                              <Face className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          ),
-                        }}
-                      />
-                      <CustomInput
                         id='email'
                         formControlProps={{
                           fullWidth: true,
                         }}
                         inputProps={{
-                          placeholder: 'Email...',
+                          onChange: (e) => {
+                            userStateStore.data.emailOrUsername = e.target.value.toLowerCase()
+                          },
+                          placeholder: 'Email or Username',
                           type: 'email',
                           startAdornment: (
                             <InputAdornment position='start'>
@@ -121,23 +113,20 @@ class LoginPage extends React.Component {
                           fullWidth: true,
                         }}
                         inputProps={{
+                          onChange: (e) => {
+                            userStateStore.data.password = e.target.value
+                          },
                           placeholder: 'Password',
                           type: 'password',
                           startAdornment: (
                             <InputAdornment position='start'>
-                              <Icon className={classes.inputIconsColor}>
-                                lock_utline
-                              </Icon>
+                              <Lock className={classes.inputIconsColor} />
                             </InputAdornment>
                           ),
                         }}
                       />
                     </CardBody>
-                    <div className={classes.textCenter}>
-                      <Button simple color='primary' size='lg'>
-                        Get started
-                      </Button>
-                    </div>
+                    <LoginButton classes={classes} />
                   </form>
                 </Card>
               </GridItem>

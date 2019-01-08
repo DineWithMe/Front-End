@@ -6,9 +6,23 @@ const createUser = gql`
       userToken
       user {
         id
+        username
         name
       }
     }
   }
 `
-export { createUser }
+
+const login = gql`
+  mutation($data: LoginUserInput!) {
+    login(data: $data) {
+      user {
+        id
+        name
+        username
+      }
+      userToken
+    }
+  }
+`
+export { createUser, login }
