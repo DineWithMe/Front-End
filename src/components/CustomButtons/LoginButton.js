@@ -60,7 +60,7 @@ class LoginButton extends Component {
 
   render() {
     const {
-      props: { classes },
+      props: { classes, loginButtonReferencing },
       state: { message },
       onLogin,
     } = this
@@ -70,8 +70,8 @@ class LoginButton extends Component {
           return (
             <div className={classes.textCenter}>
               <Button
-                ref={(Button) => {
-                  this.Button = Button
+                ref={(LoginButton) => {
+                  loginButtonReferencing(LoginButton)
                 }}
                 simple
                 color='primary'
@@ -95,5 +95,6 @@ class LoginButton extends Component {
 
 LoginButton.propTypes = {
   classes: PropTypes.object,
+  loginButtonReferencing: PropTypes.func,
 }
 export default LoginButton
