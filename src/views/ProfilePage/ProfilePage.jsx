@@ -11,21 +11,7 @@ import Camera from '@material-ui/icons/Camera'
 import Palette from '@material-ui/icons/Palette'
 import People from '@material-ui/icons/People'
 import Add from '@material-ui/icons/Add'
-// core components
-import GridContainer from '../../components/Grid/GridContainer.jsx'
-import GridItem from '../../components/Grid/GridItem.jsx'
-import NavPills from '../../components/NavPills/NavPills.jsx'
-import Card from '../../components/Card/Card.jsx'
-import CardBody from '../../components/Card/CardBody.jsx'
-import CardHeader from '../../components/Card/CardHeader.jsx'
-import Badge from '../../components/Badge/Badge.jsx'
-import Muted from '../../components/Typography/Muted.jsx'
-import Clearfix from '../../components/Clearfix/Clearfix.jsx'
-import Button from '../../components/CustomButtons/Button.jsx'
-import Parallax from '../../components/Parallax/Parallax.jsx'
-import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 // image
-import christian from '../../../static/img/faces/christian.jpg'
 import oluEletu from '../../../static/img/examples/olu-eletu.jpg'
 import clemOnojeghuo from '../../../static/img/examples/clem-onojeghuo.jpg'
 import cynthiaDelRio from '../../../static/img/examples/cynthia-del-rio.jpg'
@@ -39,6 +25,20 @@ import cardProfile2Square from '../../../static/img/faces/card-profile2-square.j
 // style
 import profilePageStyle from '../../jss/material-kit-pro-react/views/profilePageStyle.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
+// core components
+import GridContainer from '../../components/Grid/GridContainer.jsx'
+import GridItem from '../../components/Grid/GridItem.jsx'
+import NavPills from '../../components/NavPills/NavPills.jsx'
+import Card from '../../components/Card/Card.jsx'
+import CardBody from '../../components/Card/CardBody.jsx'
+import CardHeader from '../../components/Card/CardHeader.jsx'
+import Badge from '../../components/Badge/Badge.jsx'
+import Muted from '../../components/Typography/Muted.jsx'
+import Clearfix from '../../components/Clearfix/Clearfix.jsx'
+import Button from '../../components/CustomButtons/Button.jsx'
+import Parallax from '../../components/Parallax/Parallax.jsx'
+import CustomFooter from '../../components/Footer/CustomFooter.jsx'
+import ImageUpload2 from '../../components/CustomUpload/ImageUpload2.jsx'
 
 class ProfilePage extends React.Component {
   componentDidMount() {
@@ -66,9 +66,7 @@ class ProfilePage extends React.Component {
             <GridContainer justify='center'>
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
-                  <div>
-                    <img src={christian} alt='...' className={imageClasses} />
-                  </div>
+                  <ImageUpload2 classes={classes} />
                   <div className={classes.name}>
                     <h3 className={classes.title}>Christian Louboutin</h3>
                     <h6>DESIGNER</h6>
