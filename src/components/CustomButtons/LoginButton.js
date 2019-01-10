@@ -5,7 +5,7 @@ import { login } from '../../constants/mutationOperations'
 // state
 import { userStateStore } from '../../utils/unstated'
 // router
-import Router, { withRouter } from 'next/router'
+import Router from 'next/router'
 // error handling
 import handleError from '../../utils/handleError'
 //cookies
@@ -64,13 +64,15 @@ class LoginButton extends Component {
       state: { message },
       onLogin,
     } = this
-
     return (
       <Mutation mutation={login}>
         {(login, { loading }) => {
           return (
             <div className={classes.textCenter}>
               <Button
+                ref={(Button) => {
+                  this.Button = Button
+                }}
                 simple
                 color='primary'
                 size='lg'
@@ -94,4 +96,4 @@ class LoginButton extends Component {
 LoginButton.propTypes = {
   classes: PropTypes.object,
 }
-export default withRouter(LoginButton)
+export default LoginButton
