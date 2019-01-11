@@ -25,4 +25,12 @@ const login = gql`
     }
   }
 `
-export { createUser, login }
+const uploadFile = gql`
+  mutation($file: Upload!) {
+    uploadFile(file: $file) {
+      filename
+    }
+  }
+`
+
+export { createUser, login, uploadFile }
