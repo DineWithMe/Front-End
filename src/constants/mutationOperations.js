@@ -28,7 +28,7 @@ const login = gql`
 const uploadUserAvatar = gql`
   mutation($file: Upload!) {
     uploadUserAvatar(file: $file) {
-      filename
+      avatarFilename
     }
   }
 `
