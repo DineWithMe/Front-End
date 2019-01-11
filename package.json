@@ -24,6 +24,7 @@
     "@zeit/next-sass": "^1.0.1",
     "animate.css": "^3.7.0",
     "apollo-boost": "^0.1.23",
+    "apollo-upload-client": "^10.0.0",
     "babel-plugin-css-in-js": "^1.5.1",
     "classnames": "^2.2.6",
     "graphql": "^14.0.2",
