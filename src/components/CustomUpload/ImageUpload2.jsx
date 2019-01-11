@@ -37,8 +37,13 @@ class ImageUpload2 extends Component {
                 if (e.target.validity.valid) {
                   const reader = new FileReader()
                   const file = e.target.files[0]
-                  // need catch because this will be error if user cancel the to input any file
-                  reader.readAsDataURL(file).catch()
+                  try {
+                    // need catch because this will be error if user cancel the to input any file
+                    reader.readAsDataURL(file)
+                  } catch (err) {
+                    // stop if user cancel
+                    return
+                  }
                   reader.onloadend = () => {
                     this.setState({
                       file,
