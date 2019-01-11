@@ -9,7 +9,8 @@ import Tooltip from '@material-ui/core/Tooltip'
 import classNames from 'classnames'
 // image
 import christian from '../../../static/img/faces/christian.jpg'
-
+// error
+import handleError from '../../utils/handleError'
 class ImageUpload2 extends Component {
   state = { file: '', imagePreviewUrl: '' }
   render() {
@@ -24,7 +25,7 @@ class ImageUpload2 extends Component {
     )
     return (
       <Mutation mutation={uploadUserAvatar}>
-        {(uploadUserAvatar, { data }) => (
+        {(uploadUserAvatar) => (
           <>
             <input
               type='file'
@@ -36,22 +37,16 @@ class ImageUpload2 extends Component {
                 if (e.target.validity.valid) {
                   const reader = new FileReader()
                   const file = e.target.files[0]
-                  try {
-                    reader.readAsDataURL(file)
-                  } catch (err) {
-                    // this will be error if user cancel the to input any file
-                    // return and stop executing in case error
-
-                    return err
-                  }
+                  // need catch because this will be error if user cancel the to input any file
+                  reader.readAsDataURL(file).catch()
                   reader.onloadend = () => {
                     this.setState({
                       file,
                       imagePreviewUrl: reader.result,
                     })
                   }
-                  uploadUserAvatar({ variables: { file } }).then((res) =>
-                    console.log(res.data)
+                  uploadUserAvatar({ variables: { file } }).catch((err) =>
+                    handleError(err)
                   )
                 }
               }}
