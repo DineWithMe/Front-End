@@ -2,7 +2,7 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 // Apollo
 import { Mutation } from 'react-apollo'
-import { uploadFile } from '../../constants/mutationOperations'
+import { uploadUserAvatar } from '../../constants/mutationOperations'
 // material ui components
 import Tooltip from '@material-ui/core/Tooltip'
 // nodejs library that concatenates classes
@@ -23,8 +23,8 @@ class ImageUpload2 extends Component {
       classes.imgFluid
     )
     return (
-      <Mutation mutation={uploadFile}>
-        {(uploadFile, { data }) => (
+      <Mutation mutation={uploadUserAvatar}>
+        {(uploadUserAvatar, { data }) => (
           <>
             <input
               type='file'
@@ -50,9 +50,9 @@ class ImageUpload2 extends Component {
                       imagePreviewUrl: reader.result,
                     })
                   }
-                  uploadFile({ variables: { file } })
-
-                  console.log(reader.result)
+                  uploadUserAvatar({ variables: { file } }).then((res) =>
+                    console.log(res.data)
+                  )
                 }
               }}
               accept='image/png, image/jpeg'

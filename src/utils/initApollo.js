@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
+import { ApolloClient, InMemoryCache } from 'apollo-boost'
 import getConfig from 'next/config'
 import { createUploadLink } from 'apollo-upload-client'
 const { publicRuntimeConfig } = getConfig()
@@ -19,6 +19,7 @@ export const initApollo = (initialState, userToken) => {
       Authorization: `Bearer ${userToken}`,
     },
   })
+
   let apolloClient = null
 
   //create apollo client
