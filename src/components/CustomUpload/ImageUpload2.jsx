@@ -75,19 +75,17 @@ class ImageUpload2 extends Component {
           notifyOnNetworkStatusChange
         >
           {({ data, refetch, loading }) => {
-            const {
-              user: { avatarFilename },
-            } = data
-
             let src = ''
 
             // do not use setState because setState is too slow for getInitialProps
             if (loading) {
               src = loadingGif
-            } else if (avatarFilename) {
-              src = `${
-                publicRuntimeConfig.serverPage
-              }${USER_AVATAR}${avatarFilename}`
+              // if this page is visited using client next/link, it will fetch and loading first
+              // if it is render in server side, it will fetch data before render thus skipping loading
+            } else if (data.user.avatarFilename) {
+              src = `${publicRuntimeConfig.serverPage}${USER_AVATAR}${
+                data.user.avatarFilename
+              }`
             } else {
               src = defaultAvatar
             }
