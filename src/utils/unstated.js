@@ -7,8 +7,13 @@ const initialState = {
   login: false,
   userId: '',
   name: '',
+  email: '',
   username: '',
-  userToken: '',
+  avatarFilename: '',
+  avatarMimeType: '',
+  avatarEncoding: '',
+  updatedAt: '',
+  createdAt: '',
 }
 
 const initialData = {

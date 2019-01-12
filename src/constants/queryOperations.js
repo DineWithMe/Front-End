@@ -21,7 +21,13 @@ const verifyToken = gql`
       user {
         id
         name
+        email
         username
+        avatarFilename
+        avatarMimeType
+        avatarEncoding
+        updatedAt
+        createdAt
       }
       userToken
     }

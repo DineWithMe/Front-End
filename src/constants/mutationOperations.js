@@ -19,7 +19,13 @@ const login = gql`
       user {
         id
         name
+        email
         username
+        avatarFilename
+        avatarMimeType
+        avatarEncoding
+        updatedAt
+        createdAt
       }
       userToken
     }
