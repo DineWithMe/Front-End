@@ -17,6 +17,7 @@ const nextConfig = {
     reCAPTCHA_apiKey: process.env.RECAPTCHA_APIKEY,
     env: process.env.NODE_ENV,
     indexPage: process.env.INDEX_PAGE,
+    serverPage: process.env.SERVER_PAGE,
   },
   webpack: (config) => {
     config.plugins.push(
