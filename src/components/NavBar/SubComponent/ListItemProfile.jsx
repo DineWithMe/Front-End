@@ -63,6 +63,7 @@ class ListItemProfile extends Component {
               aria-label='user profile'
               onClick={() => {
                 Router.push('/profile')
+                // next/link doesnt work in this drop down list, need more study about custom drop down
               }}
             >
               <AccountBox />
