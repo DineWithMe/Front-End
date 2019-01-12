@@ -14,14 +14,13 @@ import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew'
 import Restaurant from '@material-ui/icons/Restaurant'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
-// image
-import profileImage from '../../../../static/img/faces/avatar.jpg'
 // style
 import { buttonDropDownStyle } from '../style/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'
-
+// file path
+import { getAvatarFilePath } from '../../../utils/fileOperation'
 class ListItemProfile extends Component {
   componentDidMount() {
     Router.prefetch(`/profile?username=${userStateStore.state.username}`)
@@ -46,7 +45,11 @@ class ListItemProfile extends Component {
           left
           hoverColor='dark'
           buttonText={
-            <img src={profileImage} className={classes.img} alt='profile' />
+            <img
+              src={getAvatarFilePath(userStateStore.state.avatarFilename)}
+              className={classes.img}
+              alt='profile'
+            />
           }
           buttonProps={{
             style: buttonStyle,
