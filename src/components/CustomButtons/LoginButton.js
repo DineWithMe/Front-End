@@ -33,16 +33,12 @@ class LoginButton extends Component {
     })
       .then(({ data }) => {
         const {
-          login: {
-            user: { id, username, name },
-            userToken,
-          },
+          login: { user, userToken },
         } = data
         userStateStore.setState({
           login: true,
-          userId: id,
-          username: username,
-          name: name,
+          ...user,
+          userId: user.id,
           userToken: userToken,
         })
         Cookies.set(USER_SESSION, userToken, {

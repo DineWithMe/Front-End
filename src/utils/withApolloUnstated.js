@@ -44,12 +44,11 @@ export default (App) => {
               query: verifyToken,
             })
             .then((res) => {
-              const { id, name, username } = res.data.verifyToken.user
+              const { user } = res.data.verifyToken
               userStateStore.initUserState({
                 login: true,
-                userId: id,
-                name,
-                username,
+                ...user,
+                userId: user.id,
                 userToken,
               })
             })
