@@ -8,7 +8,7 @@ import Tooltip from '@material-ui/core/Tooltip'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // image
-import christian from '../../../static/img/faces/christian.jpg'
+import defaultAvatar from '../../../static/img/faces/default-avatar.png'
 // error
 import handleError from '../../utils/handleError'
 class ImageUpload2 extends Component {
@@ -63,7 +63,7 @@ class ImageUpload2 extends Component {
               classes={{ tooltip: classes.tooltip }}
             >
               <img
-                src={imagePreviewUrl || christian}
+                src={imagePreviewUrl || defaultAvatar}
                 alt='...'
                 className={imageClasses}
                 style={{
