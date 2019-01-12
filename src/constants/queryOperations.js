@@ -1,15 +1,15 @@
 import { gql } from 'apollo-boost'
 
-const userExist = gql`
-  query($query: String) {
-    userExist(query: $query) {
+const user = gql`
+  query($username: String!) {
+    user(username: $username) {
       name
     }
   }
 `
 const emailExist = gql`
-  query($query: String) {
-    emailExist(query: $query) {
+  query($email: String!) {
+    emailExist(email: $query) {
       name
     }
   }
@@ -27,4 +27,12 @@ const verifyToken = gql`
     }
   }
 `
-export { userExist, emailExist, verifyToken }
+const userAvatar = gql`
+  query($username: String!) {
+    user(username: $username) {
+      avatarFilename
+    }
+  }
+`
+
+export { user, emailExist, verifyToken, userAvatar }
