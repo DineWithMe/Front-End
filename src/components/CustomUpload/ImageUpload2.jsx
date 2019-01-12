@@ -41,7 +41,7 @@ class ImageUpload2 extends Component {
                 this.fileInput = fileInput
               }}
               style={{ display: 'none' }}
-              onChange={(e) => {
+              onChange={async (e) => {
                 if (e.target.validity.valid) {
                   const reader = new FileReader()
                   const file = e.target.files[0]
@@ -58,10 +58,11 @@ class ImageUpload2 extends Component {
                       imagePreviewUrl: reader.result,
                     })
                   }
-                  uploadUserAvatar({ variables: { file } }).catch((err) =>
+                  // remember this is a promise
+                  await uploadUserAvatar({ variables: { file } }).catch((err) =>
                     handleError(err)
                   )
-                  refetch()
+                  this.refetch()
                 }
               }}
               accept='image/png, image/jpeg'
@@ -71,6 +72,7 @@ class ImageUpload2 extends Component {
         <Query
           query={userAvatar}
           variables={{ username: userStateStore.state.username }}
+          notifyOnNetworkStatusChange
         >
           {({ data, refetch, loading }) => {
             const {
@@ -89,7 +91,6 @@ class ImageUpload2 extends Component {
             } else {
               src = defaultAvatar
             }
-
             return (
               <Tooltip
                 title='Change Your Avatar'
@@ -100,6 +101,10 @@ class ImageUpload2 extends Component {
                   src={src}
                   alt='user avatar'
                   className={imageClasses}
+                  ref={(img) => {
+                    this.img = img
+                    this.refetch = refetch
+                  }}
                   style={{
                     cursor: 'pointer',
                   }}
