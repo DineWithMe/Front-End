@@ -35,4 +35,20 @@ const userAvatar = gql`
   }
 `
 
-export { user, emailExist, verifyToken, userAvatar }
+const me = gql`
+  query {
+    user {
+      id
+      name
+      email
+      username
+      avatarFilename
+      avatarMimeType
+      avatarEncoding
+      updatedAt
+      createdAt
+    }
+  }
+`
+
+export { user, emailExist, verifyToken, userAvatar, me }
