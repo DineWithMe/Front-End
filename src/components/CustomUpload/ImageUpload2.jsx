@@ -1,5 +1,4 @@
 import { Component } from 'react'
-import getConfig from 'next/config'
 import PropTypes from 'prop-types'
 // Apollo
 import { Mutation, Query } from 'react-apollo'
@@ -16,10 +15,9 @@ import loadingGif from '../../../static/img/gif/loading.gif'
 import handleError from '../../utils/handleError'
 // unstated
 import { userStateStore } from '../../utils/unstated'
-// constant
-import { USER_AVATAR } from '../../constants/folder'
+// file path
+import { getAvatarFilePath } from '../../utils/fileOperation'
 
-const { publicRuntimeConfig } = getConfig()
 class ImageUpload2 extends Component {
   state = { file: '' }
   render() {
@@ -83,9 +81,11 @@ class ImageUpload2 extends Component {
               // if this page is visited using client next/link, it will fetch and loading first
               // if it is render in server side, it will fetch data before render thus skipping loading
             } else if (data.user.avatarFilename) {
-              src = `${publicRuntimeConfig.serverPage}${USER_AVATAR}${
-                data.user.avatarFilename
-              }`
+              const {
+                user: { avatarFilename },
+              } = data
+              src = getAvatarFilePath(avatarFilename)
+              userStateStore.setState({ avatarFilename })
             } else {
               src = defaultAvatar
             }
