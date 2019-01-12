@@ -25,6 +25,8 @@ import cardProfile2Square from '../../../static/img/faces/card-profile2-square.j
 // style
 import profilePageStyle from '../../jss/material-kit-pro-react/views/profilePageStyle.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
+// state
+import { userStateStore } from '../../utils/unstated'
 // core components
 import GridContainer from '../../components/Grid/GridContainer.jsx'
 import GridItem from '../../components/Grid/GridItem.jsx'
@@ -68,7 +70,9 @@ class ProfilePage extends React.Component {
                 <div className={classes.profile}>
                   <ImageUpload2 classes={classes} />
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
+                    <h3 className={classes.title}>
+                      {userStateStore.state.name}
+                    </h3>
                     <h6>DESIGNER</h6>
                     <Button
                       justIcon
