@@ -9,7 +9,7 @@ const user = gql`
 `
 const emailExist = gql`
   query($email: String!) {
-    emailExist(email: $query) {
+    emailExist(email: $email) {
       name
     }
   }
