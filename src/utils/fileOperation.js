@@ -5,7 +5,9 @@ import { USER_AVATAR } from '../constants/folder'
 const { publicRuntimeConfig } = getConfig()
 
 const getAvatarFilePath = (filename) => {
-  return `${publicRuntimeConfig.serverPage}${USER_AVATAR}${filename}`
+  return (
+    filename && `${publicRuntimeConfig.serverPage}${USER_AVATAR}${filename}`
+  )
 }
 
 export { getAvatarFilePath }

@@ -1,4 +1,6 @@
 import { Component } from 'react'
+// file path
+import { getAvatarFilePath } from '../../../utils/fileOperation'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
@@ -12,6 +14,8 @@ import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
 import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew'
 import Restaurant from '@material-ui/icons/Restaurant'
+// default avatar
+import defaultAvatar from '../../../../static/img/faces/default-avatar.png'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
 // style
@@ -19,8 +23,7 @@ import { buttonDropDownStyle } from '../style/styles'
 // components
 import Button from '../../CustomButtons/Button.jsx'
 import CustomDropdown from '../../CustomDropdown/CustomDropdown.jsx'
-// file path
-import { getAvatarFilePath } from '../../../utils/fileOperation'
+
 class ListItemProfile extends Component {
   componentDidMount() {
     Router.prefetch(`/profile?username=${userStateStore.state.username}`)
@@ -39,6 +42,7 @@ class ListItemProfile extends Component {
       width === 'xs' || width === 'sm'
         ? {}
         : { marginTop: '-15%', marginBottom: '-15%' }
+
     return (
       <ListItem className={classes.listItem}>
         <CustomDropdown
@@ -46,7 +50,10 @@ class ListItemProfile extends Component {
           hoverColor='dark'
           buttonText={
             <img
-              src={getAvatarFilePath(userStateStore.state.avatarFilename)}
+              src={
+                getAvatarFilePath(userStateStore.state.avatarFilename) ||
+                defaultAvatar
+              }
               className={classes.img}
               alt='profile'
             />
