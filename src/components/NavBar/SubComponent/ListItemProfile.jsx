@@ -1,4 +1,6 @@
 import { Component } from 'react'
+// file path
+import { getAvatarFilePath } from '../../../utils/fileOperation'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
@@ -12,10 +14,10 @@ import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
 import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew'
 import Restaurant from '@material-ui/icons/Restaurant'
+// default avatar
+import defaultAvatar from '../../../../static/img/faces/default-avatar.png'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
-// image
-import profileImage from '../../../../static/img/faces/avatar.jpg'
 // style
 import { buttonDropDownStyle } from '../style/styles'
 // components
@@ -40,13 +42,21 @@ class ListItemProfile extends Component {
       width === 'xs' || width === 'sm'
         ? {}
         : { marginTop: '-15%', marginBottom: '-15%' }
+
     return (
       <ListItem className={classes.listItem}>
         <CustomDropdown
           left
           hoverColor='dark'
           buttonText={
-            <img src={profileImage} className={classes.img} alt='profile' />
+            <img
+              src={
+                getAvatarFilePath(userStateStore.state.avatarFilename) ||
+                defaultAvatar
+              }
+              className={classes.img}
+              alt='profile'
+            />
           }
           buttonProps={{
             style: buttonStyle,
@@ -63,6 +73,7 @@ class ListItemProfile extends Component {
               aria-label='user profile'
               onClick={() => {
                 Router.push('/profile')
+                // next/link doesnt work in this drop down list, need more study about custom drop down
               }}
             >
               <AccountBox />

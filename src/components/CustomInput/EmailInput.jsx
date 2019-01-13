@@ -48,7 +48,7 @@ class EmailInput extends Component {
       try {
         const res = await client.query({
           query: emailExist,
-          variables: { query: email },
+          variables: { email },
         })
         if (res.data.emailExist !== null) {
           updateState(FAILED, 'email is already taken')

@@ -14,6 +14,7 @@ const ListItemSignIn = (props) => {
 
   return (
     <ListItem className={classes.listItem}>
+      {/* prefetch is not working in dev mode as the js is only generated on request */}
       <Link href='/login' prefetch passHref>
         <Button
           className={classes.navLink}

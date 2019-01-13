@@ -87,16 +87,12 @@ class SignUpButton extends Component {
       })
         .then(({ data }) => {
           const {
-            createUser: {
-              user: { id, username, name },
-              userToken,
-            },
+            createUser: { user, userToken },
           } = data
           userStateStore.setState({
             login: true,
-            userId: id,
-            username,
-            name,
+            ...user,
+            userId: user.id,
             userToken,
           })
           onSignUpSuccess()

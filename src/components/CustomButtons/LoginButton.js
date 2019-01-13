@@ -5,7 +5,7 @@ import { login } from '../../constants/mutationOperations'
 // state
 import { userStateStore } from '../../utils/unstated'
 // router
-import Router, { withRouter } from 'next/router'
+import Router from 'next/router'
 // error handling
 import handleError from '../../utils/handleError'
 //cookies
@@ -33,16 +33,12 @@ class LoginButton extends Component {
     })
       .then(({ data }) => {
         const {
-          login: {
-            user: { id, username, name },
-            userToken,
-          },
+          login: { user, userToken },
         } = data
         userStateStore.setState({
           login: true,
-          userId: id,
-          username: username,
-          name: name,
+          ...user,
+          userId: user.id,
           userToken: userToken,
         })
         Cookies.set(USER_SESSION, userToken, {
@@ -60,17 +56,19 @@ class LoginButton extends Component {
 
   render() {
     const {
-      props: { classes },
+      props: { classes, loginButtonReferencing },
       state: { message },
       onLogin,
     } = this
-
     return (
       <Mutation mutation={login}>
         {(login, { loading }) => {
           return (
             <div className={classes.textCenter}>
               <Button
+                ref={(LoginButton) => {
+                  loginButtonReferencing(LoginButton)
+                }}
                 simple
                 color='primary'
                 size='lg'
@@ -93,5 +91,6 @@ class LoginButton extends Component {
 
 LoginButton.propTypes = {
   classes: PropTypes.object,
+  loginButtonReferencing: PropTypes.func,
 }
-export default withRouter(LoginButton)
+export default LoginButton

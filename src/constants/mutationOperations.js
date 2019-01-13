@@ -19,10 +19,24 @@ const login = gql`
       user {
         id
         name
+        email
         username
+        avatarFilename
+        avatarMimeType
+        avatarEncoding
+        updatedAt
+        createdAt
       }
       userToken
     }
   }
 `
-export { createUser, login }
+const uploadUserAvatar = gql`
+  mutation($file: Upload!) {
+    uploadUserAvatar(file: $file) {
+      avatarFilename
+    }
+  }
+`
+
+export { createUser, login, uploadUserAvatar }

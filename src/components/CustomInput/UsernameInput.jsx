@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import handleError from '../../utils/handleError'
 // graphql query constant
-import { userExist } from '../../constants/queryOperations.js'
+import { user } from '../../constants/queryOperations.js'
 // Apollo client
 import { ApolloConsumer } from 'react-apollo'
 // constants
@@ -53,10 +53,10 @@ class UsernameInput extends Component {
       // username must not be duplicate
       try {
         const { data } = await client.query({
-          query: userExist,
-          variables: { query: username },
+          query: user,
+          variables: { username },
         })
-        if (data.userExist !== null) {
+        if (data.user !== null) {
           updateState(FAILED, 'username is already taken')
         } else {
           updateState(PASSED, 'username is available')

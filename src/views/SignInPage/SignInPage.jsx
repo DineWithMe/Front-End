@@ -30,9 +30,19 @@ class LoginPage extends React.Component {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
+  loginButtonReferencing = (ref) => {
+    this.LoginButton = ref
+  }
+  onEnter = (event) => {
+    if (event.key === 'Enter') {
+      this.LoginButton.props.onClick(event)
+    }
+  }
   render() {
     const {
       props: { classes },
+      onEnter,
+      loginButtonReferencing,
     } = this
     return (
       <div>
@@ -95,6 +105,7 @@ class LoginPage extends React.Component {
                           fullWidth: true,
                         }}
                         inputProps={{
+                          onKeyPress: (e) => onEnter(e),
                           onChange: (e) => {
                             userStateStore.data.emailOrUsername = e.target.value.toLowerCase()
                           },
@@ -113,6 +124,7 @@ class LoginPage extends React.Component {
                           fullWidth: true,
                         }}
                         inputProps={{
+                          onKeyPress: (e) => onEnter(e),
                           onChange: (e) => {
                             userStateStore.data.password = e.target.value
                           },
@@ -126,7 +138,10 @@ class LoginPage extends React.Component {
                         }}
                       />
                     </CardBody>
-                    <LoginButton classes={classes} />
+                    <LoginButton
+                      classes={classes}
+                      loginButtonReferencing={loginButtonReferencing}
+                    />
                   </form>
                 </Card>
               </GridItem>
