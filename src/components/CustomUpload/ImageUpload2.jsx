@@ -78,10 +78,10 @@ class ImageUpload2 extends Component {
             // do not use setState because setState is too slow for getInitialProps
             if (loading) {
               src = loadingGif
-              userStateStore.setState({ avatarFilename: src })
+
               // if this page is visited using client next/link, it will fetch and loading first
               // if it is render in server side, it will fetch data before render thus skipping loading
-            } else if (data.user.avatarFilename) {
+            } else if (data.user && data.user.avatarFilename) {
               const {
                 user: { avatarFilename },
               } = data
@@ -89,7 +89,6 @@ class ImageUpload2 extends Component {
               userStateStore.setState({ avatarFilename })
             } else {
               src = defaultAvatar
-              userStateStore.setState({ avatarFilename: src })
             }
             return (
               <Tooltip
