@@ -4,7 +4,7 @@ import { Mutation } from 'react-apollo'
 // environment variable
 import getConfig from 'next/config'
 // state
-import { userStateStore } from '../../utils/unstated'
+import { userStateStore, AppMethodStore } from '../../utils/unstated'
 // router
 import Router from 'next/router'
 // error handling
@@ -99,6 +99,7 @@ class SignUpButton extends Component {
           Cookies.set(USER_SESSION, userToken, {
             expires: EXPIRES,
           })
+          AppMethodStore.newApolloClient()
           Router.push('/register?verified=false', '/register?verified=false', {
             shallow: true,
           })

@@ -8,7 +8,10 @@ import Router from 'next/router'
 // import material ui width
 import withWidth from '@material-ui/core/withWidth'
 // unstated
-import { userStateStore } from '../../../utils/unstated'
+import { userStateStore, AppMethodStore } from '../../../utils/unstated'
+// cookies
+import Cookies from 'js-cookie'
+import { USER_SESSION } from '../../../constants/cookies'
 // material ui icons
 import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
@@ -30,7 +33,8 @@ class ListItemProfile extends Component {
     // prefetch is not working in dev mode as the js is only generated on request
   }
   signOut = () => {
-    userStateStore.resetUserState(true)
+    process.browser && Cookies.remove(USER_SESSION)
+    AppMethodStore.newApolloClient()
     Router.push('/')
   }
   render() {

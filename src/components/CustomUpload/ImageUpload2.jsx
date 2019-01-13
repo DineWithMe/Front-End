@@ -81,7 +81,7 @@ class ImageUpload2 extends Component {
 
               // if this page is visited using client next/link, it will fetch and loading first
               // if it is render in server side, it will fetch data before render thus skipping loading
-            } else if (data.user && data.user.avatarFilename) {
+            } else if (data && data.user && data.user.avatarFilename) {
               const {
                 user: { avatarFilename },
               } = data

@@ -6,11 +6,10 @@ import { verifyToken } from '../constants/queryOperations'
 import { initApollo } from './initApollo'
 import { getDataFromTree } from 'react-apollo'
 // unstated
-import { userStateStore } from './unstated'
+import { userStateStore, AppMethodStore } from './unstated'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
-
 // error
 import handleError from './handleError'
 
@@ -99,12 +98,24 @@ export default (App) => {
           userState: userStateStore.state,
         }
       } else {
+        // this in static method is different with this of non static method
         return {
           ...appProps,
           apolloState,
         }
       }
     }
+
+    newApolloClient = () => {
+      userStateStore.resetUserState()
+      const cookie = process.browser && Cookies.get(USER_SESSION)
+      console.log(cookie)
+      this.apolloClient = initApollo(undefined, cookie)
+      // reset and refetch store
+      this.apolloClient.resetStore()
+      this.forceUpdate()
+    }
+
     constructor(props) {
       super(props)
       /* eslint-disable react/prop-types */
@@ -113,7 +124,6 @@ export default (App) => {
         userState,
         apolloState,
       } = props
-      /* eslint-enable react/prop-types */
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
@@ -124,12 +134,14 @@ export default (App) => {
         }
       }
       this.apolloClient = initApollo(apolloState, userToken)
+      AppMethodStore.newApolloClient = this.newApolloClient
     }
     render() {
+      const { props, apolloClient } = this
       return (
         <App
-          {...this.props}
-          apolloClient={this.apolloClient}
+          {...props}
+          apolloClient={apolloClient}
           userStateStore={userStateStore}
         />
       )

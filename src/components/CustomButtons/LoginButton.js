@@ -3,7 +3,7 @@ import { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import { login } from '../../constants/mutationOperations'
 // state
-import { userStateStore } from '../../utils/unstated'
+import { userStateStore, AppMethodStore } from '../../utils/unstated'
 // router
 import Router from 'next/router'
 // error handling
@@ -44,6 +44,7 @@ class LoginButton extends Component {
         Cookies.set(USER_SESSION, userToken, {
           expires: EXPIRES,
         })
+        AppMethodStore.newApolloClient()
         Router.push('/')
       })
       .catch((err) => {
