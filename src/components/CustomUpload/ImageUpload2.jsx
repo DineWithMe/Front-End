@@ -95,6 +95,7 @@ class ImageUpload2 extends Component {
             }
             return (
               <Tooltip
+                id='tooltip-top'
                 title='Change Your Avatar'
                 placement='right-end'
                 classes={{ tooltip: classes.tooltip }}
