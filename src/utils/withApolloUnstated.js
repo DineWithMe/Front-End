@@ -109,7 +109,6 @@ export default (App) => {
     newApolloClient = () => {
       userStateStore.resetUserState()
       const cookie = process.browser && Cookies.get(USER_SESSION)
-      console.log(cookie)
       this.apolloClient = initApollo(undefined, cookie)
       // reset and refetch store
       this.apolloClient.resetStore()
