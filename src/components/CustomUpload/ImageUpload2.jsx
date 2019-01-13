@@ -19,10 +19,11 @@ import { userStateStore } from '../../utils/unstated'
 import { getAvatarFilePath } from '../../utils/fileOperation'
 
 class ImageUpload2 extends Component {
-  state = { file: '' }
+  state = { file: '', image: '' }
   render() {
     const {
       props: { classes },
+      state: { image },
     } = this
     const imageClasses = classNames(
       classes.imgRaised,
@@ -56,11 +57,13 @@ class ImageUpload2 extends Component {
                       imagePreviewUrl: reader.result,
                     })
                   }
+                  this.setState({ image: loadingGif })
                   // remember this is a promise
                   await uploadUserAvatar({ variables: { file } }).catch((err) =>
                     handleError(err)
                   )
                   this.refetch()
+                  this.setState({ image: '' })
                 }
               }}
               accept='image/png, image/jpeg'
@@ -97,7 +100,7 @@ class ImageUpload2 extends Component {
                 classes={{ tooltip: classes.tooltip }}
               >
                 <img
-                  src={src}
+                  src={image || src}
                   alt='user avatar'
                   className={imageClasses}
                   ref={(img) => {
