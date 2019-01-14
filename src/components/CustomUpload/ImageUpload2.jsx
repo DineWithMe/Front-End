@@ -77,9 +77,11 @@ class ImageUpload2 extends Component {
           variables={{ username: userStateStore.state.username }}
           notifyOnNetworkStatusChange
         >
-          {({ data, loading, refetch }) => {
+          {({ data, loading, refetch, error }) => {
+            if (error) {
+              return handleError(error).component
+            }
             let src = ''
-
             // do not use setState because setState is too slow for getInitialProps
             if (loading) {
               src = loadingGif
