@@ -48,6 +48,7 @@ const QuillEditor = dynamic(
   () => import('../../components/RichTextEditor/QuillEditor'),
   {
     ssr: false,
+    loading: () => <div />,
   }
 )
 

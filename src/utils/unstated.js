@@ -9,6 +9,7 @@ const initialState = {
   avatarFilename: '',
   avatarMimeType: '',
   avatarEncoding: '',
+  userIntro: '',
   updatedAt: '',
   createdAt: '',
 }
