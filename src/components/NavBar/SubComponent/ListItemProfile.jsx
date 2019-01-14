@@ -1,6 +1,4 @@
 import { Component } from 'react'
-// file path
-import { getAvatarFilePath } from '../../../utils/fileOperation'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
@@ -17,8 +15,6 @@ import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
 import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew'
 import Restaurant from '@material-ui/icons/Restaurant'
-// default avatar
-import defaultAvatar from '../../../../static/img/faces/default-avatar.png'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
 // style
@@ -54,10 +50,7 @@ class ListItemProfile extends Component {
           hoverColor='dark'
           buttonText={
             <img
-              src={
-                getAvatarFilePath(userStateStore.state.avatarFilename) ||
-                defaultAvatar
-              }
+              src={userStateStore.state.avatarFilename}
               className={classes.img}
               alt='profile'
             />

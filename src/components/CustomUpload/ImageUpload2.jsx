@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
+import { getAvatarFilePath } from '../../utils/fileOperation'
 // Apollo
 import { Mutation, Query } from 'react-apollo'
 import { uploadUserAvatar } from '../../constants/mutationOperations'
@@ -15,11 +16,9 @@ import loadingGif from '../../../static/img/gif/loading.gif'
 import handleError from '../../utils/handleError'
 // unstated
 import { userStateStore } from '../../utils/unstated'
-// file path
-import { getAvatarFilePath } from '../../utils/fileOperation'
 
 class ImageUpload2 extends Component {
-  state = { file: '', image: '' }
+  state = { image: '' }
   render() {
     const {
       props: { classes },
@@ -51,19 +50,22 @@ class ImageUpload2 extends Component {
                     // stop if user cancel
                     return
                   }
-                  reader.onloadend = () => {
-                    this.setState({
-                      file,
-                      imagePreviewUrl: reader.result,
-                    })
-                  }
                   this.setState({ image: loadingGif })
-                  // remember this is a promise
-                  await uploadUserAvatar({ variables: { file } }).catch((err) =>
-                    handleError(err)
-                  )
-                  this.refetch()
-                  this.setState({ image: '' })
+                  userStateStore.setState({ avatarFilename: loadingGif })
+                  reader.onloadend = async () => {
+                    this.setState({
+                      image: reader.result,
+                    })
+                    userStateStore.setState({ avatarFilename: reader.result })
+                    // remember this is a promise
+                    await uploadUserAvatar({ variables: { file } }).catch(
+                      (err) => handleError(err)
+                    )
+                    this.setState({
+                      image: '',
+                    })
+                    this.refetch()
+                  }
                 }
               }}
               accept='image/png, image/jpeg'
@@ -75,7 +77,7 @@ class ImageUpload2 extends Component {
           variables={{ username: userStateStore.state.username }}
           notifyOnNetworkStatusChange
         >
-          {({ data, refetch, loading }) => {
+          {({ data, loading, refetch }) => {
             let src = ''
 
             // do not use setState because setState is too slow for getInitialProps
@@ -89,9 +91,12 @@ class ImageUpload2 extends Component {
                 user: { avatarFilename },
               } = data
               src = getAvatarFilePath(avatarFilename)
-              userStateStore.setState({ avatarFilename })
+              userStateStore.setState({
+                avatarFilename: src,
+              })
             } else {
               src = defaultAvatar
+              userStateStore.setState({ avatarFilename: defaultAvatar })
             }
             return (
               <Tooltip

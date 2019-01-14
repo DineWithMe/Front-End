@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import Head from 'next/head'
+import { getAvatarFilePath } from './fileOperation'
 // query constant
 import { verifyToken } from '../constants/queryOperations'
 // apollo
@@ -43,10 +44,14 @@ export default (App) => {
               query: verifyToken,
             })
             .then((res) => {
-              const { user } = res.data.verifyToken
+              const {
+                user,
+                user: { avatarFilename },
+              } = res.data.verifyToken
               userStateStore.initUserState({
                 login: true,
                 ...user,
+                avatarFilename: getAvatarFilePath(avatarFilename),
                 userId: user.id,
                 userToken,
               })
