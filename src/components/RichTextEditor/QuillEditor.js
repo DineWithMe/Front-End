@@ -47,15 +47,15 @@ class QuillEditor extends Component {
         {(userStateStore) => (
           <div className={classNames(classes.description, classes.textCenter)}>
             {editMode ? (
-              <Tooltip
-                id='tooltip-top'
-                title='double click to finish edit or press escape to cancel'
-                placement='left-end'
-                classes={{ tooltip: classes.tooltip }}
-              >
-                <Mutation mutation={updateUserIntro}>
-                  {(updateUserIntro) => {
-                    return (
+              <Mutation mutation={updateUserIntro}>
+                {(updateUserIntro) => {
+                  return (
+                    <Tooltip
+                      id='tooltip-top'
+                      title='double click to finish edit or press escape to cancel'
+                      placement='left-end'
+                      classes={{ tooltip: classes.tooltip }}
+                    >
                       <div
                         onDoubleClick={async () => {
                           const htmlString = this.text
@@ -82,7 +82,7 @@ class QuillEditor extends Component {
                             this.reactQuill = reactQuill
                           }}
                           theme='snow'
-                          value={htmlString}
+                          value={this.text}
                           onChange={handleTextChange}
                           modules={{
                             toolbar: [
@@ -128,10 +128,10 @@ class QuillEditor extends Component {
                           placeholder={`...write something about yourself`}
                         />
                       </div>
-                    )
-                  }}
-                </Mutation>
-              </Tooltip>
+                    </Tooltip>
+                  )
+                }}
+              </Mutation>
             ) : (
               <Tooltip
                 id='tooltip-top'
@@ -154,13 +154,13 @@ class QuillEditor extends Component {
                         return handleError(error).component
                       }
                       let userIntro = ''
-                      if (htmlString && htmlString.length > 0) {
+                      if (htmlString) {
                         userIntro = htmlString
                       } else if (!data.user) {
                         userIntro = '<p> loading... </p>'
                       } else {
                         userIntro = data.user.userIntro
-                        this.setState({ htmlString: data.user.userIntro })
+                        this.text = userIntro
                       }
 
                       return <Interweave content={userIntro} />
