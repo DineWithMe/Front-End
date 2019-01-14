@@ -8,6 +8,8 @@ import { initApollo } from './initApollo'
 import { getDataFromTree } from 'react-apollo'
 // unstated
 import { userStateStore, AppMethodStore } from './unstated'
+// image
+import defaultAvatar from '../../static/img/faces/default-avatar.png'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
@@ -48,10 +50,16 @@ export default (App) => {
                 user,
                 user: { avatarFilename },
               } = res.data.verifyToken
+              let avatar = ''
+              if (avatarFilename) {
+                avatar = getAvatarFilePath(avatarFilename)
+              } else {
+                avatar = defaultAvatar
+              }
               userStateStore.initUserState({
                 login: true,
                 ...user,
-                avatarFilename: getAvatarFilePath(avatarFilename),
+                avatarFilename: avatar,
                 userId: user.id,
                 userToken,
               })

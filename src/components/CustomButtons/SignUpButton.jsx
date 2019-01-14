@@ -13,6 +13,8 @@ import handleError from '../../utils/handleError'
 import Cookies from 'js-cookie'
 // type react properties
 import PropTypes from 'prop-types'
+// image
+import defaultAvatar from '../../../static/img/faces/default-avatar.png'
 // constants
 import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
 import { USER_SESSION, EXPIRES } from '../../constants/cookies'
@@ -93,6 +95,7 @@ class SignUpButton extends Component {
             login: true,
             ...user,
             userId: user.id,
+            avatarFilename: defaultAvatar,
             userToken,
           })
           onSignUpSuccess()

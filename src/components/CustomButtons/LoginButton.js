@@ -10,6 +10,10 @@ import Router from 'next/router'
 import handleError from '../../utils/handleError'
 //cookies
 import Cookies from 'js-cookie'
+// get path
+import { getAvatarFilePath } from '../../utils/fileOperation'
+// image
+import defaultAvatar from '../../../static/img/faces/default-avatar.png'
 // type react properties
 import PropTypes from 'prop-types'
 // constants
@@ -33,12 +37,23 @@ class LoginButton extends Component {
     })
       .then(({ data }) => {
         const {
-          login: { user, userToken },
+          login: {
+            user,
+            user: { avatarFilename },
+            userToken,
+          },
         } = data
+        let avatar = ''
+        if (avatarFilename) {
+          avatar = getAvatarFilePath(avatarFilename)
+        } else {
+          avatar = defaultAvatar
+        }
         userStateStore.setState({
           login: true,
           ...user,
           userId: user.id,
+          avatarFilename: avatar,
           userToken: userToken,
         })
         Cookies.set(USER_SESSION, userToken, {

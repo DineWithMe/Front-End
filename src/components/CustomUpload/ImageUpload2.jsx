@@ -82,12 +82,14 @@ class ImageUpload2 extends Component {
               return handleError(error).component
             }
             let src = ''
-            // do not use setState because setState is too slow for getInitialProps
+            // do not use setState because setState doesn't work before rendering
             if (loading) {
               src = loadingGif
 
               // if this page is visited using client next/link, it will fetch and loading first
               // if it is render in server side, it will fetch data before render thus skipping loading
+            } else if (image) {
+              src = image
             } else if (data && data.user && data.user.avatarFilename) {
               const {
                 user: { avatarFilename },
@@ -108,7 +110,7 @@ class ImageUpload2 extends Component {
                 classes={{ tooltip: classes.tooltip }}
               >
                 <img
-                  src={image || src}
+                  src={src}
                   alt='user avatar'
                   className={imageClasses}
                   ref={(img) => {
