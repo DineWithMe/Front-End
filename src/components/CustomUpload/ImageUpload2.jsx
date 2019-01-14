@@ -39,8 +39,10 @@ class ImageUpload2 extends Component {
                 this.fileInput = fileInput
               }}
               style={{ display: 'none' }}
-              onChange={async (e) => {
+              onChange={(e) => {
                 if (e.target.validity.valid) {
+                  this.setState({ image: loadingGif })
+                  userStateStore.setState({ avatarFilename: loadingGif })
                   const reader = new FileReader()
                   const file = e.target.files[0]
                   try {
@@ -50,21 +52,19 @@ class ImageUpload2 extends Component {
                     // stop if user cancel
                     return
                   }
-                  this.setState({ image: loadingGif })
-                  userStateStore.setState({ avatarFilename: loadingGif })
                   reader.onloadend = async () => {
-                    this.setState({
-                      image: reader.result,
-                    })
-                    userStateStore.setState({ avatarFilename: reader.result })
                     // remember this is a promise
                     await uploadUserAvatar({ variables: { file } }).catch(
                       (err) => handleError(err)
                     )
                     this.setState({
+                      image: reader.result,
+                    })
+                    userStateStore.setState({ avatarFilename: reader.result })
+                    this.refetch()
+                    this.setState({
                       image: '',
                     })
-                    this.refetch()
                   }
                 }
               }}
@@ -77,31 +77,25 @@ class ImageUpload2 extends Component {
           variables={{ username: userStateStore.state.username }}
           notifyOnNetworkStatusChange
         >
-          {({ data, loading, refetch, error }) => {
+          {({ data, refetch, error, loading }) => {
             if (error) {
               return handleError(error).component
             }
             let src = ''
             // do not use setState because setState doesn't work before rendering
-            if (loading) {
-              src = loadingGif
-
-              // if this page is visited using client next/link, it will fetch and loading first
-              // if it is render in server side, it will fetch data before render thus skipping loading
-            } else if (image) {
-              src = image
+            // if this page is visited using client next/link, it will fetch and loading first
+            // if it is render in server side, it will fetch data before render thus skipping loading
+            if (loading || image) {
+              src = image || loadingGif
             } else if (data && data.user && data.user.avatarFilename) {
               const {
                 user: { avatarFilename },
               } = data
               src = getAvatarFilePath(avatarFilename)
-              userStateStore.setState({
-                avatarFilename: src,
-              })
             } else {
               src = defaultAvatar
-              userStateStore.setState({ avatarFilename: defaultAvatar })
             }
+            userStateStore.setState({ avatarFilename: src })
             return (
               <Tooltip
                 id='tooltip-top'
