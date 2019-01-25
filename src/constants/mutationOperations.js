@@ -39,4 +39,12 @@ const uploadUserAvatar = gql`
   }
 `
 
-export { createUser, login, uploadUserAvatar }
+const updateUserIntro = gql`
+  mutation($data: UpdateUserInput!) {
+    updateUser(data: $data) {
+      userIntro
+    }
+  }
+`
+
+export { createUser, login, uploadUserAvatar, updateUserIntro }

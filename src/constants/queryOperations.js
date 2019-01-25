@@ -43,7 +43,7 @@ const userAvatar = gql`
 
 const me = gql`
   query {
-    user {
+    me {
       id
       name
       email
@@ -51,10 +51,19 @@ const me = gql`
       avatarFilename
       avatarMimeType
       avatarEncoding
+      userIntro
       updatedAt
       createdAt
     }
   }
 `
 
-export { user, emailExist, verifyToken, userAvatar, me }
+const userIntro = gql`
+  query($username: String!) {
+    user(username: $username) {
+      userIntro
+    }
+  }
+`
+
+export { user, emailExist, verifyToken, userAvatar, me, userIntro }

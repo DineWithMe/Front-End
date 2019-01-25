@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react'
 import PropTypes from 'prop-types'
+import dynamic from 'next/dynamic'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
 // @material-ui/core components
@@ -25,6 +26,7 @@ import cardProfile2Square from '../../../static/img/faces/card-profile2-square.j
 // style
 import profilePageStyle from '../../jss/material-kit-pro-react/views/profilePageStyle.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
+import 'react-quill/dist/quill.snow.css'
 // state
 import { userStateStore } from '../../utils/unstated'
 // core components
@@ -42,18 +44,24 @@ import Parallax from '../../components/Parallax/Parallax.jsx'
 import CustomFooter from '../../components/Footer/CustomFooter.jsx'
 import ImageUpload2 from '../../components/CustomUpload/ImageUpload2.jsx'
 
+const QuillEditor = dynamic(
+  () => import('../../components/RichTextEditor/QuillEditor'),
+  {
+    ssr: false,
+    loading: () => <div />,
+  }
+)
+
 class ProfilePage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     document.body.scrollTop = 0
   }
+
   render() {
-    const { classes, ...rest } = this.props
-    const imageClasses = classNames(
-      classes.imgRaised,
-      classes.imgRoundedCircle,
-      classes.imgFluid
-    )
+    const {
+      props: { classes, ...rest },
+    } = this
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery)
     return (
       <div>
@@ -119,16 +127,9 @@ class ProfilePage extends React.Component {
                 </div>
               </GridItem>
             </GridContainer>
-            <div
-              className={classNames(classes.description, classes.textCenter)}
-            >
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{' '}
-              </p>
-            </div>
+
+            <QuillEditor classes={classes} />
+
             <div className={classes.profileTabs}>
               <NavPills
                 alignCenter

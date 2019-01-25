@@ -1,16 +1,18 @@
 import { Component } from 'react'
 import Head from 'next/head'
+import { getAvatarFilePath } from './fileOperation'
 // query constant
 import { verifyToken } from '../constants/queryOperations'
 // apollo
 import { initApollo } from './initApollo'
 import { getDataFromTree } from 'react-apollo'
 // unstated
-import { userStateStore } from './unstated'
+import { userStateStore, AppMethodStore } from './unstated'
+// image
+import defaultAvatar from '../../static/img/faces/default-avatar.png'
 // cookies
 import Cookies from 'js-cookie'
 import { USER_SESSION, EXPIRES } from '../constants/cookies'
-
 // error
 import handleError from './handleError'
 
@@ -44,10 +46,20 @@ export default (App) => {
               query: verifyToken,
             })
             .then((res) => {
-              const { user } = res.data.verifyToken
+              const {
+                user,
+                user: { avatarFilename },
+              } = res.data.verifyToken
+              let avatar = ''
+              if (avatarFilename) {
+                avatar = getAvatarFilePath(avatarFilename)
+              } else {
+                avatar = defaultAvatar
+              }
               userStateStore.initUserState({
                 login: true,
                 ...user,
+                avatarFilename: avatar,
                 userId: user.id,
                 userToken,
               })
@@ -99,12 +111,23 @@ export default (App) => {
           userState: userStateStore.state,
         }
       } else {
+        // this in static method is different with this of non static method
         return {
           ...appProps,
           apolloState,
         }
       }
     }
+
+    newApolloClient = () => {
+      userStateStore.resetUserState()
+      const cookie = process.browser && Cookies.get(USER_SESSION)
+      this.apolloClient = initApollo(undefined, cookie)
+      // reset and refetch store
+      this.apolloClient.resetStore()
+      this.forceUpdate()
+    }
+
     constructor(props) {
       super(props)
       /* eslint-disable react/prop-types */
@@ -113,7 +136,6 @@ export default (App) => {
         userState,
         apolloState,
       } = props
-      /* eslint-enable react/prop-types */
       // hydrate state in client
       // serverInitialState value preserve from server to client before user navigate another next/link
       // use this chance to hydrate the state
@@ -124,12 +146,14 @@ export default (App) => {
         }
       }
       this.apolloClient = initApollo(apolloState, userToken)
+      AppMethodStore.newApolloClient = this.newApolloClient
     }
     render() {
+      const { props, apolloClient } = this
       return (
         <App
-          {...this.props}
-          apolloClient={this.apolloClient}
+          {...props}
+          apolloClient={apolloClient}
           userStateStore={userStateStore}
         />
       )

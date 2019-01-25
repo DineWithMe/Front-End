@@ -1,6 +1,4 @@
 import { Component } from 'react'
-// file path
-import { getAvatarFilePath } from '../../../utils/fileOperation'
 // props typing
 import PropTypes from 'prop-types'
 // next routing
@@ -8,14 +6,15 @@ import Router from 'next/router'
 // import material ui width
 import withWidth from '@material-ui/core/withWidth'
 // unstated
-import { userStateStore } from '../../../utils/unstated'
+import { userStateStore, AppMethodStore } from '../../../utils/unstated'
+// cookies
+import Cookies from 'js-cookie'
+import { USER_SESSION } from '../../../constants/cookies'
 // material ui icons
 import AccountBox from '@material-ui/icons/AccountBox'
 import SettingsApplications from '@material-ui/icons/SettingsApplications'
 import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew'
 import Restaurant from '@material-ui/icons/Restaurant'
-// default avatar
-import defaultAvatar from '../../../../static/img/faces/default-avatar.png'
 // material ui components
 import ListItem from '@material-ui/core/ListItem'
 // style
@@ -30,7 +29,8 @@ class ListItemProfile extends Component {
     // prefetch is not working in dev mode as the js is only generated on request
   }
   signOut = () => {
-    userStateStore.resetUserState(true)
+    process.browser && Cookies.remove(USER_SESSION)
+    AppMethodStore.newApolloClient()
     Router.push('/')
   }
   render() {
@@ -50,10 +50,7 @@ class ListItemProfile extends Component {
           hoverColor='dark'
           buttonText={
             <img
-              src={
-                getAvatarFilePath(userStateStore.state.avatarFilename) ||
-                defaultAvatar
-              }
+              src={userStateStore.state.avatarFilename}
               className={classes.img}
               alt='profile'
             />

@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
+import { getAvatarFilePath } from '../../utils/fileOperation'
 // Apollo
 import { Mutation, Query } from 'react-apollo'
 import { uploadUserAvatar } from '../../constants/mutationOperations'
@@ -15,14 +16,13 @@ import loadingGif from '../../../static/img/gif/loading.gif'
 import handleError from '../../utils/handleError'
 // unstated
 import { userStateStore } from '../../utils/unstated'
-// file path
-import { getAvatarFilePath } from '../../utils/fileOperation'
 
 class ImageUpload2 extends Component {
-  state = { file: '' }
+  state = { image: '' }
   render() {
     const {
       props: { classes },
+      state: { image },
     } = this
     const imageClasses = classNames(
       classes.imgRaised,
@@ -39,8 +39,10 @@ class ImageUpload2 extends Component {
                 this.fileInput = fileInput
               }}
               style={{ display: 'none' }}
-              onChange={async (e) => {
+              onChange={(e) => {
                 if (e.target.validity.valid) {
+                  this.setState({ image: loadingGif })
+                  userStateStore.setState({ avatarFilename: loadingGif })
                   const reader = new FileReader()
                   const file = e.target.files[0]
                   try {
@@ -50,17 +52,20 @@ class ImageUpload2 extends Component {
                     // stop if user cancel
                     return
                   }
-                  reader.onloadend = () => {
+                  reader.onloadend = async () => {
+                    // remember this is a promise
+                    await uploadUserAvatar({ variables: { file } }).catch(
+                      (err) => handleError(err)
+                    )
                     this.setState({
-                      file,
-                      imagePreviewUrl: reader.result,
+                      image: reader.result,
+                    })
+                    userStateStore.setState({ avatarFilename: reader.result })
+                    this.refetch()
+                    this.setState({
+                      image: '',
                     })
                   }
-                  // remember this is a promise
-                  await uploadUserAvatar({ variables: { file } }).catch((err) =>
-                    handleError(err)
-                  )
-                  this.refetch()
                 }
               }}
               accept='image/png, image/jpeg'
@@ -72,26 +77,28 @@ class ImageUpload2 extends Component {
           variables={{ username: userStateStore.state.username }}
           notifyOnNetworkStatusChange
         >
-          {({ data, refetch, loading }) => {
+          {({ data, refetch, error, loading }) => {
+            if (error) {
+              return handleError(error).component
+            }
             let src = ''
-
-            // do not use setState because setState is too slow for getInitialProps
-            if (loading) {
-              src = loadingGif
-
-              // if this page is visited using client next/link, it will fetch and loading first
-              // if it is render in server side, it will fetch data before render thus skipping loading
-            } else if (data.user && data.user.avatarFilename) {
+            // do not use setState because setState doesn't work before rendering
+            // if this page is visited using client next/link, it will fetch and loading first
+            // if it is render in server side, it will fetch data before render thus skipping loading
+            if (loading || image) {
+              src = image || loadingGif
+            } else if (data && data.user && data.user.avatarFilename) {
               const {
                 user: { avatarFilename },
               } = data
               src = getAvatarFilePath(avatarFilename)
-              userStateStore.setState({ avatarFilename })
             } else {
               src = defaultAvatar
             }
+            userStateStore.setState({ avatarFilename: src })
             return (
               <Tooltip
+                id='tooltip-top'
                 title='Change Your Avatar'
                 placement='right-end'
                 classes={{ tooltip: classes.tooltip }}

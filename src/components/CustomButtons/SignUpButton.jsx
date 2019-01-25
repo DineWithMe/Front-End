@@ -4,7 +4,7 @@ import { Mutation } from 'react-apollo'
 // environment variable
 import getConfig from 'next/config'
 // state
-import { userStateStore } from '../../utils/unstated'
+import { userStateStore, AppMethodStore } from '../../utils/unstated'
 // router
 import Router from 'next/router'
 // error handling
@@ -13,6 +13,8 @@ import handleError from '../../utils/handleError'
 import Cookies from 'js-cookie'
 // type react properties
 import PropTypes from 'prop-types'
+// image
+import defaultAvatar from '../../../static/img/faces/default-avatar.png'
 // constants
 import { FAILED, PASSED, ERROR, NEUTRAL } from '../../constants/general'
 import { USER_SESSION, EXPIRES } from '../../constants/cookies'
@@ -93,12 +95,14 @@ class SignUpButton extends Component {
             login: true,
             ...user,
             userId: user.id,
+            avatarFilename: defaultAvatar,
             userToken,
           })
           onSignUpSuccess()
           Cookies.set(USER_SESSION, userToken, {
             expires: EXPIRES,
           })
+          AppMethodStore.newApolloClient()
           Router.push('/register?verified=false', '/register?verified=false', {
             shallow: true,
           })

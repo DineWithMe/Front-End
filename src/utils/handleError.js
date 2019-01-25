@@ -12,6 +12,7 @@ const handleError = (error) => {
   return {
     statusCode: err.statusCode,
     message: `${err.statusCode}: ${err.message}`,
+    component: <p>{'error'}</p>,
   }
 }
 
