@@ -17,7 +17,7 @@ import '../src/scss/material-kit-pro-react.css'
 import '../src/scss/nprogress.css'
 // progress bar
 import NProgress from 'nprogress'
-// fetch api ponyfill
+// fetch api polyfill
 import 'isomorphic-unfetch'
 
 const { publicRuntimeConfig } = getConfig()
